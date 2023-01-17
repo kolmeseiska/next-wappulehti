@@ -1,0 +1,42 @@
+.social:hover {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  /* .card:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .card:hover span {
+    transform: translateX(4px);
+  } */
+}
+/* Mobile */
+@media (max-width: 700px) {
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+}
+
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate(-1px, 0) rotate(2deg);
+  }
+
+  20%, 80% {
+    transform: translate(2px, 0)  rotate(-1deg);
+  }
+
+  30%, 50%, 70% {
+    transform: translate(-3px, 0)  rotate(1deg);
+  }
+
+  40%, 60% {
+    transform: translate(3px, 0)  rotate(-2deg);
+  }
+}
