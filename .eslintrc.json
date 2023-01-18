@@ -21,13 +21,6 @@
       }
     ],
     "eol-last": "error",
-    "react/jsx-newline": [
-      "error",
-      {
-        "prevent": true,
-        "allowMultilines": false
-      }
-    ],
     "comma-spacing": "error",
     "semi": [
       "error",
@@ -41,6 +34,13 @@
       "error",
       {
         "consistent": true
+      }
+    ],
+    "react/jsx-newline": [
+      "error",
+      {
+        "prevent": true,
+        "allowMultilines": false
       }
     ],
     "react/jsx-child-element-spacing": "error",
@@ -75,8 +75,9 @@
         "closingSlash": "never",
         "beforeSelfClosing": "always",
         "afterOpening": "never",
-        "beforeClosing": "proportional-always"
+        "beforeClosing": "never"
       }
-    ]
+    ],
+    "react/jsx-closing-bracket-location": "error"
   }
 }
