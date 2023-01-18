@@ -21,7 +21,7 @@ const Form = () => {
         <label className='label'>
           <span className='label-text'>Kilta</span>
         </label>
-        <select type='text' name='guild' className='select select-primary w-full max-w-xs'>
+        <select name='guild' className='select select-primary w-full max-w-xs'>
           <option hidden value=''>Valitse</option>
           <option value='Adamas'>Adamas</option>
           <option value='Digit'>Digit</option>

@@ -17,12 +17,12 @@ const FilePreview = ({ files, onRemove }: Props) => {
       {files.map((f) => {
         return (
           <ol key={f.lastModified}>
-            <li className='flex justify-end mt-2'>
+            <li className='flex justify-end items-center mt-2'>
               <div key={f.name} className='text-slate-400 mx-2'>
                 {f.name}
               </div>
               <button 
-                className='btn btn-ghost btn-xs'
+                className='btn btn-ghost focus:outline-primary-focus focus:border-primary hover:border-primary text-slate-200 btn-xs'
                 onClick={onRemove}
               >
                 <svg
@@ -36,7 +36,8 @@ const FilePreview = ({ files, onRemove }: Props) => {
                   <path
                     strokeLinecap='round'
                     strokeLinejoin='round'
-                    d='M6 18 18 6M6 6l12 12' />
+                    d='M6 18 18 6M6 6l12 12'
+                  />
                 </svg>
               </button>
             </li>
