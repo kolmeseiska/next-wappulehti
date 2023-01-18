@@ -4,11 +4,12 @@ type Props = {}
 
 const Footer = (props: Props) => {
   return (
-    <footer className='p-4'>
+    <footer className='p-4 bg-gray-900'>
+      <p className='text-center text-zinc-300 mb-4 font-bold'>Hyppää Pönkelin matkaan!</p>
       <div className='flex items-center justify-center space-x-2'>
         <a
           href='https://www.instagram.com/wappulehtiponkeli/'
-          className='social text-zinc-500 hover:text-zinc-300'
+          className='social text-zinc-300 hover:text-zinc-50'
           target='_blank'
           rel='noopener noreferrer'
         >
@@ -18,7 +19,7 @@ const Footer = (props: Props) => {
         </a>
         <a
           href='https://www.tiktok.com/@wappulehtiponkeli'
-          className='social text-zinc-500 hover:text-zinc-300'
+          className='social text-zinc-300 hover:text-zinc-50'
           target='_blank'
           rel='noopener noreferrer'
         >

@@ -11,7 +11,10 @@
     ],
     "indent": [
       "error",
-      2
+      2,
+      {
+        "SwitchCase": 1
+      }
     ],
     "no-multiple-empty-lines": [
       "error",
@@ -47,6 +50,13 @@
     "react/jsx-first-prop-new-line": [
       "error",
       "multiline"
+    ],
+    "react/jsx-max-props-per-line": [
+      "error",
+      {
+        "maximum": 1,
+        "when": "multiline"
+      }
     ],
     "react/jsx-no-useless-fragment": "error",
     "react/jsx-props-no-multi-spaces": "error",

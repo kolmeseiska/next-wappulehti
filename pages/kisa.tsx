@@ -10,7 +10,7 @@ const Kisa = (props: Props) => {
         <div className='w-full px-12 max-w-2xl'>
           <div className='text-center lg:text-left'>
             <h1 className='text-5xl font-bold mb-5'>Pölkyn Äärellä</h1>
-            <h2 className='text-3xl mb-4'>Vitsi | Juttu | Grafiikka</h2>
+            <h2 className='text-3xl mb-4'>Vitsi | Juttu | Grafiikka -kisa</h2>
           </div>
           <p className='py-2'>
             Pönkelillä lyö päässä tyhjää, ja Pönkelöiset tarvitsevat apuasi puujalkojen pöytään pamauttamiseen.
