@@ -5,20 +5,20 @@ const Form = () => {
   return (
     <>
       <div className='form-control'>
-        <label className='label'>
+        <label htmlFor='joke' className='label'>
           <span className='label-text'>Kirjoita vitsi, juttu tai tarina</span>
         </label> 
-        <textarea className='textarea textarea-bordered h-24 textarea-primary'></textarea>
+        <textarea id='joke' className='textarea textarea-bordered h-24 textarea-primary'></textarea>
       </div>
       <FileInput />
       <div className='form-control'>
-        <label className='label'>
+        <label htmlFor='email' className='label'>
           <span className='label-text'>Sähköposti</span>
         </label>
-        <input type='text' className='input input-bordered input-primary' />
+        <input id='email' type='text' className='input input-bordered input-primary' />
       </div>
       <div className='form-control'>
-        <label className='label'>
+        <label htmlFor='guild' className='label'>
           <span className='label-text'>Kilta</span>
         </label>
         <select name='guild' className='select select-primary w-full max-w-xs'>

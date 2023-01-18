@@ -110,7 +110,8 @@ const DropZone = ({ data, dispatch }) => {
           type='file'
           multiple
           className={styles.files}
-          onChange={(e) => handleFileSelect(e)} />
+          onChange={(e) => handleFileSelect(e)}
+        />
         <label htmlFor='fileSelect'>You can select multiple Files</label>
         <h3 className={styles.uploadMessage}>
           or drag &amp; drop your files here
