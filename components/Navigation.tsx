@@ -5,10 +5,10 @@ import Logo from './Logo'
 
 const Navigation = () => {
   return (
-    <nav className='flex sm:justify-center items-center space-x-4 bg-gray-900 text-bold'>
+    <nav className='flex sm:justify-center items-center space-x-4 bg-gray-900 text-bold py-5'>
       <Link
         href={'/'}
-        className='px-3 py-2 fill-slate-50 hover:fill-indigo-500 transition-all '
+        className='px-3 py-2 fill-zinc-50 social'
       >
         <Logo className='h-7' />
       </Link>
