@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@googleapis/sheets": "^4.0.1",
     "@hookform/resolvers": "^2.9.10",
     "@next/font": "13.1.1",
     "@types/node": "18.11.18",
@@ -17,6 +18,7 @@
     "daisyui": "^2.47.0",
     "eslint": "8.30.0",
     "eslint-config-next": "13.1.1",
+    "google-auth-library": "^8.7.0",
     "multer": "^1.4.5-lts.1",
     "next": "13.1.1",
     "react": "18.2.0",
