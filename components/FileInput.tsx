@@ -11,6 +11,7 @@ const FileInput = () => {
   const {
     data,
     fileDropProps,
+    fileInputRef,
     handleRemoveFile,
     handleSelectFile
   } = useFileDrop()
@@ -31,6 +32,7 @@ const FileInput = () => {
           htmlFor='files'
         >
           <input
+            ref={fileInputRef}
             type='file'
             name='uploadfile' 
             id='files'
@@ -50,7 +52,7 @@ const FileInput = () => {
           />
           <span
             role='button'
-            className='input input-primary flex text-slate-400 hover:text-slate-200 items-center justify-center gap-2'
+            className={`input input-primary flex text-slate-400 hover:text-slate-200 items-center justify-center gap-2 ${data.inDropZone ? 'border-dashed bg-primary-focus' : ''}`}
             tabIndex={0}
           >
             Lataa

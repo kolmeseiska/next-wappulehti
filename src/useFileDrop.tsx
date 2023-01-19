@@ -1,4 +1,6 @@
-import React, { ChangeEvent, useReducer } from 'react'
+import React, { ChangeEvent, useReducer, useRef } from 'react'
+
+import { supportedFileTypes } from './participation'
 
 enum FileDropActionKey {
   SET_IN_DROP_ZONE= 'SET_IN_DROP_ZONE',
@@ -39,6 +41,8 @@ const useFileDrop =() => {
     files: [],
   })
 
+  const fileInputRef = useRef<HTMLInputElement>(null)
+
   const handleDragEnter = (event: React.DragEvent<HTMLElement>) => {
     event.preventDefault()
     event.stopPropagation()
@@ -72,7 +76,7 @@ const useFileDrop =() => {
     
     if (files?.length) {
       const existingFiles = data.files.map(file => file.name)
-      files = files.filter(file => !existingFiles.includes(file.name))
+      files = files.filter(file => !existingFiles.includes(file.name) && supportedFileTypes.some(type => type === file.type))
 
       dispatch({ type: FileDropActionKey.ADD_FILE_TO_LIST, files })
       dispatch({ type: FileDropActionKey.SET_IN_DROP_ZONE, inDropZone: false })
@@ -93,6 +97,18 @@ const useFileDrop =() => {
   }
 
   const handleRemoveFile = (filename:string) => {
+    if(!fileInputRef.current?.files) {
+      return null
+    }
+    const files = Array.from(fileInputRef.current.files)
+    const dt = new DataTransfer()
+    for (const file of files) {
+      if(file.name === filename) {
+        continue
+      }
+      dt.items.add(file)
+    }
+    fileInputRef.current.files = dt.files
     dispatch({ type: FileDropActionKey.REMOVE_FILE_FROM_LIST, filename })
   }
   return {
@@ -100,6 +116,7 @@ const useFileDrop =() => {
     dispatch,
     handleSelectFile,
     handleRemoveFile,
+    fileInputRef,
     fileDropProps: {  
       onDragEnter: handleDragEnter,
       onDragLeave: handleDragLeave,

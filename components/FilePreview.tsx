@@ -13,10 +13,10 @@ type Props = {
 const FilePreview = ({ files, onRemove }: Props) => {
   return (
     <div className='ml-3'>
-      {files.map((f) => {
-        return (
-          <ol key={f.lastModified}>
-            <li className='flex justify-end items-center mt-2'>
+      <ol>
+        {files.map((f) => {
+          return (
+            <li key={f.lastModified} className='flex justify-end items-center text-end mt-2'>
               <div key={f.name} className='text-slate-400 mx-2'>
                 {f.name}
               </div>
@@ -42,9 +42,9 @@ const FilePreview = ({ files, onRemove }: Props) => {
                 </svg>
               </button>
             </li>
-          </ol>
-        )
-      })}
+          )
+        })}
+      </ol>
     </div>
   )
 }
