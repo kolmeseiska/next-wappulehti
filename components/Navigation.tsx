@@ -20,7 +20,7 @@ const Navigation = () => {
         <Link
           key={url}
           href={url}
-          className='rounded-lg px-3 py-2 text-zinc-50 font-medium hover:bg-zinc-100 hover:text-zinc-900 transition-colors'
+          className='rounded-lg px-3 py-2 text-zinc-50 font-medium hover:bg-zinc-100 hover:text-zinc-900 transition-colors duration-200'
         >
           {title}
         </Link>

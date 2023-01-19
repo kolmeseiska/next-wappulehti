@@ -2,7 +2,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 
-import { participationSchema } from '../src/participation'
+import { Participation, participationSchema } from '../src/participation'
 import FileInput from './FileInput'
 import LoadingIcon from './LoadingIcon'
 
@@ -12,6 +12,30 @@ const defaultValues = {
   email: '',
   guild: ''
 }
+
+const upload = async (participation:Participation) => {
+  const formData = new FormData()
+
+  if(participation.files) {
+    Array.from(participation.files).forEach((file) => {
+      formData.append('files', file)
+    })
+  }
+  formData.append('joke', participation.joke || '')
+  formData.append('email', participation.email || '')
+  formData.append('guild', participation.guild || '')
+  
+  try {
+    const result = (await fetch('/api/participation', {
+      body:  formData,
+      method: 'POST',
+    }))
+      .json()
+    return result
+  } catch (error) {
+    console.log(error)
+  }
+}
 const Form = () => {
 
   const { register, handleSubmit, formState, setValue, reset } = useForm({ 
@@ -19,8 +43,8 @@ const Form = () => {
     defaultValues
   })
 
-  const onSubmit = (things:unknown) => {
-    console.log(things)
+  const onSubmit = async (participation:Participation) => {
+    const result = await upload(participation)
     reset(defaultValues)
   }
   
