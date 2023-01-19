@@ -1,7 +1,8 @@
 import React from 'react'
+import { Raleway } from '@next/font/google'
+
 import Footer from './Footer'
 import Navigation from './Navigation'
-import { Raleway } from '@next/font/google'
 
 const raleway = Raleway({ subsets: ['latin'] })
 

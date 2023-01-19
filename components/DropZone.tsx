@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Image from 'next/image'
-import FilePreview from './FilePreview'
+
 import styles from '../styles/DropZone.module.css'
+import FilePreview from './FilePreview'
 
 const DropZone = ({ data, dispatch }) => {
   // onDragEnter sets inDropZone to true
@@ -73,7 +74,7 @@ const DropZone = ({ data, dispatch }) => {
   // to handle file uploads
   const uploadFiles = async () => {
     // get the files from the fileList as an array
-    let files = data.fileList
+    const files = data.fileList
     // initialize formData object
     const formData = new FormData()
     // loop over files and add to formData

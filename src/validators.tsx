@@ -1,6 +1,5 @@
 
 import * as yup from 'yup'
-import type { ArraySchema, BaseSchema,  NumberSchema, ObjectSchema, StringSchema } from 'yup'
 
 const getTypeString = (type:string) => {
   switch(type) {

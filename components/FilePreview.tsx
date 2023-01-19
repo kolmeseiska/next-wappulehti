@@ -1,5 +1,4 @@
 import React from 'react'
-import styles from '../styles/FilePreview.module.css'
 
 type File = {
   lastModified: number,
@@ -8,7 +7,7 @@ type File = {
 
 type Props = {
   files: File[],
-  onRemove: React.MouseEventHandler<HTMLButtonElement>
+  onRemove(filename:string):void
 }
 
 const FilePreview = ({ files, onRemove }: Props) => {
@@ -23,7 +22,9 @@ const FilePreview = ({ files, onRemove }: Props) => {
               </div>
               <button 
                 className='btn btn-ghost focus:outline-primary-focus focus:border-primary hover:border-primary text-slate-200 btn-xs'
-                onClick={onRemove}
+                onClick={() => {
+                  onRemove(f.name)
+                }}
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'

@@ -1,5 +1,15 @@
 {
-  "extends": "next/core-web-vitals",
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "simple-import-sort",
+    "unused-imports"
+  ],
+  "root": true,
   "rules": {
     "quotes": [
       "error",
@@ -37,6 +47,28 @@
       "error",
       {
         "consistent": true
+      }
+    ],
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": [
+      2,
+      {
+        "groups": [
+          ["^react$", "^react", "^@?\\w"]
+        ]
+      }
+    ],
+    "sort-imports": 0, // import plugin needs this
+    "import/order": 0,
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
       }
     ],
     "react/jsx-newline": [

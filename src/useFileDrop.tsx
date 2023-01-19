@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react'
+import React, { ChangeEvent, useReducer } from 'react'
 
 enum FileDropActionKey {
   SET_IN_DROP_ZONE= 'SET_IN_DROP_ZONE',
@@ -18,7 +18,9 @@ type FileDropAction =
 const reducer = (state: FileDropState, action: FileDropAction) => {
   switch(action.type) {
     case FileDropActionKey.SET_IN_DROP_ZONE:
-      return { ...state, inDropZone: action.inDropZone }
+      return state.inDropZone === action.inDropZone
+        ? state
+        : { ...state, inDropZone: action.inDropZone }
     case FileDropActionKey.ADD_FILE_TO_LIST:
       if(action.files == null) {
         return state
@@ -62,12 +64,12 @@ const useFileDrop =() => {
     event.preventDefault()
     event.stopPropagation()
 
-    const target = event.target as HTMLInputElement
+    const target = event.dataTransfer
     if(!target.files) {
       return
     }
     let files =  Array.from(target.files)
-
+    
     if (files?.length) {
       const existingFiles = data.files.map(file => file.name)
       files = files.filter(file => !existingFiles.includes(file.name))
@@ -77,16 +79,15 @@ const useFileDrop =() => {
     }
   }
 
-  const handleFileSelect = (event: Event) => {
+  const handleSelectFile = (event: ChangeEvent) => {    
     const target = event.target as HTMLInputElement
     if(!target.files) {
       return
     }
     let files = Array.from(target.files)
     if (files?.length ) {
-      const existingFiles = data.files.map(file => file.name)
+      const existingFiles = data.files.map(file => file.name)      
       files = files.filter(file => !existingFiles.includes(file.name))
-
       dispatch({ type: FileDropActionKey.ADD_FILE_TO_LIST, files })
     }
   }
@@ -97,13 +98,13 @@ const useFileDrop =() => {
   return {
     data,
     dispatch,
-    inputProps: {  
-      handleDragEnter,
-      handleDragLeave,
-      handleDragOver,
-      handleDrop,
-      handleFileSelect,
-      handleRemoveFile
+    handleSelectFile,
+    handleRemoveFile,
+    fileDropProps: {  
+      onDragEnter: handleDragEnter,
+      onDragLeave: handleDragLeave,
+      onDragOver: handleDragOver,
+      onDrop: handleDrop
     }
   }
 }

@@ -1,10 +1,9 @@
-import Link from 'next/link'
 import React from 'react'
+import Link from 'next/link'
+
 import Logo from './Logo'
 
-type Props = {}
-
-const Navigation = (props: Props) => {
+const Navigation = () => {
   return (
     <nav className='flex sm:justify-center items-center space-x-4 bg-gray-900 text-bold'>
       <Link
