@@ -78,7 +78,6 @@
         "allowMultilines": false
       }
     ],
-    "react/jsx-child-element-spacing": "error",
     "react/jsx-first-prop-new-line": [
       "error",
       "multiline"

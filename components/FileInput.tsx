@@ -1,4 +1,6 @@
-import React from 'react'
+
+import { useEffect } from 'react'
+import { FieldValues, UseFormSetValue } from 'react-hook-form'
 
 import { supportedFileTypes } from '../src/participation'
 import useFileDrop from '../src/useFileDrop'
@@ -7,7 +9,11 @@ import SupportedFileTypeHint from './SupportedFileTypeHint'
 
 const acceptableMimes = supportedFileTypes.join(',')
 
-const FileInput = () => {
+type Props = {
+  setValue: UseFormSetValue<FieldValues>
+}
+
+const FileInput = ({ setValue }: Props) => {
   const {
     data,
     fileDropProps,
@@ -16,6 +22,10 @@ const FileInput = () => {
     handleSelectFile
   } = useFileDrop()
   
+  useEffect(() => {
+    setValue('files', data.files)
+  }, [setValue, data.files])
+
   return (
     <div className='form-control'>
       <label className='label'>
@@ -39,6 +49,7 @@ const FileInput = () => {
             accept={acceptableMimes}
             multiple
             onChange={handleSelectFile}
+            tabIndex={-1}
             style={{
               border: 0,
               clip: 'rect(0, 0, 0, 0)',
@@ -52,7 +63,7 @@ const FileInput = () => {
           />
           <span
             role='button'
-            className={`input input-primary flex text-slate-400 hover:text-slate-200 items-center justify-center gap-2 ${data.inDropZone ? 'border-dashed bg-primary-focus' : ''}`}
+            className={`input input-primary flex text-slate-400 hover:text-slate-200 items-center justify-center gap-2 ${data.inDropZone ? 'border-dashed bg-primary-' : ''}`}
             tabIndex={0}
           >
             Lataa

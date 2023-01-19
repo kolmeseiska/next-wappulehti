@@ -12,7 +12,7 @@ export default function Page() {
       <svg className='w-full h-full absolute'>
         <defs>
           <linearGradient id='logo-gradient' x1='50%' y1='0%' x2='50%' y2='100%'>
-            <stop offset='0%' stop-color='#B2A4FF'>
+            <stop offset='0%' stopColor='#B2A4FF'>
               <animate
                 attributeName='stop-color'
                 values='#B2A4FF;#FFB4B4;#B2A4FF;#f2b880;#FFDEB4;#DBF9F4;#B2A4FF'
@@ -20,7 +20,7 @@ export default function Page() {
                 repeatCount='indefinite'
               ></animate>
             </stop>
-            <stop offset='100%' stop-color='#A85751'>
+            <stop offset='100%' stopColor='#A85751'>
               <animate
                 attributeName='stop-color'
                 values='#A85751;#A85751;#B2A4FF;#DBF9F4;#f2b880;#FFB4B4;#FFDEB4;#A85751'
