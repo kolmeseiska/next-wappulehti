@@ -43,6 +43,7 @@ export const participationSchema = yup.object().shape({
     .nullable(),
   email: yup.string().label('Sähköposti').nullable(),
   guild: yup.string().label('Kilta').nullable(),
+  isFuksi: yup.boolean().label('Olen fuksi'),
 }, [['joke', 'files']])
 
 export type Participation = yup.InferType<typeof participationSchema>

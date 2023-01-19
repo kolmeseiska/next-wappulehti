@@ -10,7 +10,8 @@ const defaultValues = {
   joke: '',
   files: [],
   email: '',
-  guild: ''
+  guild: '',
+  isFuksi: false
 }
 
 const upload = async (participation:Participation) => {
@@ -24,6 +25,7 @@ const upload = async (participation:Participation) => {
   formData.append('joke', participation.joke || '')
   formData.append('email', participation.email || '')
   formData.append('guild', participation.guild || '')
+  formData.append('isFuksi', participation.isFuksi == null ? 'false' : participation.isFuksi.toString())
   
   try {
     const result = (await fetch('/api/participation', {
@@ -45,6 +47,7 @@ const Form = () => {
 
   const onSubmit = async (participation:Participation) => {
     const result = await upload(participation)
+    console.log({ result })
     reset(defaultValues)
   }
   
@@ -86,6 +89,17 @@ const Form = () => {
           type='text'
           className='input input-bordered input-primary'
         />
+      </div>
+      <div className='form-control'>
+        <label htmlFor='isFuksi' className='label cursor-pointer'>
+          <span className='label-text'>Olen fuksi</span> 
+          <input
+            id='isFuksi'
+            type='checkbox'
+            {...register('isFuksi')}
+            className='checkbox checkbox-primary'
+          />
+        </label>
       </div>
       <div className='form-control mt-6'>
         <button
