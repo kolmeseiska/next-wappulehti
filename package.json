@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@googleapis/drive": "^4.0.1",
     "@googleapis/sheets": "^4.0.1",
     "@hookform/resolvers": "^2.9.10",
     "@next/font": "13.1.1",
