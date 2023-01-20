@@ -41,8 +41,8 @@ export const participationSchema = yup.object().shape({
     })
     .label('Liitteet')
     .nullable(),
-  email: yup.string().label('Sähköposti').nullable(),
-  guild: yup.string().label('Kilta').nullable(),
+  email: yup.string().label('Sähköposti').nullable().max(320),
+  guild: yup.string().label('Kilta').nullable().max(320),
   isFuksi: yup.boolean().label('Olen fuksi'),
 }, [['joke', 'files']])
 

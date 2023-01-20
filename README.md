@@ -20,4 +20,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - Display form errors
 - Add pages
 - Update site theme
+- Restrict Google api usage
 - Implement rate limit for baddies e.g. https://kittygiraudel.com/2022/05/16/rate-limit-nextjs-api-routes/

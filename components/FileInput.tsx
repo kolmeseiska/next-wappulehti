@@ -11,10 +11,11 @@ const acceptableMimes = supportedFileTypes.join(',')
 
 type Props = {
   setValue: UseFormSetValue<FieldValues>,
-  isSubmitted: boolean
+  isSubmitted: boolean,
+  error?: { message: string}
 }
 
-const FileInput = ({ setValue, isSubmitted }: Props) => {
+const FileInput = ({ setValue, isSubmitted, error }: Props) => {
   const {
     data,
     fileDropProps,
@@ -69,7 +70,10 @@ const FileInput = ({ setValue, isSubmitted }: Props) => {
           />
           <span
             role='button'
-            className={`input input-primary flex text-slate-400 hover:text-slate-200 items-center justify-center gap-2 ${data.inDropZone ? 'border-dashed bg-primary-' : ''}`}
+            className={`input input-primary flex text-slate-400 hover:text-slate-200 items-center justify-center gap-2
+              ${data.inDropZone ? 'border-dashed bg-primary-' : ''}
+              ${error ? 'input-error' : ''}`
+            }
             tabIndex={0}
           >
             Lataa

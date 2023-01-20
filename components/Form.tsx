@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 
@@ -12,6 +12,25 @@ const defaultValues = {
   email: '',
   guild: '',
   isFuksi: false
+}
+
+type LabelProps = {
+  label:ReactNode,
+  errors:Record<string, { message: string}>,
+  name:string
+}
+
+const Label = ({ label, name, errors }:LabelProps) => {
+  const error = errors[name]?.message
+  return (
+    <label
+      htmlFor={name}
+      className={`label ${error ? 'tooltip tooltip-error tooltip-left tooltip-open' : ''}`}
+      data-tip={error}
+    >
+      <span className='label-text'>{label}</span>
+    </label> 
+  )
 }
 
 const upload = async (participation:Participation) => {
@@ -39,7 +58,6 @@ const upload = async (participation:Participation) => {
   }
 }
 const Form = () => {
-
   const { register, handleSubmit, formState, setValue, reset } = useForm({ 
     resolver: yupResolver(participationSchema),
     defaultValues
@@ -51,43 +69,54 @@ const Form = () => {
     reset(defaultValues)
   }
   
-  const { isSubmitting, isDirty, isSubmitted } = formState
-  //TODO: show errors
-  
+  const { isSubmitting, isDirty, isSubmitted, errors } = formState
   const isBusy = isSubmitting || !isDirty
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className='form-control'>
-        <label htmlFor='joke' className='label'>
-          <span className='label-text'>Kirjoita vitsi, juttu tai tarina</span>
-        </label> 
+        <Label
+          label='Kirjoita vitsi, juttu tai tarina'
+          errors={errors}
+          name='joke'
+        />
         <textarea
           id='joke'
           {...register('joke')}
-          className='textarea textarea-bordered h-24 textarea-primary'
+          className={`textarea textarea-bordered h-24 textarea-primary
+            ${errors.joke ? 'textarea-error' : ''}`}
         ></textarea>
       </div>
-      <FileInput setValue={setValue} isSubmitted={isSubmitted} />
+      <FileInput
+        setValue={setValue}
+        isSubmitted={isSubmitted}
+        error={errors.files}
+      />
       <div className='form-control'>
-        <label htmlFor='email' className='label'>
-          <span className='label-text'>Sähköposti</span>
-        </label>
+        <Label
+          label='Sähköposti'
+          errors={errors}
+          name='email'
+        />
         <input 
           id='email'
           {...register('email')}
           type='text'
-          className='input input-bordered input-primary'
+          className={`input input-bordered input-primary
+            ${errors.email ? 'input-error' : ''}`}
         />
       </div>
       <div className='form-control'>
-        <label htmlFor='guild' className='label'>
-          <span className='label-text'>Kilta</span>
-        </label>
+        <Label
+          label='Kilta'
+          errors={errors}
+          name='guild'
+        />
         <input 
           id='guild'
           {...register('guild')}
           type='text'
-          className='input input-bordered input-primary'
+          className={`input input-bordered input-primary
+            ${errors.guild ? 'input-error' : ''}`}
         />
       </div>
       <div className='form-control'>
