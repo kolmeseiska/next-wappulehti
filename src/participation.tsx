@@ -1,6 +1,6 @@
 import yup from './validators'
 
-const MAX_FILE_SIZE = 1024 * 5
+const MAX_FILE_SIZE_MB = 1000 * 1000 * 5
 
 export const supportedFileTypes = [
   'application/pdf',
@@ -28,7 +28,7 @@ export const participationSchema = yup.object().shape({
   files: yup.array(yup.mixed()
     .test('fileSize', 'Liite on liian iso', (value: File[]) => {
       const files = Array.isArray(value) ? value : [value]
-      return files.reduce((acc, file) => acc + file.size, 0) <= MAX_FILE_SIZE
+      return files.reduce((acc, file) => acc + file.size, 0) <= MAX_FILE_SIZE_MB
     })
     .test('type', 'Virheellinen tiedostotyyppi', (value:File[]) => {
       const files = Array.isArray(value) ? value : [value]

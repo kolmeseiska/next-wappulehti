@@ -10,21 +10,27 @@ import SupportedFileTypeHint from './SupportedFileTypeHint'
 const acceptableMimes = supportedFileTypes.join(',')
 
 type Props = {
-  setValue: UseFormSetValue<FieldValues>
+  setValue: UseFormSetValue<FieldValues>,
+  isSubmitted: boolean
 }
 
-const FileInput = ({ setValue }: Props) => {
+const FileInput = ({ setValue, isSubmitted }: Props) => {
   const {
     data,
     fileDropProps,
     fileInputRef,
-    handleRemoveFile,
-    handleSelectFile
+    actionsRef
   } = useFileDrop()
   
   useEffect(() => {
     setValue('files', data.files)
   }, [setValue, data.files])
+
+  useEffect(() => {
+    if(isSubmitted) {
+      actionsRef.current.handleClearFiles()
+    }
+  }, [actionsRef, isSubmitted])
 
   return (
     <div className='form-control'>
@@ -48,7 +54,7 @@ const FileInput = ({ setValue }: Props) => {
             id='files'
             accept={acceptableMimes}
             multiple
-            onChange={handleSelectFile}
+            onChange={actionsRef.current.handleSelectFile}
             tabIndex={-1}
             style={{
               border: 0,
@@ -75,8 +81,7 @@ const FileInput = ({ setValue }: Props) => {
       </div>
       <FilePreview
         onRemove={filename => {
-          console.log(filename)
-          handleRemoveFile(filename)
+          actionsRef.current.handleRemoveFile(filename)
         }}
         files={data.files}
       />

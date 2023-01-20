@@ -46,13 +46,13 @@ const Form = () => {
   })
 
   const onSubmit = async (participation:Participation) => {
-    const result = await upload(participation)
-    console.log({ result })
+    // TODO: show success notification
+    await upload(participation)
     reset(defaultValues)
   }
   
-  const { isSubmitting, isDirty, errors } = formState
-  console.log(errors)
+  const { isSubmitting, isDirty, isSubmitted } = formState
+  //TODO: show errors
   
   const isBusy = isSubmitting || !isDirty
   return (
@@ -67,7 +67,7 @@ const Form = () => {
           className='textarea textarea-bordered h-24 textarea-primary'
         ></textarea>
       </div>
-      <FileInput setValue={setValue} />
+      <FileInput setValue={setValue} isSubmitted={isSubmitted} />
       <div className='form-control'>
         <label htmlFor='email' className='label'>
           <span className='label-text'>Sähköposti</span>
