@@ -43,7 +43,6 @@ const Form = () => {
   const { register, handleSubmit, formState, setValue,  setError, reset } = useForm<Participation>({ 
     resolver: yupResolver(participationSchema),
     defaultValues
-    // defaultValues
   })
 
   const onSubmit:SubmitHandler<Participation> = async (participation) => {

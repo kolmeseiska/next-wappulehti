@@ -40,3 +40,5 @@ next-env.d.ts
 /stuff
 ## For multer
 /files
+# Local Netlify folder
+.netlify

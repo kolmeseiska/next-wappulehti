@@ -9,7 +9,7 @@ const credentials = {
   'type': 'service_account',
   'project_id': 'wappulehti-344418',
   'private_key_id': process.env.GA_PRIVATE_KEY_ID,
-  'private_key': process.env.GA_PRIVATE_KEY,
+  'private_key': process.env.GA_PRIVATE_KEY?.replace(/\\n/gm, '\n'),
   'client_email': 'wappulehti@wappulehti-344418.iam.gserviceaccount.com',
   'client_id': process.env.GA_CLIENT_ID,
   'auth_uri': 'https://accounts.google.com/o/oauth2/auth',
@@ -55,7 +55,6 @@ export const uploadFiles = async (files: Express.Multer.File[], config: GoogleCo
   const filenames:string[] = []
   for(const file of files) {
     const uploadedFile = await uploadFile(file)
-    console.log(uploadedFile)
     if(uploadedFile?.webViewLink) {
       filenames.push(uploadedFile.webViewLink)
     }
@@ -113,11 +112,9 @@ const appendSheetRow = async (jwt: auth.JWT, apiKey: string, spreadsheetId: stri
         values: [row]
       }
     })
-    console.log('Updated sheet: ' + result.data.updates?.updatedRange)
     return result.data.updates?.updatedRange || 'Nothing updated'
   } catch (error) {
     console.dir(error, { depth: null })
     throw error
   }
-
 }
