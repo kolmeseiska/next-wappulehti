@@ -15,14 +15,12 @@ const tapahtumat = () => {
   }
   
   return (
-    <div className='container mx-auto px-4 justify-center py-20'>
-      <div className='pb'>
-        <h1 className='text-6xl font-extrabold pb-10 text-center'>Tapahtumat</h1>
-        <div className='flex gap-4 items-start flex-wrap justify-center'>
-          {upcomingEvents.map(event => (
-            <Event key={event.name} event={event} />
-          ))}
-        </div>
+    <div className='container mx-auto px-4 justify-center py-16'>
+      <h1 className='text-6xl font-extrabold pb-10 text-center'>Tapahtumat</h1>
+      <div className='flex gap-4 items-start flex-wrap justify-center'>
+        {upcomingEvents.map(event => (
+          <Event key={event.name} event={event} />
+        ))}
       </div>
       <div className='py-10'>
         <h1 className='text-6xl font-extrabold pb-10 text-center'>Menneet tapahtumat</h1>

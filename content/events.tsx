@@ -41,7 +41,7 @@ const events: PonkeliEvent[] = [
     description: (
       <>
         <strong>
-          on turkulaisten teekkareiden wappulehti Pönkelin lanseeraama uusi Pönkelin sisältökilpailu,
+          on turkulaisten teekkareiden wappulehti Pönkelin lanseeraama uusi Pönkelin sisältökilpailu KÄYNNISSÄ NYT!
         </strong>
         <p>
           Lähetä omat luomuksesi ja tutustu ohjeisiin <Link className='link' href='/kisa'>Pölkyn Äärellä -sivuilta</Link>
@@ -52,7 +52,7 @@ const events: PonkeliEvent[] = [
   { 
     name: 'Pönkelin talvirieha ja jälkilöylyt 31.1.2023',
     date: '2023-01-31',
-    image: null,
+    image: '/talvirieha.jpeg',
     description: (
       <p>
         <strong>Mitä?</strong> Pönkelin Talvirieha ja talviriehan jälkilöylyt

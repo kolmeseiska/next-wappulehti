@@ -4,11 +4,13 @@ import Form from '../components/Form'
 
 const Kisa = () => {
   return (
-    <div className='py-20'>
+    <div className='py-16'>
+      <div className='prose prose-xl text-center mx-auto mb-10'>
+        <h1>Pölkyn Äärellä</h1>
+      </div>
       <div className='flex flex-col md:flex-row justify-center items-center mb-20'>
         <div className='max-w-md'>
           <article className='prose prose-xl prose-ponkeli pb-10 px-5 md:px-5 '>
-            <h1>Pölkyn Äärellä</h1>
             <h2 className='text-3xl'>Vitsi | Juttu | Grafiikka -kisa</h2>
             <p>
               Pönkelillä lyö päässä tyhjää, ja Pönkelöiset tarvitsevat apuasi puujalkojen pöytään pamauttamiseen.
@@ -62,7 +64,10 @@ const Kisa = () => {
           </h2>
           <ul>
             <li className='font-bold'>
-              Kilpailuaika on 23.1. - 28.2.2023.
+              Kilpailuaika on 23.1. - 28.2.2023. 
+            </li>
+            <li>
+              Osallistua voit yläpuolelta löytyvän lomakkeen kautta, ruokkimalla Agoran aulasta löytyvää PostiPönkeä tai saapumalla yhteisiin hupituokioihin Proffan Kellariin 8., 15., ja 22.2. kello 17-20. Hupituokiot järjestetään yläkerrassa sijaitsevassa kabinettitilassa.
             </li>
             <li>
               Älä ole tymä! Hylkäämme rasistiset sekä loukkaavat tekstit/kuvat suoraan!
