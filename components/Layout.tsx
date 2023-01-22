@@ -11,10 +11,10 @@ type Props = {
 }
 
 const Layout = ({ children }:Props) =>  (
-  <div className={`main-container ${raleway.className}`}>
+  <div className={`main-container bg-base-100 ${raleway.className}`}>
     <Navigation />
     <main>
-      <div className='hero min-h-screen bg-base-200'>
+      <div className='min-h-screen'>
         {children}
       </div>
     </main>

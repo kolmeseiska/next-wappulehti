@@ -27,7 +27,7 @@ const Footer = () => {
           <span className='sr-only'>Tiktok-sivu</span>
         </a>
       </div>
-      <div className='mt-4 text-center text-zinc-500'>
+      <div className='mt-4 text-center text-slate-600'>
         <span>
           ©
           {' '}
