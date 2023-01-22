@@ -7,7 +7,7 @@ const Kisa = () => {
     <div className='py-20'>
       <div className='flex flex-col md:flex-row justify-center items-center mb-20'>
         <div className='max-w-md'>
-          <article className='prose prose-xl pb-10 px-5 md:px-5 '>
+          <article className='prose prose-xl prose-ponkeli pb-10 px-5 md:px-5 '>
             <h1>Pölkyn Äärellä</h1>
             <h2 className='text-3xl'>Vitsi | Juttu | Grafiikka -kisa</h2>
             <p>

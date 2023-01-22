@@ -40,13 +40,18 @@ const defaultValues: Participation = {
 }
 
 const Form = () => {
-  const { register, handleSubmit, formState, setValue, reset } = useForm<Participation>({ 
+  const { register, handleSubmit, formState, setValue,  setError, reset } = useForm<Participation>({ 
     resolver: yupResolver(participationSchema),
     defaultValues
     // defaultValues
   })
 
   const onSubmit:SubmitHandler<Participation> = async (participation) => {
+    if(!participation.files.length && !participation.joke.length) {
+      setError('joke', { message:'Vitsi tai tiedosto vaaditaan' })
+      setError('files.0', { message: 'Vitsi tai tiedosto vaaditaan' })
+      return 
+    }
     // TODO: show success notification
     await upload(participation)
     reset(defaultValues)

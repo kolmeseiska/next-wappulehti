@@ -7,7 +7,7 @@ const Footer = () => {
       <div className='flex items-center justify-center space-x-2'>
         <a
           href='https://www.instagram.com/wappulehtiponkeli/'
-          className='social text-zinc-300 hover:text-zinc-50'
+          className='social text-zinc-300 hover:text-primary transition-colors'
           target='_blank'
           rel='noopener noreferrer'
         >
@@ -17,7 +17,7 @@ const Footer = () => {
         </a>
         <a
           href='https://www.tiktok.com/@wappulehtiponkeli'
-          className='social text-zinc-300 hover:text-zinc-50'
+          className='social text-zinc-300 hover:text-primary transition-colors'
           target='_blank'
           rel='noopener noreferrer'
         >

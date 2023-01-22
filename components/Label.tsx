@@ -12,7 +12,7 @@ const Label = ({ label, name, errors }:LabelProps) => {
   return (
     <label
       htmlFor={name}
-      className={`label ${error ? 'tooltip tooltip-error tooltip-left tooltip-open' : ''}`}
+      className={`label ${error ? 'tooltip tooltip-error tooltip-left tooltip-open flex' : ''}`}
       data-tip={error}
     >
       <span className='label-text'>{label}</span>
