@@ -14,6 +14,8 @@ type Error = {
   error: string
 }
 
+const storage = multer.memoryStorage()
+
 const runMiddleware = async (
   req: NextApiRequest,
   res: NextApiResponse,
@@ -34,7 +36,7 @@ export default async function handler(
   res: NextApiResponse<Success|Error>
 ) {
   if (req.method === 'POST') {
-    const multerUpload = multer({ dest: 'files/' })
+    const multerUpload = multer({ dest: 'files/', storage })
     await runMiddleware(req, res, multerUpload.array('files'))
     const files = req.files as Express.Multer.File[]
     
