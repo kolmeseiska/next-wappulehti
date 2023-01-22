@@ -1,37 +1,10 @@
-import React, { ReactNode } from 'react'
-import { useForm } from 'react-hook-form'
+import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 
 import { Participation, participationSchema } from '../src/participation'
 import FileInput from './FileInput'
+import Label from './Label'
 import LoadingIcon from './LoadingIcon'
-
-const defaultValues = {
-  joke: '',
-  files: [],
-  email: '',
-  guild: '',
-  isFuksi: false
-}
-
-type LabelProps = {
-  label:ReactNode,
-  errors:Record<string, { message: string}>,
-  name:string
-}
-
-const Label = ({ label, name, errors }:LabelProps) => {
-  const error = errors[name]?.message
-  return (
-    <label
-      htmlFor={name}
-      className={`label ${error ? 'tooltip tooltip-error tooltip-left tooltip-open' : ''}`}
-      data-tip={error}
-    >
-      <span className='label-text'>{label}</span>
-    </label> 
-  )
-}
 
 const upload = async (participation:Participation) => {
   const formData = new FormData()
@@ -57,16 +30,27 @@ const upload = async (participation:Participation) => {
     console.log(error)
   }
 }
+
+const defaultValues: Participation = {
+  joke: '',
+  files: [],
+  email: '',
+  guild: '',
+  isFuksi: false
+}
+
 const Form = () => {
-  const { register, handleSubmit, formState, setValue, reset } = useForm({ 
+  const { register, handleSubmit, formState, setValue, reset } = useForm<Participation>({ 
     resolver: yupResolver(participationSchema),
     defaultValues
+    // defaultValues
   })
 
-  const onSubmit = async (participation:Participation) => {
+  const onSubmit:SubmitHandler<Participation> = async (participation) => {
     // TODO: show success notification
     await upload(participation)
     reset(defaultValues)
+    
   }
   
   const { isSubmitting, isDirty, isSubmitted, errors } = formState
@@ -89,7 +73,7 @@ const Form = () => {
       <FileInput
         setValue={setValue}
         isSubmitted={isSubmitted}
-        error={errors.files}
+        errors={errors}
       />
       <div className='form-control'>
         <Label

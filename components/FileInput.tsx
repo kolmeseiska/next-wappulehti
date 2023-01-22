@@ -1,21 +1,22 @@
 
 import { useEffect } from 'react'
-import { FieldValues, UseFormSetValue } from 'react-hook-form'
+import { FieldErrors, UseFormSetValue } from 'react-hook-form'
 
-import { supportedFileTypes } from '../src/participation'
+import { Participation, supportedFileTypes } from '../src/participation'
 import useFileDrop from '../src/useFileDrop'
 import FilePreview from './FilePreview'
+import Label from './Label'
 import SupportedFileTypeHint from './SupportedFileTypeHint'
 
 const acceptableMimes = supportedFileTypes.join(',')
 
 type Props = {
-  setValue: UseFormSetValue<FieldValues>,
+  setValue: UseFormSetValue<Participation>,
   isSubmitted: boolean,
-  error?: { message: string}
+  errors: FieldErrors
 }
 
-const FileInput = ({ setValue, isSubmitted, error }: Props) => {
+const FileInput = ({ setValue, isSubmitted, errors }: Props) => {
   const {
     data,
     fileDropProps,
@@ -35,13 +36,17 @@ const FileInput = ({ setValue, isSubmitted, error }: Props) => {
 
   return (
     <div className='form-control'>
-      <label className='label'>
-        <span className='label-text flex items-center gap-1'>
-          Tiedosto/tiedostoja
-          {' '}
-          <SupportedFileTypeHint title={'Max 5 tiedostoa yhteensä 5MB.\n\nTuetut tiedostotyypit:\n'} types={supportedFileTypes} />
-        </span>
-      </label>
+      <Label
+        errors={errors}
+        name='files.0'
+        label={(
+          <span className='flex items-center gap-1'>
+            Tiedosto/tiedostoja
+            {' '}
+            <SupportedFileTypeHint title={'Max 5 tiedostoa yhteensä 5MB.\n\nTuetut tiedostotyypit:\n'} types={supportedFileTypes} />
+          </span>
+        )}
+      />
       <div 
         {...fileDropProps}
       >
@@ -72,7 +77,7 @@ const FileInput = ({ setValue, isSubmitted, error }: Props) => {
             role='button'
             className={`input input-primary flex text-slate-400 hover:text-slate-200 items-center justify-center gap-2
               ${data.inDropZone ? 'border-dashed bg-primary-' : ''}
-              ${error ? 'input-error' : ''}`
+              ${errors?.files ? 'input-error' : ''}`
             }
             tabIndex={0}
           >

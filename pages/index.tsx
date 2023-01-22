@@ -49,6 +49,9 @@ export default function Page() {
           <Link href='/kisa' role='button' className='btn btn-primary'>Osallistu Pölkyn Äärelle</Link>
         </div>
       </div>
+      <div className='container-lg'>
+        <p>Tänne lisäsisältöä, jossa kuva jne</p>
+      </div>
     </>
   )
 }
