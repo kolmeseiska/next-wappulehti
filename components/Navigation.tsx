@@ -34,7 +34,7 @@ const NavItems = ({ isCollapsed }:NavItemProps) => {
 
 const Navigation = () => {
   return (
-    <nav className='navbar'>
+    <nav className='navbar sticky top-0 z-10 backdrop-blur-md backdrop-saturate-20 bg-nav-alpha'>
       <div className='navbar-start' />
       <div className='navbar-center'>
         <Link

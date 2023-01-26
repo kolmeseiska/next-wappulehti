@@ -20,7 +20,7 @@ const ColorWall = ({ className }: Props) => {
           <stop offset='100%' stopColor='#A85751'>
             <animate
               attributeName='stop-color'
-              values='#A85751;#A85751;#B2A4FF;#DBF9F4;#f2b880;#FFB4B4;#FFDEB4;#A85751'
+              values='#A85751;#B2A4FF;#DBF9F4;#f2b880;#FFB4B4;#FFDEB4;#A85751'
               dur='10s'
               repeatCount='indefinite'
             ></animate>

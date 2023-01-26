@@ -2,6 +2,9 @@
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
 }
 
+.bg-nav-alpha {
+  background-color: hsla(var(--b1)/.5);
+}
 
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
