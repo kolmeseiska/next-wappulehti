@@ -6,16 +6,8 @@ import stream from 'stream'
 import { Participation } from './participation'
 
 const credentials = {
-  'type': 'service_account',
-  'project_id': 'wappulehti-344418',
-  'private_key_id': process.env.GA_PRIVATE_KEY_ID,
   'private_key': process.env.GA_PRIVATE_KEY?.replace(/\\n/gm, '\n'),
   'client_email': 'wappulehti@wappulehti-344418.iam.gserviceaccount.com',
-  'client_id': process.env.GA_CLIENT_ID,
-  'auth_uri': 'https://accounts.google.com/o/oauth2/auth',
-  'token_uri': 'https://oauth2.googleapis.com/token',
-  'auth_provider_x509_cert_url': 'https://www.googleapis.com/oauth2/v1/certs',
-  'client_x509_cert_url': 'https://www.googleapis.com/robot/v1/metadata/x509/wappulehti%40wappulehti-344418.iam.gserviceaccount.com'
 }
 
 export type GoogleConfigSheets = {
@@ -63,17 +55,26 @@ export const uploadFiles = async (files: Express.Multer.File[], config: GoogleCo
   return filenames
 }
 
-type SheetData = Omit<Participation, 'files'> & 
+type ParticipationSheetData = Omit<Participation, 'files'> & 
   { 
     filename:string
   }
 
-export const uploadToSheets = async (data:SheetData, config: GoogleConfigSheets):Promise<string> => {
+type ParticipationSheetArray = [
+  createdAt:Date,
+  joke:string,
+  email:string,
+  guild:string,
+  filename:string,
+  isFuksi:boolean
+]
+
+export const uploadToSheets = async (data:ParticipationSheetData, config: GoogleConfigSheets):Promise<string> => {
   const columns = parseToSheets(data)
   return await appendSheet(columns, config)
 }
 
-const parseToSheets = (data:SheetData):Array<any> => {
+const parseToSheets = (data:ParticipationSheetData):ParticipationSheetArray => {
   return [
     new Date(),
     data.joke,
@@ -84,10 +85,11 @@ const parseToSheets = (data:SheetData):Array<any> => {
   ]
 }
 
-const appendSheet = (columns:Array<undefined>, config: GoogleConfigSheets) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const appendSheet = <TSheet extends any[]>(row:TSheet, config: GoogleConfigSheets) => {
   const jwt = getJwt('spreadsheets')
   const range = 'A2' // First is header
-  return appendSheetRow(jwt, config.apiKey, config.spreadsheetId, range, columns)
+  return appendSheetRow(jwt, config.apiKey, config.spreadsheetId, range, row)
 }
 
 const getJwt = (googleService: 'spreadsheets'|'drive') => {
@@ -99,7 +101,8 @@ const getJwt = (googleService: 'spreadsheets'|'drive') => {
   )
 }
 
-const appendSheetRow = async (jwt: auth.JWT, apiKey: string, spreadsheetId: string, range: string, row:Array<undefined>) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const appendSheetRow = async <TSheet extends any[]  >(jwt: auth.JWT, apiKey: string, spreadsheetId: string, range: string, row:TSheet) => {
   const sheets = gSheets.sheets({ version: 'v4' })
   try {
     const result = await sheets.spreadsheets.values.append({
