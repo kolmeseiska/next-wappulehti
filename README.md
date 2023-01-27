@@ -17,8 +17,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## TODO: 
-- Display form errors
-- Add pages
-- Update site theme
-- Restrict Google api usage
+- Try to replace yup with zod
+- recaptcha v3
 - Implement rate limit for baddies e.g. https://kittygiraudel.com/2022/05/16/rate-limit-nextjs-api-routes/

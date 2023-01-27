@@ -11,8 +11,6 @@ import LoadingIcon from './LoadingIcon'
 const upload = async (participation:Participation) => {
   const formData = new FormData()
 
-  console.log(participation)
-
   if(participation.files) {
     Array.from(participation.files).forEach((file) => {
       formData.append('files', file)
