@@ -3,11 +3,15 @@ import { yupResolver } from '@hookform/resolvers/yup'
 
 import { Participation, participationSchema } from '../src/participation'
 import FileInput from './FileInput'
-import Label from './Label'
+import FormCheckbox from './FormCheckbox'
+import FormInput from './FormInput'
+import FormTextarea from './FormTextarea'
 import LoadingIcon from './LoadingIcon'
 
 const upload = async (participation:Participation) => {
   const formData = new FormData()
+
+  console.log(participation)
 
   if(participation.files) {
     Array.from(participation.files).forEach((file) => {
@@ -20,12 +24,11 @@ const upload = async (participation:Participation) => {
   formData.append('isFuksi', participation.isFuksi == null ? 'false' : participation.isFuksi.toString())
   
   try {
-    const result = (await fetch('/api/participation', {
+    const response = await fetch('/api/participation', {
       body:  formData,
-      method: 'POST',
-    }))
-      .json()
-    return result
+      method: 'POST'
+    })
+    return await response.json()
   } catch (error) {
     console.log(error)
   }
@@ -61,63 +64,35 @@ const Form = () => {
   const isBusy = isSubmitting || !isDirty
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className='form-control'>
-        <Label
-          label='Kirjoita vitsi, juttu tai tarina'
-          errors={errors}
-          name='joke'
-        />
-        <textarea
-          id='joke'
-          {...register('joke')}
-          className={`textarea textarea-bordered h-24 textarea-primary
-            ${errors.joke ? 'textarea-error' : ''}`}
-        ></textarea>
-      </div>
+      <FormTextarea<Participation>
+        name='joke'
+        label='Kirjoita vitsi, juttu tai tarina'
+        register={register}
+        errors={errors}
+      />
       <FileInput
         setValue={setValue}
         isSubmitted={isSubmitted}
         errors={errors}
       />
-      <div className='form-control'>
-        <Label
-          label='Sähköposti'
-          errors={errors}
-          name='email'
-        />
-        <input 
-          id='email'
-          {...register('email')}
-          type='text'
-          className={`input input-bordered input-primary
-            ${errors.email ? 'input-error' : ''}`}
-        />
-      </div>
-      <div className='form-control'>
-        <Label
-          label='Kilta'
-          errors={errors}
-          name='guild'
-        />
-        <input 
-          id='guild'
-          {...register('guild')}
-          type='text'
-          className={`input input-bordered input-primary
-            ${errors.guild ? 'input-error' : ''}`}
-        />
-      </div>
-      <div className='form-control'>
-        <label htmlFor='isFuksi' className='label cursor-pointer'>
-          <span className='label-text'>Olen fuksi</span> 
-          <input
-            id='isFuksi'
-            type='checkbox'
-            {...register('isFuksi')}
-            className='checkbox checkbox-primary'
-          />
-        </label>
-      </div>
+      <FormInput<Participation>
+        name='email'
+        label='Sähköposti'
+        register={register}
+        errors={errors}
+      />
+      <FormInput<Participation>
+        name='guild'
+        label='Kilta'
+        register={register}
+        errors={errors}
+      />
+      <FormCheckbox<Participation> 
+        name='isFuksi'
+        label='Olen fuksi'
+        register={register}
+        errors={errors}
+      />
       <div className='form-control mt-6'>
         <button
           type='submit'
