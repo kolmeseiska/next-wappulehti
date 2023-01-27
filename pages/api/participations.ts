@@ -3,16 +3,8 @@
 import multer from 'multer'
 import type { NextApiRequest, NextApiResponse, PageConfig } from 'next'
 
-import { GoogleConfigDrive, GoogleConfigSheets, uploadFiles, uploadToSheets } from '../../src/google'
+import { appendSheet, GoogleConfigDrive, GoogleConfigSheets, uploadFiles } from '../../src/google'
 import { Participation } from '../../src/participation'
-
-type Success = {
-  message: string
-}
-type Error = {
-  message: string,
-  error: string
-}
 
 const storage = multer.memoryStorage()
 
@@ -33,7 +25,7 @@ const runMiddleware = async (
 
 export default async function handler(
   req: NextApiRequest & Participation,
-  res: NextApiResponse<Success|Error>
+  res: NextApiResponse<ApiSuccess|ApiError>
 ) {
   if (req.method === 'POST') {
     const multerUpload = multer({ dest: 'files/', storage })
@@ -42,7 +34,7 @@ export default async function handler(
     
     let filenames = null 
     
-    if(!process.env.SPREADSHEET_ID || !process.env.API_KEY) {
+    if(!process.env.SPREADSHEET_ID_PARTICIPATION || !process.env.API_KEY) {
       return res.status(500)
         .json({
           message: 'Ongelmia palvelimella. Ota yhteyttä Pönkeleihin'
@@ -55,17 +47,24 @@ export default async function handler(
     } as GoogleConfigDrive
     const configSheets = {
       apiKey: process.env.API_KEY,
-      spreadsheetId: process.env.SPREADSHEET_ID
+      spreadsheetId: process.env.SPREADSHEET_ID_PARTICIPATION
     } as GoogleConfigSheets
 
     if(files?.length && !process.env.SKIP_FILE_UPLOAD) {
       filenames = await uploadFiles(files, configDrive)
     }
-    const sheet = await uploadToSheets({
-      ...req.body,
-      filename: filenames?.join('\n')
-    }, configSheets)
 
+    const data: Participation = req.body
+    const columns =[
+      new Date(),
+      data.joke,
+      data.email,
+      data.guild,
+      filenames?.join('\n'),
+      data.isFuksi,
+    ]
+
+    const sheet = await appendSheet(columns, configSheets)
     console.log('Updated sheet', sheet)
 
     res.status(200).json({

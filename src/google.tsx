@@ -3,8 +3,6 @@ import * as gSheets from '@googleapis/sheets'
 import * as auth from 'google-auth-library'
 import stream from 'stream'
 
-import { Participation } from './participation'
-
 const credentials = {
   'private_key': process.env.GA_PRIVATE_KEY?.replace(/\\n/gm, '\n'),
   'client_email': 'wappulehti@wappulehti-344418.iam.gserviceaccount.com',
@@ -55,38 +53,8 @@ export const uploadFiles = async (files: Express.Multer.File[], config: GoogleCo
   return filenames
 }
 
-type ParticipationSheetData = Omit<Participation, 'files'> & 
-  { 
-    filename:string
-  }
-
-type ParticipationSheetArray = [
-  createdAt:Date,
-  joke:string,
-  email:string,
-  guild:string,
-  filename:string,
-  isFuksi:boolean
-]
-
-export const uploadToSheets = async (data:ParticipationSheetData, config: GoogleConfigSheets):Promise<string> => {
-  const columns = parseToSheets(data)
-  return await appendSheet(columns, config)
-}
-
-const parseToSheets = (data:ParticipationSheetData):ParticipationSheetArray => {
-  return [
-    new Date(),
-    data.joke,
-    data.email,
-    data.guild,
-    data.filename,
-    data.isFuksi,
-  ]
-}
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const appendSheet = <TSheet extends any[]>(row:TSheet, config: GoogleConfigSheets) => {
+export const appendSheet = <TSheet extends any[]>(row:TSheet, config: GoogleConfigSheets) => {
   const jwt = getJwt('spreadsheets')
   const range = 'A2' // First is header
   return appendSheetRow(jwt, config.apiKey, config.spreadsheetId, range, row)

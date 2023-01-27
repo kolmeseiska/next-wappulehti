@@ -22,7 +22,7 @@ const upload = async (participation:Participation) => {
   formData.append('isFuksi', participation.isFuksi == null ? 'false' : participation.isFuksi.toString())
   
   try {
-    const response = await fetch('/api/participation', {
+    const response = await fetch('/api/participations', {
       body:  formData,
       method: 'POST'
     })

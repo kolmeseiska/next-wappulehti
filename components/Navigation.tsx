@@ -7,6 +7,14 @@ type NavItemProps = {
   isCollapsed?: boolean
 }
 
+type Route = [string, string]
+
+const routes:Route[] = [
+  ['Pölkyn Äärellä', '/kisa'],
+  ['Tapahtumat', '/tapahtumat'],
+  ['Historia', '/historia']
+]
+
 const NavItems = ({ isCollapsed }:NavItemProps) => {
   const menuClassName = isCollapsed
     ? 'menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 shadow-2xl'
@@ -14,11 +22,7 @@ const NavItems = ({ isCollapsed }:NavItemProps) => {
   
   return (
     <ul tabIndex={0} className={menuClassName}>
-      {[
-        ['Pölkyn Äärellä', '/kisa'],
-        ['Tapahtumat', '/tapahtumat'],
-        ['Historia', '/historia'],
-      ].map(([title, url]) => (
+      {routes.map(([title, url]) => (
         <Link
           key={url}
           href={url}
