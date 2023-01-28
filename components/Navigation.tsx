@@ -12,7 +12,8 @@ type Route = [string, string]
 const routes:Route[] = [
   ['Pölkyn Äärellä', '/kisa'],
   ['Tapahtumat', '/tapahtumat'],
-  ['Historia', '/historia']
+  ['Historia', '/historia'],
+  // ['Myyjäksi!', '/myyjarekry'],
 ]
 
 const NavItems = ({ isCollapsed }:NavItemProps) => {
