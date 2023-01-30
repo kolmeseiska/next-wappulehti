@@ -4,7 +4,6 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { Seller, sellerSchema } from '../src/seller'
 import FormCheckbox from './FormCheckbox'
 import FormInput from './FormInput'
-import FormTextarea from './FormTextarea'
 import LoadingIcon from './LoadingIcon'
 
 const upload = async (seller:Seller) => {
@@ -25,8 +24,8 @@ const upload = async (seller:Seller) => {
 const defaultValues: Seller = {
   name: '',
   email: '',
-  description: '',
-  isExperience: false
+  isExperience: false,
+  isFuksi: false
 }
 
 const SellerForm = () => {
@@ -56,16 +55,15 @@ const SellerForm = () => {
         register={register}
         errors={errors}
       />
-      <FormTextarea<Seller>
-        name='description'
-        label='Kerro vähän itsestäsi?'
-        register={register}
-        errors={errors}
-        placeholder='Aikaisempi myyjäkokemus etc.'
-      />
       <FormCheckbox<Seller> 
         name='isExperience'
         label='Minulla on aikaisempaa wappulehtikokemusta'
+        register={register}
+        errors={errors}
+      />
+      <FormCheckbox<Seller> 
+        name='isFuksi'
+        label='Olen fuksi'
         register={register}
         errors={errors}
       />

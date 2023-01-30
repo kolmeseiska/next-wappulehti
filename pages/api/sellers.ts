@@ -25,8 +25,8 @@ export default async function handler(
       new Date(),
       data.email,
       data.email,
-      data.description,
-      data.isExperience
+      data.isExperience,
+      data.isFuksi,
     ]
 
     const sheet = await appendSheet(columns, configSheets)
