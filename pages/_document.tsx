@@ -10,7 +10,7 @@ export default function Document() {
         <meta property='og:type' content='website' />
         <meta property='og:description' content='Pönkeli - Turun yliopiston teekkareiden Wappulehti' />
         <meta property='og:url' content='https://pönkeli.fi/' />
-        <meta property='og:image' content='https://pönkeli.fi/images/wappulehti-og.jpg' />
+        <meta property='og:image' content='https://pönkeli.fi/wappulehti-og.jpg' />
         <meta property='og:image:width' content='1200' />
         <meta property='og:image:height' content='630' />
         <meta name='twitter:card' content='summary_large_image' />
@@ -18,7 +18,7 @@ export default function Document() {
         <meta property='twitter:url' content='https://pönkeli.fi/' />
         <meta name='twitter:title' content='Pönkeli' />
         <meta name='twitter:description' content='Pönkeli - Turun yliopiston teekkareiden Wappulehti' />
-        <meta name='twitter:image' content='https://pönkeli.fi/images/wappulehti-og.jpg' />
+        <meta name='twitter:image' content='https://pönkeli.fi/wappulehti-og.jpg' />
       </Head>
       <body>
         <Main />
