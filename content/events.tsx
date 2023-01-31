@@ -64,11 +64,15 @@ const events: PonkeliEvent[] = [
         <strong>Miksi?</strong> Ilmasta pullaa, mehua, musaa, kavereita, lumisotaa ja pulkkailua! Luvassa palkinnot parhaimmille pulkka trick shottien suorittajille.
         <br />
         <strong>MYYJÄKSI?</strong>  TAPAHTUMASSA VOIT ILMOITTAUTUA PÖNKELIN 2023 MYYJÄKSI JA LUNASTAA SAMALLA PAIKAN PÖNKELIJULKKAREIDEN VIP-ALUEELTA WAPUNALOITUKSESSA!
+        <br />
+        <Link href='/myyjarekry' className='link'> 
+          Myyjäksi voit myös ilmoittautua täältä.
+        </Link>
       </p>
     )
   },
   {
-    name: 'Wappulehden julkkarit ja Wapunaloitusbileet',
+    name: 'Pönkelijulkkarit ja Wapunaloitusbileet',
     date: '2023-04',
     image: '/ponkelijulkkari-1.jpg',
     description: (

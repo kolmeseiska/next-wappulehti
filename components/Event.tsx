@@ -9,7 +9,7 @@ type Props = {
 
 const Event = ({ event }: Props) => {
   return (
-    <div className='card w-96 bg-blue-900 text-primary-content text-lg leading-8'>
+    <div className='card w-96 bg-cyan-700 text-primary-content text-lg leading-8'>
       <figure className='h-44'>
         <Image
           src={event.image || '/ponkelitausta.png'}
