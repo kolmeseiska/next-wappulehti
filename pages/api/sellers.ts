@@ -23,7 +23,7 @@ export default async function handler(
     const data: Seller = req.body
     const columns =[
       new Date(),
-      data.email,
+      data.name,
       data.email,
       data.isExperience,
       data.isFuksi,
