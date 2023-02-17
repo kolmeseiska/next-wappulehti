@@ -14,9 +14,7 @@ const Layout = ({ children }:Props) =>  (
   <div className={`main-container bg-base-100 ${raleway.className}`}>
     <Navigation />
     <main>
-      <div className='min-h-screen'>
-        {children}
-      </div>
+      {children}
     </main>
     <Footer />
   </div>

@@ -10,9 +10,9 @@ export default function Page() {
       <Head>
         <title>Wappulehti Pönkeli</title>
       </Head>
-      <div className='hero min-h-screen relative'>
+      <div className='hero relative h-full'>
         <ColorWall />
-        <div className='hero-content text-center text-slate-100'>
+        <div className='hero-content text-center text-slate-100 py-32'>
           <div className='max-w-md'>
             <h2 className='text-xl font-bold'>Turun Yliopiston<br />teekkareiden Wappulehti</h2>
             <h1 className='text-8xl font-bold uppercase mb-8 fill-slate-50'>
