@@ -35,14 +35,14 @@ const tapahtumat = () => {
         : null}
       <div className='flex gap-4 items-start flex-wrap justify-center'>
         {upcomingEvents.map(event => (
-          <Event key={event.name} event={event} />
+          <Event key={event.name} event={event} width='max-w-[500px]' />
         ))}
       </div>
       <div className='py-10'>
         <h1 className='text-6xl font-extrabold pb-10 text-center'>Menneet tapahtumat</h1>
         <div className='flex gap-4 items-start flex-wrap justify-center'>
           {pastEvents.map(event => (
-            <Event key={event.name} event={event} />
+            <Event key={event.name} event={event} isPast />
           ))}
         </div>
       </div>

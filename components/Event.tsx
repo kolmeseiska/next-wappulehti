@@ -4,12 +4,14 @@ import Image from 'next/image'
 import { PonkeliEvent } from '../content/events'
 
 type Props = {
-  event: PonkeliEvent
+  event: PonkeliEvent,
+  isPast?: boolean,
+  width?: string
 }
 
-const Event = ({ event }: Props) => {
+const Event = ({ event, isPast, width = 'w-96' }: Props) => {
   return (
-    <div className='card w-96 bg-cyan-700 text-primary-content text-lg leading-8'>
+    <div className={`card ${width} ${isPast ? 'bg-gray-600' : 'bg-cyan-700'} text-primary-content text-lg leading-8`}>
       <figure className='h-44'>
         <Image
           src={event.image || '/ponkelitausta.png'}
@@ -19,7 +21,7 @@ const Event = ({ event }: Props) => {
           className='object-cover'
         />
       </figure>
-      <div className='card-body text-slate-200'>
+      <div className={`card-body ${isPast ? 'text-gray-400' : 'text-slate-200'}`}>
         <h2 className='card-title'>{event.name}</h2>
         {event.description}
       </div>
