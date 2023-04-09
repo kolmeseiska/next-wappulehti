@@ -18,11 +18,18 @@ export default function Page() {
             <h1 className='text-8xl font-bold uppercase mb-8 fill-slate-50'>
               <Logo className='h-48 max-w-full' />
             </h1>
+            <h3 className='text-4xl font-bold mb-8'>
+              Pönkeli 2023
+              <br />
+              julkistustilaisuus 12.4.
+            </h3>
             <Link 
-              href='/kisa'
+              href='/tapahtumat'
               role='button'
               className='btn btn-primary'
-            >Osallistu Pölkyn Äärelle</Link>
+            >
+              Lisätietoja tapahtumasta
+            </Link>
           </div>
         </div>
       </div>
