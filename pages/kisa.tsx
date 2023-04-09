@@ -7,7 +7,14 @@ const Kisa = () => {
   return (
     <CardFormPage
       header={(
-        <h1>Pölkyn Äärellä</h1>
+        <>
+          <h1>Pölkyn Äärellä</h1>
+          <p className='max-w-md mx-auto'>
+            <b className='text-primary brightness-110'>Vuoden 2023 kilpailu on päättynyt!</b>
+            <br />
+            Voit kuitenkin lähettää vitsejäsi edelleen ja niitä saatetaan hyödyntää ensi vuoden Pönkelissä.
+          </p>
+        </>
       )}
       side={(
         <>
