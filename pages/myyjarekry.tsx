@@ -13,10 +13,10 @@ const myyjarekry = () => {
           <>
             <h2 className='text-3xl'>Nyt tulee Pönkeliä!</h2>
             <p>
-              Pönkeli kaipaa jälleen reippaita ja ansiokkaita opiskelijoita myymään vuoden 2023 hupaisinta tuotetta eli Turun Yliopiston teekkareiden wappulehteä <b className='text-primary brightness-110'>Pönkeliä.</b>
+              Pönkeli kaipaa jälleen reippaita ja ansiokkaita opiskelijoita myymään vuoden 2023 hupaisinta tuotetta eli Turun Yliopiston teekkareiden wappulehti <b className='text-primary brightness-110'>Pönkeliä.</b>
             </p>
             <p>
-              Pönkelin myyjänä pääset nauttimaan vain myyjille suoduista eduista ja palkinnoista. Myyjäksi ilmoittautuminen ei sido sinua mihinkään ja myynti perustuu vapaaehtoisuuteen.
+              Pönkelin myyjänä pääset nauttimaan vain myyjille suoduista eduista ja palkinnoista. Myyjäksi ilmoittautuminen ei sido sinua mihinkään ja myynti perustuu vapaaehtoisuuteen. 
             </p>
           </>
         )}
@@ -29,13 +29,14 @@ const myyjarekry = () => {
               Kiinnostuitko? Lue lisää
             </h2>
             <p>
-              Wappulehtien myynti on hauskaa puuhaa, ja niiden myyntiä ei tarvitse stressata tai pelätä joutuvansa myymään niitä yksin, sillä pönkelöiset myyvät lehtiä kanssasi wappuna! Tänä vuonna wappulehtiä ei myöskään tarvitse lunastaa etukäteen, ja kaikki myymättömät myyntikunnossa olevat wappulehdet saa palauttaa takaisin pönkelöisille. Myyt siis vain sen verran kuin haluat ja jaksat!
+              Wappulehtien myynti on hauskaa puuhaa, ja niiden myyntiä ei tarvitse stressata tai pelätä joutuvansa myymään niitä yksin, sillä pönkelöiset myyvät lehtiä kanssasi wappuna! Tänä vuonna wappulehtiä ei myöskään tarvitse lunastaa etukäteen, ja kaikki myymättömät myyntikunnossa olevat wappulehdet saa palauttaa takaisin pönkelöisille. 
             </p>
             <p>
               Myyt siis vain sen verran kuin haluat ja jaksat!
             </p>
             <p>
               Pönkeli hemmottelee myyjiänsä palkitsemalla eri myyntitasolle päässeet myyjänsä:
+
             </p>
             <ol>
               <li><b className='text-primary brightness-110'>Taimi</b> - mainion myyjän siemen, 3 myytyä lehteä</li>
@@ -46,17 +47,21 @@ const myyjarekry = () => {
             <p>
               Seuraava myyntitaso pitää sisällään aina myös edellisen tason palkinnot. Tämän lisäksi palkitaan koko Pönkelin tehokkain eli paras myyjä ruhtinaallisesti! Killoille ja ainejärjestöille jaetaan lisäksi kunniamainintoja ansioituneesta myynnistä.
             </p>
+            <p className='font-bold'>Palkinnot myyjätasojen mukaan:</p>
+            <ol>
+              <li>Haalarimerkki</li>
+              <li>Haalarimerkin lisäosa 1, Pönkelilasit</li>
+              <li>Haalarimerkin lisäosa 2, Pönkelipullo</li>
+              <li>Haalarimerkin lisäosa 3, Pönkelipowerbank</li>
+            </ol>
             <p>
-              <strong>Kaikkia Pönkelin myyjiä myös hemmotellaan wapun jälkeen</strong> erillisillä virkkareilla, joihin pääsevät vain Pönkelin myyjät. 
+              Lisäksi kaikille myyjille on oma <b>MYYJÄAAMIAINEN 26.4. klo 9-11 TEK Loungessa</b> ennen Grilliä & Kyykkää. Luvassa on ihana rentouttava aamiainen hyvässä seurassa! Wapun jälkeen järjestetään myös myyjille oma virkistäytymistapahtuma, josta tiedotetaan myyjille erikseen.
             </p>
             <p>
-              Lisätietoja kaikista palkinnoista tulossa pian.
-            </p>
-            <p>
-              <b className='text-primary brightness-110'>HOXHOX!</b> Teekkarifukseille luvassa fuksipisteitä wappulehden myymisestä! Pönkelipisteen saat Pönkelitoimikunnan jäseneltä, eli et omalta tuutoriltasi. Pisteen saat hyvissä ajoin. 
+              <b className='text-primary brightness-110'>HOXHOX!</b>  Teekkarifukseille luvassa fuksipisteitä wappulehden myymisestä! Pönkelipisteen saat Pönkelitoimikunnan jäseneltä, eli et omalta tuutoriltasi. Pisteen saat hyvissä ajoin.
             </p>
             <i>
-              Miten myynti käytännössä toimii? <b>Siitä kuulet lisää</b> joko myyjäinfossa 23.3. klo 16-17 (Naturan sali XIV) tai myyjäkoulutuksessa 5.4. klo 16-17 (Agoran salissa XXI)
+              Miten myynti käytännössä toimii? <b>Siitä kuulet lisää</b> myyjäkoulutuksessa 10.4. klo 17. Koulutukseen on mahdollista osallistua myös etänä, jonka Zoom-linkki lähetetään ilmoittautuneille.
             </i>
             <p>
             </p>
@@ -64,7 +69,6 @@ const myyjarekry = () => {
           </>
         )}
       />
-
     </div>
     
   )
