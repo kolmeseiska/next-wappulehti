@@ -2,7 +2,7 @@ import { Head, Html, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
-    <Html lang='fi' data-theme='dark'>
+    <Html lang='fi' data-theme='dark' className='scroll-smooth'>
       <Head>
         <meta name='description' content='Pönkeli - Turun yliopiston teekkareiden Wappulehti' />
         <link rel='icon' type='image/png' href='favicon.png' />
