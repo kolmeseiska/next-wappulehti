@@ -22,7 +22,7 @@ const Event = ({ event, isPast, width = 'w-96' }: Props) => {
         />
       </figure>
       <div className={`card-body ${isPast ? 'text-gray-400' : 'text-slate-200'}`}>
-        <h2 className='card-title'>{event.name}</h2>
+        <h2 className='card-title font-bold text-2xl'>{event.name}</h2>
         {event.description}
       </div>
     </div>

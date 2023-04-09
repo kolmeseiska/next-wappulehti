@@ -97,7 +97,7 @@ const events: PonkeliEvent[] = [
   {
     name: 'Pönkelireivit',
     date: '2023-04-15',
-    image: '/ponkelireivit.jpg',
+    image: '/ponkelireivit.png',
     description: (
       <>
         <b>lauantaina 15.4. salaisessa reivilokaatiossa</b>
