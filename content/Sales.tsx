@@ -11,7 +11,7 @@ type SaleProps = {
 }
 
 const SaleTime = ({ saleEvent }: SaleProps) => {
-  const currentISODate = '2023-04-23' // new Date().toISOString().slice(0, 10)
+  const currentISODate = new Date().toISOString().slice(0, 10)
   const isToday = currentISODate === saleEvent.date
   const isPast = saleEvent.date < currentISODate
   // Add strikethrough if event is past
