@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import ReleaseInfo from '../content/ReleaseInfo'
+import OffseasonHero from '../content/OffseasonHero'
 
 export default function Page() {
   return (
@@ -8,8 +8,8 @@ export default function Page() {
       <Head>
         <title>Wappulehti Pönkeli</title>
       </Head>
-      <ReleaseInfo />
-      {/* <OffseasonHero /> */}
+      {/* <ReleaseInfo /> */}
+      <OffseasonHero />
     </>
   )
 }

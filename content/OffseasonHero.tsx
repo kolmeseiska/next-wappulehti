@@ -15,16 +15,27 @@ const OffseasonHero = () => {
             <Logo className='h-48 max-w-full' />
           </h1>
           <h3 className='text-4xl font-bold mb-8'>
-            Pönkeli 2023
+            Pönkeli 2024
             <br />
-            julkistustilaisuus 12.4.
+            on tulossa!
           </h3>
-          <Link 
-            href='/tapahtumat'
+          <Link
+            href='https://forms.gle/TYMwUFqTT3GvBszAA'
             role='button'
             className='btn btn-primary'
+            target='_blank'
+            rel='noopener noreferrer'
           >
-            Lisätietoja tapahtumasta
+            Hae toimikuntaan 6.9. mennessä
+          </Link>
+          <Link
+            href='https://forms.gle/gL9HVsmReAeWwujK8'
+            role='button'
+            className='btn btn-primary mt-5 btn-outline'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Anna palautetta Pönkelistä 2023
           </Link>
         </div>
       </div>

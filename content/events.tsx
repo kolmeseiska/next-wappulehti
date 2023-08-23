@@ -21,8 +21,8 @@ const events: PonkeliEvent[] = [
         </p>
         <p className='pb-5'>
           Tapahtuman upeita joukkueita sekä lajeja voi fiilistellä Turun yliopiston teekkareiden kuvagalleriassa
-          {' '} 
-          <a 
+          {' '}
+          <a
             className='link'
             href='https://tyteekkarit.kuvat.fi/kuvat/P%C3%B6nkeli+-Turkulainen+wappulehti/P%C3%B6nkeli+Games+2022/'
             target='_blank'
@@ -49,7 +49,7 @@ const events: PonkeliEvent[] = [
       </>
     )
   },
-  { 
+  {
     name: 'Pönkelin talvirieha ja jälkilöylyt 31.1.2023',
     date: '2023-01-31',
     image: '/talvirieha.jpeg',
@@ -65,7 +65,7 @@ const events: PonkeliEvent[] = [
         <br />
         <strong>MYYJÄKSI?</strong>  TAPAHTUMASSA VOIT ILMOITTAUTUA PÖNKELIN 2023 MYYJÄKSI JA LUNASTAA SAMALLA PAIKAN PÖNKELIJULKKAREIDEN VIP-ALUEELTA WAPUNALOITUKSESSA!
         <br />
-        <Link href='/myyjarekry' className='link'> 
+        <Link href='/myyja' className='link'>
           Myyjäksi voit myös ilmoittautua täältä.
         </Link>
       </p>
@@ -105,7 +105,7 @@ const events: PonkeliEvent[] = [
           “Reivaa kanssamme”, sanoi Pönkeli-setä innoissaan, ja niin syntyi idea nuoremmille Pönkeleille. Turun teekkariwappu on jo kauan kaivannut itselleen rehellisiä reivejä! Nimensä mukaisesti tarjolla on elektronista tanssimusiikkia eksoottisessa kohteessa. Astu siis Pönkelibussin kyytiin, ja lähde elämäsi reiviseikkailuun. Iltaan sisältyy joukko erityisiä esiintyjiä, pönkelimäistä menoa sekä maukasta ravintoa.
         </p>
         <p>
-          <a 
+          <a
             href='https://link.webropol.com/s/ponkelireivit-ilmoittautuminen'
             target='_blank'
             className='hover:text-primary transition-colors'
@@ -125,7 +125,7 @@ const events: PonkeliEvent[] = [
           <li><b>What to bring?</b> water bottle, good dancing shoes, BYOB</li>
         </ul>
         <p>
-          <a 
+          <a
             href='https://link.webropol.com/s/ponkelireivit-ilmoittautuminen'
             target='_blank'
             className='hover:text-primary transition-colors'

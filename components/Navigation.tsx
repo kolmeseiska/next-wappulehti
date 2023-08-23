@@ -13,14 +13,14 @@ const routes:Route[] = [
   ['Pölkyn Äärellä', '/kisa'],
   ['Tapahtumat', '/tapahtumat'],
   ['Historia', '/historia'],
-  ['Myyjäksi!', '/myyjarekry', 'text-zinc-50 bg-primary hover:text-primary hover:bg-zinc-50'],
+  ['Myyjäksi!', '/myyja', 'text-zinc-50 bg-primary hover:text-primary hover:bg-zinc-50'],
 ]
 
 const NavItems = ({ isCollapsed }:NavItemProps) => {
   const menuClassName = isCollapsed
     ? 'menu menu-compact text-zinc-50 dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 shadow-2xl'
     : 'menu menu-horizontal text-zinc-50 px-1'
-  
+
   return (
     <ul tabIndex={0} className={menuClassName}>
       {routes.map(([title, url, className = 'hover:bg-zinc-100 hover:text-zinc-900']) => (

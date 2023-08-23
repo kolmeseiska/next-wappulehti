@@ -3,9 +3,14 @@ const nextConfig = {
   reactStrictMode: true,
   async redirects() {
     return [
+      // {
+      //   source: '/myyja',
+      //   destination: '/myyjarekry',
+      //   permanent: true,
+      // },
       {
-        source: '/myyjaksi',
-        destination: '/myyjarekry',
+        source: '/myyja',
+        destination: '/myyjainfo',
         permanent: true,
       },
     ]}
