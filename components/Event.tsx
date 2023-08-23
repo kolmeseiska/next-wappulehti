@@ -21,7 +21,7 @@ const Event = ({ event, isPast, width = 'w-96' }: Props) => {
           className='object-cover'
         />
       </figure>
-      <div className={`card-body ${isPast ? 'text-gray-400' : 'text-slate-200'}`}>
+      <div className={`card-body ${isPast ? 'text-gray-300' : 'text-slate-200'}`}>
         <h2 className='card-title font-bold text-2xl'>{event.name}</h2>
         {event.description}
       </div>

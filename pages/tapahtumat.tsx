@@ -9,10 +9,10 @@ const tapahtumat = () => {
 
   const currentISODate = new Date().toISOString().slice(0, 10)
 
-  for(const event of events) {
-    if(event.date && event.date < currentISODate) {
+  for (const event of events) {
+    if (event.date && event.date < currentISODate) {
       pastEvents.push(event)
-    } else if(event.date && event.date > currentISODate) {
+    } else if (event.date && event.date > currentISODate) {
       upcomingEvents.push(event)
     } else {
       currentEvent.push(event)
@@ -21,7 +21,7 @@ const tapahtumat = () => {
   return (
     <div className='container mx-auto px-4 justify-center py-16'>
       <h1 className='text-6xl font-extrabold pb-10 text-center'>Tapahtumat</h1>
-      {currentEvent.length 
+      {currentEvent.length
         ? (
           <>
             <h1 className='text-2xl font-extrabold pb-10 text-center'>Tänään!</h1>
@@ -32,7 +32,11 @@ const tapahtumat = () => {
             </div>
           </>
         )
-        : null}
+        : (
+          <p className='text-center text-gray-500'>
+            Psst.. Ota Pönkelin somet seurantaan sivun alalaidasta, niin saat tuoreimmat tiedot tapahtumista ja uutisista!
+          </p>
+        )}
       <div className='flex gap-4 items-start flex-wrap justify-center'>
         {upcomingEvents.map(event => (
           <Event key={event.name} event={event} width='max-w-[500px]' />
@@ -41,7 +45,7 @@ const tapahtumat = () => {
       <div className='py-10'>
         <h1 className='text-6xl font-extrabold pb-10 text-center'>Menneet tapahtumat</h1>
         <div className='flex gap-4 items-start flex-wrap justify-center'>
-          {pastEvents.map(event => (
+          {pastEvents.reverse().map(event => (
             <Event key={event.name} event={event} isPast />
           ))}
         </div>
