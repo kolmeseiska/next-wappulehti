@@ -13,7 +13,7 @@ const routes:Route[] = [
   ['Pölkyn Äärellä', '/kisa'],
   ['Tapahtumat', '/tapahtumat'],
   ['Historia', '/historia'],
-  ['Myyjäksi!', '/myyja', 'text-zinc-50 bg-primary hover:text-primary hover:bg-zinc-50'],
+  ['Myyjät', '/myyjainfo'],
 ]
 
 const NavItems = ({ isCollapsed }:NavItemProps) => {

@@ -65,7 +65,7 @@ const events: PonkeliEvent[] = [
         <br />
         <strong>MYYJÄKSI?</strong>  TAPAHTUMASSA VOIT ILMOITTAUTUA PÖNKELIN 2023 MYYJÄKSI JA LUNASTAA SAMALLA PAIKAN PÖNKELIJULKKAREIDEN VIP-ALUEELTA WAPUNALOITUKSESSA!
         <br />
-        <Link href='/myyja' className='link'>
+        <Link href='/myyjainfo' className='link'>
           Myyjäksi voit myös ilmoittautua täältä.
         </Link>
       </p>
