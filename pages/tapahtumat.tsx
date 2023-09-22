@@ -32,11 +32,13 @@ const tapahtumat = () => {
             </div>
           </>
         )
-        : (
-          <p className='text-center text-gray-500'>
-            Psst.. Ota Pönkelin somet seurantaan sivun alalaidasta, niin saat tuoreimmat tiedot tapahtumista ja uutisista!
-          </p>
-        )}
+        : upcomingEvents.length
+          ? null
+          : (
+            <p className='text-center text-gray-500 mb-4'>
+              Psst.. Ota Pönkelin somet seurantaan sivun alalaidasta, niin saat tuoreimmat tiedot tapahtumista ja uutisista!
+            </p>
+          )}
       <div className='flex gap-4 items-start flex-wrap justify-center'>
         {upcomingEvents.map(event => (
           <Event key={event.name} event={event} width='max-w-[500px]' />

@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import Link from 'next/link'
 
-export type PonkeliEvent ={
+export type PonkeliEvent = {
   name: string,
   date: string | null,
   description: ReactNode,
@@ -156,12 +156,50 @@ const events: PonkeliEvent[] = [
         </ul>
         <b>[TL;DR ENG]</b>
         <ul>
-          <li><b>What?</b> Pönkeli’s Wappurecess</li>
+          <li><b>What?</b> Pönkeli&aposs Wappurecess</li>
           <li><b>Where?</b> Kuuvuori field</li>
           <li><b>When?</b> 24th of April at noon till 6 PM</li>
           <li><b>Why?</b> Because all of us want those carefree childhood recesses back.</li>
           <li><b>Price?</b> Free</li>
           <li><b>Dresscode?</b> Overalls/Sport clothes</li>
+        </ul>
+      </>
+    )
+  },
+  {
+    name: 'PöNGi - Pönkeli Games 2023',
+    date: '2023-10-10',
+    image: '/ponkeli-games22.jpg',
+    description: (
+      <>
+        <p>Pönkeli Games tulee jälleen, ja järjestetään <b>10.10.23 klo 17-20 Kupittaan urheiluhallissa!</b> PöNGissä neljän hengen opiskelijajoukkueet kisailevat leikkimielisissä urheilulajeissa, jotka vaativat kekseliäisyyttä ja yhteistyötä. Parhaat joukkueet palkitaan illan <b>y2k-bileissä!</b> Joukkuepaikkoja on rajatusti, joten ilmoittautumisessa tulee olla nopea. Tapahtumassa on paljon ohjelmaa myös yleisölle, joten kannattaa tulla paikalle, vaikka joukkuepaikkaa ei saisikaan.</p>
+        <p>Kokoa siis neljän (4) hengen joukkue, ja valmistaudu syksyn hauskimpaan seikkailuun. <b>Lipun hinta on 8 € /henkilö</b>, joka sisältää PöNGi-haalarimerkin, jonon ohituksen y2k-bileisiin ja bileiden haalarimerkin, sekä pientä naposteltavaa ja juotavaa tapahtuman aikana. Viime vuonna teemana toimi yliopistokaupungit, ja myös tänä vuonna on Pönkeli kehitellyt hauskan teeman joukkueille. Teeman mukaan parhaiten pukeutuneet palkitaan.</p>
+        <p>Joukkuepaikkojen ilmoittautuminen aukeaa 25.9.2023 klo 12.00. Ilmoittautuminen tapahtuu
+          {' '}
+          <Link
+            href='https://link.webropol.com/s/pongi23-ilmo'
+            className='link'
+            target='_blank'
+            rel='noopener noreferrer'
+          >tästä linkistä</Link>. Ilmoittautumisen jälkeen lähetetään joukkueen yhteyshenkilölle tarkemmat lisätiedot ja ohjeet.</p>
+        <p>Tule siis nauttimaan huikeista suorituksista, musiikista sekä kisatunnelmasta Kupittaan urheiluhalliin 10.10.23 klo 17-20. Tapahtumassa on runsaasti katsottavaa ja koettavaa myös yleisölle, nähdään siis Kupittaalla!</p>
+        <p>Seuraa Pönkelin instagramia ja tiktokia @wappulehtiponkeli ja nettisivuja pönkeli.fi löytääksesi lisätietoja tapahtumasta. </p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>Mitä? Pönkeli Games 2023 eli PöNGi23</b></li>
+          <li><b>Missä? Opiskelijoiden leikkimieliset urheilukilpailut Kupittaan urheiluhallissa</b></li>
+          <li><b>Milloin? 10.10.23 klo 17-20</b></li>
+          <li><b>Miksi? Koska tarjolla on hauskoja pelailuja kanssaopiskelijoiden kanssa!</b></li>
+          <li><b>Mitä Maksaa? 8 € / hlö, sisältäen naposteltavaa, haalarimerkin, jonon ohituksen y2k-bileisiin ja bileiden haalarimerkin</b></li>
+          <li><b>
+            <Link
+              href='https://link.webropol.com/s/pongi23-ilmo'
+              className='link'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              Ilmoittautuminen
+            </Link></b></li>
         </ul>
       </>
     )

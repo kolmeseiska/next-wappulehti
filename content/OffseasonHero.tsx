@@ -20,13 +20,19 @@ const OffseasonHero = () => {
             on tulossa!
           </h3>
           <Link
-            href='https://forms.gle/TYMwUFqTT3GvBszAA'
+            href='https://link.webropol.com/s/pongi23-ilmo'
             role='button'
             className='btn btn-primary'
             target='_blank'
             rel='noopener noreferrer'
           >
-            Hae toimikuntaan 6.9. mennessä
+            <div>
+              <b className='inline-block mb-1'>
+                Pönkeli Games 2023
+              </b>
+              <br />
+              Ilmoittautuminen 25.9. klo 12
+            </div>
           </Link>
           <Link
             href='https://forms.gle/gL9HVsmReAeWwujK8'
