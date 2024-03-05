@@ -13,7 +13,8 @@ const routes: Route[] = [
   ['Pölkyn Äärellä', '/kisa', true],
   ['Tapahtumat', '/tapahtumat'],
   ['Historia', '/historia'],
-  ['Myyjät', '/myyjainfo'],
+  ['Myyjät', '/myyjarekry'],
+  // ['Myyjät', '/myyjainfo'],
 ]
 
 const NavItems = ({ isCollapsed }: NavItemProps) => {
