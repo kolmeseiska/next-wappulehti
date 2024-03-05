@@ -15,7 +15,7 @@ const runMiddleware = async (
 ): Promise<any> => {
   return new Promise((resolve, reject) => {
     fn(req, res, (result: any) => {
-      if (result instanceof Error) {
+      if(result instanceof Error) {
         return reject(result)
       }
       return resolve(result)
@@ -25,29 +25,30 @@ const runMiddleware = async (
 
 export default async function handler(
   req: NextApiRequest & Participation,
-  res: NextApiResponse<ApiSuccess|ApiError>
+  res: NextApiResponse<ApiSuccess | ApiError>
 ) {
-  if (req.method === 'POST') {
+  if(req.method === 'POST') {
     const multerUpload = multer({ dest: 'files/', storage })
     await runMiddleware(req, res, multerUpload.array('files'))
     const files = req.files as Express.Multer.File[]
-    
-    let filenames = null 
-    
+
+    let filenames = null
+
     if(!process.env.SPREADSHEET_ID_PARTICIPATION || !process.env.API_KEY) {
       return res.status(500)
         .json({
           message: 'Ongelmia palvelimella. Ota yhteyttä Pönkeleihin'
         })
     }
-  
+
     const configDrive = {
       apiKey: process.env.API_KEY,
       driveFolderId: process.env.DRIVE_FOLDER_ID
     } as GoogleConfigDrive
     const configSheets = {
       apiKey: process.env.API_KEY,
-      spreadsheetId: process.env.SPREADSHEET_ID_PARTICIPATION
+      spreadsheetId: process.env.SPREADSHEET_ID_PARTICIPATION,
+      tabIndex: 0
     } as GoogleConfigSheets
 
     if(files?.length && !process.env.SKIP_FILE_UPLOAD) {
@@ -55,7 +56,7 @@ export default async function handler(
     }
 
     const data: Participation = req.body
-    const columns =[
+    const columns = [
       new Date(),
       data.joke,
       data.email,

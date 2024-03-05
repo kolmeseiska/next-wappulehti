@@ -10,9 +10,7 @@ const Kisa = () => {
         <>
           <h1>Pölkyn Äärellä</h1>
           <p className='max-w-md mx-auto'>
-            <b className='text-primary brightness-110'>Vuoden 2023 kilpailu on päättynyt!</b>
-            <br />
-            Voit kuitenkin lähettää vitsejäsi edelleen ja niitä saatetaan hyödyntää ensi vuoden Pönkelissä.
+            <b className='text-red-50'>Vuoden 2024 kilpailu on taas käynnissä!</b>
           </p>
         </>
       )}
@@ -20,19 +18,16 @@ const Kisa = () => {
         <>
           <h2 className='text-3xl'>Vitsi | Juttu | Grafiikka -kisa</h2>
           <p>
-            Pönkelillä lyö päässä tyhjää, ja Pönkelöiset tarvitsevat apuasi puujalkojen pöytään pamauttamiseen.
+            <b>Pölkyn Äärellä</b> on turkulaisten teekkareiden wappulehti Pönkelin lanseeraama vitsi/grafiikka/kirjoitus -kilpailu, jonka tarkoituksena on saada ne kaikkein hervottomimmat ja nerokkaimmat tuotokset samaan painokseen eli wappuna 2024 ilmestyvään Pönkeliin!
+          </p>
+          <b>
+            Huom! Parhaat tuotokset palkitaan!
+          </b>
+          <p>
+            Oletko siis taidokas taiteilija, suurenmoinen sanailija tai kenties virtuoosi vitsailija? Tai muuten vaan hupsu hassuttelija, joka haluaisi osallistua wappulehden tekoon?
           </p>
           <p>
-            Tepsuttele siis Pölkyn Äärelle, ja osallistu kilpailuun, jossa palkitaan uutterimmat, hillittömimmät, veikeimmät ja hulvattomimmat osallistujat ylellisesti!
-          </p>
-          <p>
-            Kilpailussa haetaan hervottomia hekotuksia aikaansaavia hupijuttuja, villeimpiä vitsejä ja gliffoja grafiikoita.
-          </p>
-          <p>
-            Parhaimmat päätyvät Pönkeliin 2023 ja niiden luojat palkitaan loistokkaasti Pönkelijulkkareissa wapun aloituksessa.
-          </p>
-          <p>
-            Huom! Teekkarifukseille jaossa fuksipisteitä!
+            Tiputa parhain luomuksesi oheiseen lomakkeeseen ja bongaa se Pönkeli 2024 -lehdestä!
           </p>
         </>
       )}
@@ -43,11 +38,8 @@ const Kisa = () => {
             Kilpailun säännöt
           </h2>
           <ul>
-            <li className='font-bold'>
-              Kilpailuaika on 23.1. - 28.2.2023. 
-            </li>
             <li>
-              Osallistua voit yläpuolelta löytyvän lomakkeen kautta, ruokkimalla Agoran aulasta löytyvää PostiPönkeä tai saapumalla yhteisiin hupituokioihin Proffan Kellariin 8., 15., ja 22.2. kello 17-20. Hupituokiot järjestetään yläkerrassa sijaitsevassa kabinettitilassa.
+              Osallistua voit yläpuolelta löytyvän lomakkeen kautta, ruokkimalla Agoran aulasta löytyvää PostiPönkeä tai saapumalla yhteisiin hupituokioihin Proffan Kellariin 6.3. kello 17-20. Hupituokio järjestetään yläkerrassa sijaitsevassa kabinettitilassa.
             </li>
             <li>
               Älä ole tymä! Hylkäämme rasistiset sekä loukkaavat tekstit/kuvat suoraan!
@@ -59,27 +51,18 @@ const Kisa = () => {
               Pönkelin kontsaneuvosto käy kilpailun päättymisen jälkeen läpi kaiken lähetetyn materiaalin, ja valitsee niiden keskuudesta ainakin seuraavat palkittavat:
             </li>
             <ul className='font-bold'>
-              <li>
-                Hulvattomin kilta (hauskin kuva/juttu/vitsi)
-              </li>
-              <li>
-                Uutterin kilta (eniten vitsejä/juttuja/kuvia tuottanut)
-              </li>
-              <li>
-                Hillittömin vitsiniekka (Hauskimman jutun/kuvan/vitsin tuottanut opiskelija 2023)
-              </li>
-              <li>
-                Veikein fuksi (Hauskimman jutun/kuvan/vitsin tuottanut fuksi/piltti 2023)
-              </li>
+              <li><b>Hulvattomin kilta</b> - Ainejärjestö/kilta, joka tuottaa kaikkein loistavimmat letkautukset!</li>
+              <li><b>Hillittömin vitsiniekka</b> - Turun hauskin opiskelija 2024</li>
+              <li><b>Veikein fuksi</b> - Turun hauskin fuksi/piltti 2024</li>
             </ul>
             <li>
-              Palkitseminen suoritetaan Pönkelijulkkareissa <strong>12.4.2023</strong> wapunaloitusbileiden virallisilla etkoilla. Palkinnot ovat tänä vuonna entistä paremmat, pönkelimmät ja mahtipontisemmat!
+              Palkitseminen suoritetaan Pönkelijulkkareissa.
             </li>
             <li>
-              Fuksit saavat lehteen päätyneestä jutusta/vitsistä/kuvasta fuksipisteen. Fukseille ilmoitetaan mikäli heidän tuotoksensa ei päädy lehteen, jotta he voivat vielä ilmoittautua Pönkelin myyjiksi fuksipisteen toivossa. 
+              Fuksit saavat lehteen päätyneestä jutusta/vitsistä/kuvasta fuksipisteen. Fukseille ilmoitetaan mikäli heidän tuotoksensa ei päädy lehteen, jotta he voivat vielä ilmoittautua Pönkelin myyjiksi fuksipisteen toivossa.
             </li>
             <li>
-              Voittajille ilmoitetaan henkilökohtaisesti, joten varmistathan oikeat yhteystiedot. Sähköpostiosoitteet poistetaan wapun jälkeen, mutta nimitieto säilytetään, jotta Pönkeli voi tulevaisuudessa kiittää vitsin/jutun/grafiikan tuottanutta henkilöä. 
+              Voittajille ilmoitetaan henkilökohtaisesti, joten varmistathan oikeat yhteystiedot. Sähköpostiosoitteet poistetaan wapun jälkeen, mutta nimitieto säilytetään, jotta Pönkeli voi tulevaisuudessa kiittää vitsin/jutun/grafiikan tuottanutta henkilöä.
             </li>
           </ul>
         </>

@@ -7,31 +7,36 @@ type NavItemProps = {
   isCollapsed?: boolean
 }
 
-type Route = [string, string, string?]
+type Route = [string, string, boolean?]
 
-const routes:Route[] = [
-  ['Pölkyn Äärellä', '/kisa'],
+const routes: Route[] = [
+  ['Pölkyn Äärellä', '/kisa', true],
   ['Tapahtumat', '/tapahtumat'],
   ['Historia', '/historia'],
   ['Myyjät', '/myyjainfo'],
 ]
 
-const NavItems = ({ isCollapsed }:NavItemProps) => {
+const NavItems = ({ isCollapsed }: NavItemProps) => {
   const menuClassName = isCollapsed
     ? 'menu menu-compact text-zinc-50 dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 shadow-2xl'
     : 'menu menu-horizontal text-zinc-50 px-1'
 
   return (
     <ul tabIndex={0} className={menuClassName}>
-      {routes.map(([title, url, className = 'hover:bg-zinc-100 hover:text-zinc-900']) => (
-        <Link
-          key={url}
-          href={url}
-          className={`rounded-lg px-3 py-2 font-bold transition-colors duration-200 ${className} `}
-        >
-          {title}
-        </Link>
-      ))
+      {routes.map(([title, url, isHighlight]) => {
+        const className = isHighlight
+          ? 'text-zinc-50 bg-primary hover:text-primary hover:bg-zinc-50'
+          : 'hover:bg-zinc-100 hover:text-zinc-900'
+        return (
+          <Link
+            key={url}
+            href={url}
+            className={`rounded-lg px-3 py-2 font-bold transition-colors duration-200 ${className} `}
+          >
+            {title}
+          </Link>
+        )
+      })
       }
     </ul>
   )

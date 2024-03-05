@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 import ColorWall from '../components/ColorWall'
+import DownCaretIcon from '../components/DownCaretIcon'
 import Logo from '../components/Logo'
 
 const OffseasonHero = () => {
@@ -15,18 +16,26 @@ const OffseasonHero = () => {
             <Logo className='h-48 max-w-full' />
           </h1>
           <h3 className='text-4xl font-bold mb-8'>
-            Pönkeli 2024
-            <br />
-            on tulossa!
+            Pölkyn äärellä kokoonnutaan taas!
           </h3>
-          <Link
+          <div className='motion-safe:animate-bounce'>
+            <DownCaretIcon />
+          </div>
+          {/* <Link
             href='https://forms.gle/gL9HVsmReAeWwujK8'
             role='button'
-            className='btn btn-primary mt-5 btn-outline'
+            className='btn btn-primary mt-5 btn-outline bg-red-50'
             target='_blank'
             rel='noopener noreferrer'
           >
             Anna palautetta Pönkelistä 2023
+          </Link> */}
+          <Link
+            href={'/kisa'}
+            role='button'
+            className='btn btn-primary mt-5 btn-outline bg-red-50'
+          >
+            Osallistu kisaan!
           </Link>
         </div>
       </div>

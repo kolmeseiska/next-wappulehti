@@ -8,7 +8,7 @@ import FormInput from './FormInput'
 import FormTextarea from './FormTextarea'
 import LoadingIcon from './LoadingIcon'
 
-const upload = async (participation:Participation) => {
+const upload = async (participation: Participation) => {
   const formData = new FormData()
 
   if(participation.files) {
@@ -20,14 +20,14 @@ const upload = async (participation:Participation) => {
   formData.append('email', participation.email || '')
   formData.append('guild', participation.guild || '')
   formData.append('isFuksi', participation.isFuksi == null ? 'false' : participation.isFuksi.toString())
-  
+
   try {
     const response = await fetch('/api/participations', {
-      body:  formData,
+      body: formData,
       method: 'POST'
     })
     return await response.json()
-  } catch (error) {
+  } catch(error) {
     console.log(error)
   }
 }
@@ -41,23 +41,22 @@ const defaultValues: Participation = {
 }
 
 const Form = () => {
-  const { register, handleSubmit, formState, setValue,  setError, reset } = useForm<Participation>({ 
+  const { register, handleSubmit, formState, setValue, setError, reset } = useForm<Participation>({
     resolver: yupResolver(participationSchema),
     defaultValues
   })
 
-  const onSubmit:SubmitHandler<Participation> = async (participation) => {
+  const onSubmit: SubmitHandler<Participation> = async (participation) => {
     if(!participation.files.length && !participation.joke.length) {
-      setError('joke', { message:'Vitsi tai tiedosto vaaditaan' })
+      setError('joke', { message: 'Vitsi tai tiedosto vaaditaan' })
       setError('files.0', { message: 'Vitsi tai tiedosto vaaditaan' })
-      return 
+      return
     }
     // TODO: show success notification
     await upload(participation)
     reset(defaultValues)
-    
   }
-  
+
   const { isSubmitting, isDirty, isSubmitted, errors } = formState
   const isBusy = isSubmitting || !isDirty
   return (
@@ -85,7 +84,7 @@ const Form = () => {
         register={register}
         errors={errors}
       />
-      <FormCheckbox<Participation> 
+      <FormCheckbox<Participation>
         name='isFuksi'
         label='Olen fuksi'
         register={register}
@@ -97,12 +96,12 @@ const Form = () => {
           className={`btn btn-primary relative ${isBusy ? 'btn-disabled' : ''} `}
           disabled={isSubmitting || !isDirty}
         >
-          {isSubmitting 
-            ? <LoadingIcon /> 
+          {isSubmitting
+            ? <LoadingIcon />
             : null}
           {isDirty
-            ?'Lähetä'
-            :'Kirjoita meille'}
+            ? 'Lähetä'
+            : 'Kirjoita meille'}
         </button>
       </div>
     </form>

@@ -23,12 +23,13 @@ const FileInput = ({ setValue, isSubmitted, errors }: Props) => {
     fileInputRef,
     actionsRef
   } = useFileDrop()
-  
+
   useEffect(() => {
     setValue('files', data.files)
   }, [setValue, data.files])
 
   useEffect(() => {
+    console.log('hmm')
     if(isSubmitted) {
       actionsRef.current.handleClearFiles()
     }
@@ -47,7 +48,7 @@ const FileInput = ({ setValue, isSubmitted, errors }: Props) => {
           </span>
         )}
       />
-      <div 
+      <div
         {...fileDropProps}
       >
         <label
@@ -56,7 +57,7 @@ const FileInput = ({ setValue, isSubmitted, errors }: Props) => {
           <input
             ref={fileInputRef}
             type='file'
-            name='uploadfile' 
+            name='uploadfile'
             id='files'
             accept={acceptableMimes}
             multiple
