@@ -1,4 +1,7 @@
 
+import Image from 'next/image'
+import Link from 'next/link'
+
 import CardFormPage from '../components/CardFormPage'
 import SellerForm from '../components/SellerForm'
 
@@ -13,7 +16,7 @@ const myyjarekry = () => {
           <>
             <h2 className='text-3xl'>Nyt tulee Pönkeliä!</h2>
             <p>
-              Pönkeli kaipaa jälleen reippaita ja ansiokkaita opiskelijoita myymään vuoden 2024 hupaisinta tuotetta eli Turun Yliopiston teekkareiden wappulehti <b className='text-primary brightness-110'>Pönkeliä.</b>
+              Pönkeli kaipaa jälleen reippaita ja ansiokkaita opiskelijoita myymään vuoden 2024 hupaisinta tuotetta eli Turun Yliopiston teekkareiden wappulehti <b>Pönkeliä</b>.
             </p>
             <p>
               Pönkelin myyjänä pääset nauttimaan vain myyjille suoduista eduista ja palkinnoista. Myyjäksi ilmoittautuminen ei sido sinua mihinkään ja myynti perustuu vapaaehtoisuuteen.
@@ -32,7 +35,7 @@ const myyjarekry = () => {
               Wappulehtien myynti on hauskaa puuhaa, ja niiden myyntiä ei tarvitse stressata tai pelätä joutuvansa myymään niitä yksin, sillä pönkelöiset myyvät lehtiä kanssasi wappuna! Wappulehtiä ei tarvitse lunastaa etukäteen, ja kaikki myymättömät myyntikunnossa olevat wappulehdet saa palauttaa takaisin pönkelöisille.
             </p>
             <p>
-              Myyt siis vain sen verran kuin haluat ja jaksat!
+              Myyt siis vain sen verran kuin haluat ja jaksat! Myyjäksi voit ilmoittautua vaikka heti!
             </p>
             <p>
               Pönkeli hemmottelee myyjiänsä palkitsemalla eri myyntitasolle päässeet myyjänsä:
@@ -45,8 +48,15 @@ const myyjarekry = () => {
               <li><b className='text-primary brightness-110'>Jalo</b> - komeasti patinoitunut huippumyyjä, 20 myytyä lehteä</li>
             </ol>
             <p>
-              Seuraava myyntitaso pitää sisällään aina myös edellisen tason palkinnot. Lisäksi palkitaan kolme tehokkainta myyjää ruhtinaallisesti 100e lahjakorteilla! Killoille ja ainejärjestöille jaetaan lisäksi kunniamainintoja ansioituneesta myynnistä.
+              Seuraava myyntitaso pitää sisällään aina myös edellisen tason palkinnot. Lisäksi palkitaan kolme tehokkainta myyjää ruhtinaallisesti <b className='text-primary brightness-110'>100 €</b>:n lahjakorteilla! Killoille ja ainejärjestöille jaetaan lisäksi kunniamainintoja ansioituneesta myynnistä.
             </p>
+            <Image
+              src={'/ponkelimerkki.webp'}
+              alt='Myyjäpalkinto '
+              width={180}
+              height={144}
+              className='float-start me-12 not-prose my-3'
+            />
             <p className='font-bold'>Palkinnot myyjätasojen mukaan:</p>
             <ol>
               <li>Haalarimerkki</li>
@@ -55,17 +65,36 @@ const myyjarekry = () => {
               <li>Haalarimerkin lisäosa 3, Pönkelitermospullo</li>
             </ol>
             <p>
-              Lisäksi kaikille myyjille on oma <b>MYYJÄAAMIAINEN</b> ennen Grilliä & Kyykkää (23.4. lisäinfoa myöhemmin). Luvassa on ihana rentouttava aamiainen hyvässä seurassa! Wapun jälkeen järjestetään myös myyjille oma virkistäytymistapahtuma, josta tiedotetaan myyjille erikseen.
+              Lisäksi kaikille myyjille on oma <b>PÖNKELIN SKUMPPA-KALJA-JOOGA</b>, jonka jälkeen tarjotaan virkistävät smoothiet ennen Grilliä & Kyykkää 23.4. klo 10-11 Educariumin salissa. Luvassa on ihana rentouttava jooga hyvässä seurassa.
+              <Image
+                src={'/ponkelilasit.webp'}
+                alt='Myyjäpalkinto '
+                width={296}
+                height={370}
+                className='float-end ms-3 not-prose my-3'
+              />
             </p>
             <p>
-              <b className='text-primary brightness-110'>HOXHOX!</b>  Teekkarifukseille luvassa fuksipisteitä wappulehden myymisestä! Pönkelipisteen saat Pönkelitoimikunnan jäseneltä, eli et omalta tuutoriltasi. Pisteen saat hyvissä ajoin.
+              Liity myyjien telegram-ryhmään jo nyt, niin pysyt kärryillä kaikesta myyjiin liittyvästä <Link href='https://t.me/+2RmZdlKJogQxYTE8'>Täältä</Link>
+            </p>
+            <p>
+              <b className='text-primary brightness-110'>HOXHOX!</b>  Teekkarifukseille luvassa fuksipisteitä wappulehden myymisestä! Pönkelipisteen saat Pönkelitoimikunnan jäseneltä, eli et omalta tuutoriltasi. Pisteen saat hyvissä ajoin. Pisteen saat myytyäsi vähintään yhden lehden. Pisteen saat hyvissä ajoin.
+            </p>
+            <Image
+              src={'/ponkelitermos.webp'}
+              alt='Myyjäpalkinto '
+              width={88}
+              height={275}
+              className='float-start me-3 not-prose my-3'
+            />
+            <p>
+              Miten myynti käytännössä toimii? <b>Siitä kuulet lisää</b> seuraavassa myyjäinfossa 28.3.24 klo 16.00 Zoomissa. Tämän lisäksi pidetään vielä myyjäkoulu Zoomissa juuri ennen wappua 8.4.24 klo 16.00. Tilaisuudet kestävät 30-45 minuuttia ja saat siellä paljon tietoa ja vastauksia kysymyksiisi. Linkit jaetaan <Link href='https://t.me/+2RmZdlKJogQxYTE8'>myyjä tg-ryhmässä</Link>
+            </p>
+            <p>
             </p>
             <i>
-              Miten myynti käytännössä toimii? <b>Siitä kuulet lisää</b> myyjäkoulutuksissa pitkin kevättä. Päivät ja ajankohdat tarkentuvat lähiaikoina. Seuraathan Pönkelin somea sekä kiltasi viikkotiedotteita.
+              Ilmoittautumistiedot poistetaan Wapun jälkeen.
             </i>
-            <p>
-            </p>
-            <i>Ilmoittautumistiedot poistetaan Wapun jälkeen.</i>
           </>
         )}
       />
