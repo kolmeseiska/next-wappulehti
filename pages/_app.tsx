@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app'
 
 import '../styles/globals.css'
 import '../styles/styles.css'
+import '../styles/collapse.css'
 import Layout from '../components/Layout'
 
 export default function App({ Component, pageProps }: AppProps) {

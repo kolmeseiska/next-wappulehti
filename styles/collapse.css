@@ -1,0 +1,13 @@
+.simple-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms;
+}
+
+.simple-collapse[aria-hidden="false"] {
+  grid-template-rows: 1fr;
+}
+
+.simple-collapse > div {
+  overflow: hidden;
+}
