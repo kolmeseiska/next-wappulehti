@@ -16,7 +16,7 @@ const OffseasonHero = () => {
             <Logo className='h-48 max-w-full' />
           </h1>
           <h3 className='text-4xl font-bold mb-8'>
-            Pölkyn äärellä kokoonnutaan taas!
+            Ilmoittaudu mukaan Pönkelin myyjäksi!
           </h3>
           <div className='motion-safe:animate-bounce'>
             <DownCaretIcon />
@@ -30,12 +30,19 @@ const OffseasonHero = () => {
           >
             Anna palautetta Pönkelistä 2023
           </Link> */}
-          <Link
+          {/* <Link
             href={'/kisa'}
             role='button'
             className='btn btn-primary mt-5 btn-outline bg-red-50'
           >
             Osallistu kisaan!
+          </Link> */}
+          <Link
+            href={'/myyjarekry'}
+            role='button'
+            className='btn btn-primary mt-5 btn-outline bg-red-50'
+          >
+            Myyjärekry!
           </Link>
         </div>
       </div>
