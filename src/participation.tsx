@@ -27,12 +27,18 @@ export const participationSchema = yup.object({
   //   otherwise: schema => schema.required('Vitsi tai tiedosto vaaditaan')
   // }),
   files: yup.array()
-    .of(yup.mixed()
-      .test('fileSize', 'Liite on liian iso', (value: File[] | File) => {
+    .of(yup.mixed<File>()
+      .test('fileSize', 'Liite on liian iso', (value: File | undefined) => {
+        if(!value) {
+          return true
+        }
         const files = Array.isArray(value) ? value : [value]
         return files.reduce((acc, file) => acc + file.size, 0) <= MAX_FILE_SIZE_MB
       })
-      .test('type', 'Virheellinen tiedostotyyppi', (value: File[] | File) => {
+      .test('type', 'Virheellinen tiedostotyyppi', (value: File | undefined) => {
+        if(!value) {
+          return true
+        }
         const files = Array.isArray(value) ? value : [value]
         return files.every(file => supportedFileTypes.includes(file.type))
       }))

@@ -13,7 +13,10 @@ const upload = async (participation: Participation) => {
 
   if(participation.files) {
     Array.from(participation.files).forEach((file) => {
-      formData.append('files', file)
+      if(file) {
+        formData.append('files', file)
+      }
+
     })
   }
   formData.append('joke', participation.joke || '')
