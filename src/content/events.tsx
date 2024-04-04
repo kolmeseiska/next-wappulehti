@@ -88,7 +88,7 @@ const events: PonkeliEvent[] = [
         <p>Tapahtuma toimii virallisina etkoina wapunaloitusbileille ja tapahtumassa on ensimmäinen mahdollisuus lunastaa itselleen wapun haluituin tuote eli Pönkeli 2023! Tapahtuman jälkeen wappukansa vaeltaa yhdessä kohti Lygasia ja wapunaloitusbileitä!</p>
         <b>[TL;DR ENG]</b>
         <ul>
-          <li><b>What?</b> Pönkeli's publishing party and wappu pre-party</li>
+          <li><b>What?</b> Pönkeli&apos;s publishing party and wappu pre-party</li>
           <li><b>Where?</b> Kåren, Hämeenkatu 22</li>
           <li><b>When?</b> 12th of April at 6 PM till 9 PM. Doors open at 5.30 PM</li>
           <li><b>Why?</b>  BECAUSE THIS IS THE STARTING OF WAPPU</li>
@@ -165,7 +165,7 @@ const events: PonkeliEvent[] = [
         </ul>
         <b>[TL;DR ENG]</b>
         <ul>
-          <li><b>What?</b> Pönkeli&aposs Wappurecess</li>
+          <li><b>What?</b> Pönkeli&apos;s Wappurecess</li>
           <li><b>Where?</b> Kuuvuori field</li>
           <li><b>When?</b> 24th of April at noon till 6 PM</li>
           <li><b>Why?</b> Because all of us want those carefree childhood recesses back.</li>
@@ -238,13 +238,13 @@ const events: PonkeliEvent[] = [
         </ul>
         <hr className='my-3' />
         <b>ENGLISH</b>
-        <strong>Pönkeli's publishing party and wappu pre-party 10.4 at Kåren</strong>
-        <p>Dear teekkari, teekkarifuksi or teekkari-minded student, the time has come to begin the most expected period of the year; Turku's teekkariwappu 2024!</p>
-        <p>Turku's teekkariwappu begins with the official pre-party for the wappu-starting-party, and of course by publishing Turku's teekkaris' very own wappu magazine: Pönkeli! Pönkeli will take over and solemnly lead all students to wappu atmosphere. There will of course be a surprise entertainers that you do not want to miss. The bar will be open the whole event and has student-friendly prices. There bar will serve Pönkeli's very own drink “Teekkari's scream”!</p>
+        <strong>Pönkeli&apos;s publishing party and wappu pre-party 10.4 at Kåren</strong>
+        <p>Dear teekkari, teekkarifuksi or teekkari-minded student, the time has come to begin the most expected period of the year; Turku&apos;s teekkariwappu 2024!</p>
+        <p>Turku&apos;s teekkariwappu begins with the official pre-party for the wappu-starting-party, and of course by publishing Turku&apos;s teekkaris&apos; very own wappu magazine: Pönkeli! Pönkeli will take over and solemnly lead all students to wappu atmosphere. There will of course be a surprise entertainers that you do not want to miss. The bar will be open the whole event and has student-friendly prices. There bar will serve Pönkeli&apos;s very own drink “Teekkari&apos;s scream”!</p>
         <p>The event is the official pre-party for the wappu-starting-party and there is the first chance to redeem yourself the most wanted product of wappu, i.e. Pönkeli 2024! After the event the wappu nation wanders together towards Lygas and wappu-starting-party.</p>
         <ul>
           <li><b>TL;DR</b></li>
-          <li><b>What?</b> Pönkeli's publishing party and wappu pre-party</li>
+          <li><b>What?</b> Pönkeli&apos;s publishing party and wappu pre-party</li>
           <li><b>Where?</b> Kåren, Hämeenkatu 22</li>
           <li><b>When?</b> 10th of April at 6 PM till 9 PM. Starts at 5.30 PM</li>
           <li><b>Why?</b>  BECAUSE THIS IS THE STARTING OF WAPPU</li>
@@ -284,18 +284,23 @@ const events: PonkeliEvent[] = [
           <li><b>Hinta?</b> 10€</li>
           <li><b>Pukukoodi?</b> Reivit/haalarit. Tapahtuma järjestetään lämpimissä sisätiloissa</li>
           <li><b>Mitä mukaan?</b> OPM, vesipullo, hyvät tanssikengät</li>
-          <li><b>Ilmoittautuminen?</b>  <Link
-            href='https://kide.app/events/e3b0dee8-0c67-4117-af2f-eaa7eed76245'
-            target='_blank'
-            className='link hover:text-primary transition-colors'
-            rel='noopener noreferrer'
-            onClick={e => e.stopPropagation()}
-          >Ilmoittautuminen täällä.</Link></li>
+          <li><b>Ilmoittautuminen?</b>
+            {' '}
+            <Link
+              href='https://kide.app/events/e3b0dee8-0c67-4117-af2f-eaa7eed76245'
+              target='_blank'
+              className='link hover:text-primary transition-colors'
+              rel='noopener noreferrer'
+              onClick={e => e.stopPropagation()}
+            >
+              Ilmoittautuminen täällä.
+            </Link>
+          </li>
         </ul>
         <hr className='my-3' />
         <b>ENGLISH</b>
         <strong>Pönkelirave 13.4. from 7 PM till 5 AM</strong>
-        <p>Last year successfully debuted Pönkelirave returns to Turku's Teekkariwappu better than ever. The rave will be held on 13th of  April starting from 7 PM. Living up to its name there will be served a variety of electronic dance music. Such artist will be seen at the rave: GACHY X DLT, DJ Hexter feat. Thomas Trooper, Hvitr, DJ Erkku, DJ Fearinen and Spettbros. So come on and jump into a rave adventure of your life with Pönkeli!</p>
+        <p>Last year successfully debuted Pönkelirave returns to Turku&apos;s Teekkariwappu better than ever. The rave will be held on 13th of  April starting from 7 PM. Living up to its name there will be served a variety of electronic dance music. Such artist will be seen at the rave: GACHY X DLT, DJ Hexter feat. Thomas Trooper, Hvitr, DJ Erkku, DJ Fearinen and Spettbros. So come on and jump into a rave adventure of your life with Pönkeli!</p>
         <p>Enrolling will take place at KideApp and starts 1st of April at 10 PM
           {' '}
           <Link
@@ -316,13 +321,18 @@ const events: PonkeliEvent[] = [
           <li><b>Price?</b> Tickets? 10 €</li>
           <li><b>Dresscode?</b> Dresscode? Rave/Overalls. The rave will be held inside.</li>
           <li><b>What to bring?</b> What to bring? water bottle, good dancing shoes, BYOB</li>
-          <li><b>Enroll?</b>  <Link
-            href='https://kide.app/events/e3b0dee8-0c67-4117-af2f-eaa7eed76245'
-            target='_blank'
-            className='link hover:text-primary transition-colors'
-            rel='noopener noreferrer'
-            onClick={e => e.stopPropagation()}
-          >Enroll here.</Link></li>
+          <li><b>Enroll?</b>
+            {' '}
+            <Link
+              href='https://kide.app/events/e3b0dee8-0c67-4117-af2f-eaa7eed76245'
+              target='_blank'
+              className='link hover:text-primary transition-colors'
+              rel='noopener noreferrer'
+              onClick={e => e.stopPropagation()}
+            >
+              Enroll here.
+            </Link>
+          </li>
         </ul>
       </>
     )
