@@ -1,0 +1,31 @@
+:root,
+[data-theme] {
+  background-color: theme(colors.base-100);
+  color: theme(colors.base-content);
+}
+
+@supports not (color: oklch(0% 0 0)) {
+    :root {
+      color-scheme: wappu;
+      --fallback-p: #e11d48;
+      --fallback-pc: #34030e;
+      --fallback-s: #D926AA;
+      --fallback-sc: #560e49;
+      --fallback-a: #00c7b5;
+      --fallback-ac: #000e0c;
+      --fallback-n: #191D24;
+      --fallback-nc: #a6adbb;
+      --fallback-b1: #2A303C;
+      --fallback-b2: #191e24;
+      --fallback-b3: #15191e;
+      --fallback-bc: #e3e2ee;
+      --fallback-in: #3ABFF8;
+      --fallback-inc: #060606;
+      --fallback-su: #36D399;
+      --fallback-suc: #060606;
+      --fallback-wa: #FBBD23;
+      --fallback-wac: #060606;
+      --fallback-er: #FBBD23;
+      --fallback-erc: #060606;
+    }
+  }
