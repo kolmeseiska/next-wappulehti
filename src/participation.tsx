@@ -28,16 +28,16 @@ export const participationSchema = yup.object({
   // }),
   files: yup.array()
     .of(yup.mixed()
-      .test('fileSize', 'Liite on liian iso', (value: File[]) => {
+      .test('fileSize', 'Liite on liian iso', (value: File[] | File) => {
         const files = Array.isArray(value) ? value : [value]
         return files.reduce((acc, file) => acc + file.size, 0) <= MAX_FILE_SIZE_MB
       })
-      .test('type', 'Virheellinen tiedostotyyppi', (value:File[]) => {
+      .test('type', 'Virheellinen tiedostotyyppi', (value: File[] | File) => {
         const files = Array.isArray(value) ? value : [value]
         return files.every(file => supportedFileTypes.includes(file.type))
       }))
     .defined()
-    // .when('joke', { 
+    // .when('joke', {
     //   is: (joke: string) => joke.length,
     //   then: schema => schema,
     //   otherwise: schema => schema.required('Tiedosto tai vitsi vaaditaan').min(1, 'Vähintään 1 tiedosto vaaditaan')

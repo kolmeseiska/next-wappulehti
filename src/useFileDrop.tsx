@@ -111,7 +111,6 @@ const useFileDrop = () => {
       dispatch({ type: FileDropActionKey.REMOVE_FILE_FROM_LIST, filename })
     },
     handleClearFiles: () => {
-      console.log('hmmm', fileInputRef.current?.files)
       console.dir(fileInputRef.current)
       if(!fileInputRef.current?.files) {
         return null

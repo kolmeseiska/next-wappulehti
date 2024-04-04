@@ -17,19 +17,20 @@ export type GoogleConfigDrive = {
   driveFolderId: string
 }
 
-export const uploadFiles = async (files: Express.Multer.File[], config: GoogleConfigDrive, description?:string):Promise<string[]> => {
+export const uploadFiles = async (files: File[], config: GoogleConfigDrive, description?: string): Promise<string[]> => {
   const jwt = getJwt('drive')
-  const uploadFile = async (file:Express.Multer.File) => {
+  const uploadFile = async (file: File) => {
     const bufferStream = new stream.PassThrough()
-    bufferStream.end(file.buffer)
-    const safeName = encodeURI(file.originalname.replaceAll(' ', '_'))
+    const buffer = Buffer.from(await file.arrayBuffer())
+    bufferStream.end(buffer)
+    const safeName = encodeURI(file.name.replaceAll(' ', '_'))
     const { data } = await gDrive
       .drive({ version: 'v3' })
       .files
       .create({
         auth: jwt,
         media: {
-          mimeType: file.mimetype,
+          mimeType: file.type,
           body: bufferStream,
         },
         requestBody: {
@@ -42,7 +43,7 @@ export const uploadFiles = async (files: Express.Multer.File[], config: GoogleCo
     return data
   }
 
-  const filenames:string[] = []
+  const filenames: string[] = []
   for(const file of files) {
     const uploadedFile = await uploadFile(file)
     if(uploadedFile?.webViewLink) {
@@ -54,23 +55,23 @@ export const uploadFiles = async (files: Express.Multer.File[], config: GoogleCo
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const appendSheet = <TSheet extends any[]>(row:TSheet, config: GoogleConfigSheets) => {
+export const appendSheet = <TSheet extends any[]>(row: TSheet, config: GoogleConfigSheets) => {
   const jwt = getJwt('spreadsheets')
   const range = 'A2' // First is header
   return appendSheetRow(jwt, config.apiKey, config.spreadsheetId, range, row)
 }
 
-const getJwt = (googleService: 'spreadsheets'|'drive') => {
+const getJwt = (googleService: 'spreadsheets' | 'drive') => {
   return new auth.JWT(
-    credentials.client_email, 
-    undefined, 
+    credentials.client_email,
+    undefined,
     credentials.private_key,
     [`https://www.googleapis.com/auth/${googleService}`]
   )
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const appendSheetRow = async <TSheet extends any[]  >(jwt: auth.JWT, apiKey: string, spreadsheetId: string, range: string, row:TSheet) => {
+const appendSheetRow = async <TSheet extends any[]>(jwt: auth.JWT, apiKey: string, spreadsheetId: string, range: string, row: TSheet) => {
   const sheets = gSheets.sheets({ version: 'v4' })
   try {
     const result = await sheets.spreadsheets.values.append({
@@ -84,7 +85,7 @@ const appendSheetRow = async <TSheet extends any[]  >(jwt: auth.JWT, apiKey: str
       }
     })
     return result.data.updates?.updatedRange || 'Nothing updated'
-  } catch (error) {
+  } catch(error) {
     console.dir(error, { depth: null })
     throw error
   }
