@@ -10,6 +10,11 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('daisyui'),
   ],
+  theme: {
+    fontFamily: {
+      'display': ['var(--font-display)']
+    }
+  },
   daisyui: {
     logs: false, // Shows info about daisyUI version and used config in the console when building your CSS
     themes: [
@@ -34,12 +39,12 @@ module.exports = {
           primary: '#f1f1f1',
           secondary: '#152747',
           accent: '#513448',
-          neutral: '#EBE7E5',
+          neutral: '#e3d2d2',
           'neutral-content': '#181818',
-          'base-100': '#51212D',
+          'base-100': '#EBE7E5',
           'base-200': '#181818',
-          'base-300': '#915A68',
-          'base-content': '#EBE7E5',
+          'base-300': '#383838',
+          'base-content': '#181818',
           info: '#66c6ff',
           success: '#87d039',
           warning: '#e2d562',

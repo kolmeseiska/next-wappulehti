@@ -4,6 +4,7 @@ import '../styles/globals.css'
 import '../styles/styles.css'
 import '../styles/collapse.css'
 import '../styles/colors.css'
+import { dmSerifDisplay, raleway } from './fonts'
 
 export const metadata: Metadata = {
   title: 'Pönkeli',
@@ -36,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='fi' data-theme='gallery' className='scroll-smooth'>
+    <html lang='fi' data-theme='gallery' className={`scroll-smooth ${raleway.className} ${dmSerifDisplay.variable}`}>
       <body>
         {children}
       </body>

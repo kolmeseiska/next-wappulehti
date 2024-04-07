@@ -1,10 +1,8 @@
 import React from 'react'
-import { Raleway } from 'next/font/google'
 
 import Footer from './Footer'
 import Navigation from './Navigation'
-
-const raleway = Raleway({ subsets: ['latin'] })
+import { raleway } from '@/app/fonts'
 
 type Props = {
   children: React.ReactNode

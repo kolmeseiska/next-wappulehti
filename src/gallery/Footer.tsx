@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 import Stamp from '@/app/galleria/Stamp'
 
@@ -10,24 +11,23 @@ const Footer = () => {
         <p>Wappulehti Pönkeli.<br />Hauskuutta ja iloa tänäkin vuonna 2024</p>
       </aside>
       <nav>
-        <h6 className='footer-title'>Services</h6>
-        <a className='link link-hover'>Branding</a>
-        <a className='link link-hover'>Design</a>
-        <a className='link link-hover'>Marketing</a>
-        <a className='link link-hover'>Advertisement</a>
-      </nav>
-      <nav>
-        <h6 className='footer-title'>Company</h6>
-        <a className='link link-hover'>About us</a>
-        <a className='link link-hover'>Contact</a>
-        <a className='link link-hover'>Jobs</a>
-        <a className='link link-hover'>Press kit</a>
-      </nav>
-      <nav>
-        <h6 className='footer-title'>Legal</h6>
-        <a className='link link-hover'>Terms of use</a>
-        <a className='link link-hover'>Privacy policy</a>
-        <a className='link link-hover'>Cookie policy</a>
+        <h6 className='footer-title'>Seuraa meitä</h6>
+        <Link
+          href='https://www.instagram.com/wappulehtiponkeli/'
+          className='link link-hover'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Instagram
+        </Link>
+        <Link
+          href='https://www.tiktok.com/@wappulehtiponkeli'
+          className='link link-hover'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          TikTok
+        </Link>
       </nav>
     </footer>
   )

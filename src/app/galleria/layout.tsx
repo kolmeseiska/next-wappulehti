@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 import '../../styles/colors.css'
 import '../../styles/globals.css'
+import '../../styles/wappu2024.css'
 import Footer from '@/gallery/Footer'
 import Header from '@/gallery/Header'
 
@@ -36,10 +37,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
-      <Header />
+    <div className='content-grid'>
+      <div className='breakout'>
+        <Header />
+      </div>
       {children}
-      <Footer />
-    </>
+      <div className='breakout'>
+        <Footer />
+      </div>
+    </div>
   )
 }
