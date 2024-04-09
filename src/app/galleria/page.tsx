@@ -13,7 +13,7 @@ const Gallery = () => {
     <>
       <section id='info' className='my-5'>
         <div className='flex flex-row items-center gap-5'>
-          <h2 className='font-bold text-8xl orientation-upright text-neutral'>INFO</h2>
+          <h2 className='font-bold text-4xl sm:text-8xl orientation-upright text-neutral'>INFO</h2>
           <div className='py-4 '>
             <h3 className='font-bold uppercase pb-1'>Tervetuloa galleriaan</h3>
             <p className='font-display max-w-[65ch] text-xl text-neutral-500 highlight-text leading-9'>
@@ -35,7 +35,7 @@ const Gallery = () => {
             height={400}
             width={650}
           />
-          <h2 className='font-bold text-8xl orientation-upright text-neutral flex-0'>VENUE</h2>
+          <h2 className='font-bold text-4xl sm:text-8xl orientation-upright text-neutral flex-0'>VENUE</h2>
           <p className='text-xl font-semibold whitespace-nowrap flex-1 py-10'>
             <span className='text-4xl font-bold'>Taiteen Talo</span> <br /><br />
             Nunnankatu 4, 20500 Turku <br />
@@ -47,7 +47,7 @@ const Gallery = () => {
       </section>
       <section id='aukioloajat' className=' my-5'>
         <div className='flex flex-row items-center gap-5'>
-          <h2 className='font-bold text-8xl orientation-upright text-neutral'>AUKIOLOAJAT</h2>
+          <h2 className='font-bold text-4xl sm:text-8xl orientation-upright text-neutral'>AUKIOLOAJAT</h2>
           <div className='py-4'>
             <p className='text-xl mt-10 font-semibold'>
               Gallerian auki olemisen tunnistat avoimesta ovesta ja kutsuvasta kyltistä.<br />

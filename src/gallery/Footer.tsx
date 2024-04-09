@@ -7,7 +7,9 @@ const Footer = () => {
   return (
     <footer className='footer p-10 '>
       <aside>
-        <Stamp className='fill-base-content' width='70' height='70' />
+        <Link href='/'>
+          <Stamp className='fill-base-content' width='70' height='70' />
+        </Link>
         <p>Wappulehti Pönkeli<br />Hauskuutta ja iloa myös vuonna 2024</p>
       </aside>
       <nav>
