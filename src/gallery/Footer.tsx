@@ -5,10 +5,10 @@ import Stamp from '@/app/galleria/Stamp'
 
 const Footer = () => {
   return (
-    <footer className='footer p-10 bg-base-100 text-base-content'>
+    <footer className='footer p-10 '>
       <aside>
         <Stamp className='fill-base-content' width='70' height='70' />
-        <p>Wappulehti Pönkeli.<br />Hauskuutta ja iloa tänäkin vuonna 2024</p>
+        <p>Wappulehti Pönkeli<br />Hauskuutta ja iloa myös vuonna 2024</p>
       </aside>
       <nav>
         <h6 className='footer-title'>Seuraa meitä</h6>

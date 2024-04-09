@@ -1,8 +1,11 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 
+import OpeningTimes from '@/gallery/OpeningTimes'
+
 export const metadata: Metadata = {
   title: `Pönkeli ${new Date().getFullYear()}`,
+  // TODO: ADD METADATA!
 }
 
 const Gallery = () => {
@@ -12,15 +15,13 @@ const Gallery = () => {
         <div className='flex flex-row items-center gap-5'>
           <h2 className='font-bold text-8xl orientation-upright text-neutral'>INFO</h2>
           <div className='py-4 '>
-            <h3 className='font-bold'>Tervetuloa galleriaan</h3>
-            <p className='font-display max-w-[65ch] text-xl text-neutral-500'>
-              Pönkeli - Turun yliopiston teekkareiden wappulehti.
-              Pönkeli pyrkii aina innostamaan ja yhdistämään teekkareita tavallisia kuolevaisia. Tänä vuonna  wappulehti sai muodokseen taidenäyttelyn. Galleria Pönkeli on kaikille avoin näyttely, jonka teokset kuvastavat niin muinaista, kuin nykyistä teekkarikulttuuria sekä huumoria. Tule ja tutustu.
+            <h3 className='font-bold uppercase pb-1'>Tervetuloa galleriaan</h3>
+            <p className='font-display max-w-[65ch] text-xl text-neutral-500 highlight-text leading-9'>
+              Turun Yliopiston teekkareiden wappulehti <span className='highlight'>Pönkeli</span> julkaistiin 10.4.2024 Kårenilla juhlavin menoin. Tämän vuoden lehdeksi paljastui tekniikan osaajien taiteellista puolta korostava taidenäyttely ja lehti teekkariuden ja taiteen kohtaamisesta. Näyttely pidetään <span className='highlight'>Taiteen talolla</span> teekkariwapun aikana <span className='highlight'>11.4-29.4.</span> Galleria Pönkeli on kaikille avoin kokemus iästä riippumatta, jossa teokset kuvastavat niin muinaista kuin nykyistä <span className='highlight'>teekkaritiedettä ja -taidetta</span>. Oman lehtesi saat teekkarilakkipäisiltä Pönkelin <span className='highlight'>myyjiltä</span>, tai saapumalla Taiteen talolle. Lehti toimii lippuna taidenäyttelyyn. Tule ja naura!
             </p>
             <p className='text-xl mt-10 font-semibold'>
               Hinta 8€ <br />
-              taNperelaiset 10€ <br />
-              Lehti toimii pääsylippuna näyttelyyn
+              taNperelaiset 10€
             </p>
           </div>
         </div>
@@ -30,12 +31,12 @@ const Gallery = () => {
           <Image
             src='/venue-location.webp'
             alt='Venue-sijainti'
-            className='object-cover -my-12 max-w-[650vw] flex-0'
+            className='object-cover -mt-12 max-w-full flex-0'
             height={400}
             width={650}
           />
           <h2 className='font-bold text-8xl orientation-upright text-neutral flex-0'>VENUE</h2>
-          <p className='text-xl mt-10 font-semibold whitespace-nowrap flex-1 pb-5'>
+          <p className='text-xl font-semibold whitespace-nowrap flex-1 py-10'>
             <span className='text-4xl font-bold'>Taiteen Talo</span> <br /><br />
             Nunnankatu 4, 20500 Turku <br />
             <small>
@@ -49,15 +50,16 @@ const Gallery = () => {
           <h2 className='font-bold text-8xl orientation-upright text-neutral'>AUKIOLOAJAT</h2>
           <div className='py-4'>
             <p className='text-xl mt-10 font-semibold'>
-              Näyttely on avoinna 11.-29.4.<br />
+              Gallerian auki olemisen tunnistat avoimesta ovesta ja kutsuvasta kyltistä.<br />
               <br />
-              Ma-Pe 15.00 - 19.00<br />
+              Ma-Pe 14.00 - 19.00<br />
               La-Su 12.00 - 16.00<br />
+              23. & 25.4. ei avoinna<br />
               <br />
-              Poikkeusaikataulut<br />
-              Näyttely suljettu 23. & 25.4.<br />
-              Pidätämme oikeudet muutoksiin
+              Galleria on avoinna 11.-29.4.<br />
             </p>
+            <OpeningTimes />
+            <i>Pidätämme oikeudet muutoksiin</i>
           </div>
         </div>
       </section>
