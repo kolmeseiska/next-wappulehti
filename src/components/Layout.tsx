@@ -9,7 +9,7 @@ type Props = {
 }
 
 const Layout = ({ children }: Props) => (
-  <div className={`main-container bg-base-100 ${raleway.className}`}>
+  <div className={`main-container ${raleway.className}`}>
     <Navigation />
     <main>
       {children}

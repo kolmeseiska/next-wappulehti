@@ -1,10 +1,10 @@
-import OffseasonHero from '@/content/OffseasonHero'
+import ReleaseInfo from '../galleria/ReleaseInfo'
 
 export default function Page() {
   return (
     <>
-      {/* <ReleaseInfo /> */}
-      <OffseasonHero />
+      <ReleaseInfo />
+      {/* <OffseasonHero /> */}
     </>
   )
 }

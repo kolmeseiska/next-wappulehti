@@ -42,7 +42,7 @@ export default function RootLayout({
         <Header />
       </div>
       {children}
-      <div className='breakout'>
+      <div className='full-width'>
         <Footer />
       </div>
     </div>
