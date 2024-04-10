@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div
       className={`navbar
-      bg-base-300 text-base-100 rounded-b-xl mx-auto overflow-hidden z-10
+      bg-base-300 text-base-100 rounded-b-xl mx-auto overflow-hidden z-10 p-0
       min-w-fit
       gallery-header`}
     >
