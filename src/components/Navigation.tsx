@@ -11,7 +11,8 @@ type NavItemProps = {
 type Route = [string, string, boolean?]
 
 const routes: Route[] = [
-  ['Pölkyn Äärellä', '/kisa', true],
+  // ['Pölkyn Äärellä', '/kisa', true],
+  ['Galleria Pönkeli 2024', '/galleria', true],
   ['Tapahtumat', '/tapahtumat'],
   ['Historia', '/historia'],
   ['Myyjät', '/myyjarekry'],
@@ -27,14 +28,15 @@ const NavItems = ({ isCollapsed }: NavItemProps) => {
 
   const pathname = usePathname()
   const menuClassName = isCollapsed
-    ? 'menu text-zinc-50 dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 shadow-2xl'
-    : 'menu menu-horizontal text-zinc-50 px-1'
+    ? 'menu text-primary dropdown-content mt-3 p-2 shadow bg-base-300 rounded-box w-52 shadow-2xl'
+    : 'menu menu-horizontal text-primary px-1'
 
   return (
     <ul tabIndex={0} className={`gap-1 ${menuClassName}`}>
       {routes.map(([title, url, isHighlight]) => {
         const className = isHighlight
-          ? 'text-zinc-50 bg-primary hover:text-primary hover:bg-zinc-50'
+          // ? 'text-primary bg-primary hover:text-primary hover:bg-zinc-50'
+          ? 'text-secondary bg-neutral hover:text-base-100 hover:bg-accent'
           : 'hover:bg-zinc-100 hover:text-zinc-900'
         return (
           <Link
@@ -58,7 +60,8 @@ const NavItems = ({ isCollapsed }: NavItemProps) => {
 
 const Navigation = () => {
   return (
-    <nav className='navbar sticky top-0 z-10 backdrop-blur-md backdrop-saturate-20 bg-nav-alpha'>
+    // <nav className='navbar sticky top-0 z-10 backdrop-blur-md backdrop-saturate-20 bg-nav-alpha'>
+    <nav className='navbar sticky top-0 z-10 bg-base-300'>
       <div className='navbar-start' />
       <div className='navbar-center'>
         <Link
@@ -73,7 +76,7 @@ const Navigation = () => {
       </div>
       <div className='navbar-end'>
         <div className='dropdown dropdown-end'>
-          <label tabIndex={0} className='btn btn-ghost md:hidden'>
+          <label tabIndex={0} className='btn btn-ghost text-primary md:hidden'>
             <svg xmlns='http://www.w3.org/2000/svg' className='h-5 w-5' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round' strokeWidth='2' d='M4 6h16M4 12h8m-8 6h16' /></svg>
           </label>
           <NavItems isCollapsed />
