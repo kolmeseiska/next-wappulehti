@@ -5,11 +5,11 @@ const Header = () => {
   return (
     <div
       className={`navbar
-      bg-base-300 text-base-100 rounded-b-xl mx-auto overflow-hidden z-10 p-0
+      bg-base-300 text-base-100 rounded-b-xl mx-auto overflow-hidden z-10 p-1
       min-w-fit
       gallery-header`}
     >
-      <div className='navbar-start z-10 text-xl sm:text-3xl leading-7 mx-3 font-display'>
+      <div className='navbar-start z-10 text-3xl sm:text-3xl leading-7 mx-3 font-display'>
         <div>
           <div>
             Galleria
