@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://turunwappulehti.fi/*"
+  to = "https://xn--pnkeli-wxa.fi/:splat"
+  status = 301
+  force = true
