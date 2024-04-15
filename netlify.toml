@@ -4,5 +4,11 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "https://www.turunwappulehti.fi/*"
+  to = "https://xn--pnkeli-wxa.fi/:splat"
+  status = 301
+  force = true
+
 [build.environment]
   TZ="Europe/Helsinki"
