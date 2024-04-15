@@ -9,6 +9,7 @@ import Header from '@/gallery/Header'
 export const metadata: Metadata = {
   title: 'Galleria-Pönkeli',
   description: 'Galleria-Pönkeli - 2024 Turun yliopiston teekkareiden wappulehti',
+  keywords: 'pönkeli,pönkeli2024,taiteen talo,turun yliopisto,teekkariwappulehti,wappu,vappu,teekkari,galleria,taidenäyttely,turku',
   openGraph: {
     title: 'Galleria Pönkeli',
     type: 'website',
