@@ -6,7 +6,7 @@ const openingTimes = [
   { day: 'pe', date: '2024-04-12', time: '12-19' },
   { day: 'la', date: '2024-04-13', time: '11-15' },
   { day: 'su', date: '2024-04-14', time: '12-16' },
-  { day: 'ma', date: '2024-04-15', time: '12-19' },
+  { day: 'ma', date: '2024-04-15', time: '15-19' },
   { day: 'ti', date: '2024-04-16', time: '12-19' },
   { day: 'ke', date: '2024-04-17', time: '12-19' },
   { day: 'to', date: '2024-04-18', time: '15-19' },
