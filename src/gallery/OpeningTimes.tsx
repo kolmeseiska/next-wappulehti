@@ -22,7 +22,7 @@ const openingTimes = [
   { day: 'su', date: '2024-04-28', time: '12-16' },
   { day: 'ma', date: '2024-04-29', time: '15-19' },
   // { day: 'ti', date: '2024-04-30', time: '12-17' },
-  // { day: 'ke', date: '2024-05-01', time: '14-18' },
+  { day: 'ke', date: '2024-05-01', time: '14-18' },
 ]
 
 const OpeningTimes = () => {
