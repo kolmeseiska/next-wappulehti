@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   // TODO: ADD METADATA!
 }
 
+export const revalidate = 3600
+
 const Gallery = () => {
   return (
     <>
