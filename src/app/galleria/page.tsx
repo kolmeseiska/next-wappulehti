@@ -54,11 +54,7 @@ const Gallery = () => {
             <p className='text-xl mt-10 font-semibold'>
               Gallerian auki olemisen tunnistat avoimesta ovesta ja kutsuvasta kyltistä.<br />
               <br />
-              Ma-Pe 14.00 - 19.00<br />
-              La-Su 12.00 - 16.00<br />
-              23. & 25.4. ei avoinna<br />
-              <br />
-              Galleria on avoinna 11.-29.4.<br />
+              Galleria on avoinna 11.4.-1.5.<br />
             </p>
             <OpeningTimes />
             <i>Pidätämme oikeudet muutoksiin</i>

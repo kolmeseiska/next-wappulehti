@@ -20,8 +20,8 @@ const openingTimes = [
   { day: 'pe', date: '2024-04-26', time: '15-19' },
   { day: 'la', date: '2024-04-27', time: '12-16' },
   { day: 'su', date: '2024-04-28', time: '12-16' },
-  { day: 'ma', date: '2024-04-29', time: '15-19' },
-  // { day: 'ti', date: '2024-04-30', time: '12-17' },
+  { day: 'ma', date: '2024-04-29', time: 'EI AVOINNA' },
+  { day: 'ti', date: '2024-04-30', time: '15-17' },
   { day: 'ke', date: '2024-05-01', time: '14-18' },
 ]
 
