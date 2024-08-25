@@ -17,7 +17,7 @@ const OffseasonHero = () => {
             <Logo className='h-48 max-w-full' />
           </h1>
           <h3 className='text-4xl font-bold mb-8'>
-            Ilmoittaudu mukaan Pönkelin myyjäksi!
+            Hae mukaan Pönkeliin!
           </h3>
           <div className='motion-safe:animate-bounce'>
             <DownCaretIcon />
@@ -38,12 +38,19 @@ const OffseasonHero = () => {
           >
             Osallistu kisaan!
           </Link> */}
-          <Link
+          {/* <Link
             href={'/myyjarekry'}
             role='button'
             className='btn btn-primary mt-5 btn-outline bg-red-50'
           >
             Myyjärekry!
+          </Link> */}
+          <Link
+            href={'/rekry'}
+            role='button'
+            className='btn btn-accent mt-5 btn-outline bg-red-50 text-xl'
+          >
+            Rekry!
           </Link>
         </div>
       </div>
