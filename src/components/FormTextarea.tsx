@@ -4,7 +4,7 @@ import { FieldValues, get } from 'react-hook-form'
 import { FormInputProps } from './FormInput'
 import Label from './Label'
 
-const FormTextarea= <T extends FieldValues>({ label, name, errors, register, placeholder }: FormInputProps<T>) => {
+const FormTextarea = <T extends FieldValues>({ label, name, errors, register, placeholder }: FormInputProps<T>) => {
   return (
     <div className='form-control'>
       <Label
@@ -15,7 +15,7 @@ const FormTextarea= <T extends FieldValues>({ label, name, errors, register, pla
       <textarea
         id={name}
         {...register(name)}
-        className={`textarea textarea-bordered h-24 textarea-primary
+        className={`textarea textarea-bordered h-24 focus-within:textarea-accent
           ${get(errors, name) ? 'textarea-error' : ''}`}
         placeholder={placeholder}
       />

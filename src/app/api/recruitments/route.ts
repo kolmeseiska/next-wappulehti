@@ -1,8 +1,8 @@
 import { appendSheet, GoogleConfigSheets } from '@/google'
-import { Seller } from '@/seller'
+import { Recruitment } from '@/recruitment'
 
 export async function POST(req: Request) {
-  if(!process.env.SPREADSHEET_ID_SELLER || !process.env.API_KEY) {
+  if(!process.env.SPREADSHEET_ID_RECRUITMENT || !process.env.API_KEY) {
     return Response
       .json(
         { message: 'Ongelmia palvelimella. Ota yhteyttä Pönkeleihin' },
@@ -12,16 +12,16 @@ export async function POST(req: Request) {
 
   const configSheets = {
     apiKey: process.env.API_KEY,
-    spreadsheetId: process.env.SPREADSHEET_ID_SELLER
+    spreadsheetId: process.env.SPREADSHEET_ID_RECRUITMENT
   } as GoogleConfigSheets
 
-  const data: Seller = await req.json()
+  const data: Recruitment = await req.json()
   const columns = [
     new Date(),
     data.name,
     data.email,
-    data.isExperience,
-    data.isFuksi,
+    data.telegram,
+    data.description,
   ]
 
   const sheet = await appendSheet(columns, configSheets)
