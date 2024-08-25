@@ -15,12 +15,13 @@ module.exports = {
       'display': ['var(--font-display)']
     }
   },
+  darkMode: ['selector', '[data-mode="dark"]'],
   daisyui: {
     logs: false, // Shows info about daisyUI version and used config in the console when building your CSS
     themes: [
       {
         // NOTE: remember to update colors.css fallback values
-        wappuDark: {
+        dark: {
           'primary': '#e11d48',
           'secondary': '#D926AA',
           'accent': '#00c7b5',
@@ -34,7 +35,7 @@ module.exports = {
         },
       },
       {
-        wappuLight: {
+        light: {
           primary: '#f1f1f1',
           secondary: '#152747',
           accent: '#513448',
@@ -42,7 +43,7 @@ module.exports = {
           'neutral-content': '#181818',
           'base-100': '#EBE7E5',
           'base-200': '#181818',
-          'base-300': '#383838',
+          'base-300': '#20252f',
           'base-content': '#181818',
           info: '#66c6ff',
           success: '#87d039',

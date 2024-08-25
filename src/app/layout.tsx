@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { ThemeProvider } from 'next-themes'
 
 import '../styles/globals.css'
 import '../styles/styles.css'
@@ -32,8 +31,6 @@ export const metadata: Metadata = {
 
 }
 
-const themes = ['wappuLight', 'wappuDark']
-
 export default function RootLayout({
   children
 }: Readonly<{
@@ -42,14 +39,11 @@ export default function RootLayout({
   return (
     <html
       lang='fi'
-      data-theme='wappuLight'
       className={`scroll-smooth ${raleway.className} ${raleway.variable} ${dmSerifDisplay.variable}`}
       suppressHydrationWarning // To prevent next-theme warnings on top level
     >
       <body>
-        <ThemeProvider defaultTheme='wappuLight' themes={themes}>
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   )
