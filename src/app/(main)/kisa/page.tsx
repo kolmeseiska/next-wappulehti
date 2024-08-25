@@ -18,7 +18,7 @@ const Kisa = () => {
         <>
           <h2 className='text-3xl'>Vitsi | Juttu | Grafiikka -kisa</h2>
           <p>
-            <b>Pölkyn Äärellä</b> on turkulaisten teekkareiden wappulehti Pönkelin lanseeraama vitsi/grafiikka/kirjoitus -kilpailu, jonka tarkoituksena on saada ne kaikkein hervottomimmat ja nerokkaimmat tuotokset samaan painokseen eli wappuna 2024 ilmestyvään Pönkeliin!
+            <b>Pölkyn Äärellä</b> on wappulehti Pönkelin lanseeraama vitsi/grafiikka/kirjoitus -kilpailu, jonka tarkoituksena on saada ne kaikkein hervottomimmat ja nerokkaimmat tuotokset samaan painokseen eli wappuna 2024 ilmestyvään Pönkeliin!
           </p>
           <b>
             Huom! Parhaat tuotokset palkitaan!

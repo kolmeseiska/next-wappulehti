@@ -12,7 +12,7 @@ const OffseasonHero = () => {
       <ColorWall />
       <div className='hero-content text-center text-slate-100 py-32'>
         <div className='max-w-md'>
-          <h2 className='text-xl font-bold'>Turun Yliopiston<br />teekkareiden Wappulehti</h2>
+          <h2 className='text-xl font-bold'>Turun Yliopiston opiskelijoiden Wappulehti</h2>
           <h1 className='text-8xl font-bold uppercase mb-8 fill-slate-50'>
             <Logo className='h-48 max-w-full' />
           </h1>

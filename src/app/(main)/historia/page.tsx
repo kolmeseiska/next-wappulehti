@@ -56,10 +56,10 @@ const historia = () => {
       <h1 className='text-6xl font-extrabold pb-10 text-center'>Historia</h1>
       <div className='prose prose-xl mx-auto'>
         <h2 className='text-3xl font-extrabold'>
-          Pönkeli on Turun yliopiston teekkareiden Wappulehti.
+          Pönkeli on Turun yliopiston opiskelijoiden Wappulehti.
         </h2>
         <p>
-          Teekkareiden Wappulehtiä on väännetty Turun yliopistossa jo vuodesta 2001 ja tuolloin teoksen nimi oli Pilde&Napander. Vuonna 2020 projekti aloitettiin alusta ja wappulehti sai uuden uljaan ja soiluvan nimen <b>Pönkeli.</b>
+          Wappulehtiä on väännetty Turun yliopistossa jo vuodesta 2001 ja tuolloin teoksen nimi oli Pilde&Napander. Vuonna 2020 projekti aloitettiin alusta ja wappulehti sai uuden uljaan ja soiluvan nimen <b>Pönkeli.</b>
         </p>
         {editions.map(edition => (
           <Fragment key={edition.year}>

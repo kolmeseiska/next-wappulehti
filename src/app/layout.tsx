@@ -9,11 +9,11 @@ import { dmSerifDisplay, raleway } from './fonts'
 
 export const metadata: Metadata = {
   title: 'Pönkeli',
-  description: 'Pönkeli - Turun yliopiston teekkareiden Wappulehti',
+  description: 'Pönkeli - Turun yliopiston opiskelijoiden Wappulehti',
   openGraph: {
     title: 'Pönkeli',
     type: 'website',
-    description: 'Pönkeli - Turun yliopiston teekkareiden Wappulehti',
+    description: 'Pönkeli - Turun yliopiston opiskelijoiden Wappulehti',
     url: 'https://pönkeli.fi/',
     images: {
       url: 'https://pönkeli.fi/wappulehti-og.jpg',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Pönkeli',
-    description: 'Pönkeli - Turun yliopiston teekkareiden Wappulehti',
+    description: 'Pönkeli - Turun yliopiston opiskelijoiden Wappulehti',
     images: {
       url: 'https://pönkeli.fi/wappulehti-og.jpg',
     }
