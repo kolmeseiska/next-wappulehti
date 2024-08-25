@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { ThemeProvider } from 'next-themes'
 
 import '../styles/globals.css'
 import '../styles/styles.css'
@@ -31,15 +32,24 @@ export const metadata: Metadata = {
 
 }
 
+const themes = ['wappuLight', 'wappuDark']
+
 export default function RootLayout({
   children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='fi' data-theme='wappu' className={`scroll-smooth ${raleway.className} ${raleway.variable} ${dmSerifDisplay.variable}`}>
+    <html
+      lang='fi'
+      data-theme='wappuLight'
+      className={`scroll-smooth ${raleway.className} ${raleway.variable} ${dmSerifDisplay.variable}`}
+      suppressHydrationWarning // To prevent next-theme warnings on top level
+    >
       <body>
-        {children}
+        <ThemeProvider defaultTheme='wappuLight' themes={themes}>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -3,6 +3,17 @@ import Image from 'next/image'
 
 const editions = [
   {
+    year: 2024,
+    title: 'Galleria',
+    body: (
+      <>
+        <p>Mo</p>
+        <p>Mo</p>
+      </>
+    ),
+    imageSource: '/galleria-24.webp'
+  },
+  {
     year: 2023,
     title: 'FantasiaPönkeli',
     body: (
