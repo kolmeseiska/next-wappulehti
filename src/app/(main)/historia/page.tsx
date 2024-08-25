@@ -8,7 +8,7 @@ const editions = [
     body: (
       <>
         <p>
-          Wappuna 2024 ilmestynyt Galleria Pönkeli oli ensimmäinen wappulehti laatuaan, joka oli myös kokemus fyysisen lehden sijaan. Pönkeli ilmestyi taidenäyttelynä tieteen ja taiteen kohtaamisista, mihin pääsylippuna toimi pieni huumorilehtinen, joka opasti näyttelyssä kävijöitä teoksista.
+          Wappuna 2024 ilmestynyt <b>&quot;Galleria Pönkeli&quot;</b> oli ensimmäinen wappulehti laatuaan, joka oli myös kokemus fyysisen lehden sijaan. Pönkeli ilmestyi taidenäyttelynä tieteen ja taiteen kohtaamisista, mihin pääsylippuna toimi pieni huumorilehtinen, joka opasti näyttelyssä kävijöitä teoksista.
         </p>
         <p>
           Taidenäyttelyyn oli luotu erilaisia teoksia aina perinteisistä maalauksista suurempiinkin insinööritaidonnäytteisiin. Galleria Pönkeliä pidettiin Turun Taiteen Talolla koko wapun ajan auki, ja se muovautui opiskelijoiden olohuoneeksi. Galleria Pönkeli oli innovatiivinen, kokeilunhaluinen ja osoitus tekniikan ja taiteen luovuudesta.
