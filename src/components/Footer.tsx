@@ -34,7 +34,7 @@ const Footer = () => {
           {' '}
           {(new Date()).getFullYear()}
           {' '}
-          Pönkeli - Hassuttaahan se
+          Pönkeli - Huumorihulinaa vuodesta 2021
         </span>
       </div>
     </footer>
