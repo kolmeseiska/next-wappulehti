@@ -17,9 +17,12 @@ const Event = ({ event, isPast, width = 'w-96' }: Props) => {
   const details = [date, event.details].filter(Boolean).join(' - ')
 
   return (
-    <button onClick={toggle} className='text-start'>
-      <div className={`card ${width} ${isPast ? 'bg-gray-600' : 'bg-cyan-700'} text-primary-content text-lg leading-8`}>
-        <figure className='h-44'>
+    <button
+      onClick={toggle}
+      className='text-start group transform transition duration-500 hover:scale-[101%]'
+    >
+      <div className={`card ${width} ${isPast ? 'bg-gray-600' : 'bg-cyan-700'} text-primary-content text-lg leading-8 overflow-hidden`}>
+        <figure className='h-44 transform transition duration-500 group-hover:scale-110 group-hover:rotate-2'>
           <Image
             src={event.image || '/ponkelitausta.png'}
             alt='Tapahtuman kuva'
