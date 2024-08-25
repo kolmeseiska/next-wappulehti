@@ -12,7 +12,6 @@ type Route = [string, string, boolean?]
 
 const routes: Route[] = [
   // ['Pölkyn Äärellä', '/kisa', true],
-  ['Galleria Pönkeli 2024', '/galleria', true],
   ['Tapahtumat', '/tapahtumat'],
   ['Historia', '/historia'],
   ['Myyjät', '/myyjarekry'],

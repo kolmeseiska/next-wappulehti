@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='fi' data-theme='gallery' className={`scroll-smooth ${raleway.className} ${raleway.variable} ${dmSerifDisplay.variable}`}>
+    <html lang='fi' data-theme='wappu' className={`scroll-smooth ${raleway.className} ${raleway.variable} ${dmSerifDisplay.variable}`}>
       <body>
         {children}
       </body>

@@ -32,24 +32,6 @@ module.exports = {
           'warning': '#FBBD23',
           'error': '#FBBD23',
         },
-      },
-      {
-        // Pönkeli 2024 colors
-        gallery: {
-          primary: '#f1f1f1',
-          secondary: '#152747',
-          accent: '#513448',
-          neutral: '#e3d2d2',
-          'neutral-content': '#181818',
-          'base-100': '#EBE7E5',
-          'base-200': '#181818',
-          'base-300': '#383838',
-          'base-content': '#181818',
-          info: '#66c6ff',
-          success: '#87d039',
-          warning: '#e2d562',
-          error: '#ff6f6f',
-        }
       }
     ],
   }
