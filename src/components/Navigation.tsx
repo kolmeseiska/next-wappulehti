@@ -35,8 +35,7 @@ const NavItems = ({ isCollapsed }: NavItemProps) => {
     <ul tabIndex={0} className={`gap-1 ${menuClassName}`}>
       {routes.map(([title, url, isHighlight]) => {
         const className = isHighlight
-          // ? 'text-primary bg-primary hover:text-primary hover:bg-zinc-50'
-          ? 'text-secondary bg-neutral hover:text-base-100 hover:bg-accent'
+          ? 'text-secondary bg-neutral hover:bg-accent'
           : 'hover:bg-zinc-100 hover:text-zinc-900'
         return (
           <Link

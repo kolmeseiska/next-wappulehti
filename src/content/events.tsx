@@ -25,7 +25,7 @@ const events: PonkeliEvent[] = [
           Tapahtuman upeita joukkueita sekä lajeja voi fiilistellä Turun yliopiston teekkareiden kuvagalleriassa
           {' '}
           <Link
-            className='link'
+            className='link hover:text-accent'
             href='https://tyteekkarit.kuvat.fi/kuvat/P%C3%B6nkeli+-Turkulainen+wappulehti/P%C3%B6nkeli+Games+2022/'
             target='_blank'
             rel='noreferrer'
@@ -47,7 +47,7 @@ const events: PonkeliEvent[] = [
           on turkulaisten teekkareiden wappulehti Pönkelin lanseeraama uusi Pönkelin sisältökilpailu KÄYNNISSÄ NYT!
         </strong>
         <p>
-          Lähetä omat luomuksesi ja tutustu ohjeisiin <Link className='link' href='/kisa'>Pölkyn Äärellä -sivuilta</Link>
+          Lähetä omat luomuksesi ja tutustu ohjeisiin <Link className='link hover:text-accent' href='/kisa'>Pölkyn Äärellä -sivuilta</Link>
         </p>
       </>
     )
@@ -69,7 +69,7 @@ const events: PonkeliEvent[] = [
         <br />
         <strong>MYYJÄKSI?</strong>  TAPAHTUMASSA VOIT ILMOITTAUTUA PÖNKELIN 2023 MYYJÄKSI JA LUNASTAA SAMALLA PAIKAN PÖNKELIJULKKAREIDEN VIP-ALUEELTA WAPUNALOITUKSESSA!
         <br />
-        <Link href='/myyjainfo' className='link'>
+        <Link href='/myyjainfo' className='link hover:text-accent'>
           Myyjäksi voit myös ilmoittautua täältä.
         </Link>
       </p>
@@ -114,7 +114,7 @@ const events: PonkeliEvent[] = [
           <Link
             href='https://link.webropol.com/s/ponkelireivit-ilmoittautuminen'
             target='_blank'
-            className='link hover:text-primary transition-colors'
+            className='link hover:text-accent transition-colors'
             rel='noopener noreferrer'
             onClick={e => e.stopPropagation()}
           >
@@ -135,7 +135,7 @@ const events: PonkeliEvent[] = [
           <Link
             href='https://link.webropol.com/s/ponkelireivit-ilmoittautuminen'
             target='_blank'
-            className='link hover:text-primary transition-colors'
+            className='link hover:text-accent transition-colors'
             rel='noopener noreferrer'
             onClick={e => e.stopPropagation()}
           >
@@ -188,7 +188,7 @@ const events: PonkeliEvent[] = [
           {' '}
           <Link
             href='https://link.webropol.com/s/pongi23-ilmo'
-            className='link'
+            className='link hover:text-accent'
             target='_blank'
             rel='noopener noreferrer'
             onClick={e => e.stopPropagation()}
@@ -205,7 +205,7 @@ const events: PonkeliEvent[] = [
           <li><b>
             <Link
               href='https://link.webropol.com/s/pongi23-ilmo'
-              className='link'
+              className='link hover:text-accent'
               target='_blank'
               rel='noopener noreferrer'
               onClick={e => e.stopPropagation()}
@@ -268,7 +268,7 @@ const events: PonkeliEvent[] = [
           <Link
             href='https://kide.app/events/e3b0dee8-0c67-4117-af2f-eaa7eed76245'
             target='_blank'
-            className='link hover:text-primary transition-colors'
+            className='link hover:text-accent transition-colors'
             rel='noopener noreferrer'
             onClick={e => e.stopPropagation()}
           >tämän linkin kautta.</Link>
@@ -289,7 +289,7 @@ const events: PonkeliEvent[] = [
             <Link
               href='https://kide.app/events/e3b0dee8-0c67-4117-af2f-eaa7eed76245'
               target='_blank'
-              className='link hover:text-primary transition-colors'
+              className='link hover:text-accent transition-colors'
               rel='noopener noreferrer'
               onClick={e => e.stopPropagation()}
             >
@@ -306,7 +306,7 @@ const events: PonkeliEvent[] = [
           <Link
             href='https://kide.app/events/e3b0dee8-0c67-4117-af2f-eaa7eed76245'
             target='_blank'
-            className='link hover:text-primary transition-colors'
+            className='link hover:text-accent transition-colors'
             rel='noopener noreferrer'
             onClick={e => e.stopPropagation()}
           >through this link.</Link>
@@ -326,7 +326,7 @@ const events: PonkeliEvent[] = [
             <Link
               href='https://kide.app/events/e3b0dee8-0c67-4117-af2f-eaa7eed76245'
               target='_blank'
-              className='link hover:text-primary transition-colors'
+              className='link hover:text-accent transition-colors'
               rel='noopener noreferrer'
               onClick={e => e.stopPropagation()}
             >
@@ -352,7 +352,7 @@ const events: PonkeliEvent[] = [
           <Link
             href='https://kide.app/events/d2a57bc7-2919-4594-b5fc-e2d1fa1957b5'
             target='_blank'
-            className='link hover:text-primary transition-colors'
+            className='link hover:text-accent transition-colors'
             rel='noopener noreferrer'
             onClick={e => e.stopPropagation()}
           >
@@ -370,7 +370,7 @@ const events: PonkeliEvent[] = [
             <Link
               href='https://kide.app/events/d2a57bc7-2919-4594-b5fc-e2d1fa1957b5'
               target='_blank'
-              className='link hover:text-primary transition-colors'
+              className='link hover:text-accent transition-colors'
               rel='noopener noreferrer'
               onClick={e => e.stopPropagation()}
             >

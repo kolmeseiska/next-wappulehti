@@ -8,7 +8,7 @@ const Footer = () => {
       <div className='flex items-center justify-center space-x-2'>
         <Link
           href='https://www.instagram.com/wappulehtiponkeli/'
-          className='social text-zinc-300 hover:text-primary transition-colors'
+          className='social text-zinc-300 hover:text-accent transition-colors'
           target='_blank'
           rel='noopener noreferrer'
         >
@@ -18,7 +18,7 @@ const Footer = () => {
         </Link>
         <Link
           href='https://www.tiktok.com/@wappulehtiponkeli'
-          className='social text-zinc-300 hover:text-primary transition-colors'
+          className='social text-zinc-300 hover:text-accent transition-colors'
           target='_blank'
           rel='noopener noreferrer'
         >
