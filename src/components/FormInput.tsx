@@ -11,7 +11,7 @@ export type FormInputProps<TFieldValues extends FieldValues> = {
   placeholder?: string
 }
 
-const FormInput= <T extends FieldValues>({ label, name, errors, register, placeholder }: FormInputProps<T>) => {
+const FormInput = <T extends FieldValues>({ label, name, errors, register, placeholder }: FormInputProps<T>) => {
   return (
     <div className='form-control'>
       <Label
@@ -19,11 +19,11 @@ const FormInput= <T extends FieldValues>({ label, name, errors, register, placeh
         errors={errors}
         name={name}
       />
-      <input 
+      <input
         id={name}
         {...register(name)}
         type='text'
-        className={`input input-bordered input-primary
+        className={`input input-bordered focus-within:input-accent
           ${get(errors, name) ? 'input-error' : ''}`}
         placeholder={placeholder}
       />
