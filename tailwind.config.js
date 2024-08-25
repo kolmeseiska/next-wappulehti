@@ -15,7 +15,7 @@ module.exports = {
       'display': ['var(--font-display)']
     }
   },
-  darkMode: ['selector', '[data-mode="dark"]'],
+  darkMode: ['selector', '[data-theme="dark"]'],
   daisyui: {
     logs: false, // Shows info about daisyUI version and used config in the console when building your CSS
     themes: [

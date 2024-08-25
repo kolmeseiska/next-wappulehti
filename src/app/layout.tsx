@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { ThemeProvider } from 'next-themes'
 
 import '../styles/globals.css'
 import '../styles/styles.css'
@@ -31,6 +32,8 @@ export const metadata: Metadata = {
 
 }
 
+const themes = ['light', 'dark']
+
 export default function RootLayout({
   children
 }: Readonly<{
@@ -43,7 +46,12 @@ export default function RootLayout({
       suppressHydrationWarning // To prevent next-theme warnings on top level
     >
       <body>
-        {children}
+        <ThemeProvider
+          themes={themes}
+          enableSystem={false}
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
