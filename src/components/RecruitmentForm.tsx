@@ -41,9 +41,6 @@ const RecruitmentForm = () => {
 
   const { isSubmitting, isDirty, errors, isValid } = formState
   const isBusy = isSubmitting || !isDirty
-
-  console.log({ isValid, errors })
-
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <FormInput<Recruitment>

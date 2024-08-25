@@ -37,7 +37,7 @@ const NavItems = ({ isCollapsed }: NavItemProps) => {
     <ul tabIndex={0} className={`gap-1 ${menuClassName}`}>
       {routes.map(([title, url, isHighlight]) => {
         const className = isHighlight
-          ? 'text-secondary bg-neutral hover:bg-accent'
+          ? 'bg-accent outline text-accent-content hover:bg-accent'
           : 'hover:bg-zinc-100 hover:text-zinc-900'
         return (
           <Link
@@ -45,7 +45,7 @@ const NavItems = ({ isCollapsed }: NavItemProps) => {
             href={url}
             className={`rounded-lg px-3 py-2 font-bold transition-colors duration-200
               focus-visible:outline focus-visible:outline-primary
-              ${pathname === url ? 'outline outline-zinc-100 ' : ''}
+              ${pathname === url ? 'outline outline-zinc-100 text-accent-content' : ''}
               ${className}
             `}
             onClick={onLinkClick}
