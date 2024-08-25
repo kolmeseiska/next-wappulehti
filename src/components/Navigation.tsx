@@ -16,6 +16,7 @@ const routes: Route[] = [
   ['Tapahtumat', '/tapahtumat'],
   ['Historia', '/historia'],
   ['Myyjät', '/myyjarekry'],
+  ['Pönkelipiste', '/ponkelipiste'],
   // ['Myyjät', '/myyjainfo'],
 ]
 
