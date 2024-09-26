@@ -381,6 +381,68 @@ const events: PonkeliEvent[] = [
       </>
     )
   },
+  {
+    name: 'Pönkeli Games 2024',
+    date: '2024-10-10',
+    details: null,
+    image: '/ponkeligames2024.webp',
+    description: (
+      <>
+        <strong>Sporttiseikkailu kampuksesi ympäri!</strong>
+        <p>Pönkeli Games eli PöNGi on täällä taas ja ne kisaillaan tänä vuonna 10. lokakuuta klo 17 alkaen! PöNGissä pääset ottamaan mittaa muista joukkueista Amazing Race -tyylisellä rastikierroksella. Rastit vaativat kekseliäisyyttä, yhteistyötä ja ripeitä jalkoja. Kisan jälkeen voittajajoukkue lunastaa itselleen huikean palkinnon, ja kaikki osallistujat pääsevät virkistäytymään TYYn saunalla ennen myöhempiin illanviettoihin siirtymistä.</p>
+        <p>Kokoa siis neljän (4) hengen joukkueesi ja valmistaudu syksyn hauskimpaan ja vauhdikkaimpaan seikkailuun, kun Amazing PöNGi alkaa! Lipun hinta on vaivaiset 6 € / henkilö, joka sisältää osallistumisen kisaan, upean haalarimerkin sekä palauttavaa syötävää ja juotavaa saunalla kisan jälkeen.</p>
+        <p>Ilmoittautuminen kisaan alkaa 30.9. klo 12.00. Ilmoittautumisen jälkeen joukkueilla lähetetään sähköpostitse tarkempia ohjeita PöNGiin valmistautumisesta.</p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>Mitä?</b> Pönkeli Games 2024!</li>
+          <li><b>Missä?</b> Turussa, lähtö TYYn saunalta!</li>
+          <li><b>Milloin?</b> Torstaina 10.10., lähtö klo 17!</li>
+          <li><b>Miksi?</b> Maine, kunnia ja huikeat palkinnot!</li>
+          <li><b>Hinta?</b> 6€/osallistuja</li>
+          <li><b>Palju?</b> Ei, mut sauna on!</li>
+          <li><b>Ilmoittautuminen</b>
+            {' '}
+            <Link
+              href='https://kide.app/events/4b2b1a41-21db-498d-b723-d883ba5a2842'
+              target='_blank'
+              className='link hover:text-accent transition-colors'
+              rel='noopener noreferrer'
+              onClick={e => e.stopPropagation()}
+            >
+              Kide.appissa
+            </Link>
+          </li>
+        </ul>
+        <hr className='my-3' />
+        <b>ENGLISH</b>
+        <strong>Sporttiseikkailu kampuksesi ympäri!</strong>
+        <p>The Pönkeli Games aka PöNGi is here again and they will be held this year on 10th of October starting at 17:00! In PöNGi you will take on other teams in an Amazing Race-style checkpoint race. The tasks require ingenuity, cooperation and fast feet. After the race, the winning team will claim a stunning prize, and all participants will be able to freshen up in the TYY sauna.</p>
+        <p>So get your team of four (4) together and get ready for the most fun and action-packed adventure of this autumn when the Amazing PöNGi begins! The ticket price is mere 6 € per person, which includes entry to the race, a great jumpsuit stamp and refreshing snacks and drinks in the sauna after the race.</p>
+        <p>Registration for the race starts on 30th of September at 12.00. After the registration closes, all teams will be sent an email with more detailed instructions on how to prepare for the PöNGi.</p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>What?</b> Pönkeli Games 2024!</li>
+          <li><b>Where?</b> In Turku, starting from TYY sauna!</li>
+          <li><b>When?</b> Thursday 10.10., start at 17:00!</li>
+          <li><b>Why?</b> Fame, glory and amazing prizes!</li>
+          <li><b>Price?</b> 6€/participant</li>
+          <li><b>Hot tub?</b> No, but the sauna is warm!</li>
+          <li><b>Enroll</b>
+            {' '}
+            <Link
+              href='https://kide.app/events/4b2b1a41-21db-498d-b723-d883ba5a2842'
+              target='_blank'
+              className='link hover:text-accent transition-colors'
+              rel='noopener noreferrer'
+              onClick={e => e.stopPropagation()}
+            >
+              Kide.appissa
+            </Link>
+          </li>
+        </ul>
+      </>
+    )
+  },
 ]
 
 export default events
