@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: 'Pönkeli - Turun yliopiston opiskelijoiden Wappulehti',
     url: 'https://pönkeli.fi/',
     images: {
-      url: 'https://pönkeli.fi/wappulehti-og.jpg',
+      url: 'https://pönkeli.fi/wappulehti-og.webp',
       width: '1200',
       height: '630'
     },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: 'Pönkeli',
     description: 'Pönkeli - Turun yliopiston opiskelijoiden Wappulehti',
     images: {
-      url: 'https://pönkeli.fi/wappulehti-og.jpg',
+      url: 'https://pönkeli.fi/wappulehti-og.webp',
     }
   }
 
