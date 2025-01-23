@@ -255,7 +255,7 @@ const events: PonkeliEvent[] = [
     )
   },
   {
-    name: 'Pönkelireivit',
+    name: 'Pönkelireivit 24',
     date: '2024-04-13',
     details: '19-05 @UG',
     image: '/ponkelireivit24.webp',

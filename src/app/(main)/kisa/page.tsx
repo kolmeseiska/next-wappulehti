@@ -10,7 +10,7 @@ const Kisa = () => {
         <>
           <h1>Pölkyn Äärellä</h1>
           <p className='max-w-md mx-auto'>
-            <b className='text-red-50'>Vuoden 2024 kilpailu on taas käynnissä!</b>
+            <b className='text-red-50'>Taas aika kokoontua pölkyn äärelle!</b>
           </p>
         </>
       )}
