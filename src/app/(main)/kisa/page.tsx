@@ -8,9 +8,10 @@ const Kisa = () => {
     <CardFormPage
       header={(
         <>
-          <h1>Pölkyn Äärellä</h1>
+          <h1>Pönkelin vitsikilpailu</h1>
           <p className='max-w-md mx-auto'>
-            <b className='text-red-50'>Taas aika kokoontua pölkyn äärelle!</b>
+            <b className='text-red-50'>Oletko sinä hauska? Onko Pönkeli hauska?
+            </b>
           </p>
         </>
       )}
@@ -18,16 +19,22 @@ const Kisa = () => {
         <>
           <h2 className='text-3xl'>Vitsi | Juttu | Grafiikka -kisa</h2>
           <p>
-            <b>Pölkyn Äärellä</b> on wappulehti Pönkelin lanseeraama vitsi/grafiikka/kirjoitus -kilpailu, jonka tarkoituksena on saada ne kaikkein hervottomimmat ja nerokkaimmat tuotokset samaan painokseen eli wappuna 2024 ilmestyvään Pönkeliin!
+            <b>Pönkelin vitsikilpailu</b> on wappulehti Pönkelin vitsi/grafiikka/kirjoitus -kilpailu, jonka tarkoituksena on saada ne kaikkein hervottomimmat ja nerokkaimmat tuotokset samaan painokseen eli wappuna 2025 ilmestyvään Pönkeliin! Vitsikilpailu on käynnissä <b>18.2.-16.3.2025.</b>
           </p>
-          <b>
-            Huom! Parhaat tuotokset palkitaan!
-          </b>
+          <p>
+            <b>Vitsikilpailun palkinnot:</b>
+            <ul className='font-bold'>
+              <li><b>Paras vitsi</b> 50 € S-ryhmän lahjakortti</li>
+              <li><b>Paras fuksivitsi</b> 50 € S-ryhmän lahjakortti + pönkelipiste fuksipassiin</li>
+              <li><b>Hauskin kilta</b> MAINETTA ja taidetta (kiltikselle)</li>
+              <li><b>Salainen kiltakategoria</b> ?</li>
+            </ul>
+          </p>
           <p>
             Oletko siis taidokas taiteilija, suurenmoinen sanailija tai kenties virtuoosi vitsailija? Tai muuten vaan hupsu hassuttelija, joka haluaisi osallistua wappulehden tekoon?
           </p>
           <p>
-            Tiputa parhain luomuksesi oheiseen lomakkeeseen ja bongaa se Pönkeli 2024 -lehdestä!
+            Tiputa parhain luomuksesi oheiseen lomakkeeseen ja bongaa se Pönkeli 2025 -lehdestä!
           </p>
         </>
       )}
@@ -39,7 +46,10 @@ const Kisa = () => {
           </h2>
           <ul>
             <li>
-              Osallistua voit yläpuolelta löytyvän lomakkeen kautta, ruokkimalla Agoran aulasta löytyvää PostiPönkeä tai saapumalla yhteisiin hupituokioihin Proffan Kellariin 6.3. kello 17-20. Hupituokio järjestetään yläkerrassa sijaitsevassa kabinettitilassa.
+              Kilpailu on käynnissä <b>18.2.-16.3.2025</b>, mutta voit tuottaa vitsejä vaikka vuoden ympäri!
+            </li>
+            <li>
+              Osallistua voit yläpuolelta löytyvän lomakkeen kautta tai ruokkimalla Agoran aulasta löytyvää PostiPönkeä.
             </li>
             <li>
               Älä ole tymä! Hylkäämme rasistiset sekä loukkaavat tekstit/kuvat suoraan!
@@ -51,9 +61,10 @@ const Kisa = () => {
               Pönkelin kontsaneuvosto käy kilpailun päättymisen jälkeen läpi kaiken lähetetyn materiaalin, ja valitsee niiden keskuudesta ainakin seuraavat palkittavat:
             </li>
             <ul className='font-bold'>
-              <li><b>Hulvattomin kilta</b> - Ainejärjestö/kilta, joka tuottaa kaikkein loistavimmat letkautukset!</li>
-              <li><b>Hillittömin vitsiniekka</b> - Turun hauskin opiskelija 2024</li>
-              <li><b>Veikein fuksi</b> - Turun hauskin fuksi/piltti 2024</li>
+              <li><b>Paras vitsi</b></li>
+              <li><b>Paras fuksivitsi</b></li>
+              <li><b>Hauskin kilta</b></li>
+              <li><b>Salainen kiltakategoria</b></li>
             </ul>
             <li>
               Palkitseminen suoritetaan Pönkelijulkkareissa.

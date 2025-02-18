@@ -52,7 +52,7 @@ const contents = {
         Tervetuloa painamaan pönkeliä!
       </h3>
       <p className='text-xl italic mb-5'>
-        Pölkyn äärellä on leikkimielinen vitsi- sekä juttukilpailu, josta sinä tai kiltasi voitte voittaa hienoja palkintoja sekä mainetta!
+        Pönkelin vitsikilpailu on leikkimielinen vitsi- sekä juttukilpa, josta sinä tai kiltasi voitte voittaa hienoja palkintoja sekä mainetta!
       </p>
       <div className='motion-safe:animate-bounce'>
         <DownCaretIcon />

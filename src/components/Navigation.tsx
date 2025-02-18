@@ -12,7 +12,7 @@ type NavItemProps = {
 type Route = [string, string, boolean?]
 
 const routes: Route[] = [
-  ['Pölkyn Äärellä', '/kisa', true],
+  ['Vitsikilpailu', '/kisa', true],
   ['Tapahtumat', '/tapahtumat'],
   ['Historia', '/historia'],
   ['Myyjät', '/myyjarekry'],
