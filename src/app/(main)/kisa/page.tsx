@@ -9,9 +9,8 @@ const Kisa = () => {
       header={(
         <>
           <h1>Pönkelin vitsikilpailu</h1>
-          <p className='max-w-md mx-auto'>
-            <b className='text-red-50'>Oletko sinä hauska? Onko Pönkeli hauska?
-            </b>
+          <p className='max-w-md mx-auto font-semibold'>
+            Oletko sinä hauska? Onko Pönkeli hauska?
           </p>
         </>
       )}
