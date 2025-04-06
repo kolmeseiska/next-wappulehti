@@ -26,7 +26,7 @@ export default function NiksiPage() {
               Myyntiajat
             </Link>
             <Button asChild className='bg-[#44ace2] hover:bg-amber-400 text-primary hover:text-[#032a39]' size='sm'>
-              <Link href='https://kolmeseiska.holvi.fi/ponkeli25'>
+              <Link href='https://holvi.com/shop/ponkeli/'>
                 <ShoppingBasket />
                 Verkkokauppa
               </Link>
@@ -44,7 +44,7 @@ export default function NiksiPage() {
                 Osta Pönkeli 2025 ja uppoudu syvälle puhtaan sekä kuivan huumorin maailmaan! Lehden mukana tulee monikäyttöinen pyyhe sekä yksi kuudesta eri tuoksuisesta saippuasta.
               </p>
               <p className='text-md'>
-                Tänä vuonna Pönkeliä on myös mahdollista ostaa verkkokaupastamme. <ExternalLink href='https://kolmeseiska.holvi.fi/ponkeli25'>Siirry ostoksille.</ExternalLink>
+                Tänä vuonna Pönkeliä on myös mahdollista ostaa verkkokaupastamme. <ExternalLink href='https://holvi.com/shop/ponkeli/'>Siirry ostoksille.</ExternalLink>
               </p>
             </div>
           </div>
