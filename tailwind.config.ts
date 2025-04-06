@@ -91,6 +91,13 @@ const config = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out'
+      },
+      // Wappulehti 2025
+      backgroundSize: {
+        full: '100%'
+      },
+      backgroundPosition: {
+        'mobile': 'center top 8rem',
       }
     }
   },

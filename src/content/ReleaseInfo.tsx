@@ -9,7 +9,7 @@ const ReleaseInfo = () => {
   return (
     <div>
       <div className='hero relative min-h-[94vh]'>
-        <ColorWall dark />
+        <ColorWall />
         <div className='hero-content text-center text-slate-100 py-32'>
           <div className='max-w-md'>
             <span className='text-8xl font-bold uppercase mb-8 fill-slate-50'>
@@ -39,8 +39,8 @@ const ReleaseInfo = () => {
       </div>
       <div id='lehti' className='py-16'>
         <article className='prose prose-xl mx-auto px-5 md:px-5 my-5 text-slate-200'>
-          <h1>Pönkeli 2023 on julkaistu!</h1>
-          <p>Hyppää lohikäärmeen selkään, selviä petollisista Jalluränneistä sekä heitä itsesi mukaan turkulaiseen teekkariwappuun.</p>
+          <h1>Pönkeli 2025 on saapunut!</h1>
+          <p>Vitsejä, vinkkejä sekä vinhoja tehtäviä lehden täydeltä</p>
         </article>
         <article className='prose prose-xl mx-auto pb-10 pt-1 px-5 md:px-5 mb-5 mt-10 text-slate-200 bg-[#8c0303]'>
           <Sales />
