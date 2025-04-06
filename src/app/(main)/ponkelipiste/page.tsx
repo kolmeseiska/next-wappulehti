@@ -4,11 +4,11 @@ import Link from 'next/link'
 
 const page = () => {
   return (
-    <div className='container mx-auto px-4 justify-center py-16'>
+    <div className='container mx-auto px-4 justify-center py-16 max-w-[75ch]'>
       <h1 className='text-6xl font-extrabold pb-10 text-center'>
         Mikä Pönkeli ja Pönkelipiste?
       </h1>
-      <div className='prose prose-xl mx-auto'>
+      <div className='prose prose-xl mx-auto space-y-5'>
         <p>
           Pönkeli on turkulainen wappulehti, joka ilmestyi ensimmäisen kerran vuonna 2021. Lehti ilmestyy vuosittain wapun aikaan kaiken kansan iloksi. Wappulehdet ovatkin tärkeä osa teekkareiden ja opiskelijoiden historiaa ja kulttuuria ylipäänsä - niiden avulla on rahoitettu isompiakin rakennusprojekteja ja tuettu hyväntekeväisyyttä, sekä annettu yhteisölle takaisin.
         </p>

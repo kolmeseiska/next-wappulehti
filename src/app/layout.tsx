@@ -4,7 +4,6 @@ import { ThemeProvider } from 'next-themes'
 import '../styles/globals.css'
 import '../styles/styles.css'
 import '../styles/collapse.css'
-import '../styles/colors.css'
 import { dmSerifDisplay, raleway } from './fonts'
 
 export const metadata: Metadata = {

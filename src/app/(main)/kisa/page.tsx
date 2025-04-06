@@ -20,7 +20,7 @@ const Kisa = () => {
           <p>
             <b>Pönkelin vitsikilpailu</b> on wappulehti Pönkelin vitsi/grafiikka/kirjoitus -kilpailu, jonka tarkoituksena on saada ne kaikkein hervottomimmat ja nerokkaimmat tuotokset samaan painokseen eli wappuna 2025 ilmestyvään Pönkeliin! Vitsikilpailu on käynnissä <b>18.2.-16.3.2025.</b>
           </p>
-          <p>
+          <div className='my-3'>
             <b>Vitsikilpailun palkinnot:</b>
             <ul className='font-bold'>
               <li><b>Paras vitsi</b> 50 € S-ryhmän lahjakortti</li>
@@ -28,7 +28,7 @@ const Kisa = () => {
               <li><b>Hauskin kilta</b> MAINETTA ja taidetta (kiltikselle)</li>
               <li><b>Salainen kiltakategoria</b> ?</li>
             </ul>
-          </p>
+          </div>
           <p>
             Oletko siis taidokas taiteilija, suurenmoinen sanailija tai kenties virtuoosi vitsailija? Tai muuten vaan hupsu hassuttelija, joka haluaisi osallistua wappulehden tekoon?
           </p>

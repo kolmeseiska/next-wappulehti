@@ -2,7 +2,7 @@ import React from 'react'
 
 const NoUpcomingEvents = () => {
   return (
-    <div className='prose prose-lg mx-auto'>
+    <div className='prose prose-lg mx-auto max-w-[75ch] space-y-3'>
       <p>
         Pönkeli järjestää ympäri vuoden hauskoja kaikille avoimia tapahtumia: Syksyllä urheilutapahtuma Pönkeli Games vaihtuvalla teemalla, talvella saatat huomata erilaisia jekkuja ja kevät huipentuu tietenkin Wapun aloittavaan tapahtumaan, Pönkelijulkkareihin, sekä Turun opiskelijaskenen parhaimpiin reiveihin, Pönkelireiveihin.
       </p>
