@@ -31,9 +31,9 @@ const Sales = () => {
     <div className='overflow-x-auto w-full'>
       <table className='table'>
         <thead className='text-nowrap text-sm'>
-          <tr>
+          <tr className='border-amber-800 border-opacity-10'>
             <th>Päivä</th>
-            <th>Aukioloaika</th>
+            <th>Aika</th>
             <th>Paikka</th>
           </tr>
         </thead>
@@ -49,10 +49,10 @@ const Sales = () => {
             return (
               <tr
                 key={date}
-                className={`text-sm
-            ${isPast ? 'text-gray-400' : ''}
-            ${isToday ? 'bg-accent text-neutral' : ''}
-            `}
+                className={`text-sm border-amber-800 border-opacity-10
+                  ${isPast ? 'text-gray-400' : ''}
+                  ${isToday ? 'bg-accent text-neutral' : ''}
+                `}
               >
                 <td>{day} {formattedDate}</td>
                 <td>{time}</td>

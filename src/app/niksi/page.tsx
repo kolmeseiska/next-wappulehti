@@ -25,7 +25,7 @@ export default function NiksiPage() {
             <Link href='#osta' className='text-[#032a39] hover:text-[#44ace2] transition-colors'>
               Myyntiajat
             </Link>
-            <Button asChild className='bg-[#44ace2] hover:bg-[#e8a736] text-primary hover:text-primary-content' size='sm'>
+            <Button asChild className='bg-[#44ace2] hover:bg-amber-400 text-primary hover:text-primary-content' size='sm'>
               <Link href='/'>
                 <ShoppingBasket />
                 Verkkokauppa
