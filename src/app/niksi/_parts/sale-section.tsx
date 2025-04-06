@@ -1,4 +1,3 @@
-
 import { ExternalLink } from './ExternalLink'
 import Sales from './sales'
 

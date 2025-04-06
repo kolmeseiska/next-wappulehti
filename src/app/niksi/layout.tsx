@@ -1,4 +1,7 @@
+'use cache'
+
 import type { Metadata } from 'next'
+import { unstable_cacheLife as cacheLife } from 'next/cache'
 
 import '../../styles/globals.css'
 
@@ -28,11 +31,17 @@ export const metadata: Metadata = {
 
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Revalidate page every hour to keep sales times up to date
+  cacheLife({
+    stale: 60 * 60 * 3, // 3 hours
+    revalidate: 60 * 60 * 12, // 12 hour
+    expire: 60 * 60 * 24 // 1 day
+  })
   return (
     <div className='content-grid'>
       {children}

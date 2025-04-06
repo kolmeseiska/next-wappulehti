@@ -1,4 +1,3 @@
-
 const saleTimes = [
   { day: 'ke', date: '2025-04-09', time: '14-19', place: 'Osakuntasali' },
   { day: 'to', date: '2025-04-10', time: '14-19', place: 'Osakuntasali' },
@@ -25,8 +24,12 @@ const saleTimes = [
   { day: 'to', date: '2025-05-01', time: '14-18', place: 'Osakuntasali' },
 ]
 
+const getCurrentDate = () => {
+  return new Date().toISOString().slice(0, 10)
+}
+
 const Sales = () => {
-  const currentISODate = new Date().toISOString().slice(0, 10)
+  const currentISODate = getCurrentDate()
   return (
     <div className='overflow-x-auto w-full'>
       <table className='table'>
@@ -50,8 +53,8 @@ const Sales = () => {
               <tr
                 key={date}
                 className={`text-sm border-amber-800 border-opacity-10
-                  ${isPast ? 'text-gray-400' : ''}
-                  ${isToday ? 'bg-accent text-neutral' : ''}
+                  ${isPast ? 'text-stone-400' : ''}
+                  ${isToday ? 'bg-amber-600 text-amber-50' : ''}
                 `}
               >
                 <td>{day} {formattedDate}</td>
