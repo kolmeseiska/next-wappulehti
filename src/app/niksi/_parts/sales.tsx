@@ -20,8 +20,8 @@ const saleTimes = [
   { day: 'su', date: '2025-04-27', time: '12-16', place: 'Osakuntasali' },
   { day: 'ma', date: '2025-04-28', time: '12-16', place: 'Osakuntasali' },
   { day: 'ti', date: '2025-04-29', time: '15-19', place: 'Osakuntasali' },
-  { day: 'ke', date: '2025-04-30', time: '15-17', place: 'Osakuntasali' },
-  { day: 'to', date: '2025-05-01', time: '14-18', place: 'Osakuntasali' },
+  { day: 'ke', date: '2025-04-30', time: '12-16', place: 'Tuomiokirkkotori' },
+  { day: 'to', date: '2025-05-01', time: '14-18', place: 'Wappupicnic' },
 ]
 
 const getCurrentDate = () => {
@@ -34,7 +34,7 @@ const Sales = () => {
     <div className='overflow-x-auto w-full'>
       <table className='table'>
         <thead className='text-nowrap text-sm'>
-          <tr className='border-amber-800 border-opacity-10'>
+          <tr className='border-amber-800 border-opacity-10 text-[#9A6869]'>
             <th>Päivä</th>
             <th>Aika</th>
             <th>Paikka</th>

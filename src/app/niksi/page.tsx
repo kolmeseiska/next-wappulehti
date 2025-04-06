@@ -25,8 +25,8 @@ export default function NiksiPage() {
             <Link href='#osta' className='text-[#032a39] hover:text-[#44ace2] transition-colors'>
               Myyntiajat
             </Link>
-            <Button asChild className='bg-[#44ace2] hover:bg-amber-400 text-primary hover:text-primary-content' size='sm'>
-              <Link href='/'>
+            <Button asChild className='bg-[#44ace2] hover:bg-amber-400 text-primary hover:text-[#032a39]' size='sm'>
+              <Link href='https://kolmeseiska.holvi.fi/ponkeli25'>
                 <ShoppingBasket />
                 Verkkokauppa
               </Link>

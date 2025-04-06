@@ -3,8 +3,6 @@
 import type { Metadata } from 'next'
 import { unstable_cacheLife as cacheLife } from 'next/cache'
 
-import '../../styles/globals.css'
-
 export const metadata: Metadata = {
   title: 'Niksi Pönkeli',
   description: 'Niksi-Pönkeli - 2025 Turun yliopiston teekkareiden wappulehti',
