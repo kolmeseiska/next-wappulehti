@@ -443,6 +443,44 @@ const events: PonkeliEvent[] = [
       </>
     )
   },
+  {
+    name: 'Pönkelijulkkarit ja wappurauhanjulistus',
+    date: '2025-04-08',
+    details: '18.00 @Kåren',
+    image: '/ponkelijulkkarit25.webp',
+    description: (
+      <>
+        <strong>Pönkelijulkkarit ja wappurauhanjulistus 8.4. klo 18 Kårenilla</strong>
+        <p>Wappu on täällä! Arvon turkulainen teekkari, teekkarifuksi ja teekkarimielinen opiskelija Pönkeli 2025 on taas täällä!</p>
+        <p>Turun teekkariwappu käynnistyy virallisilla wapunaloituksen etkoilla eli Turun teekkareiden oman wappulehden Pönkelin julkaisulla. Pönkeli virittää turkulaiset opiskelijat juhlatunnelmaan näyttävällä tavalla. Julkkareissa yllätyksiä sekä viihdettä. Kårenin baari palvelee koko tapahtuman ajan opiskelijaystävällisin hinnoin.</p>
+        <p>Tapahtuma toimii virallisina etkoina wapunaloitusbileille ja tapahtumassa on ensimmäinen mahdollisuus ostaa puhdasta sekä kuivaa huumoria tihkuva Pönkeli 2025! Wapunaloitusbileet starttaavat Vegasissa klo 22!</p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>Mitä</b> Pönkelijulkkarit ja wappuetkot</li>
+          <li><b>Missä</b> Kåren, Hämeenkatu 22</li>
+          <li><b>Milloin</b> 8.4.24 klo 18.00-21.00. Ovet auki klo 17.30</li>
+          <li><b>Miksi</b> WAPPUUUUU! 🥳</li>
+          <li><b>Mitä Maksaa</b> 0€, narikka 3€</li>
+          <li><b>Pukukoodi</b> Wappu/Pönkeli/haalarit</li>
+        </ul>
+        <hr className='my-3' />
+        <b>ENGLISH</b>
+        <strong>Pönkeli&apos;s publishing party and wappu pre-party 8.4 at Kåren</strong>
+        <p>Dear teekkari, teekkarifuksi or teekkari-minded student, the time has come to begin the most expected period of the year; Turku&apos;s teekkariwappu 2025!</p>
+        <p>Turku&apos;s teekkariwappu begins with the official pre-party for the wappu-starting-party, and of course by publishing Turku&apos;s teekkaris&apos; very own wappu magazine: Pönkeli! Pönkeli will take over and solemnly lead all students to wappu atmosphere. There will of course be a surprise entertainers that you do not want to miss. The bar will be open the whole event and has student-friendly prices.</p>
+        <p>The event is the official pre-party for the wappu-starting-party and there is the first chance to redeem yourself the most wanted product of wappu, i.e. Pönkeli 2025! After the event the wappu nation wanders together towards Vegas and wappu-starting-party.</p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>What?</b> Pönkeli&apos;s publishing party and wappu pre-party</li>
+          <li><b>Where?</b> Kåren, Hämeenkatu 22</li>
+          <li><b>When?</b> 8th of April at 6 PM till 9 PM. Starts at 5.30 PM</li>
+          <li><b>Miksi</b>WAPPUUUUU! 🥳</li>
+          <li><b>Price?</b> 0€, Cloakroom 3 €</li>
+          <li><b>Dresscode?</b> Wappu/Pönkeli/over-alls</li>
+        </ul>
+      </>
+    )
+  },
 ]
 
 export default events
