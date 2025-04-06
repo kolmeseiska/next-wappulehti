@@ -1,16 +1,6 @@
-import Link from 'next/link'
 
+import { ExternalLink } from './ExternalLink'
 import Sales from './sales'
-
-const teekkariwappuLink = (
-  <Link
-    href='https://teekkariwappu.fi'
-    className='text-[#44ace2] hover:bg-[#44ace2] hover:text-white transition-colors'
-    target='_blank'
-    rel='noopener noreferrer'
-  >
-    Turun teekkariwapun
-  </Link>)
 
 export const SaleSection = () => {
   return (
@@ -34,13 +24,16 @@ export const SaleSection = () => {
               <path d='M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z'></path>
             </svg>
           </div>
-          <div className=''>
+          <div className='text-[#032a39] text-pretty'>
             <h3 className='text-xl font-semibold text-[#032a39] mb-2'>Miten saan oman Pönkelin?</h3>
-            <p className='text-[#032a39] text-pretty mb-6'>
-              Eikö vielä tullut Pönkeliä? Ei hätää! Pönkeliä myydään ympäri Turun keskustaa ja yliopiston kampuksilla koko {teekkariwappuLink} ajan.
+            <p className='mb-6'>
+              Eikö vielä tullut Pönkeliä? Ei hätää! Pönkeliä myydään ympäri Turun keskustaa ja yliopiston kampuksilla koko <ExternalLink href='https://teekkariwappu.fi'>Turun teekkariwapun</ExternalLink> ajan.
             </p>
-            <p className='text-[#032a39] text-pretty mb-6'>
+            <p className='mb-6'>
               Lehtiä löydät myös teekkarilakkipäisiltä Pönkelin <span className='highlight'>myyjiltä.</span>
+            </p>
+            <p className='mb-6'>
+              Tänä vuonna Pönkeliä on myös mahdollista ostaa verkkokaupastamme. <ExternalLink href='https://kolmeseiska.holvi.fi/ponkeli25'>Siirry ostoksille.</ExternalLink>
             </p>
             <Sales />
           </div>

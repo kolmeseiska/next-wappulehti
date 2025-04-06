@@ -1,6 +1,8 @@
+import { ShoppingBasket } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { ExternalLink } from './_parts/ExternalLink'
 import Footer from './_parts/footer'
 import { SaleSection } from './_parts/sale-section'
 import { Social } from './_parts/social'
@@ -16,26 +18,33 @@ export default function NiksiPage() {
               PÖNKELI 2025
             </Link>
           </div>
-          <div className='md:flex space-x-6'>
+          <div className='flex gap-2 md:gap-4 flex-wrap items-center'>
             <Link href='#lehti' className='text-[#032a39] hover:text-[#44ace2] transition-colors'>
               Tutustu Lehteen
             </Link>
             <Link href='#osta' className='text-[#032a39] hover:text-[#44ace2] transition-colors'>
-              Osta Pönkeli
+              Myyntiajat
             </Link>
+            <Button asChild className='bg-[#44ace2] hover:bg-[#e8a736] text-primary hover:text-primary-content' size='sm'>
+              <Link href='/'>
+                <ShoppingBasket />
+                Verkkokauppa
+              </Link>
+            </Button>
           </div>
-          <Button variant={'outline'} asChild className='bg-[#44ace2] hover:bg-[#e8a736] text-primary hover:text-primary-content'>
-            <Link href='/'>Pönkeli.fi</Link>
-          </Button>
+          <div></div>
         </nav>
       </header>
       <section className=''>
         <div className='container mx-auto flex flex-col md:flex-row items-center justify-center gap-3'>
           <div className='text-center space-y-6 flex-1'>
-            <div>
-              <h1 className='text-3xl md:text-5xl lg:text-5xl font-bold text-[#032a39] mb-8'>Pönkeli 2025<br />on saapunut!</h1>
-              <p className='text-[#032a39] max-w-sm mx-auto text-lg font-semibold'>
+            <div className='text-[#032a39] max-w-sm mx-auto'>
+              <h1 className='text-3xl md:text-5xl lg:text-5xl font-bold mb-8'>Pönkeli 2025<br />on saapunut!</h1>
+              <p className='text-lg font-semibold mb-3'>
                 Osta Pönkeli 2025 ja uppoudu syvälle puhtaan sekä kuivan huumorin maailmaan! Lehden mukana tulee monikäyttöinen pyyhe sekä yksi kuudesta eri tuoksuisesta saippuasta.
+              </p>
+              <p className='text-md'>
+                Tänä vuonna Pönkeliä on myös mahdollista ostaa verkkokaupastamme. <ExternalLink href='https://kolmeseiska.holvi.fi/ponkeli25'>Siirry ostoksille.</ExternalLink>
               </p>
             </div>
           </div>
@@ -117,7 +126,7 @@ export default function NiksiPage() {
       </section>
       <section className='bg-[#44ace2] bg-opacity-10 py-16'>
         <div className='container mx-auto px-4 text-center'>
-          <h2 className='text-3xl font-semibold text-[#032a39] mb-4'>Hauskaa ja huumorintäyteistä Wappua kaikille!</h2>
+          <h2 className='text-xl md:text-3xl font-semibold text-[#032a39] mb-4'>Hauskaa ja huumorintäyteistä Wappua kaikille!</h2>
           <p className='text-[#032a39] max-w-xl mx-auto mb-8'>
             Seuraa meitä somessa ja tule tervehtimään myyntipisteelle!
           </p>
