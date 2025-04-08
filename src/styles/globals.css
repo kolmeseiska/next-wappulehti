@@ -32,8 +32,6 @@ body {
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
-
-
 @media (prefers-reduced-motion) {
   /* .thirteen::before {
     animation: none;

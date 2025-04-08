@@ -1,13 +1,13 @@
 import React from 'react'
 
-type SaleEvent = { 
-  date: string, 
+type SaleEvent = {
+  date: string,
   description: string,
   time?: string
- }
+}
 
 type SaleProps = {
-  saleEvent:SaleEvent
+  saleEvent: SaleEvent
 }
 
 const SaleTime = ({ saleEvent }: SaleProps) => {
@@ -17,7 +17,7 @@ const SaleTime = ({ saleEvent }: SaleProps) => {
   // Add strikethrough if event is past
   const Wrapper = isPast ? 's' : 'div'
   const wrapperClassName = isPast
-    ?'flex text-red-400'
+    ? 'flex text-red-400'
     : 'flex'
   return (
     <li>
@@ -37,7 +37,7 @@ const SaleTime = ({ saleEvent }: SaleProps) => {
   )
 }
 
-const saleTimes:SaleEvent[] = [
+const saleTimes: SaleEvent[] = [
   { date: '2023-04-12', description: 'Pönkelin julkistustilaisuus, Kåren', time: '18.00 - 21.00' },
   { date: '2023-04-13', description: 'Pönkeliständi, Osakuntasalin edusta, Rehtorinpellonkatu 4', time: '10.00 - 14.00' },
   { date: '2023-04-14', description: 'Pönkeliständi, Osakuntasalin edusta, Rehtorinpellonkatu 4', time: '12.00 - 18.00' },

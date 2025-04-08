@@ -1,0 +1,75 @@
+const saleTimes: { day: string, date: string, time: string, place: string }[] = [
+  { day: 'ke', date: '2025-04-09', time: '12-16', place: 'Osakuntasali' },
+  { day: 'to', date: '2025-04-10', time: 'Tulossa', place: 'Tulossa' },
+  { day: 'pe', date: '2025-04-11', time: '-', place: '-' },
+  { day: 'la', date: '2025-04-12', time: '-', place: '-' },
+  { day: 'su', date: '2025-04-13', time: '-', place: '-' },
+  { day: 'ma', date: '2025-04-14', time: '-', place: '-' },
+  { day: 'ti', date: '2025-04-15', time: '-', place: '-' },
+  { day: 'ke', date: '2025-04-16', time: '-', place: '-' },
+  { day: 'to', date: '2025-04-17', time: '-', place: '-' },
+  { day: 'pe', date: '2025-04-18', time: '-', place: '-' },
+  { day: 'la', date: '2025-04-19', time: '-', place: '-' },
+  { day: 'su', date: '2025-04-20', time: '-', place: '-' },
+  { day: 'ma', date: '2025-04-21', time: '-', place: '-' },
+  { day: 'ti', date: '2025-04-22', time: '-', place: '-' },
+  { day: 'ke', date: '2025-04-23', time: '-', place: '-' },
+  { day: 'to', date: '2025-04-24', time: '-', place: '-' },
+  { day: 'pe', date: '2025-04-25', time: '-', place: '-' },
+  { day: 'la', date: '2025-04-26', time: '-', place: '-' },
+  { day: 'su', date: '2025-04-27', time: '-', place: '-' },
+  { day: 'ma', date: '2025-04-28', time: '-', place: '-' },
+  { day: 'ti', date: '2025-04-29', time: '-', place: '-' },
+  { day: 'ke', date: '2025-04-30', time: '-', place: 'Tuomiokirkkotori' },
+  { day: 'to', date: '2025-05-01', time: '-', place: 'Wappupicnic' },
+]
+
+const getCurrentDate = () => {
+  return new Date().toISOString().slice(0, 10)
+}
+
+const Sales = () => {
+  const currentISODate = getCurrentDate()
+  return (
+    <div className='overflow-x-auto w-full'>
+      <table className='table'>
+        <thead className='text-nowrap text-sm'>
+          <tr className='border-amber-800 border-opacity-10 text-[#9A6869]'>
+            <th>Päivä</th>
+            <th>Aika</th>
+            <th>Paikka</th>
+          </tr>
+        </thead>
+        <tbody>
+          {saleTimes.map(({ day, date, time, place }) => {
+            const isPast = currentISODate > date
+            const isToday = currentISODate === date
+
+            const formattedDate = new Intl.DateTimeFormat('fi-FI', {
+              day: 'numeric',
+              month: 'numeric'
+            }).format(new Date(date))
+            return (
+              <tr
+                key={date}
+                className={`text-sm border-amber-800 border-opacity-10
+                  ${isPast ? 'text-stone-400' : ''}
+                  ${isToday ? 'bg-amber-600 text-amber-50' : ''}
+                `}
+              >
+                <td>{day} {formattedDate}</td>
+                <td>{time}</td>
+                <td>{place}</td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
+      <p className='text-amber-900 py-4'>
+        Hiomme vielä myyntiaikoja ja -paikkoja, joten seuraa sivua sekä someamme!
+      </p>
+    </div>
+  )
+}
+
+export default Sales

@@ -1,3 +1,5 @@
+'use cache'
+
 import type { Metadata } from 'next'
 import { ThemeProvider } from 'next-themes'
 
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
 
 const themes = ['light', 'dark']
 
-export default function RootLayout({
+export default async function RootLayout({
   children
 }: Readonly<{
   children: React.ReactNode;

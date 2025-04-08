@@ -3,7 +3,7 @@ import type { Config } from 'tailwindcss'
 import tailwindcssAnimate from 'tailwindcss-animate'
 
 const config = {
-  darkMode: ['selector', '[data-theme="dark"]', 'class'],
+  darkMode: ['selector', '[data-theme="dark"]'],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -91,6 +91,13 @@ const config = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out'
+      },
+      // Wappulehti 2025
+      backgroundSize: {
+        full: '100%'
+      },
+      backgroundPosition: {
+        'mobile': 'center top 8rem',
       }
     }
   },
