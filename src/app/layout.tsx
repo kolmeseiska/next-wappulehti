@@ -1,5 +1,6 @@
 'use cache'
 
+import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata } from 'next'
 import { ThemeProvider } from 'next-themes'
 
@@ -54,6 +55,7 @@ export default async function RootLayout({
           {children}
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId='G-SP2GW904WR' />
     </html>
   )
 }
