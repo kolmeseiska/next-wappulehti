@@ -9,7 +9,6 @@ const saleTimes: { date: string, time: string, place: string }[] = [
   { date: '2025-04-21', time: '12-20', place: 'Kuuvuoren kenttä' },
   { date: '2025-04-23', time: '16-18', place: 'Osakuntasali, Rehtorinpellonkatu 4 B' },
   { date: '2025-04-26', time: '12-16', place: 'Kauppatori' },
-  { date: '2025-04-27', time: '14-16', place: 'Osakuntasali, Rehtorinpellonkatu 4 B' },
   { date: '2025-04-30', time: '12-13.30', place: 'Yhteislakitus, Tuomiokirkon edusta' },
   { date: '2025-05-01', time: 'koko päivä', place: 'Teekkarikaste jokiranta/Wappupiknik Vartiovuori' },
 ]
