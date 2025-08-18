@@ -3,6 +3,21 @@ import Image from 'next/image'
 
 const editions = [
   {
+    year: 2025,
+    title: 'Niksi Pönkeli',
+    body: (
+      <>
+        <p>
+          Wapun 2025 siistein julkaisu <b>&quot;Niksi Pönkeli&quot;</b> sisälsi lehden täydeltä puhdasta sekä kuivaa huumoria.
+        </p>
+        <p>
+          Niksi Pönkelin mukana lukija sai itselleen suomalaisella käsityöllä tehdyn saippuan sekä monikäyttöisen "kyykkäpyyhkeen". Lehden vitsit, tarinat sekä grafiikat tarjosivat lukijalleen unohtumatonta hupia ja iloa.
+        </p>
+      </>
+    ),
+    imageSource: '/historia-25.webp'
+  },
+  {
     year: 2024,
     title: 'Galleria Pönkeli',
     body: (

@@ -20,6 +20,7 @@ const tapahtumat = () => {
       currentEvent.push(event)
     }
   }
+
   return (
     <div className='container mx-auto px-4 justify-center py-16'>
       <h1 className='text-6xl font-extrabold pb-10 text-center'>Tapahtumat</h1>
@@ -29,7 +30,7 @@ const tapahtumat = () => {
             <h1 className='text-2xl font-extrabold pb-10 text-center'>Tänään!</h1>
             <div className='flex gap-4 items-start flex-wrap justify-center pb-10'>
               {currentEvent.map(event => (
-                <Event key={event.name} event={event} />
+                <Event key={`${event.name}-${event.date}`} event={event} />
               ))}
             </div>
           </>
@@ -39,14 +40,14 @@ const tapahtumat = () => {
           : <NoUpcomingEvents />}
       <div className='flex gap-4 items-start flex-wrap justify-center'>
         {upcomingEvents.map(event => (
-          <Event key={event.name} event={event} width='max-w-[500px]' />
+          <Event key={`${event.name}-${event.date}`} event={event} width='max-w-[500px]' />
         ))}
       </div>
       <div className='py-10'>
         <h1 className='text-6xl font-extrabold pb-10 text-center'>Menneet tapahtumat</h1>
         <div className='flex gap-4 items-start flex-wrap justify-center'>
           {pastEvents.reverse().map(event => (
-            <Event key={event.name} event={event} isPast />
+            <Event key={`${event.name}-${event.date}`} event={event} isPast />
           ))}
         </div>
       </div>

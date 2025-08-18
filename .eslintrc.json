@@ -54,7 +54,11 @@
       2,
       {
         "groups": [
-          ["^react$", "^react", "^@?\\w"]
+          [
+            "^react$",
+            "^react",
+            "^@?\\w"
+          ]
         ]
       }
     ],
@@ -119,6 +123,7 @@
         "beforeClosing": "never"
       }
     ],
-    "react/jsx-closing-bracket-location": "error"
+    "react/jsx-closing-bracket-location": "error",
+    "react/no-unescaped-entities": "off"
   }
 }
