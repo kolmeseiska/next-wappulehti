@@ -127,20 +127,20 @@ const config = {
       },
       {
         light: {
-          primary: '#f1f1f1',
-          secondary: '#152747',
-          accent: '#e11d48',
+          'primary': '#e11d48',
+          'secondary': '#D926AA',
+          'accent': '#e11d48',
           'accent-content': '#e3e2ee',
-          neutral: '#e3d2d2',
+          'neutral': '#e3d2d2',
           'neutral-content': '#181818',
           'base-100': '#EBE7E5',
           'base-200': '#252b36',
           'base-300': '#20252f',
           'base-content': '#181818',
-          info: '#66c6ff',
-          success: '#87d039',
-          warning: '#e2d562',
-          error: '#ff6f6f',
+          'info': '#66c6ff',
+          'success': '#87d039',
+          'warning': '#e2d562',
+          'error': '#ff6f6f',
         }
       }
     ],
