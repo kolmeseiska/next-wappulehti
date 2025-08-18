@@ -22,6 +22,8 @@ export async function POST(req: Request) {
     data.email,
     data.telegram,
     data.description,
+    data.year,
+    data.fieldOfStudy,
   ]
 
   const sheet = await appendSheet(columns, configSheets)

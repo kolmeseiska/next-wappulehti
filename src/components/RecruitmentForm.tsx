@@ -50,8 +50,14 @@ const RecruitmentForm = () => {
         errors={errors}
       />
       <FormInput<Recruitment>
-        name='email'
-        label='Sähköposti'
+        name='year'
+        label='Vuosikurssi'
+        register={register}
+        errors={errors}
+      />
+      <FormInput<Recruitment>
+        name='fieldOfStudy'
+        label='Mitä opiskelet'
         register={register}
         errors={errors}
       />
@@ -63,7 +69,7 @@ const RecruitmentForm = () => {
       />
       <FormTextarea<Recruitment>
         name='description'
-        label='Kerro jotain itsestäsi halutessasi'
+        label='Lyhyt viesti itsestäsi halutessasi'
         register={register}
         errors={errors}
       />
