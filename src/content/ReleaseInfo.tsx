@@ -38,11 +38,11 @@ const ReleaseInfo = () => {
         </div>
       </div>
       <div id='lehti' className='py-16'>
-        <article className='prose prose-xl mx-auto px-5 md:px-5 my-5 text-slate-200'>
+        <article className='prose prose-lg mx-auto px-5 md:px-5 my-5 text-slate-200'>
           <h1>Pönkeli 2025 on saapunut!</h1>
           <p>Vitsejä, vinkkejä sekä vinhoja tehtäviä lehden täydeltä</p>
         </article>
-        <article className='prose prose-xl mx-auto pb-10 pt-1 px-5 md:px-5 mb-5 mt-10 text-slate-200 bg-[#8c0303]'>
+        <article className='prose prose-lg mx-auto pb-10 pt-1 px-5 md:px-5 mb-5 mt-10 text-slate-200 bg-[#8c0303]'>
           <Sales />
         </article>
       </div>

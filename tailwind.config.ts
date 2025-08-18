@@ -1,3 +1,4 @@
+import typography from '@tailwindcss/typography'
 import daisyui from 'daisyui'
 import type { Config } from 'tailwindcss'
 import tailwindcssAnimate from 'tailwindcss-animate'
@@ -103,7 +104,8 @@ const config = {
   },
   plugins: [
     tailwindcssAnimate,
-    daisyui
+    daisyui,
+    typography
   ],
   daisyui: {
     logs: false, // Shows info about daisyUI version and used config in the console when building your CSS

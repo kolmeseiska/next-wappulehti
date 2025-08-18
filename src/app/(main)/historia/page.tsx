@@ -73,7 +73,7 @@ const historia = () => {
   return (
     <div className='container mx-auto px-4 justify-center py-16'>
       <h1 className='text-6xl font-extrabold pb-10 text-center'>Historia</h1>
-      <div className='prose prose-xl mx-auto max-w-[75ch] flex flex-col gap-10'>
+      <div className='prose mx-auto max-w-[75ch] flex flex-col gap-10'>
         <div>
           <h2 className='text-3xl font-extrabold mb-3'>
             Pönkeli on Turun yliopiston opiskelijoiden Wappulehti.

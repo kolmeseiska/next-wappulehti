@@ -5,7 +5,7 @@ const info = () => {
   return (
     <div className='container mx-auto px-4 justify-center py-16'>
       <h1 className='text-6xl font-extrabold pb-10 text-center'>Myyjät</h1>
-      <div className='prose prose-xl mx-auto'>
+      <div className='prose mx-auto'>
         <h2 className='text-3xl font-extrabold'>
           Kiitos kaikille kevään 2023 Pönkeli-myyjille!
         </h2>
