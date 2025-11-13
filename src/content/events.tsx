@@ -478,6 +478,47 @@ const events: PonkeliEvent[] = [
       </>
     )
   },
+  {
+    name: 'Pönkeli Games IV',
+    date: '2025-11-24',
+    details: null,
+    image: null,
+    description: (
+      <>
+        <strong>FI/EN</strong>
+        <strong>Fast-paced checkpoint race around your campus!</strong>
+        <p>Pönkeli Games IV  kisaillaan tänä vuonna 24. marraskuuta klo 17 alkaen! Kisoissa pääset ottamaan joukkueesi kanssa mittaa muista opiskelijoista urheilullisella rastikierroksella. Rastit vaativat kekseliäisyyttä, yhteistyötä ja voimaa. Kisan jälkeen voittajajoukkue lunastaa itselleen huikean palkinnon, ja kaikki osallistujat pääsevät virkistäytymään saunalla.</p>
+        <p>Kokoa siis neljän (4) hengen joukkueesi ja valmistaudu syksyn hauskimpaan ja vauhdikkaimpaan seikkailuun, kun neljännet Pönkeli Gamesit alkavat! Lipun hinta on vaivaiset 6 € / henkilö, joka sisältää osallistumisen kisaan, upean haalarimerkin sekä palauttavaa syötävää ja juotavaa saunalla kisan jälkeen.</p>
+        <p>Ilmoittautuminen kisaan alkaa 18.11. klo 12.00. Ilmoittautumisen jälkeen joukkueilla lähetetään sähköpostitse tarkempia ohjeita rastikierrokseen valmistautumisesta (varustus: urheilullinen).</p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>Mitä?</b> Pönkeli Games IV</li>
+          <li><b>Missä?</b> Turussa, lähtö TYYn saunalta!</li>
+          <li><b>Milloin?</b> Maanantaina 24.11., lähtö klo 17!</li>
+          <li><b>Miksi?</b> Maine, kunnia ja huikeat palkinnot!</li>
+          <li><b>Hinta?</b> 6€/osallistuja</li>
+          <li><b>Palju?</b> Ei, mut sauna on!</li>
+          <li><b>Ilmoittautuminen</b> TBA </li>
+        </ul>
+        <hr className='my-3' />
+        <b>ENGLISH</b>
+        <strong>Fast-paced checkpoint race around your campus!</strong>
+        <p>The Pönkeli Games are here again for the fourth time and they will be held this year on 24th of November starting at 17:00! In the Games you will take on other teams in an Amazing Race-style fast checkpoint race. The tasks require ingenuity, cooperation, strenght and fast feet. After the race, the winning team will claim a stunning prize, and all participants will be able to freshen up in the sauna.</p>
+        <p>So get your team of four (4) together and get ready for the most fun and action-packed adventure of this autumn when the Pönkeli Games begin! The ticket price is mere 6 € per person, which includes entry to the race, an overall badge and refreshing snacks and drinks in the sauna after the race.</p>
+        <p>Registration for the race starts on 18th of November at 12.00. After the registration closes, all teams will be sent an email with more detailed instructions on how to prepare for the checkpoint race (equipment: athletic).</p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>What?</b> Pönkeli Games IV</li>
+          <li><b>Where?</b> In Turku, starting from TYY sauna!</li>
+          <li><b>When?</b> Monday 24.11., start at 17:00!</li>
+          <li><b>Why?</b> Fame, glory and amazing prizes!</li>
+          <li><b>Price?</b> 6€/participant</li>
+          <li><b>Hot tub?</b> No, but the sauna is warm!</li>
+          <li><b>Registration</b> TBA </li>
+        </ul>
+      </>
+    )
+  },
 ]
 
 export default events

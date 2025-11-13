@@ -13,7 +13,7 @@ const contents = {
   recruitment: (
     <>
       <h3 className='text-4xl font-bold mb-8'>
-        Hae mukaan Pönkelin toimikuntaan!
+        Hae mukaan Pönkelin toimitukseen!
       </h3>
       <div className='motion-safe:animate-bounce'>
         <DownCaretIcon />
@@ -53,7 +53,7 @@ const contents = {
         Tervetuloa painamaan pönkeliä!
       </h3>
       <p className='text-xl italic mb-5'>
-        Pönkelin vitsikilpailu on leikkimielinen vitsi- sekä juttukilpa, josta sinä tai kiltasi voitte voittaa hienoja palkintoja sekä mainetta!
+        Pönkelin vitsikilpailu on leikkimielinen vitsi- sekä juttukilpailu, josta sinä tai kiltasi voitte voittaa hienoja palkintoja sekä mainetta!
       </p>
       <div className='motion-safe:animate-bounce'>
         <DownCaretIcon />
