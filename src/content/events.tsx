@@ -481,8 +481,8 @@ const events: PonkeliEvent[] = [
   {
     name: 'Pönkeli Games IV',
     date: '2025-11-24',
-    details: null,
-    image: null,
+    details: '17.00 @TYYn sauna',
+    image: '/ponkeligames25.webp',
     description: (
       <>
         <strong>FI/EN</strong>
@@ -498,7 +498,18 @@ const events: PonkeliEvent[] = [
           <li><b>Miksi?</b> Maine, kunnia ja huikeat palkinnot!</li>
           <li><b>Hinta?</b> 6€/osallistuja</li>
           <li><b>Palju?</b> Ei, mut sauna on!</li>
-          <li><b>Ilmoittautuminen</b> TBA </li>
+          <li><b>Ilmoittautuminen</b> 
+            {' '}
+            <Link
+              href=' https://holvi.com/shop/ponkeli/'
+              target='_blank'
+              className='link hover:text-accent transition-colors'
+              rel='noopener noreferrer'
+              onClick={e => e.stopPropagation()}
+            >
+              Pönkelin verkkokaupassa
+            </Link>
+          </li>
         </ul>
         <hr className='my-3' />
         <b>ENGLISH</b>
@@ -514,7 +525,18 @@ const events: PonkeliEvent[] = [
           <li><b>Why?</b> Fame, glory and amazing prizes!</li>
           <li><b>Price?</b> 6€/participant</li>
           <li><b>Hot tub?</b> No, but the sauna is warm!</li>
-          <li><b>Registration</b> TBA </li>
+          <li><b>Registration</b> 
+            {' '}
+            <Link
+              href=' https://holvi.com/shop/ponkeli/'
+              target='_blank'
+              className='link hover:text-accent transition-colors'
+              rel='noopener noreferrer'
+              onClick={e => e.stopPropagation()}
+            >
+              Pönkeli shop
+            </Link>
+          </li>
         </ul>
       </>
     )
