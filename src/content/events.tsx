@@ -478,6 +478,7 @@ const events: PonkeliEvent[] = [
       </>
     )
   },
+  /*
   {
     name: 'Pönkeli Games IV',
     date: '2025-11-24',
@@ -540,7 +541,7 @@ const events: PonkeliEvent[] = [
         </ul>
       </>
     )
-  },
+  },*/
 ]
 
 export default events
