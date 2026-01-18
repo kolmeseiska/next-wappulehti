@@ -498,19 +498,7 @@ const events: PonkeliEvent[] = [
           <li><b>Miksi?</b> Maine, kunnia ja huikeat palkinnot!</li>
           <li><b>Hinta?</b> 6€/osallistuja</li>
           <li><b>Palju?</b> Ei, mut sauna on!</li>
-          <li><b>Ilmoittautuminen</b> TBD 
-          {/*
-            {' '}
-            <Link
-              href=' https://holvi.com/shop/ponkeli/'
-              target='_blank'
-              className='link hover:text-accent transition-colors'
-              rel='noopener noreferrer'
-              onClick={e => e.stopPropagation()}
-            >
-              Pönkelin verkkokaupassa
-            </Link>
-            */}
+          <li><b>Ilmoittautuminen</b> TBD
           </li>
         </ul>
         <hr className='my-3' />
@@ -528,18 +516,6 @@ const events: PonkeliEvent[] = [
           <li><b>Price?</b> 6€/participant</li>
           <li><b>Hot tub?</b> No, but the sauna is warm!</li>
           <li><b>Registration</b> TBD
-          {/* 
-            {' '}
-            <Link
-              href=' https://holvi.com/shop/ponkeli/'
-              target='_blank'
-              className='link hover:text-accent transition-colors'
-              rel='noopener noreferrer'
-              onClick={e => e.stopPropagation()}
-            >
-              Pönkeli shop
-            </Link>
-            */}
           </li>
         </ul>
       </>
@@ -590,9 +566,7 @@ const events: PonkeliEvent[] = [
     details: '',
     image: '',
     description: (
-      <>
-        <strong>More info coming soon!</strong>
-      </>
+      <strong>More info coming soon!</strong>
     )
   },
   {
@@ -601,9 +575,7 @@ const events: PonkeliEvent[] = [
     details: '',
     image: '',
     description: (
-      <>
-        <strong>More info coming soon!</strong>
-      </>
+      <strong>More info coming soon!</strong>
     )
   },
   {
@@ -612,9 +584,7 @@ const events: PonkeliEvent[] = [
     details: '',
     image: '',
     description: (
-      <>
-        <strong>More info coming soon!</strong>
-      </>
+      <strong>More info coming soon!</strong>
     )
   },
 ]
