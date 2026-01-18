@@ -478,28 +478,28 @@ const events: PonkeliEvent[] = [
       </>
     )
   },
-  /*
   {
     name: 'Pönkeli Games IV',
-    date: '2025-11-24',
+    date: '2026-03-18',
     details: '17.00 @TYYn sauna',
     image: '/ponkeligames25.webp',
     description: (
       <>
         <strong>FI/EN</strong>
-        <strong>Fast-paced checkpoint race around your campus!</strong>
-        <p>Pönkeli Games IV  kisaillaan tänä vuonna 24. marraskuuta klo 17 alkaen! Kisoissa pääset ottamaan joukkueesi kanssa mittaa muista opiskelijoista urheilullisella rastikierroksella. Rastit vaativat kekseliäisyyttä, yhteistyötä ja voimaa. Kisan jälkeen voittajajoukkue lunastaa itselleen huikean palkinnon, ja kaikki osallistujat pääsevät virkistäytymään saunalla.</p>
+        <strong>Urheilullinen rastikierros Turussa!</strong>
+        <p>Pönkeli Games IV  kisaillaan keskiviikkona 18.3. klo 17 alkaen! Kisoissa pääset ottamaan joukkueesi kanssa mittaa muista opiskelijoista urheilullisella rastikierroksella. Rastit vaativat kekseliäisyyttä, yhteistyötä ja voimaa. Kisan jälkeen voittajajoukkue lunastaa itselleen huikean palkinnon, ja kaikki osallistujat pääsevät virkistäytymään saunalla.</p>
         <p>Kokoa siis neljän (4) hengen joukkueesi ja valmistaudu syksyn hauskimpaan ja vauhdikkaimpaan seikkailuun, kun neljännet Pönkeli Gamesit alkavat! Lipun hinta on vaivaiset 6 € / henkilö, joka sisältää osallistumisen kisaan, upean haalarimerkin sekä palauttavaa syötävää ja juotavaa saunalla kisan jälkeen.</p>
-        <p>Ilmoittautuminen kisaan alkaa 18.11. klo 12.00. Ilmoittautumisen jälkeen joukkueilla lähetetään sähköpostitse tarkempia ohjeita rastikierrokseen valmistautumisesta (varustus: urheilullinen).</p>
+        <p>Ilmoittautuminen kisaan alkaa 2.3. klo 16.00. Ilmoittautumisen jälkeen joukkueilla lähetetään sähköpostitse tarkempia ohjeita rastikierrokseen valmistautumisesta (varustus: urheilullinen).</p>
         <ul>
           <li><b>TL;DR</b></li>
           <li><b>Mitä?</b> Pönkeli Games IV</li>
           <li><b>Missä?</b> Turussa, lähtö TYYn saunalta!</li>
-          <li><b>Milloin?</b> Maanantaina 24.11., lähtö klo 17!</li>
+          <li><b>Milloin?</b> Keskiviikkona 18.3., lähtö klo 17!</li>
           <li><b>Miksi?</b> Maine, kunnia ja huikeat palkinnot!</li>
           <li><b>Hinta?</b> 6€/osallistuja</li>
           <li><b>Palju?</b> Ei, mut sauna on!</li>
-          <li><b>Ilmoittautuminen</b> 
+          <li><b>Ilmoittautuminen</b> TBD 
+          {/*
             {' '}
             <Link
               href=' https://holvi.com/shop/ponkeli/'
@@ -510,14 +510,15 @@ const events: PonkeliEvent[] = [
             >
               Pönkelin verkkokaupassa
             </Link>
+            */}
           </li>
         </ul>
         <hr className='my-3' />
         <b>ENGLISH</b>
         <strong>Fast-paced checkpoint race around your campus!</strong>
-        <p>The Pönkeli Games are here again for the fourth time and they will be held this year on 24th of November starting at 17:00! In the Games you will take on other teams in an Amazing Race-style fast checkpoint race. The tasks require ingenuity, cooperation, strenght and fast feet. After the race, the winning team will claim a stunning prize, and all participants will be able to freshen up in the sauna.</p>
+        <p>The Pönkeli Games are here again for the fourth time and they will be held this year on 18th of March starting at 17:00! In the Games you will take on other teams in an Amazing Race-style fast checkpoint race. The tasks require ingenuity, cooperation, strenght and fast feet. After the race, the winning team will claim a stunning prize, and all participants will be able to freshen up in the sauna.</p>
         <p>So get your team of four (4) together and get ready for the most fun and action-packed adventure of this autumn when the Pönkeli Games begin! The ticket price is mere 6 € per person, which includes entry to the race, an overall badge and refreshing snacks and drinks in the sauna after the race.</p>
-        <p>Registration for the race starts on 18th of November at 12.00. After the registration closes, all teams will be sent an email with more detailed instructions on how to prepare for the checkpoint race (equipment: athletic).</p>
+        <p>Registration for the race starts on 2nd of March at 16.00. After the registration closes, all teams will be sent an email with more detailed instructions on how to prepare for the checkpoint race (equipment: athletic).</p>
         <ul>
           <li><b>TL;DR</b></li>
           <li><b>What?</b> Pönkeli Games IV</li>
@@ -526,7 +527,8 @@ const events: PonkeliEvent[] = [
           <li><b>Why?</b> Fame, glory and amazing prizes!</li>
           <li><b>Price?</b> 6€/participant</li>
           <li><b>Hot tub?</b> No, but the sauna is warm!</li>
-          <li><b>Registration</b> 
+          <li><b>Registration</b> TBD
+          {/* 
             {' '}
             <Link
               href=' https://holvi.com/shop/ponkeli/'
@@ -537,11 +539,84 @@ const events: PonkeliEvent[] = [
             >
               Pönkeli shop
             </Link>
+            */}
           </li>
         </ul>
       </>
     )
-  },*/
+  },
+  {
+    name: 'Pönkelin Pubivisa 2026',
+    date: '2026-01-21',
+    details: '18.00 @Saaristobaari',
+    image: '/pubivisa26.webp',
+    description: (
+      <>
+        <strong>FI/EN</strong>
+        <strong>Pubivisan Wapun tulon vauhdittamiseksi!</strong>
+        <p>Odotatko jo Wapun alkua? Tai kutkuttaako tietovisa hammastasi? Wappulehti Pönkeli tarjoaa loistavan ratkaisun molempiin, kun se järjestää 100 wappuun bileille etkot Pönkelin Pubivisan muodossa. </p> 
+        <p>Suuntaa siis keskiviikkona 21.1. Saaristobaariin klo 18.00, ja tule nauttimaan rennosta wapputunnelmasta keskellä lumista talvea sekä kilpailemaan upeista palkinnoista.</p>
+        <p>Tapahtumassa on myös mahdollisuus liittyä Pönkelin VIP-myyjäksi! Lisää tietoa <Link href='/myyjarekry'>täältä!</Link></p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>Mitä?</b> 100 Päivää Wappuun etkot pubivisa</li>
+          <li><b>Missä?</b> Saaristobaari</li>
+          <li><b>Milloin?</b> Keskiviikkona 21.1., klo 18</li>
+          <li><b>Miksi?</b> Koska Wappu ei tule ilman pientä odotusta</li>
+          <li><b>Hinta?</b> Ei mitään!</li>
+          <li><b>Ilmoittautuminen</b> Paikanpäällä</li>
+        </ul>
+        <hr className='my-3' />
+        <b>ENGLISH</b>
+        <strong>Pub quiz to start warming up for Wappu</strong>
+        <p>Are you already looking forward to Wappu? Or are you feeling the itch for a good quiz? Pönkeli has the perfect solution to both, as it hosts a pre-party for 100 Days to Wappu party in the form of a pub quiz.</p>
+        <p>Join us on Wednesday, January 21st at 18.00 in Saaristobaari to enjoy a great Wappu atmosphere in the middle of snowy winter and compete for awesome prizes.</p>
+        <p>At the event, you’ll also have the opportunity to become a Pönkeli VIP seller. More info <Link href='/myyjarekry'>here!</Link></p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>What?</b>100 days to Wappu pub quiz</li>
+          <li><b>Where?</b>Saaristobaari</li>
+          <li><b>When?</b> Wednesday, January 21st at 18.00</li>
+          <li><b>Why?</b>Wappu will come faster if you answer correctly.</li>
+          <li><b>Price?</b>Nothing!</li>
+          <li><b>Registration</b> At the venue</li>
+        </ul>
+      </>
+    )
+  },
+  {
+    name: 'Pönkelijulkkarit 2026',
+    date: '2026-04-09',
+    details: '',
+    image: '',
+    description: (
+      <>
+        <strong>More info coming soon!</strong>
+      </>
+    )
+  },
+  {
+    name: 'Pönkelireivit 2026',
+    date: '2026-04-16',
+    details: '',
+    image: '',
+    description: (
+      <>
+        <strong>More info coming soon!</strong>
+      </>
+    )
+  },
+  {
+    name: 'Pönkelis Mystery Wappu Event 2026',
+    date: '2026-04-27',
+    details: '',
+    image: '',
+    description: (
+      <>
+        <strong>More info coming soon!</strong>
+      </>
+    )
+  },
 ]
 
 export default events

@@ -37,7 +37,8 @@ const myyjarekry = () => {
             <p className='mb-3'>
               Pönkelin myyjänä pääset nauttimaan vain myyjille suoduista eduista ja palkinnoista. Myyjäksi ilmoittautuminen ei sido sinua mihinkään ja myynti perustuu vapaaehtoisuuteen.
             </p>
-            <p>Mikäli ilmoittaudut myyjäksi jo Pönkelin pubivisassa 21.1.2026, pääset <b>VIP-myyjäksi</b>. VIP-myyjät saavat ensimmäisenä lehdet haltuunsa heti Pönkelijulkkareiden jälkeen ja heille on tarjolla eturivin paikka virvokkeineen päräyttävässä Turun teekkariwapun aloittavassa tapahtumassa - Pönkelijulkkareissa!</p>
+            <p>Mikäli ilmoittaudut myyjäksi jo <b>Pönkelin pubivisassa 21.1.2026</b>, pääset <b>VIP-myyjäksi</b>. VIP-myyjät saavat ensimmäisenä lehdet haltuunsa heti Pönkelijulkkareiden jälkeen ja heille on tarjolla eturivin paikka virvokkeineen päräyttävässä Turun teekkariwapun aloittavassa tapahtumassa - Pönkelijulkkareissa!</p>
+            <p>VIP-myyjäksi pääseminen edellyttää myyjäsopimuksen allekirjoittamista Pubivisassa! Jollet pääse paikanpäälle, mutta haluat VIP-myyjäksi, ole yhteydessä lehden toimitukseen!</p>
             <h2>Pelottaako?</h2>
             <p className='mb-3'>
               Älä Huoli! Wappulehtien myynti on hauskaa puuhaa, eikä niiden myyntiä tarvitse stressata tai pelätä joutuvansa myymään niitä yksin, sillä toimittajat myyvät lehtiä kanssasi koko wapun ajan. Wappulehtiä ei myöskään tarvitse lunastaa etukäteen, vaan tilität ne myynnin lopuksi. Kaikki myymättömät myyntikunnossa olevat wappulehdet saa palauttaa takaisin toimitukselle. Myyt siis vain sen verran kuin haluat ja jaksat. Viimeistään näillä kannustuksilla kannattaa lähteä myyjäksi!
