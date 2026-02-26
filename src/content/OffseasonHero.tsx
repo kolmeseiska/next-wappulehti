@@ -7,7 +7,7 @@ import DownCaretIcon from '@/components/DownCaretIcon'
 import Logo from '@/components/Logo'
 import { Button } from '@/components/ui/button'
 
-const contentType: keyof typeof contents = 'sellers'
+const contentType: keyof typeof contents = 'competition'
 
 const contents = {
   recruitment: (
@@ -50,10 +50,10 @@ const contents = {
   competition: (
     <>
       <h3 className='text-4xl font-bold mb-8'>
-        Tervetuloa painamaan pönkeliä!
+        Tervetuloa painamaan Pönkeliä!
       </h3>
       <p className='text-xl italic mb-5'>
-        Pönkelin vitsikilpailu on leikkimielinen vitsi- sekä juttukilpailu, josta sinä tai kiltasi voitte voittaa hienoja palkintoja sekä mainetta!
+        Pönkelin vitsikilpailu on vitsikilpailu, josta sinä tai kiltasi voitte voittaa hienoja palkintoja sekä mainetta!
       </p>
       <div className='motion-safe:animate-bounce'>
         <DownCaretIcon />

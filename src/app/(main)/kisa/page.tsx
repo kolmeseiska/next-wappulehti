@@ -10,7 +10,7 @@ const Kisa = () => {
         <>
           <h1>Pönkelin vitsikilpailu</h1>
           <p className='max-w-md mx-auto font-semibold'>
-            Oletko sinä hauska? Onko Pönkeli hauska?
+            Oletko sinä hauska? Onko Pönkeli hauska?<br/>Oletteko yhdessä hauskempia?
           </p>
         </>
       )}
@@ -18,22 +18,23 @@ const Kisa = () => {
         <>
           <h2 className='text-3xl'>Vitsi | Juttu | Grafiikka -kisa</h2>
           <p>
-            <b>Pönkelin vitsikilpailu</b> on wappulehti Pönkelin vitsi/grafiikka/kirjoitus -kilpailu, jonka tarkoituksena on saada ne kaikkein hervottomimmat ja nerokkaimmat tuotokset samaan painokseen eli wappuna 2025 ilmestyvään Pönkeliin! Vitsikilpailu on käynnissä <b>18.2.-16.3.2025.</b>
+            <b>Pönkelin vitsikilpailu</b> on Wappulehti Pönkelin vitsi/grafiikka/kirjoitus -kilpailu, jonka tarkoituksena on saada ne kaikkein hervottomimmat ja nerokkaimmat tuotokset samaan painokseen eli Wappuna 2026 ilmestyvään Pönkeliin! Vitsikilpailu on käynnissä nyt ja päättyy <b>12.3.2026.</b>
           </p>
           <div className='my-3'>
-            <b>Vitsikilpailun palkinnot:</b>
+            <b>Kilpailun kategoriat:</b>
             <ul className='font-bold'>
-              <li><b>Paras vitsi</b> 50 € S-ryhmän lahjakortti</li>
-              <li><b>Paras fuksivitsi</b> 50 € S-ryhmän lahjakortti + pönkelipiste fuksipassiin</li>
-              <li><b>Hauskin kilta</b> MAINETTA ja taidetta (kiltikselle)</li>
-              <li><b>Salainen kiltakategoria</b> ?</li>
+              <li><b>Paras vitsi</b></li>
+              <li><b>Hauskin fuksi</b></li>
+              <li><b>Humoristisin taideteos</b></li>
+              <li><b>Tehokkain kilta</b></li>
             </ul>
           </div>
+          <p>Kategorioiden voittajat palkitaan lahjakorteilla ja tehokkain kilta kiltahuoneen viihtyvyyttä edistävillä tarvikkeilla!</p>
           <p>
-            Oletko siis taidokas taiteilija, suurenmoinen sanailija tai kenties virtuoosi vitsailija? Tai muuten vaan hupsu hassuttelija, joka haluaisi osallistua wappulehden tekoon?
+            Oletko siis taidokas taiteilija, suurenmoinen sanailija tai kenties virtuoosi vitsailija? Tai muuten vaan hupsu hassuttelija, joka haluaisi osallistua wappulehden tekoon? 
           </p>
           <p>
-            Tiputa parhain luomuksesi oheiseen lomakkeeseen ja bongaa se Pönkeli 2025 -lehdestä!
+            Tiputa parhain luomuksesi oheiseen lomakkeeseen ja bongaa se Pönkeli 2026 -lehdestä!
           </p>
         </>
       )}
@@ -45,34 +46,34 @@ const Kisa = () => {
           </h2>
           <ul>
             <li>
-              Kilpailu on käynnissä <b>18.2.-16.3.2025</b>, mutta voit tuottaa vitsejä vaikka vuoden ympäri!
+              Kilpailu on käynnissä <b>12.3.2026 asti</b>.
             </li>
             <li>
               Osallistua voit yläpuolelta löytyvän lomakkeen kautta tai ruokkimalla Agoran aulasta löytyvää PostiPönkeä.
             </li>
             <li>
-              Älä ole tymä! Hylkäämme rasistiset sekä loukkaavat tekstit/kuvat suoraan!
+              Älä ole tymä! Hylkäämme loukkaavat tuotokset suoraan!
             </li>
             <li>
-              Lähettämällä vitsisi/kuvasi/tekstisi hyväksyt sen mahdollisen käytön Pönkelissä nyt tai tulevaisuudessa alkuperäisenä tai muokattuna.
+              Lähettämällä vitsisi/grafiikkasi/tekstisi hyväksyt sen mahdollisen käytön Pönkelissä nyt tai tulevaisuudessa alkuperäisenä tai muokattuna.
             </li>
             <li>
-              Pönkelin kontsaneuvosto käy kilpailun päättymisen jälkeen läpi kaiken lähetetyn materiaalin, ja valitsee niiden keskuudesta ainakin seuraavat palkittavat:
+              Pönkelin huumorineuvosto käy kilpailun päättymisen jälkeen läpi kaiken lähetetyn materiaalin, ja valitsee niiden keskuudesta ainakin seuraavat palkittavat:
             </li>
-            <ul className='font-bold'>
-              <li><b>Paras vitsi</b></li>
-              <li><b>Paras fuksivitsi</b></li>
-              <li><b>Hauskin kilta</b></li>
-              <li><b>Salainen kiltakategoria</b></li>
+            <ul>
+              <li>Paras vitsi- Paras yksittäinen vitsi</li>
+              <li>Hauskin fuksi - Hauskin fuksin lähettämä tuotos</li>
+              <li>Humoristisin taideteos - Eniten hilpeyttä aiheuttava graafinen teos</li>
+              <li>Tehokkain kilta - Kilta, joka tuottaa eniten vitsejä, grafiikkaa tai juttuja</li>
             </ul>
             <li>
-              Palkitseminen suoritetaan Pönkelijulkkareissa.
+              Palkitseminen suoritetaan Pönkelijulkkareissa 9.4.
             </li>
             <li>
-              Fuksit saavat lehteen päätyneestä jutusta/vitsistä/kuvasta fuksipisteen. Fukseille ilmoitetaan mikäli heidän tuotoksensa ei päädy lehteen, jotta he voivat vielä ilmoittautua Pönkelin myyjiksi fuksipisteen toivossa.
+              Fuksit saavat lehteen päätyneestä tuotoksesta Pönkelipisteen fuksipassiin. Fukseille ilmoitetaan mikäli heidän tuotoksensa päätyy lehteen ennen julkkareita.
             </li>
             <li>
-              Voittajille ilmoitetaan henkilökohtaisesti, joten varmistathan oikeat yhteystiedot. Sähköpostiosoitteet poistetaan wapun jälkeen, mutta nimitieto säilytetään, jotta Pönkeli voi tulevaisuudessa kiittää vitsin/jutun/grafiikan tuottanutta henkilöä.
+              Voittajille ilmoitetaan henkilökohtaisesti, joten varmistathan oikeat yhteystiedot. Sähköpostiosoitteet poistetaan Wapun jälkeen, mutta nimitieto säilytetään, jotta Pönkeli voi tulevaisuudessa kiittää lehden tekoon osallistuneita henkilöitä.
             </li>
           </ul>
         </>
