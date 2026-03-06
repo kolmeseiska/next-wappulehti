@@ -508,7 +508,7 @@ const events: PonkeliEvent[] = [
               onClick={e => e.stopPropagation()}
               >
               Holvissa
-            </Link>/
+            </Link>
           </li>
         </ul>
         <hr className='my-3' />
@@ -535,7 +535,7 @@ const events: PonkeliEvent[] = [
               onClick={e => e.stopPropagation()}
               >
               In Pönkelis Holvi-shop
-            </Link>/
+            </Link>
           </li>
         </ul>
       </>
