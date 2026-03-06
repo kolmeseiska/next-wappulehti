@@ -481,41 +481,61 @@ const events: PonkeliEvent[] = [
   {
     name: 'Pönkeli Games IV',
     date: '2026-03-18',
-    details: '17.00 @TYYn sauna',
-    image: '/ponkeligames25.webp',
+    details: '16.30 @TYYn sauna',
+    image: '/ponkeligamesiv.webp',
     description: (
       <>
         <strong>FI/EN</strong>
         <strong>Urheilullinen rastikierros Turussa!</strong>
-        <p>Pönkeli Games IV  kisaillaan keskiviikkona 18.3. klo 17 alkaen! Kisoissa pääset ottamaan joukkueesi kanssa mittaa muista opiskelijoista urheilullisella rastikierroksella. Rastit vaativat kekseliäisyyttä, yhteistyötä ja voimaa. Kisan jälkeen voittajajoukkue lunastaa itselleen huikean palkinnon, ja kaikki osallistujat pääsevät virkistäytymään saunalla.</p>
+        <p>Pönkeli Games IV  kisaillaan keskiviikkona 18.3. klo 16.30 alkaen! Kisoissa pääset ottamaan joukkueesi kanssa mittaa muista opiskelijoista urheilullisella rastikierroksella. Rastit vaativat kekseliäisyyttä, yhteistyötä ja voimaa. Kisan jälkeen voittajajoukkue lunastaa itselleen huikean palkinnon, ja kaikki osallistujat pääsevät virkistäytymään saunalla.</p>
         <p>Kokoa siis neljän (4) hengen joukkueesi ja valmistaudu syksyn hauskimpaan ja vauhdikkaimpaan seikkailuun, kun neljännet Pönkeli Gamesit alkavat! Lipun hinta on vaivaiset 6 € / henkilö, joka sisältää osallistumisen kisaan, upean haalarimerkin sekä palauttavaa syötävää ja juotavaa saunalla kisan jälkeen.</p>
-        <p>Ilmoittautuminen kisaan alkaa 2.3. klo 16.00. Ilmoittautumisen jälkeen joukkueilla lähetetään sähköpostitse tarkempia ohjeita rastikierrokseen valmistautumisesta (varustus: urheilullinen).</p>
+        <p>Ilmoittautuminen kisaan on auki NYT ja se päättyy 18.3. klo 12.00. Joukkue voi valmistatutua kisoihin varustautumalla urheilullisesti (tapahtuma sisältää juoksemista ulkona).</p>
         <ul>
           <li><b>TL;DR</b></li>
           <li><b>Mitä?</b> Pönkeli Games IV</li>
           <li><b>Missä?</b> Turussa, lähtö TYYn saunalta!</li>
-          <li><b>Milloin?</b> Keskiviikkona 18.3., lähtö klo 17!</li>
+          <li><b>Milloin?</b> Keskiviikkona 18.3.2026, lähtö klo 16.30!</li>
           <li><b>Miksi?</b> Maine, kunnia ja huikeat palkinnot!</li>
           <li><b>Hinta?</b> 6€/osallistuja</li>
           <li><b>Palju?</b> Ei, mut sauna on!</li>
-          <li><b>Ilmoittautuminen</b> TBD
+          <li><b>Ilmoittautuminen</b>
+            {' '}
+            <Link
+              href="https://holvi.com/shop/ponkeli/product/5fbd37239dc0fce19585466f9a156627/"
+              target='_blank'
+              className='link hover:text-accent transition-colors'
+              rel='noopener noreferrer'
+              onClick={e => e.stopPropagation()}
+              >
+              Holvissa
+            </Link>/
           </li>
         </ul>
         <hr className='my-3' />
         <b>ENGLISH</b>
-        <strong>Fast-paced checkpoint race around your campus!</strong>
-        <p>The Pönkeli Games are here again for the fourth time and they will be held this year on 18th of March starting at 17:00! In the Games you will take on other teams in an Amazing Race-style fast checkpoint race. The tasks require ingenuity, cooperation, strenght and fast feet. After the race, the winning team will claim a stunning prize, and all participants will be able to freshen up in the sauna.</p>
+        <strong>Fast-paced checkpoint race around the campus!</strong>
+        <p>The Pönkeli Games are here again for the fourth time and they will be held this year on 18th of March starting at 16:30! In the Games you will take on other teams in an Amazing Race-style fast checkpoint race. The tasks require ingenuity, cooperation, strenght and fast feet. After the race, the winning team will claim a stunning prize, and all participants will be able to freshen up in the sauna.</p>
         <p>So get your team of four (4) together and get ready for the most fun and action-packed adventure of this autumn when the Pönkeli Games begin! The ticket price is mere 6 € per person, which includes entry to the race, an overall badge and refreshing snacks and drinks in the sauna after the race.</p>
-        <p>Registration for the race starts on 2nd of March at 16.00. After the registration closes, all teams will be sent an email with more detailed instructions on how to prepare for the checkpoint race (equipment: athletic).</p>
+        <p>Registration for the race is open NOW and closes at 18th of March 12.00. Your team can prepare for the games by wearing sporty clothes (the event includes running outside).</p>
         <ul>
           <li><b>TL;DR</b></li>
           <li><b>What?</b> Pönkeli Games IV</li>
           <li><b>Where?</b> In Turku, starting from TYY sauna!</li>
-          <li><b>When?</b> Monday 24.11., start at 17:00!</li>
+          <li><b>When?</b> Wednesday 18.3.2026, start at 16:30!</li>
           <li><b>Why?</b> Fame, glory and amazing prizes!</li>
           <li><b>Price?</b> 6€/participant</li>
           <li><b>Hot tub?</b> No, but the sauna is warm!</li>
-          <li><b>Registration</b> TBD
+          <li><b>Sign up</b>
+            {' '}
+            <Link
+              href="https://holvi.com/shop/ponkeli/product/5fbd37239dc0fce19585466f9a156627/"
+              target='_blank'
+              className='link hover:text-accent transition-colors'
+              rel='noopener noreferrer'
+              onClick={e => e.stopPropagation()}
+              >
+              In Pönkelis Holvi-shop
+            </Link>/
           </li>
         </ul>
       </>
