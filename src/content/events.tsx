@@ -488,7 +488,7 @@ const events: PonkeliEvent[] = [
         <strong>FI/EN</strong>
         <strong>Urheilullinen rastikierros Turussa!</strong>
         <p>Pönkeli Games IV  kisaillaan keskiviikkona 18.3. klo 16.30 alkaen! Kisoissa pääset ottamaan joukkueesi kanssa mittaa muista opiskelijoista urheilullisella rastikierroksella. Rastit vaativat kekseliäisyyttä, yhteistyötä ja voimaa. Kisan jälkeen voittajajoukkue lunastaa itselleen huikean palkinnon, ja kaikki osallistujat pääsevät virkistäytymään saunalla.</p>
-        <p>Kokoa siis neljän (4) hengen joukkueesi ja valmistaudu syksyn hauskimpaan ja vauhdikkaimpaan seikkailuun, kun neljännet Pönkeli Gamesit alkavat! Lipun hinta on vaivaiset 6 € / henkilö, joka sisältää osallistumisen kisaan, upean haalarimerkin sekä palauttavaa syötävää ja juotavaa saunalla kisan jälkeen.</p>
+        <p>Kokoa siis neljän (4) hengen joukkueesi ja valmistaudu kevään hauskimpaan ja vauhdikkaimpaan rastikierrokseen, kun neljännet Pönkeli Gamesit alkavat! Lipun hinta on vaivaiset 6 € / henkilö, joka sisältää osallistumisen kisaan, upean haalarimerkin sekä palauttavaa syötävää ja juotavaa saunalla kisan jälkeen.</p>
         <p>Ilmoittautuminen kisaan on auki NYT ja se päättyy 18.3. klo 12.00. Joukkue voi valmistatutua kisoihin varustautumalla urheilullisesti (tapahtuma sisältää juoksemista ulkona).</p>
         <ul>
           <li><b>TL;DR</b></li>
@@ -515,7 +515,7 @@ const events: PonkeliEvent[] = [
         <b>ENGLISH</b>
         <strong>Fast-paced checkpoint race around the campus!</strong>
         <p>The Pönkeli Games are here again for the fourth time and they will be held this year on 18th of March starting at 16:30! In the Games you will take on other teams in an Amazing Race-style fast checkpoint race. The tasks require ingenuity, cooperation, strenght and fast feet. After the race, the winning team will claim a stunning prize, and all participants will be able to freshen up in the sauna.</p>
-        <p>So get your team of four (4) together and get ready for the most fun and action-packed adventure of this autumn when the Pönkeli Games begin! The ticket price is mere 6 € per person, which includes entry to the race, an overall badge and refreshing snacks and drinks in the sauna after the race.</p>
+        <p>So get your team of four (4) together and get ready for the most fun and action-packed adventure of this spring when the Pönkeli Games begin! The ticket price is mere 6 € per person, which includes entry to the race, an overall badge and refreshing snacks and drinks in the sauna after the race.</p>
         <p>Registration for the race is open NOW and closes at 18th of March 12.00. Your team can prepare for the games by wearing sporty clothes (the event includes running outside).</p>
         <ul>
           <li><b>TL;DR</b></li>
