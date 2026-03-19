@@ -7,7 +7,7 @@ import DownCaretIcon from '@/components/DownCaretIcon'
 import Logo from '@/components/Logo'
 import { Button } from '@/components/ui/button'
 
-const contentType: keyof typeof contents = 'competition'
+const contentType: keyof typeof contents = 'sellers'
 
 const contents = {
   recruitment: (

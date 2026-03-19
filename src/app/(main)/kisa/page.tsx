@@ -10,7 +10,7 @@ const Kisa = () => {
         <>
           <h1>Pönkelin vitsikilpailu</h1>
           <p className='max-w-md mx-auto font-semibold'>
-            Oletko sinä hauska? Onko Pönkeli hauska?<br/>Oletteko yhdessä hauskempia?
+            Vitsikilpailu on päättynyt, kiitos osallistuneille!<br/>Voittajat julkistetaan Pönkelijulkkareissa 9.4.2026
           </p>
         </>
       )}

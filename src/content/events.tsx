@@ -11,7 +11,7 @@ export type PonkeliEvent = {
 
 const events: PonkeliEvent[] = [
   {
-    name: 'Pönkeli Games 2022',
+    name: 'Pönkeli Games',
     date: '2022-10-12',
     details: null,
     image: '/ponkeli-games22.webp',
@@ -173,7 +173,7 @@ const events: PonkeliEvent[] = [
     )
   },
   {
-    name: 'PöNGi - Pönkeli Games 2023',
+    name: 'PöNGi - Pönkeli Games II',
     date: '2023-10-10',
     details: null,
     image: '/ponkeli-games22.webp',
@@ -379,7 +379,7 @@ const events: PonkeliEvent[] = [
     )
   },
   {
-    name: 'Pönkeli Games 2024',
+    name: 'Pönkeli Games III',
     date: '2024-10-10',
     details: null,
     image: '/ponkeligames2024.webp',
@@ -474,6 +474,45 @@ const events: PonkeliEvent[] = [
           <li><b>Miksi</b>WAPPUUUUU! 🥳</li>
           <li><b>Price?</b> 0€, Cloakroom 3 €</li>
           <li><b>Dresscode?</b> Wappu/Pönkeli/over-alls</li>
+        </ul>
+      </>
+    )
+  },
+  {
+    name: 'Pönkelireivit 25',
+    date: '2025-04-17',
+    details: '19-02 @Taiteen talo',
+    image: '/ponkelireivit25.webp',
+    description: (
+      <>
+        <strong>FI/EN</strong>
+        <strong>Pönkelireivit palaavat jälleen vauhdittamaan turkulaisia opiskelijoita!</strong>
+        <p>Vauhdikkaat ja suuren suosion saaneet Pönkelireivit palaavat jälleen. Reivit järjestetään tänä vuonna 17.4.2025 klo 19.00 alkaen.  Nimensä mukaisesti tarjolla on laaja kirjo elektronista tanssimusiikkia. Lähde siis elämäsi reiviseikkailuun Pönkelin matkassa.</p>
+        <p>Tapahtumaan ilmoittautuminen alkaa 10.4. klo 14.00 alkaen. Reiveille mahtuu rajallinen määrä ihmisiä, joten kannattaa olla nopea. Paikka ilmoitetaan osallistujille ennen tapahtumaa. Tapahtuma on OPM.</p>
+        <p>Luvassa on siis jälleen kerran kovaa reivausta läpi illan mahtavassa seurassa, näitä reivejä et halua jättää väliin!</p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>Mitä?</b> Pönkelireivit</li>
+          <li><b>Missä?</b> Taiteen talo</li>
+          <li><b>Milloin?</b> Torstaina 17.4.2025, klo 19.00</li>
+          <li><b>Miksi?</b> Kaikille, jotka haluavat reivata sydämensä kyllyydestä</li>
+          <li><b>Hinta?</b> 12 €</li>
+          <li><b>Pukukoodi?</b> Reivit/Haalarit. Tapahtuma järjestetään lämpimissä sisätiloissa</li>
+          <li><b>Mitä mukaan?</b> OPM, vesipullo, hyvät tanssikengät</li>
+        </ul>
+        <hr className='my-3' />
+        <b>ENGLISH</b>
+        <strong>Pönkelirave is here again to make you move!</strong>
+        <p>The Pönkelirave is here once again! The rave will be held on 17th of April starting at 19.00 and ending at 02.00 in the night. Living up to its name there will be served a variety of electronic dance music. So come on in and join Pönkeli for the rave adventure of your life.</p>
+        <p>Tickets will be available 10th of April at 14.00. There is a limited amount of places available, so be fast. The venue will be announced to participants later. BYOB, Bring your own bottle.</p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>What?</b> Pönkelirave</li>
+          <li><b>Where?</b> Taiteen talo</li>
+          <li><b>When?</b> 17.4.2025 at 19.00</li>
+          <li><b>Why?</b> Cardio</li>
+          <li><b>Price?</b> 12 €</li>
+          <li><b>Dresscode?</b> Rave/overalls. The event will be held inside</li>
         </ul>
       </>
     )
@@ -583,19 +622,78 @@ const events: PonkeliEvent[] = [
   {
     name: 'Pönkelijulkkarit 2026',
     date: '2026-04-09',
-    details: '',
+    details: '18.00 @Kåren',
     image: '',
     description: (
-      <strong>More info coming soon!</strong>
+        <>
+        <strong>Pönkelijulkkarit ja wappurauhanjulistus 9.4. klo 18 Kårenilla</strong>
+        <p>Wappu on täällä! Arvon turkulaiset teekkarit, fuksit ja teekkarimieliset opiskelijat, Pönkeli on taas täällä!</p>
+        <p>Turun teekkariwappu käynnistyy virallisilla wapunaloituksen etkoilla eli Turun teekkareiden oman Wappulehti Pönkelin julkaisulla. Pönkeli virittää turkulaiset opiskelijat juhlatunnelmaan näyttävällä tavalla. Julkkareissa yllätyksiä sekä viihdettä. Kårenin baari palvelee koko tapahtuman ajan opiskelijaystävällisin hinnoin.</p>
+        <p>Tapahtuma toimii virallisina etkoina wapunaloitusbileille ja tapahtumassa on ensimmäinen mahdollisuus ostaa vauhdikasta huummoria tihkuva Pönkeli 2026! Wapunaloitusbileet starttaavat Vegasissa klo 22!</p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>Mitä</b> Pönkelijulkkarit</li>
+          <li><b>Missä</b> Kåren, Hämeenkatu 22</li>
+          <li><b>Milloin</b> 9.4. klo 18.00-21.00. Ovet auki klo 17.30</li>
+          <li><b>Miksi</b> WAPPUUUUU! 🥳</li>
+          <li><b>Mitä maksaa</b> 0€, narikka 3€</li>
+          <li><b>Pukukoodi</b> Wappu/Pönkeli/haalarit</li>
+        </ul>
+        <hr className='my-3' />
+        <b>ENGLISH</b>
+        <strong>Pönkeli&apos;s publishing party 9.4 at Kåren</strong>
+        <p>Dear teekkaris, freshmen and teekkari-minded students, the time has come to begin the most expected period of the year; Turku&apos;s teekkariwappu 2026!</p>
+        <p>Turku&apos;s teekkariwappu begins with the official pre-party for the wappu-starting-party, and of course by publishing of Turku&apos;s teekkaris&apos; very own wappu magazine: Pönkeli! Pönkeli will take over and solemnly lead all students to wappu atmosphere. There will of course be a surprise entertainment that you do not want to miss. The bar will be open the whole event and has student-friendly prices.</p>
+        <p>The event is the official pre-party for the wappu-starting-party and there is the first chance to redeem yourself the most wanted product of wappu, i.e. Pönkeli 2026! After the event the wappu nation wanders together towards Vegas and wappu-starting-party.</p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>What?</b> Pönkeli&apos;s publishing party</li>
+          <li><b>Where?</b> Kåren, Hämeenkatu 22</li>
+          <li><b>When?</b> 9.4. from 18.00 to 21.00. Doors open at 17.30</li>
+          <li><b>Miksi</b>WAPPUUUUU! 🥳</li>
+          <li><b>Price?</b> 0€, Cloakroom 3 €</li>
+          <li><b>Dresscode?</b> Wappu/Pönkeli/over-alls</li>
+        </ul>
+      </>
     )
   },
   {
     name: 'Pönkelireivit 2026',
     date: '2026-04-16',
-    details: '',
+    details: '23-05 @UG-klubi',
     image: '',
     description: (
-      <strong>More info coming soon!</strong>
+      <>
+        <strong>FI/EN</strong>
+        <strong>Pönkelireivit palaavat jälleen vauhdittamaan turkulaisia opiskelijoita!</strong>
+        <p>Vauhdikkaat ja suuren suosion saaneet Pönkelireivit palaavat jälleen. Reivit järjestetään 16.4.2026 klo 23.00 alkaen.  Nimensä mukaisesti tarjolla on laaja kirjo elektronista tanssimusiikkia. Lähde siis elämäsi reiviseikkailuun Pönkelin matkassa.</p>
+        <p>Liput myydään ovelta. Reiveille mahtuu rajallinen määrä ihmisiä, joten kannattaa olla paikalla ajoissa. Illan pääesiintyjän aloittaa klo 00.00</p>
+        <p>Luvassa on siis jälleen kerran kovaa reivausta läpi illan mahtavassa seurassa, näitä reivejä et halua jättää väliin!</p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>Mitä?</b> Pönkelireivit</li>
+          <li><b>Missä?</b> UG-klubi</li>
+          <li><b>Milloin?</b> Torstaina 17.4.2026, klo 19.00</li>
+          <li><b>Miksi?</b> Kaikille, jotka haluavat reivata sydämensä kyllyydestä</li>
+          <li><b>Hinta?</b> 5 €</li>
+          <li><b>Pukukoodi?</b> Reivit/haalarit</li>
+          <li><b>Mitä mukaan?</b> Hyvät tanssikengät</li>
+        </ul>
+        <hr className='my-3' />
+        <b>ENGLISH</b>
+        <strong>Pönkelirave is here again to make you move!</strong>
+        <p>The Pönkelirave is here once again! The rave will be held on 16th of April starting at 23.00. Living up to its name there will be served a variety of electronic dance music. So come on in and join Pönkeli for the rave adventure of your life.</p>
+        <p>Tickets sold from the door. There is a limited amount of places available, so be early! Our main guest will take the stage at 00.00</p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>What?</b> Pönkelirave</li>
+          <li><b>Where?</b> UG-klubi</li>
+          <li><b>When?</b> 16.4.2026 at 23.00</li>
+          <li><b>Why?</b> Cardio</li>
+          <li><b>Price?</b> 5 €</li>
+          <li><b>Dresscode?</b> Rave/overalls</li>
+        </ul>
+      </>
     )
   },
   {
