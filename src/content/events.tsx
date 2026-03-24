@@ -620,6 +620,39 @@ const events: PonkeliEvent[] = [
     )
   },
   {
+    name: 'Myyjäkoulu 2026',
+    date: '2026-03-30',
+    details: '18-19 @ Agora XXI',
+    image: '/myyjakoulu26.webp',
+    description: (
+        <>
+        <strong>Ilmoittaudu ja opi Pönkelin myyjäksi</strong>
+        <p>Lehtien myynnistä on luvassa myyjäpalkintoja sekä teekkarifukseille Pönkelipiste. Pönkeli järjestää myös pelkästään myyjille suunnattuja tapahtumia, joihin juuri sinun on mahdollista vain myyjänä osallistua!</p>
+        <p>Myyjäksi voit ilmoittautua Pönkelin nettisivujen kautta tai saapumalla Myyjäkouluun 30.3. klo 18-19 Agoran saliin XXI, jossa kerrotaan lisää Pönkelistä, lehtien myymisestä, palkinnoista ja tapahtumista. Vaikket olisi varma osallistumisesta, tule ihmeessä paikalle! Myyjäkoulu järjestetään myös Zoomissa (linkki saatavilla kiltasi tiedotuskanavilla tai pyytämällä sähköpostitse).</p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>Mitä</b> Myyjäkoulu</li>
+          <li><b>Missä</b> Agora XXI</li>
+          <li><b>Milloin</b> 30.3. klo 18.00-19.00</li>
+          <li><b>Miksi</b> Pääset ilmoittautumaan myyjäksi ja oppimaan myyntiä</li>
+        </ul>
+        <hr className='my-3' />
+        <b>ENGLISH</b>
+        <strong>Register and learn how to become a Pönkeli salesperson</strong>
+        <p>Teekkari Wappu and the Pönkeli publishing party are approaching, and Pönkeli is looking for enthusiastic sellers for this year’s most fun student Wappu magazine in Turku!</p>
+        <p>By selling the magazines, you can earn seller rewards, and for teekkari freshmen, the Pönkeli point. Pönkeli also organizes exclusive events for sellers during Wappu.</p>
+        <p>You can sign up as a seller through Pönkeli’s website or by attending the seller training on March 30th from 18:00 to 19:00 in Agora, hall XXI. There you will hear more about Pönkeli, selling the magazines, rewards, and events. Even if you’re not sure about participating, feel free to come along! The seller training will also be held on Zoom (link available in your guild's information channels or by asking through e-mail).</p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>What?</b>Pönkeli salersperson training</li>
+          <li><b>Where?</b> Agora XXI</li>
+          <li><b>When?</b> 30.3. from 18.00 to 19.00</li>
+          <li><b>Miksi</b> Register, sell, earn  rewards</li>
+        </ul>
+      </>
+    )
+  },
+  {
     name: 'Pönkelijulkkarit 2026',
     date: '2026-04-09',
     details: '18.00 @Kåren',
