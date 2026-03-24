@@ -609,11 +609,11 @@ const events: PonkeliEvent[] = [
         <p>At the event, you’ll also have the opportunity to become a Pönkeli VIP seller. More info <Link href='/myyjarekry'>here!</Link></p>
         <ul>
           <li><b>TL;DR</b></li>
-          <li><b>What?</b>100 days to Wappu pub quiz</li>
-          <li><b>Where?</b>Saaristobaari</li>
+          <li><b>What?</b> 100 days to Wappu pub quiz</li>
+          <li><b>Where?</b> Saaristobaari</li>
           <li><b>When?</b> Wednesday, January 21st at 18.00</li>
-          <li><b>Why?</b>Wappu will come faster if you answer correctly.</li>
-          <li><b>Price?</b>Nothing!</li>
+          <li><b>Why?</b> Wappu will come faster if you answer correctly.</li>
+          <li><b>Price?</b> Nothing!</li>
           <li><b>Registration</b> At the venue</li>
         </ul>
       </>
@@ -644,10 +644,10 @@ const events: PonkeliEvent[] = [
         <p>You can sign up as a seller through Pönkeli’s website or by attending the seller training on March 30th from 18:00 to 19:00 in Agora, hall XXI. There you will hear more about Pönkeli, selling the magazines, rewards, and events. Even if you’re not sure about participating, feel free to come along! The seller training will also be held on Zoom (link available in your guild's information channels or by asking through e-mail).</p>
         <ul>
           <li><b>TL;DR</b></li>
-          <li><b>What?</b>Pönkeli salersperson training</li>
+          <li><b>What?</b> Pönkeli salesperson training</li>
           <li><b>Where?</b> Agora XXI</li>
           <li><b>When?</b> 30.3. from 18.00 to 19.00</li>
-          <li><b>Miksi</b> Register, sell, earn  rewards</li>
+          <li><b>Why?</b> Register, sell, earn rewards</li>
         </ul>
       </>
     )
@@ -706,7 +706,7 @@ const events: PonkeliEvent[] = [
           <li><b>TL;DR</b></li>
           <li><b>Mitä?</b> Pönkelireivit</li>
           <li><b>Missä?</b> UG-klubi</li>
-          <li><b>Milloin?</b> Torstaina 17.4.2026, klo 19.00</li>
+          <li><b>Milloin?</b> Torstaina 16.4.2026, klo 23.00</li>
           <li><b>Miksi?</b> Kaikille, jotka haluavat reivata sydämensä kyllyydestä</li>
           <li><b>Hinta?</b> 5 €</li>
           <li><b>Pukukoodi?</b> Reivit/haalarit</li>
