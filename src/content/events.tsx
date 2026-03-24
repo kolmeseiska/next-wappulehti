@@ -694,7 +694,7 @@ const events: PonkeliEvent[] = [
     name: 'Pönkelireivit 2026',
     date: '2026-04-16',
     details: '23-05 @UG-klubi',
-    image: '',
+    image: '/reivit26.webp',
     description: (
       <>
         <strong>FI/EN</strong>
