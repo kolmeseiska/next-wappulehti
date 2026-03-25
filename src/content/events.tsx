@@ -693,20 +693,20 @@ const events: PonkeliEvent[] = [
   {
     name: 'Pönkelireivit 2026',
     date: '2026-04-16',
-    details: '23-05 @UG-klubi',
+    details: '22-04 @UG-klubi',
     image: '/reivit26.webp',
     description: (
       <>
         <strong>FI/EN</strong>
         <strong>Pönkelireivit palaavat jälleen vauhdittamaan turkulaisia opiskelijoita!</strong>
-        <p>Vauhdikkaat ja suuren suosion saaneet Pönkelireivit palaavat jälleen. Reivit järjestetään 16.4.2026 klo 23.00 alkaen.  Nimensä mukaisesti tarjolla on laaja kirjo elektronista tanssimusiikkia. Lähde siis elämäsi reiviseikkailuun Pönkelin matkassa.</p>
+        <p>Vauhdikkaat ja suuren suosion saaneet Pönkelireivit palaavat jälleen. Reivit järjestetään 16.4.2026 klo 22.00 alkaen.  Nimensä mukaisesti tarjolla on laaja kirjo elektronista tanssimusiikkia. Lähde siis elämäsi reiviseikkailuun Pönkelin matkassa.</p>
         <p>Liput myydään ovelta. Reiveille mahtuu rajallinen määrä ihmisiä, joten kannattaa olla paikalla ajoissa. Illan pääesiintyjän aloittaa klo 00.00</p>
         <p>Luvassa on siis jälleen kerran kovaa reivausta läpi illan mahtavassa seurassa, näitä reivejä et halua jättää väliin!</p>
         <ul>
           <li><b>TL;DR</b></li>
           <li><b>Mitä?</b> Pönkelireivit</li>
           <li><b>Missä?</b> UG-klubi</li>
-          <li><b>Milloin?</b> Torstaina 16.4.2026, klo 23.00</li>
+          <li><b>Milloin?</b> Torstaina 16.4.2026, klo 22.00</li>
           <li><b>Miksi?</b> Kaikille, jotka haluavat reivata sydämensä kyllyydestä</li>
           <li><b>Hinta?</b> 5 €</li>
           <li><b>Pukukoodi?</b> Reivit/haalarit</li>
@@ -715,13 +715,13 @@ const events: PonkeliEvent[] = [
         <hr className='my-3' />
         <b>ENGLISH</b>
         <strong>Pönkelirave is here again to make you move!</strong>
-        <p>The Pönkelirave is here once again! The rave will be held on 16th of April starting at 23.00. Living up to its name there will be served a variety of electronic dance music. So come on in and join Pönkeli for the rave adventure of your life.</p>
-        <p>Tickets sold from the door. There is a limited amount of places available, so be early! Our main guest will take the stage at 00.00</p>
+        <p>The Pönkelirave is here once again! The rave will be held on 16th of April starting at 22.00. Living up to its name there will be served a variety of electronic dance music. So come on in and join Pönkeli for the rave adventure of your life.</p>
+        <p>Tickets sold from the door. There is a limited amount of space available, so be early! Our main guest will take the stage at 00.00</p>
         <ul>
           <li><b>TL;DR</b></li>
           <li><b>What?</b> Pönkelirave</li>
           <li><b>Where?</b> UG-klubi</li>
-          <li><b>When?</b> 16.4.2026 at 23.00</li>
+          <li><b>When?</b> 16.4.2026 at 22.00</li>
           <li><b>Why?</b> Cardio</li>
           <li><b>Price?</b> 5 €</li>
           <li><b>Dresscode?</b> Rave/overalls</li>
