@@ -656,7 +656,7 @@ const events: PonkeliEvent[] = [
     name: 'Pönkelijulkkarit 2026',
     date: '2026-04-09',
     details: '18.00 @Kåren',
-    image: '',
+    image: '/julkkarit26.webp',
     description: (
         <>
         <strong>Pönkelijulkkarit ja wappurauhanjulistus 9.4. klo 18 Kårenilla</strong>
@@ -730,12 +730,61 @@ const events: PonkeliEvent[] = [
     )
   },
   {
-    name: 'Pönkelis Mystery Wappu Event 2026',
+    name: 'Pönkeli FIA-cup 2026',
     date: '2026-04-27',
-    details: '',
-    image: '',
+    details: 'Q-talon alakerta, Vähä-Heikkilä',
+    image: '/fia26.webp',
     description: (
-      <strong>More info coming soon!</strong>
+      <>
+        <strong>FI/EN</strong>
+        <p>Olet varmaan ihmetellyt, mikä peli on tuo FIA, jota Åbo Akademin sivistyneet teekkarit erityisesti suosivat. Nyt sinulla on mahdollisuus päästä pelaamaan fiaa</p>
+        <p>FIA-cup järjestetään 27.4.2026 klo 18.00 Q-talon epäilyttävässä alakerrassa. FIA-cupissa kilpaillaan kahden henkilön joukkueissa isolla FIA-laudalla. Pelinappuloina toimivat pienet shottilasit, joilla syödään toisten nappuloita. Juoma on laimeaa alkoholia. Yhdessä pelissä on mukana neljä joukkuetta.</p>
+        <p>Tapahtuma järjestetään 16 joukkueen turnauksena, jossa pelataan välierät ennen finaalia. Turnausta saa tulla myös seuraamaan!</p>
+        <p>Lähde mukaan teekkariwappuun paluun tehneeseen FIA-cupiin!</p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>Mitä?</b> FIA-cup</li>
+          <li><b>Missä?</b> Q-talon alakerta, Vähä-Heikkilä</li>
+          <li><b>Milloin?</b> 27.4.2026 klo 18.00 alkaen</li>
+          <li><b>Miksi?</b> FIA</li>
+          <li><b>Hinta?</b> 16 €, sis. pelijuomat</li>
+          <li><b>Ilmoittautuminen?</b> Linkki tulee Teekkariwapun Telegram-tiedotukseen </li>
+        </ul>
+        <hr className='my-3' />
+        <b>ENGLISH</b>
+        <p>You have probably wondered what is that FIA game that the teekkaris of ÅA are fond of. Well now you have the chance to experience FIA.</p>
+        <p>Pönkelis FIA-cup will be held on 27th of April 2026 at 18.00 in the basement of Q-talo. In FIA, teams of two compete on a big FIA board. The game pieces are small shot glasses, which are "eaten" by other pieces. The drink is mildly alcoholic. Each game includes four teams.</p>
+        <p>The event is organized as a tournament with 16 teams, where semifinals are played before the final. You can also come and watch the tournament!</p>
+        <p>Join the FIA-cup, which has made a comeback to Wappu!</p>
+        <ul>
+          <li><b>TL;DR</b></li>
+          <li><b>What?</b> FIA-cup</li>
+          <li><b>Where?</b> Basement of Q-talo, Vähä-Heikkilä</li>
+          <li><b>When?</b> 27.4.2026 at 18.00</li>
+          <li><b>Why?</b> FIA</li>
+          <li><b>Price?</b> 16 €, includes drinks for the game</li>
+          <li><b>Registration?</b> Link will be shared in Teekkariwappu Telegram information channel </li>
+        </ul>
+        <hr className='my-3' />
+        <b>SÄÄNNÖT</b>
+        <b>Tavoite:</b>
+        <p> Pelin tarkoituksena on saada kaikki oman joukkueen pelinappulat kotipesään ensimmäisenä.</p>
+        <b>Pelinkulku:</b>
+        <p> Pelin aloittaa suurimman silmäluvun heittänyt joukkue. Pelinappuloita voi asettaa pelilaudalle nopan silmäluvuilla 1 tai 6. Jos joukkueella ei ole yhtään pelinappulaa kentällä, on sillä enintään kolme yritystä saada kentälle pelinappula. Silmäluvulla 6 saa aina uuden heittovuoron.</p>
+        <p> Kussakin peliruudussa saa olla vain yksi nappula kerrallaan.</p>
+        <p> Jos joukkue liikuttaa pelinappulaa ruutuun, missä on jo toisen joukkueen nappula, juo syönyt joukkue syödystä nappulasta shotin FIA-juomaa. Syöty nappula palautuu varikolle. Syöminen on aina pakollista, jos se on millään joukkueen nappulalla mahdollista, mukaan lukien varikolla olevalla nappulalla. Jos syöminen edellyttää siirtymistä uudelle kierrokselle, täytyy se tehdä.</p>
+        <p> Nappulan on kierrettävä pelilauta myötäpäivään. Kokonaisen kierroksen kierrettyään, nappulat voivat päästä kotipesään. Kotipesään on osuttava tasaluvulla ja kotipesä on täytettävä keskustasta varikkoon päin järjestyksessä. Kun nappula päätyy kotipesään oikealle kohdalle, juo nappulan omaava joukkue siitä shotin ja nappula lukittuu paikoilleen.</p>
+        <b>FIA- erikoissäännöt:</b>
+        <ul>
+          <li>- Noppaa saa heittää ainoastaan pelipöydälle. Muualle kohdistuneet heitot lasketaan vuoron luovuttamiseksi seuraavalle joukkueelle.</li>
+          <li>- Voittaja joukkueen on istuttava 5 minuuttia paikallaan heti pelin voiton yhteydessä. Molempien pelaajien on oltava paikallaan istumassa koko tämä aika. Jos kumpikaan joukkueen jäsenistä ei tähän kykene, lasketaan tilanne luovutusvoitoksi seuraavaksi tulleelle joukkueelle.</li>
+          <li>- Pelin aikana ainakin yksi pelaaja jokaisesta joukkueesta on oltava paikalla minä tahansa hetkenä.</li>
+          <li>- Jos FIA-juoma loppuu pelin aikana, haetaan uusi termos,</li>
+          <li>- Hävinneiden tiimien kesken juodaan tasaisesti pelilaudalla olevat nappulat,</li>
+          <li>- Kun peli päättyy, jaetaan jäljellä oleva termoksen juoma kaikkien pelissä mukana olleiden kesken tasaisesti.</li>
+          <li>- FIA-juomassa ei ole palautusoikeutta.</li>
+        </ul>
+      </>
     )
   },
 ]
