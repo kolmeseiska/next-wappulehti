@@ -122,3 +122,10 @@ body {
     @apply bg-background text-foreground;
   } */
 }
+
+/* Sportti page hero mobile background behavior */
+@media screen and (max-width: 767px) {
+  .sportti-hero-mobile {
+    background: black;
+  }
+}

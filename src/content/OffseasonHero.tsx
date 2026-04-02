@@ -7,7 +7,7 @@ import DownCaretIcon from '@/components/DownCaretIcon'
 import Logo from '@/components/Logo'
 import { Button } from '@/components/ui/button'
 
-const contentType: keyof typeof contents = 'sellers'
+const contentType: keyof typeof contents = 'release'
 
 const contents = {
   recruitment: (
@@ -85,24 +85,24 @@ const contents = {
         target='_blank'
         rel='noopener noreferrer'
       >
-        Anna palautetta Pönkelistä 2025
+        Anna palautetta Pönkelistä 2026
       </Link>
     </>
   ),
   release: (
     <>
-      <h2 className='text-4xl font-bold mb-8'>Pönkeli 2025 on saapunut!</h2>
-      <p className='text-2xl font-semibold'>Vitsejä, vinkkejä sekä vinhoja tehtäviä lehden täydeltä!</p>
+      <h2 className='text-4xl font-bold mb-8'>Pönkeli 2026 on saapunut!</h2>
+      <p className='text-2xl font-semibold'>Liikuttavia vitsejä, villejä lajikokeiluja ja vauhdikasta huumoria koko lehden täydeltä tyylikkäiden urheiluaurinkolasien kera!</p>
       <Button
         asChild
         size='lg'
         className='mt-5 btn-outline bg-orange-300 hover:bg-sky-500 text-slate-800 transition transition-colors'
       >
         <Link
-          href={'/niksi'}
+          href={'/sportti'}
           role='button'
         >
-          Lue lisää!
+          Lue lisää ja osta!
         </Link>
       </Button>
     </>
