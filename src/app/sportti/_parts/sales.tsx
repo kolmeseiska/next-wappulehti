@@ -33,6 +33,13 @@ const Sales = () => {
           </tr>
         </thead>
         <tbody>
+          {currentISODate <= '2026-04-26' && (
+            <tr className='text-sm border-amber-800 border-opacity-10'>
+              <td>13.4.–26.4.</td>
+              <td>10-18</td>
+              <td>Wappupako, Educariumin ja Publicumin aukio</td>
+            </tr>
+          )}
           {saleTimes.map(({ date, time, place }) => {
             const isPast = currentISODate > date
             const isToday = currentISODate === date
