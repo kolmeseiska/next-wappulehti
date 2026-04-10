@@ -32,7 +32,7 @@ export const SaleSection = () => {
               Lehtiä löydät myös teekkarilakkipäisiltä Pönkelin <span className='highlight'>myyjiltä.</span>
             </p>
             <p className='mb-6'>
-              Tänä vuonna Pönkeliä on myös mahdollista ostaa verkkokaupastamme. <ExternalLink href='https://holvi.com/shop/ponkeli/'>Siirry ostoksille.</ExternalLink>
+              Tänäkin vuonna Pönkeliä on myös mahdollista ostaa verkkokaupastamme. <ExternalLink href='https://holvi.com/shop/ponkeli/product/a6fd43741d594f69dca9a82de93e2df4/'>Siirry ostoksille</ExternalLink>
             </p>
             <Sales />
           </div>
