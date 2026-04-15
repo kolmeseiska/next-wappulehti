@@ -2,7 +2,7 @@ const saleTimes: { date: string, time: string, place: string }[] = [
   { date: '2026-04-10', time: '12-16', place: 'Osakuntasali, Rehtorinpellonkatu 4 B' },
   { date: '2026-04-13', time: '12-14', place: 'Osakuntasali, Rehtorinpellonkatu 4 B' },
   { date: '2026-04-15', time: '14-16', place: 'Osakuntasali, Rehtorinpellonkatu 4 B' },
-  { date: '2026-04-18', time: '12-14', place: 'Kauppatori' },
+  { date: '2026-04-18', time: '12-13.30', place: 'Kauppatori' },
   { date: '2026-04-20', time: '12-14', place: 'Osakuntasali, Rehtorinpellonkatu 4 B' },
   { date: '2026-04-22', time: '16-18', place: 'Osakuntasali, Rehtorinpellonkatu 4 B' },
   { date: '2026-04-23', time: '18-20', place: 'Polkuauto Grand Prix, Varvintori' },
