@@ -23,7 +23,7 @@ const getDay = (date: string) => weekDays[new Date(date).getDay()]
 const Sales = () => {
   const currentISODate = getCurrentDate()
   const wappupakoStart = '2026-04-13'
-  const wappupakoEnd = '2026-04-26'
+  const wappupakoEnd = '2026-04-25'
   const wappupakoBaseDate = wappupakoStart
 
   const isInWappupakoRange = currentISODate >= wappupakoStart && currentISODate <= wappupakoEnd

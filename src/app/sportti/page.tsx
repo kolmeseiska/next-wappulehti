@@ -112,7 +112,7 @@ export default function Sportti() {
               <span className='text-[#44ace2] text-sm font-medium'>LAJIKOKEILUT</span>
               <h3 className='text-xl font-semibold text-[#032a39]'>Vinkkejä uusiin urheilulajeihin</h3>
               <p className='text-[#032a39] opacity-80'>
-                Oletko kyllästynyt vanhoihin perinteiseen urheiluun?? Kokeile näitä uusia ja jännittäviä lajeja!
+                Oletko kyllästynyt vanhoihin perinteisiin urheilulajeihin? Kokeile näitä uusia ja jännittäviä lajeja!
               </p>
             </div>
           </div>
