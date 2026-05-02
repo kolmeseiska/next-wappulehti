@@ -31,15 +31,11 @@ export const SaleSection = () => {
             <p className='mb-6'>
               Lehtiä löydät myös teekkarilakkipäisiltä Pönkelin <span className='highlight'>myyjiltä.</span>
             </p>
-            <p className='mb-6'>
-              Pönkeli on lähes loppuunmyyty, joten verkkokauppamme on sulkeutunut. Kiitoksia ostajille.
-            </p>
             {/*
             <p className='mb-6'>
               Tänäkin vuonna Pönkeliä on myös mahdollista ostaa verkkokaupastamme. <ExternalLink href='https://holvi.com/shop/ponkeli/product/a6fd43741d594f69dca9a82de93e2df4/'>Siirry ostoksille</ExternalLink>
             </p>
             */}
-            <h3 className='text-xl font-semibold text-[#032a39] mb-4'>Päivitys 30.4.2026 kello 7.30: Lehtiä hyvin vähän jäljellä myyntipisteillä! Oman Sportti-Pönkelin voit saada vielä myyjiltä tai toimittajilta!</h3>
             <Sales />
           </div>
         </div>

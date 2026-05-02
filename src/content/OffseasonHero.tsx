@@ -7,7 +7,7 @@ import DownCaretIcon from '@/components/DownCaretIcon'
 import Logo from '@/components/Logo'
 import { Button } from '@/components/ui/button'
 
-const contentType: keyof typeof contents = 'release'
+const contentType: keyof typeof contents = 'recruitment'
 
 const contents = {
   recruitment: (

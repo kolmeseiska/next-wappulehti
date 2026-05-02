@@ -3,6 +3,21 @@ import Image from 'next/image'
 
 const editions = [
   {
+    year: 2026,
+    title: 'Sportti-Pönkeli',
+    body: (
+      <>
+        <p>
+          Wappua 2026 vauhditti <b>&quot;Sportti-Pönkeli&quot;</b>, joka sisälsi urheilullista sisältöä ja liikuttavaa huumoria.
+        </p>
+        <p>
+          Sportti-Pönkelin mukana tulivat myös upeat sporttisen Pönkelin urheiluaurinkolasit, jotka suojasivat niin opiskelijoita kuin muitakin kansalaisia wapun aurinkoiselta säältä ja lisäsivät nopeutta hauskanpitoon!
+        </p>
+      </>
+    ),
+    imageSource: '/ponkeli26-og.webp'
+  },
+  {
     year: 2025,
     title: 'Niksi Pönkeli',
     body: (

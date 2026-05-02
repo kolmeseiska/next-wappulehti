@@ -16,10 +16,10 @@ const page = () => {
           Pönkelin tavoitteena on yhdistää kaikkia turkulaisia teekkareita ja opiskelijoita kaikilta kampuksilta. Pönkeli haluaa levittää teekkarihuumorin ilosanomaa kaikelle kansalle ja jatkaa wappulehtien perinnettä. Pönkeli noudattaa toiminnassaaan yhdenvertaisuuden ja turvallisen tilan periaatteita.
         </p>
         <p>
-          <strong>No entä sitten se Pönkelipiste?</strong> Pönkelipiste löytyy jokaisen teekkarifuksin fuksipassista. Pisteen voit suorittaa fuksivuotesi aikana toimimalla Pönkelin myyjänä tai tuottamalla Pönkeliin sisältöä joko grafiikan, piirroksen, humoristisen tekstin tai vitsin Pönkelin vitsikilpailuun. Pisteen saat, kun tuotoksesi päätyy lehteen, ja siitä ilmoitetaan hyvissä ajoin. <b>Pönkelipisteen saat passiisi kun myyt 4 Pönkeliä.</b>
+          <strong>No entä sitten se Pönkelipiste?</strong> Pönkelipiste löytyy jokaisen teekkarifuksin fuksipassista. Pisteen voit suorittaa fuksivuotesi aikana toimimalla Pönkelin myyjänä tai tuottamalla Pönkeliin sisältöä joko grafiikan, piirroksen, humoristisen tekstin tai vitsin Pönkelin vitsikilpailuun. Pisteen saat, kun tuotoksesi päätyy lehteen, ja siitä ilmoitetaan hyvissä ajoin. <b>Pönkelipisteen saat passiisi myös myymällä Pönkeleitä.</b>
         </p>
         <p>
-          Pönkelin myyjäksi ilmoittautuminen ei sido sinua vielä mihinkään ja se perustuu vapaaehtoisuuteen. Aiempina vuosina myyjiä on palkittu mm. virkistäytymisellä, palkinnoilla, lahjakorteilla, aamupaloilla jne. Lähde siis Pönkelin myyjäksi vaikka heti <Link href='/myyjarekry'>täältä!</Link>
+          Pönkelin myyjäksi ilmoittautuminen ei sido sinua vielä mihinkään ja se perustuu vapaaehtoisuuteen. Aiempina vuosina myyjiä on palkittu mm. virkistäytymisellä, palkinnoilla, lahjakorteilla, aamupaloilla jne. Pönkelin myyjäksi ilmoittautuminen aukeaa myöhemmin, seuraa meidän Instagramiamme.
         </p>
         <p>
           Myyjänä toimimisesta ja Pönkelin vitsikilpailusta kuulet lisää Pönkelin instagramista, tiktokista, kiltasi tiedotuskanavista sähköpostitse ja täältä nettisivuilta!

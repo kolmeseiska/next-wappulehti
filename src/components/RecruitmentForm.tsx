@@ -69,7 +69,7 @@ const RecruitmentForm = () => {
       />
       <FormTextarea<Recruitment>
         name='description'
-        label='Lyhyt viesti itsestäsi ja miksi haluat liittyä Pönkelin toimitukseen'
+        label='Kerro lyhyesti itsestäsi ja miksi haluat liittyä Pönkelin toimitukseen'
         register={register}
         errors={errors}
       />

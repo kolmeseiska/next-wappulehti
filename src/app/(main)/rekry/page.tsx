@@ -22,6 +22,9 @@ const page = () => {
           <li>Valo- ja videokuvaajia</li>
           <li>Markkinoijia ja sosiaalisen median sisällöntuottajia</li>
         </ul>
+        <p>
+          Rekry sulkeutuu virallisesti 31.5.2026
+        </p>
       </div>
       <div className='card shadow-2xl w-full max-w-md bg-base-100 mx-auto my-5'>
         <div className='card-body'>
