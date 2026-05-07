@@ -62,6 +62,12 @@ const RecruitmentForm = () => {
         errors={errors}
       />
       <FormInput<Recruitment>
+        name='email'
+        label='Sähköposti'
+        register={register}
+        errors={errors}
+      />
+      <FormInput<Recruitment>
         name='telegram'
         label='Telegram-nick'
         register={register}
