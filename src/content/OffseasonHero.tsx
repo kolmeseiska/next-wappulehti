@@ -7,7 +7,7 @@ import DownCaretIcon from '@/components/DownCaretIcon'
 import Logo from '@/components/Logo'
 import { Button } from '@/components/ui/button'
 
-const contentType: keyof typeof contents = 'recruitment'
+const contentType: keyof typeof contents = 'release'
 
 const contents = {
   recruitment: (
@@ -115,11 +115,12 @@ const OffseasonHero = () => {
       <ColorWall />
       <div className='hero-content text-center text-slate-100 py-32'>
         <div className='max-w-md'>
-          <h2 className='text-xl font-bold'>Turun Yliopiston opiskelijoiden Wappulehti</h2>
+          <h2 className='text-xl font-bold'>Turun yliopiston teekkareiden wappulehti</h2>
           <h1 className='text-8xl font-bold uppercase mb-8 fill-slate-50'>
             <Logo className='h-48 max-w-full' />
           </h1>
-          {contents[contentType] ?? <h3>Tervetuloa tutustumaan Pönkelin toimintaan. Tutki historiaa sekä osallistu toimintaan sivuiltamme!</h3>}
+          <h3>Tervetuloa tutustumaan Pönkelin toimintaan. Tutki historiaa sekä osallistu toimintaan sivuiltamme!</h3>
+          { /* contents[contentType] ?? <h3>Tervetuloa tutustumaan Pönkelin toimintaan. Tutki historiaa sekä osallistu toimintaan sivuiltamme!</h3> */ }
         </div>
       </div>
     </div>

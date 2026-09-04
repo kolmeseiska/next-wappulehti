@@ -14,7 +14,7 @@ type Route = [string, string, boolean?]
 const routes: Route[] = [
   // ['Vitsikilpailu', '/kisa', true],
   // ['Sportti-Pönkeli', '/sportti', true],
-  ['Rekry', '/rekry', true],
+  // ['Rekry', '/rekry', true],
   ['Tapahtumat', '/tapahtumat'],
   ['Historia', '/historia'],
   //['Myyjät', '/myyjarekry'],
