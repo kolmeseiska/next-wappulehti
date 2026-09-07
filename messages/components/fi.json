@@ -1,0 +1,93 @@
+{
+  "common": {
+    "nav": {
+      "tapahtumat": "Tapahtumat",
+      "historia": "Historia",
+      "ponkelipiste": "Pönkelipiste"
+    },
+    "languageToggle": {
+      "label": "Vaihda kieli",
+      "fi": "Suomi",
+      "en": "Englanti"
+    },
+    "themeToggle": {
+      "dark": "Tumma teema",
+      "light": "Vaalea teema"
+    }
+  },
+  "footer": {
+    "tagline": "Hyppää Pönkelin matkaan!",
+    "instagramLabel": "Instagram-sivu",
+    "tiktokLabel": "Tiktok-sivu",
+    "linkedinLabel": "LinkedIn-sivu",
+    "copyright": "© {year} Pönkeli - Huumorihulinaa vuodesta 2021"
+  },
+  "home": {
+    "eyebrow": "Turun yliopiston teekkareiden wappulehti",
+    "intro": "Tervetuloa tutustumaan Pönkelin toimintaan. Tutki historiaa sekä osallistu toimintaan sivuiltamme!",
+    "recruitment": {
+      "title": "Hae mukaan Pönkelin toimitukseen!",
+      "cta": "Rekry!"
+    },
+    "sellers": {
+      "title": "Hae mukaan Pönkelin myyjäksi!",
+      "subtitle": "Luvassa palkintoja sekä uniikkeja myyjätapahtumia.",
+      "cta": "Ilmoittaudu myyjäksi täältä!"
+    },
+    "competition": {
+      "title": "Tervetuloa painamaan Pönkeliä!",
+      "subtitle": "Pönkelin vitsikilpailu on vitsikilpailu, josta sinä tai kiltasi voitte voittaa hienoja palkintoja sekä mainetta!",
+      "cta": "Osallistu kisaan tästä!"
+    },
+    "feedback": {
+      "title": "Kiitos upeasta Wapusta sekä osallistumisesta Pönkelin toimintaan!",
+      "subtitle": "Palaute on meille tärkeää, jotta voimme kehittää Pönkelin toimintaa entistä paremmaksi!",
+      "cta": "Anna palautetta Pönkelistä 2026"
+    },
+    "release": {
+      "title": "Pönkeli 2026 on saapunut!",
+      "subtitle": "Liikuttavia vitsejä, villejä lajikokeiluja ja vauhdikasta huumoria koko lehden täydeltä tyylikkäiden urheiluaurinkolasien kera!",
+      "cta": "Lue lisää ja osta!"
+    }
+  },
+  "pages": {
+    "noUpcomingEvents": {
+      "paragraph1": "Pönkeli järjestää ympäri vuoden hauskoja kaikille avoimia tapahtumia: Syksyllä urheilutapahtuma Pönkeli Games vaihtuvalla teemalla, talvella saatat huomata erilaisia jekkuja ja kevät huipentuu tietenkin Wapun aloittavaan tapahtumaan, Pönkelijulkkareihin, sekä Turun opiskelijaskenen parhaimpiin reiveihin, Pönkelireiveihin.",
+      "paragraph2": "Ota Pönkelin somet seurantaan sivun alalaidasta, niin saat tuoreimmat tiedot tapahtumista ja uutisista!"
+    }
+  },
+  "forms": {
+    "recruitment": {
+      "name": "Nimi",
+      "year": "Vuosikurssi",
+      "fieldOfStudy": "Mitä opiskelet",
+      "email": "Sähköposti",
+      "telegram": "Telegram-nick",
+      "description": "Kerro lyhyesti itsestäsi ja miksi haluat liittyä Pönkelin toimitukseen",
+      "submit": "Lähetä",
+      "submitIdle": "Tule mukaan toimintaan!"
+    },
+    "participation": {
+      "joke": "Kirjoita vitsi, juttu tai tarina",
+      "email": "Sähköposti",
+      "guild": "Kilta",
+      "isFuksi": "Olen fuksi",
+      "submit": "Lähetä",
+      "submitIdle": "Kirjoita meille",
+      "fileOrTextRequired": "Vitsi tai tiedosto vaaditaan"
+    },
+    "seller": {
+      "name": "Nimi",
+      "email": "Sähköposti",
+      "isExperience": "Minulla on aikaisempaa wappulehtikokemusta",
+      "isFuksi": "Olen fuksi",
+      "submit": "Lähetä",
+      "submitIdle": "Ryhdy Pönkelimyyjäksi!"
+    },
+    "fileInput": {
+      "label": "Tiedosto/tiedostoja",
+      "hintTitle": "Max 5 tiedostoa yhteensä 5MB.\n\nTuetut tiedostotyypit:\n",
+      "upload": "Lataa"
+    }
+  }
+}

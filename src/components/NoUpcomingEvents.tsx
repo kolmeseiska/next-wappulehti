@@ -1,13 +1,16 @@
 import React from 'react'
+import { useTranslations } from 'next-intl'
 
 const NoUpcomingEvents = () => {
+  const t = useTranslations('pages.noUpcomingEvents')
+
   return (
     <div className='prose mx-auto max-w-[75ch]'>
       <p>
-        Pönkeli järjestää ympäri vuoden hauskoja kaikille avoimia tapahtumia: Syksyllä urheilutapahtuma Pönkeli Games vaihtuvalla teemalla, talvella saatat huomata erilaisia jekkuja ja kevät huipentuu tietenkin Wapun aloittavaan tapahtumaan, Pönkelijulkkareihin, sekä Turun opiskelijaskenen parhaimpiin reiveihin, Pönkelireiveihin.
+        {t('paragraph1')}
       </p>
       <p>
-        Ota Pönkelin somet seurantaan sivun alalaidasta, niin saat tuoreimmat tiedot tapahtumista ja uutisista!
+        {t('paragraph2')}
       </p>
     </div>
     // Old fallback

@@ -1,5 +1,6 @@
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { useTranslations } from 'next-intl'
 
 import { Participation, participationSchema } from '../participation'
 import FileInput from './FileInput'
@@ -44,6 +45,7 @@ const defaultValues: Participation = {
 }
 
 const Form = () => {
+  const t = useTranslations('forms.participation')
   const { register, handleSubmit, formState, setValue, setError, reset } = useForm<Participation>({
     resolver: yupResolver(participationSchema),
     defaultValues
@@ -51,8 +53,8 @@ const Form = () => {
 
   const onSubmit: SubmitHandler<Participation> = async (participation) => {
     if(!participation.files.length && !participation.joke.length) {
-      setError('joke', { message: 'Vitsi tai tiedosto vaaditaan' })
-      setError('files.0', { message: 'Vitsi tai tiedosto vaaditaan' })
+      setError('joke', { message: t('fileOrTextRequired') })
+      setError('files.0', { message: t('fileOrTextRequired') })
       return
     }
     // TODO: show success notification
@@ -66,7 +68,7 @@ const Form = () => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <FormTextarea<Participation>
         name='joke'
-        label='Kirjoita vitsi, juttu tai tarina'
+        label={t('joke')}
         register={register}
         errors={errors}
       />
@@ -77,19 +79,19 @@ const Form = () => {
       />
       <FormInput<Participation>
         name='email'
-        label='Sähköposti'
+        label={t('email')}
         register={register}
         errors={errors}
       />
       <FormInput<Participation>
         name='guild'
-        label='Kilta'
+        label={t('guild')}
         register={register}
         errors={errors}
       />
       <FormCheckbox<Participation>
         name='isFuksi'
-        label='Olen fuksi'
+        label={t('isFuksi')}
         register={register}
         errors={errors}
       />
@@ -103,8 +105,8 @@ const Form = () => {
             ? <LoadingIcon />
             : null}
           {isDirty
-            ? 'Lähetä'
-            : 'Kirjoita meille'}
+            ? t('submit')
+            : t('submitIdle')}
         </button>
       </div>
     </form>

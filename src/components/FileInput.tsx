@@ -1,6 +1,7 @@
 
 import { useEffect } from 'react'
 import { FieldErrors, UseFormSetValue } from 'react-hook-form'
+import { useTranslations } from 'next-intl'
 
 import { Participation, supportedFileTypes } from '../participation'
 import useFileDrop from '../useFileDrop'
@@ -17,6 +18,7 @@ type Props = {
 }
 
 const FileInput = ({ setValue, isSubmitted, errors }: Props) => {
+  const t = useTranslations('forms.fileInput')
   const {
     data,
     fileDropProps,
@@ -41,9 +43,9 @@ const FileInput = ({ setValue, isSubmitted, errors }: Props) => {
         name='files.0'
         label={(
           <span className='flex items-center gap-1'>
-            Tiedosto/tiedostoja
+            {t('label')}
             {' '}
-            <SupportedFileTypeHint title={'Max 5 tiedostoa yhteensä 5MB.\n\nTuetut tiedostotyypit:\n'} types={supportedFileTypes} />
+            <SupportedFileTypeHint title={t('hintTitle')} types={supportedFileTypes} />
           </span>
         )}
       />
@@ -81,7 +83,7 @@ const FileInput = ({ setValue, isSubmitted, errors }: Props) => {
             }
             tabIndex={0}
           >
-            Lataa
+            {t('upload')}
             <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='w-6 h-6'>
               <path strokeLinecap='round' strokeLinejoin='round' d='M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5' />
             </svg>

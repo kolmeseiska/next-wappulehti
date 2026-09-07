@@ -1,5 +1,6 @@
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { useTranslations } from 'next-intl'
 
 import FormInput from './FormInput'
 import FormTextarea from './FormTextarea'
@@ -29,6 +30,7 @@ const defaultValues: Recruitment = {
 }
 
 const RecruitmentForm = () => {
+  const t = useTranslations('forms.recruitment')
   const { register, handleSubmit, formState, reset } = useForm<Recruitment>({
     resolver: yupResolver(recruitmentSchema),
     defaultValues
@@ -45,37 +47,37 @@ const RecruitmentForm = () => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <FormInput<Recruitment>
         name='name'
-        label='Nimi'
+        label={t('name')}
         register={register}
         errors={errors}
       />
       <FormInput<Recruitment>
         name='year'
-        label='Vuosikurssi'
+        label={t('year')}
         register={register}
         errors={errors}
       />
       <FormInput<Recruitment>
         name='fieldOfStudy'
-        label='Mitä opiskelet'
+        label={t('fieldOfStudy')}
         register={register}
         errors={errors}
       />
       <FormInput<Recruitment>
         name='email'
-        label='Sähköposti'
+        label={t('email')}
         register={register}
         errors={errors}
       />
       <FormInput<Recruitment>
         name='telegram'
-        label='Telegram-nick'
+        label={t('telegram')}
         register={register}
         errors={errors}
       />
       <FormTextarea<Recruitment>
         name='description'
-        label='Kerro lyhyesti itsestäsi ja miksi haluat liittyä Pönkelin toimitukseen'
+        label={t('description')}
         register={register}
         errors={errors}
       />
@@ -89,8 +91,8 @@ const RecruitmentForm = () => {
             ? <LoadingIcon />
             : null}
           {isValid
-            ? 'Lähetä'
-            : 'Tule mukaan toimintaan!'}
+            ? t('submit')
+            : t('submitIdle')}
         </button>
       </div>
     </form>

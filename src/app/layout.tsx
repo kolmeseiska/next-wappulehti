@@ -1,7 +1,7 @@
-'use cache'
-
 import { GoogleAnalytics } from '@next/third-parties/google'
 import type { Metadata } from 'next'
+import { NextIntlClientProvider } from 'next-intl'
+import { getLocale, getMessages } from 'next-intl/server'
 import { ThemeProvider } from 'next-themes'
 
 import '../styles/globals.css'
@@ -36,24 +36,33 @@ export const metadata: Metadata = {
 
 const themes = ['light', 'dark']
 
+// The locale cookie read below (for i18n) makes every route dynamic, so this
+// app can't produce a static shell - opt the whole tree out of that check.
+export const instant = false
+
 export default async function RootLayout({
   children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale()
+  const messages = await getMessages()
+
   return (
     <html
-      lang='fi'
+      lang={locale}
       className={`scroll-smooth ${raleway.className} ${raleway.variable} ${dmSerifDisplay.variable}`}
       suppressHydrationWarning // To prevent next-theme warnings on top level
     >
       <body>
-        <ThemeProvider
-          themes={themes}
-          enableSystem={false}
-        >
-          {children}
-        </ThemeProvider>
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider
+            themes={themes}
+            enableSystem={false}
+          >
+            {children}
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
       <GoogleAnalytics gaId='G-SP2GW904WR' />
     </html>

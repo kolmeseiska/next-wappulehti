@@ -1,28 +1,32 @@
 'use client'
 
-import Link from 'next/link'
+import type { ReactNode } from 'react'
+import { useTranslations } from 'next-intl'
 
 const page = () => {
+  const t = useTranslations('pages.ponkelipiste')
+  const bold = { b: (chunks: ReactNode) => <b>{chunks}</b> }
+
   return (
     <div className='container mx-auto px-4 justify-center py-16 max-w-[75ch]'>
       <h1 className='text-6xl font-extrabold pb-10 text-center'>
-        Mikä Pönkeli ja Pönkelipiste?
+        {t('title')}
       </h1>
       <div className='prose mx-auto space-y-5'>
         <p>
-          Pönkeli on turkulainen wappulehti, joka ilmestyi ensimmäisen kerran vuonna 2021. Lehti ilmestyy vuosittain wapun aikaan kaiken kansan iloksi. Wappulehdet ovatkin tärkeä osa teekkareiden ja opiskelijoiden historiaa ja kulttuuria ylipäänsä - niiden avulla on rahoitettu isompiakin rakennusprojekteja ja tuettu hyväntekeväisyyttä, sekä annettu yhteisölle takaisin.
+          {t('paragraph1')}
         </p>
         <p>
-          Pönkelin tavoitteena on yhdistää kaikkia turkulaisia teekkareita ja opiskelijoita kaikilta kampuksilta. Pönkeli haluaa levittää teekkarihuumorin ilosanomaa kaikelle kansalle ja jatkaa wappulehtien perinnettä. Pönkeli noudattaa toiminnassaaan yhdenvertaisuuden ja turvallisen tilan periaatteita.
+          {t('paragraph2')}
         </p>
         <p>
-          <strong>No entä sitten se Pönkelipiste?</strong> Pönkelipiste löytyy jokaisen teekkarifuksin fuksipassista. Pisteen voit suorittaa fuksivuotesi aikana toimimalla Pönkelin myyjänä tai tuottamalla Pönkeliin sisältöä joko grafiikan, piirroksen, humoristisen tekstin tai vitsin Pönkelin vitsikilpailuun. Pisteen saat, kun tuotoksesi päätyy lehteen, ja siitä ilmoitetaan hyvissä ajoin. <b>Pönkelipisteen saat passiisi myös myymällä Pönkeleitä.</b>
+          {t.rich('paragraph3', bold)}
         </p>
         <p>
-          Pönkelin myyjäksi ilmoittautuminen ei sido sinua vielä mihinkään ja se perustuu vapaaehtoisuuteen. Aiempina vuosina myyjiä on palkittu mm. virkistäytymisellä, palkinnoilla, lahjakorteilla, aamupaloilla jne. Pönkelin myyjäksi ilmoittautuminen aukeaa myöhemmin, seuraa meidän Instagramiamme.
+          {t('paragraph4')}
         </p>
         <p>
-          Myyjänä toimimisesta ja Pönkelin vitsikilpailusta kuulet lisää Pönkelin instagramista, tiktokista, kiltasi tiedotuskanavista sähköpostitse ja täältä nettisivuilta!
+          {t('paragraph5')}
         </p>
       </div>
     </div>

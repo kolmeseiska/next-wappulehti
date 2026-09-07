@@ -1,13 +1,30 @@
 import { ReactNode } from 'react'
 import Link from 'next/link'
 
+export type LocalizedContent = {
+  fi: ReactNode,
+  // Older events were never translated - omit `en` and the Finnish text is
+  // shown regardless of locale instead of adding a new translation.
+  en?: ReactNode
+}
+
+export type LocalizedText = {
+  fi: string,
+  // Most venues are proper names shared across locales - omit `en` and the
+  // Finnish text is used regardless of locale instead of adding a translation.
+  en?: string
+}
+
 export type PonkeliEvent = {
   name: string,
   date: string | null,
-  details: string | null,
-  description: ReactNode,
+  details: LocalizedText | null,
+  description: LocalizedContent,
   image: string | null
 }
+
+export const resolveLocalized = <T,>(content: { fi: T, en?: T }, locale: string): T =>
+  locale === 'en' ? (content.en ?? content.fi) : content.fi
 
 const events: PonkeliEvent[] = [
   {
@@ -15,777 +32,700 @@ const events: PonkeliEvent[] = [
     date: '2022-10-12',
     details: null,
     image: '/ponkeli-games22.webp',
-    description: (
-      <>
-        <strong>Rajattomasti hauskaa, urheilua ja yllätyksiä kaikelle kansalle</strong>
-        <p>
-          Ensimmäinen Pönkeli Games 2022 eli PöNGi22 pelattiin kauniissa syyskelissä Yliopistonmäellä keskiviikkona 12.10.22. Voittajia ja yleistä tunnelmaa fiilisteltiin jatkoilla PöNGi-bileissä Dynamossa!
-        </p>
-        <p className='pb-5'>
-          Tapahtuman upeita joukkueita sekä lajeja voi fiilistellä Turun yliopiston teekkareiden kuvagalleriassa
-          {' '}
-          <Link
-            className='link hover:text-accent'
-            href='https://tyteekkarit.kuvat.fi/kuvat/P%C3%B6nkeli+-Turkulainen+wappulehti/P%C3%B6nkeli+Games+2022/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            täällä.
-          </Link>
-        </p>
-      </>
-    )
+    description: {
+      fi: (
+        <>
+          <strong>Rajattomasti hauskaa, urheilua ja yllätyksiä kaikelle kansalle</strong>
+          <p>
+            Ensimmäinen Pönkeli Games 2022 eli PöNGi22 pelattiin kauniissa syyskelissä Yliopistonmäellä keskiviikkona 12.10.22. Voittajia ja yleistä tunnelmaa fiilisteltiin jatkoilla PöNGi-bileissä Dynamossa!
+          </p>
+          <p className='pb-5'>
+            Tapahtuman upeita joukkueita sekä lajeja voi fiilistellä Turun yliopiston teekkareiden kuvagalleriassa
+            {' '}
+            <Link
+              className='link hover:text-accent'
+              href='https://tyteekkarit.kuvat.fi/kuvat/P%C3%B6nkeli+-Turkulainen+wappulehti/P%C3%B6nkeli+Games+2022/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              täällä.
+            </Link>
+          </p>
+        </>
+      )
+    }
   },
   {
     name: 'Pölkyn äärellä',
     date: '2023-02',
     details: null,
     image: '/polkyn-aarella.png',
-    description: (
-      <>
-        <strong>
-          on turkulaisten teekkareiden wappulehti Pönkelin lanseeraama uusi Pönkelin sisältökilpailu KÄYNNISSÄ NYT!
-        </strong>
-        <p>
-          Lähetä omat luomuksesi ja tutustu ohjeisiin <Link className='link hover:text-accent' href='/kisa'>Pölkyn Äärellä -sivuilta</Link>
-        </p>
-      </>
-    )
+    description: {
+      fi: (
+        <>
+          <strong>
+            on turkulaisten teekkareiden wappulehti Pönkelin lanseeraama uusi Pönkelin sisältökilpailu KÄYNNISSÄ NYT!
+          </strong>
+          <p>
+            Lähetä omat luomuksesi ja tutustu ohjeisiin <Link className='link hover:text-accent' href='/kisa'>Pölkyn Äärellä -sivuilta</Link>
+          </p>
+        </>
+      )
+    }
   },
   {
     name: 'Pönkelin talvirieha ja jälkilöylyt 31.1.2023',
     date: '2023-01-31',
     details: null,
     image: '/talvirieha.jpeg',
-    description: (
-      <p>
-        <strong>Mitä?</strong> Pönkelin Talvirieha ja talviriehan jälkilöylyt
-        <br />
-        <strong>Milloin?</strong> Tiistaina 31.1.2023 klo 16.00-20.00, jälkilöylyt klo 20.00
-        <br />
-        <strong>Missä?</strong> Tuomaanpuistossa, jälkilöylyt Proffan Kellarin kabineteissa
-        <br />
-        <strong>Miksi?</strong> Ilmasta pullaa, mehua, musaa, kavereita, lumisotaa ja pulkkailua! Luvassa palkinnot parhaimmille pulkka trick shottien suorittajille.
-        <br />
-        <strong>MYYJÄKSI?</strong>  TAPAHTUMASSA VOIT ILMOITTAUTUA PÖNKELIN 2023 MYYJÄKSI JA LUNASTAA SAMALLA PAIKAN PÖNKELIJULKKAREIDEN VIP-ALUEELTA WAPUNALOITUKSESSA!
-        <br />
-      </p>
-    )
+    description: {
+      fi: (
+        <p>
+          <strong>Mitä?</strong> Pönkelin Talvirieha ja talviriehan jälkilöylyt
+          <br />
+          <strong>Milloin?</strong> Tiistaina 31.1.2023 klo 16.00-20.00, jälkilöylyt klo 20.00
+          <br />
+          <strong>Missä?</strong> Tuomaanpuistossa, jälkilöylyt Proffan Kellarin kabineteissa
+          <br />
+          <strong>Miksi?</strong> Ilmasta pullaa, mehua, musaa, kavereita, lumisotaa ja pulkkailua! Luvassa palkinnot parhaimmille pulkka trick shottien suorittajille.
+          <br />
+          <strong>MYYJÄKSI?</strong>  TAPAHTUMASSA VOIT ILMOITTAUTUA PÖNKELIN 2023 MYYJÄKSI JA LUNASTAA SAMALLA PAIKAN PÖNKELIJULKKAREIDEN VIP-ALUEELTA WAPUNALOITUKSESSA!
+          <br />
+        </p>
+      )
+    }
   },
   {
     name: 'Pönkelijulkkarit ja wappuetkot',
     date: '2023-04-12',
     details: null,
     image: '/ponkelijulkkarit.jpg',
-    description: (
-      <>
-        <b> 12.4. klo 18 Kårenilla</b>
-        <p>Hyvä turkulainen teekkari, teekkarifuksi ja teekkarimielinen opiskelija, on tullut aika aloittaa kauan odotettu ajanjakso vuodesta, eli Turun Teekkariwappu 2023.</p>
-        <p>Turun teekkariwappu aloitetaan wapunaloitusbileiden virallisilla etkoilla ja tietenkin Turun teekkareiden oman wappulehden, Pönkelin, julkaisulla. Tapahtuma alkaa wapputoimikunnan perinteisellä esitelmällä ja wappuvideolla, jonka jälkeen Pönkeli johdattelee kaikki turkulaiset opiskelijat wapputunnelmaan juhlavin menoin. Pönkelin julkkareissa on tietenkin myös yllätysesiintyjä, jota ei kannata missata. Kårenin baari palvelee koko tapahtuman ajan opiskelijaystävällisin hinnoin.</p>
-        <p>Tapahtuma toimii virallisina etkoina wapunaloitusbileille ja tapahtumassa on ensimmäinen mahdollisuus lunastaa itselleen wapun haluituin tuote eli Pönkeli 2023! Tapahtuman jälkeen wappukansa vaeltaa yhdessä kohti Lygasia ja wapunaloitusbileitä!</p>
-        <b>[TL;DR ENG]</b>
-        <ul>
-          <li><b>What?</b> Pönkeli&apos;s publishing party and wappu pre-party</li>
-          <li><b>Where?</b> Kåren, Hämeenkatu 22</li>
-          <li><b>When?</b> 12th of April at 6 PM till 9 PM. Doors open at 5.30 PM</li>
-          <li><b>Why?</b>  BECAUSE THIS IS THE STARTING OF WAPPU</li>
-          <li><b>Price?</b> Cloakroom 3 €</li>
-          <li><b>Dresscode?</b> Wappu/Pönkeli/over-alls</li>
-        </ul>
+    description: {
+      fi: (
+        <>
+          <b> 12.4. klo 18 Kårenilla</b>
+          <p>Hyvä turkulainen teekkari, teekkarifuksi ja teekkarimielinen opiskelija, on tullut aika aloittaa kauan odotettu ajanjakso vuodesta, eli Turun Teekkariwappu 2023.</p>
+          <p>Turun teekkariwappu aloitetaan wapunaloitusbileiden virallisilla etkoilla ja tietenkin Turun teekkareiden oman wappulehden, Pönkelin, julkaisulla. Tapahtuma alkaa wapputoimikunnan perinteisellä esitelmällä ja wappuvideolla, jonka jälkeen Pönkeli johdattelee kaikki turkulaiset opiskelijat wapputunnelmaan juhlavin menoin. Pönkelin julkkareissa on tietenkin myös yllätysesiintyjä, jota ei kannata missata. Kårenin baari palvelee koko tapahtuman ajan opiskelijaystävällisin hinnoin.</p>
+          <p>Tapahtuma toimii virallisina etkoina wapunaloitusbileille ja tapahtumassa on ensimmäinen mahdollisuus lunastaa itselleen wapun haluituin tuote eli Pönkeli 2023! Tapahtuman jälkeen wappukansa vaeltaa yhdessä kohti Lygasia ja wapunaloitusbileitä!</p>
+          <b>[TL;DR ENG]</b>
+          <ul>
+            <li><b>What?</b> Pönkeli&apos;s publishing party and wappu pre-party</li>
+            <li><b>Where?</b> Kåren, Hämeenkatu 22</li>
+            <li><b>When?</b> 12th of April at 6 PM till 9 PM. Doors open at 5.30 PM</li>
+            <li><b>Why?</b>  BECAUSE THIS IS THE STARTING OF WAPPU</li>
+            <li><b>Price?</b> Cloakroom 3 €</li>
+            <li><b>Dresscode?</b> Wappu/Pönkeli/over-alls</li>
+          </ul>
 
-      </>
-    )
+        </>
+      )
+    }
   },
   {
     name: 'Pönkelireivit',
     date: '2023-04-15',
     details: null,
     image: '/ponkelireivit.png',
-    description: (
-      <>
-        <b>lauantaina 15.4. salaisessa reivilokaatiossa</b>
-        <p>
-          “Reivaa kanssamme”, sanoi Pönkeli-setä innoissaan, ja niin syntyi idea nuoremmille Pönkeleille. Turun teekkariwappu on jo kauan kaivannut itselleen rehellisiä reivejä! Nimensä mukaisesti tarjolla on elektronista tanssimusiikkia eksoottisessa kohteessa. Astu siis Pönkelibussin kyytiin, ja lähde elämäsi reiviseikkailuun. Iltaan sisältyy joukko erityisiä esiintyjiä, pönkelimäistä menoa sekä maukasta ravintoa.
-        </p>
-        <p>
-          <Link
-            href='https://link.webropol.com/s/ponkelireivit-ilmoittautuminen'
-            target='_blank'
-            className='link hover:text-accent transition-colors'
-            rel='noopener noreferrer'
-            onClick={e => e.stopPropagation()}
-          >
-            Ilmoittaudu tapahtumaan täältä.
-          </Link>
-        </p>
-        <b>[TL;DR ENG]</b>
-        <ul>
-          <li><b>What?</b> Pönkelirave!</li>
-          <li><b>Where?</b> at a secret location</li>
-          <li><b>When?</b> Saturday the 15th of April at 5PM till 00.30 AM. The buses will leave from the University at 5 PM and back to the University at 11.30 PM.</li>
-          <li><b>Why?</b> To all of those, who want to rave their heart out, and are bored of those regular club parties.</li>
-          <li><b>Tickets?</b> 16 €. Transportation and food included.</li>
-          <li><b>Dresscode?</b> Rave/Overalls. The rave will be held inside.</li>
-          <li><b>What to bring?</b> water bottle, good dancing shoes, BYOB</li>
-        </ul>
-        <p>
-          <Link
-            href='https://link.webropol.com/s/ponkelireivit-ilmoittautuminen'
-            target='_blank'
-            className='link hover:text-accent transition-colors'
-            rel='noopener noreferrer'
-            onClick={e => e.stopPropagation()}
-          >
-            Enroll here.
-          </Link>
-        </p>
-      </>
-    )
+    description: {
+      fi: (
+        <>
+          <b>lauantaina 15.4. salaisessa reivilokaatiossa</b>
+          <p>
+            “Reivaa kanssamme”, sanoi Pönkeli-setä innoissaan, ja niin syntyi idea nuoremmille Pönkeleille. Turun teekkariwappu on jo kauan kaivannut itselleen rehellisiä reivejä! Nimensä mukaisesti tarjolla on elektronista tanssimusiikkia eksoottisessa kohteessa. Astu siis Pönkelibussin kyytiin, ja lähde elämäsi reiviseikkailuun. Iltaan sisältyy joukko erityisiä esiintyjiä, pönkelimäistä menoa sekä maukasta ravintoa.
+          </p>
+          <b>[TL;DR ENG]</b>
+          <ul>
+            <li><b>What?</b> Pönkelirave!</li>
+            <li><b>Where?</b> at a secret location</li>
+            <li><b>When?</b> Saturday the 15th of April at 5PM till 00.30 AM. The buses will leave from the University at 5 PM and back to the University at 11.30 PM.</li>
+            <li><b>Why?</b> To all of those, who want to rave their heart out, and are bored of those regular club parties.</li>
+            <li><b>Tickets?</b> 16 €. Transportation and food included.</li>
+            <li><b>Dresscode?</b> Rave/Overalls. The rave will be held inside.</li>
+            <li><b>What to bring?</b> water bottle, good dancing shoes, BYOB</li>
+          </ul>
+        </>
+      )
+    }
   },
   {
     name: 'Pönkelin Wappuvälitunti',
     date: '2023-04-24',
-    details: null,
+    details: { fi: 'Kuuvuoren kenttä', en: 'Kuuvuori sports field' },
     image: '/wappuvalitunti.jpg',
-    description: (
-      <>
-        <b>24.4.23 klo 12.00-16.00 @Kuuvoren kenttä</b>
-        <p>Lapsettaako? Turun yliopiston teekkareiden ikioma wappulehti Pönkeli tuo lapsuudenmuistot (ja traumat) Kuuvuorelle 24.4. klo 12 alkaen. Pönkelin porukka vetää lapsuudesta tuttuja pelejä sekä leikkejä hyvässä hengessä ja matalalla kynnyksellä. Luvassa on purkkista, kirkkistä, kymmenen tikkua laudalla, peiliä ja muita ihania klassikkoleikkejä välitunneilta! Tule siis tuulettumaan luentojen välissä ja päästä sisäinen lapsesi taas ulos. Tapahtumasta voi ostaa Pönkeleitä. Luvassa on musiikkia ja hyvää meininkiä.</p>
-        <b>TL;DR:</b>
-        <ul>
-          <li>Mitä? Pönkeli Wappuvälitunti</li>
-          <li>Missä? Kuuvuoren kenttä</li>
-          <li>Milloin? 24.4.23 klo 12.00-16.00</li>
-          <li>Miksi? Koska kaikki haluaa takaisin lapsuuden huolettomat välitunnit</li>
-          <li>Hinta? ilmainen</li>
-          <li>Pukukoodi? Haalarit/sporttivaatteet</li>
-        </ul>
-        <b>[TL;DR ENG]</b>
-        <ul>
-          <li><b>What?</b> Pönkeli&apos;s Wappurecess</li>
-          <li><b>Where?</b> Kuuvuori field</li>
-          <li><b>When?</b> 24th of April at noon till 6 PM</li>
-          <li><b>Why?</b> Because all of us want those carefree childhood recesses back.</li>
-          <li><b>Price?</b> Free</li>
-          <li><b>Dresscode?</b> Overalls/Sport clothes</li>
-        </ul>
-      </>
-    )
+    description: {
+      fi: (
+        <>
+          <b>24.4.23 klo 12.00-16.00 @Kuuvoren kenttä</b>
+          <p>Lapsettaako? Turun yliopiston teekkareiden ikioma wappulehti Pönkeli tuo lapsuudenmuistot (ja traumat) Kuuvuorelle 24.4. klo 12 alkaen. Pönkelin porukka vetää lapsuudesta tuttuja pelejä sekä leikkejä hyvässä hengessä ja matalalla kynnyksellä. Luvassa on purkkista, kirkkistä, kymmenen tikkua laudalla, peiliä ja muita ihania klassikkoleikkejä välitunneilta! Tule siis tuulettumaan luentojen välissä ja päästä sisäinen lapsesi taas ulos. Tapahtumasta voi ostaa Pönkeleitä. Luvassa on musiikkia ja hyvää meininkiä.</p>
+          <b>TL;DR:</b>
+          <ul>
+            <li>Mitä? Pönkeli Wappuvälitunti</li>
+            <li>Missä? Kuuvuoren kenttä</li>
+            <li>Milloin? 24.4.23 klo 12.00-16.00</li>
+            <li>Miksi? Koska kaikki haluaa takaisin lapsuuden huolettomat välitunnit</li>
+            <li>Hinta? ilmainen</li>
+            <li>Pukukoodi? Haalarit/sporttivaatteet</li>
+          </ul>
+          <b>[TL;DR ENG]</b>
+          <ul>
+            <li><b>What?</b> Pönkeli&apos;s Wappurecess</li>
+            <li><b>Where?</b> Kuuvuori sports field</li>
+            <li><b>When?</b> 24th of April at noon till 6 PM</li>
+            <li><b>Why?</b> Because all of us want those carefree childhood recesses back.</li>
+            <li><b>Price?</b> Free</li>
+            <li><b>Dresscode?</b> Overalls/Sport clothes</li>
+          </ul>
+        </>
+      )
+    }
   },
   {
     name: 'PöNGi - Pönkeli Games II',
     date: '2023-10-10',
     details: null,
     image: '/ponkeli-games22.webp',
-    description: (
-      <>
-        <p>Pönkeli Games tulee jälleen, ja järjestetään <b>10.10.23 klo 17-20 Kupittaan urheiluhallissa!</b> PöNGissä neljän hengen opiskelijajoukkueet kisailevat leikkimielisissä urheilulajeissa, jotka vaativat kekseliäisyyttä ja yhteistyötä. Parhaat joukkueet palkitaan illan <b>y2k-bileissä!</b> Joukkuepaikkoja on rajatusti, joten ilmoittautumisessa tulee olla nopea. Tapahtumassa on paljon ohjelmaa myös yleisölle, joten kannattaa tulla paikalle, vaikka joukkuepaikkaa ei saisikaan.</p>
-        <p>Kokoa siis neljän (4) hengen joukkue, ja valmistaudu syksyn hauskimpaan seikkailuun. <b>Lipun hinta on 8 € /henkilö</b>, joka sisältää PöNGi-haalarimerkin, jonon ohituksen y2k-bileisiin ja bileiden haalarimerkin, sekä pientä naposteltavaa ja juotavaa tapahtuman aikana. Viime vuonna teemana toimi yliopistokaupungit, ja myös tänä vuonna on Pönkeli kehitellyt hauskan teeman joukkueille. Teeman mukaan parhaiten pukeutuneet palkitaan.</p>
-        <p>Joukkuepaikkojen ilmoittautuminen aukeaa 25.9.2023 klo 12.00. Ilmoittautuminen tapahtuu
-          {' '}
-          <Link
-            href='https://link.webropol.com/s/pongi23-ilmo'
-            className='link hover:text-accent'
-            target='_blank'
-            rel='noopener noreferrer'
-            onClick={e => e.stopPropagation()}
-          >tästä linkistä</Link>. Ilmoittautumisen jälkeen lähetetään joukkueen yhteyshenkilölle tarkemmat lisätiedot ja ohjeet.</p>
-        <p>Tule siis nauttimaan huikeista suorituksista, musiikista sekä kisatunnelmasta Kupittaan urheiluhalliin 10.10.23 klo 17-20. Tapahtumassa on runsaasti katsottavaa ja koettavaa myös yleisölle, nähdään siis Kupittaalla!</p>
-        <p>Seuraa Pönkelin instagramia ja tiktokia @wappulehtiponkeli ja nettisivuja pönkeli.fi löytääksesi lisätietoja tapahtumasta. </p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>Mitä? Pönkeli Games 2023 eli PöNGi23</b></li>
-          <li><b>Missä? Opiskelijoiden leikkimieliset urheilukilpailut Kupittaan urheiluhallissa</b></li>
-          <li><b>Milloin? 10.10.23 klo 17-20</b></li>
-          <li><b>Miksi? Koska tarjolla on hauskoja pelailuja kanssaopiskelijoiden kanssa!</b></li>
-          <li><b>Hinta? 8 € / hlö, sisältäen naposteltavaa, haalarimerkin, jonon ohituksen y2k-bileisiin ja bileiden haalarimerkin</b></li>
-          <li><b>
-            <Link
-              href='https://link.webropol.com/s/pongi23-ilmo'
-              className='link hover:text-accent'
-              target='_blank'
-              rel='noopener noreferrer'
-              onClick={e => e.stopPropagation()}
-            >
-              Ilmoittautuminen
-            </Link></b></li>
-        </ul>
-      </>
-    )
+    description: {
+      fi: (
+        <>
+          <p>Pönkeli Games tulee jälleen, ja järjestetään <b>10.10.23 klo 17-20 Kupittaan urheiluhallissa!</b> PöNGissä neljän hengen opiskelijajoukkueet kisailevat leikkimielisissä urheilulajeissa, jotka vaativat kekseliäisyyttä ja yhteistyötä. Parhaat joukkueet palkitaan illan <b>y2k-bileissä!</b> Joukkuepaikkoja on rajatusti, joten ilmoittautumisessa tulee olla nopea. Tapahtumassa on paljon ohjelmaa myös yleisölle, joten kannattaa tulla paikalle, vaikka joukkuepaikkaa ei saisikaan.</p>
+          <p>Kokoa siis neljän (4) hengen joukkue, ja valmistaudu syksyn hauskimpaan seikkailuun. <b>Lipun hinta on 8 € /henkilö</b>, joka sisältää PöNGi-haalarimerkin, jonon ohituksen y2k-bileisiin ja bileiden haalarimerkin, sekä pientä naposteltavaa ja juotavaa tapahtuman aikana. Viime vuonna teemana toimi yliopistokaupungit, ja myös tänä vuonna on Pönkeli kehitellyt hauskan teeman joukkueille. Teeman mukaan parhaiten pukeutuneet palkitaan.</p>
+          <p>Joukkuepaikkojen ilmoittautuminen aukeaa 25.9.2023 klo 12.00. Ilmoittautumisen jälkeen lähetetään joukkueen yhteyshenkilölle tarkemmat lisätiedot ja ohjeet.</p>
+          <p>Tule siis nauttimaan huikeista suorituksista, musiikista sekä kisatunnelmasta Kupittaan urheiluhalliin 10.10.23 klo 17-20. Tapahtumassa on runsaasti katsottavaa ja koettavaa myös yleisölle, nähdään siis Kupittaalla!</p>
+          <p>Seuraa Pönkelin instagramia ja tiktokia @wappulehtiponkeli ja nettisivuja pönkeli.fi löytääksesi lisätietoja tapahtumasta. </p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>Mitä? Pönkeli Games 2023 eli PöNGi23</b></li>
+            <li><b>Missä? Opiskelijoiden leikkimieliset urheilukilpailut Kupittaan urheiluhallissa</b></li>
+            <li><b>Milloin? 10.10.23 klo 17-20</b></li>
+            <li><b>Miksi? Koska tarjolla on hauskoja pelailuja kanssaopiskelijoiden kanssa!</b></li>
+            <li><b>Hinta? 8 € / hlö, sisältäen naposteltavaa, haalarimerkin, jonon ohituksen y2k-bileisiin ja bileiden haalarimerkin</b></li>
+          </ul>
+        </>
+      )
+    }
   },
   {
     name: 'Pönkelijulkkarit ja wappurauhanjulistus',
     date: '2024-04-10',
-    details: '18.00 @Kåren',
+    details: { fi: '18.00 @Kåren' },
     image: '/ponkelijulkkarit23.webp',
-    description: (
-      <>
-        <strong>Pönkelijulkkarit ja wappurauhanjulistus 10.4. klo 18 Kårenilla</strong>
-        <p>Hyvä turkulainen teekkari, teekkarifuksi ja teekkarimielinen opiskelija, on tullut aika aloittaa kauan odotettu ajanjakso vuodesta, eli Turun Teekkariwappu 2024.</p>
-        <p>Turun teekkariwappu aloitetaan wapunaloitusbileiden virallisilla etkoilla ja tietenkin Turun teekkareiden oman wappulehden, Pönkelin, julkaisulla. Pönkeli johdattelee kaikki turkulaiset opiskelijat wapputunnelmaan juhlavin menoin. Julkkareissa on tietenkin myös yllätysesiintyjiä, joita ei kannata missata. Kårenin baari palvelee koko tapahtuman ajan opiskelijaystävällisin hinnoin. Baarista saatavilla myös Pönkelin nimikkojuomaa “Teekkarin huuto”!</p>
-        <p>Tapahtuma toimii virallisina etkoina wapunaloitusbileille ja tapahtumassa on ensimmäinen mahdollisuus lunastaa itselleen wapun haluituin tuote eli Pönkeli 2024! Tapahtuman jälkeen wappukansa vaeltaa yhdessä kohti Lygasia ja wapunaloitusbileitä!</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>Mitä</b> Pönkelijulkkarit ja wappuetkot</li>
-          <li><b>Missä</b> Kåren, Hämeenkatu 22</li>
-          <li><b>Milloin</b> 10.4.24 klo 18.00-21.00. Ovet auki klo 17.30</li>
-          <li><b>Miksi</b> KOSKA TÄSTÄ SE WAPPU ALKAA</li>
-          <li><b>Mitä Maksaa</b> 0€, narikka 3€</li>
-          <li><b>Pukukoodi</b> Wappu/Pönkeli/haalarit</li>
-        </ul>
-        <hr className='my-3' />
-        <b>ENGLISH</b>
-        <strong>Pönkeli&apos;s publishing party and wappu pre-party 10.4 at Kåren</strong>
-        <p>Dear teekkari, teekkarifuksi or teekkari-minded student, the time has come to begin the most expected period of the year; Turku&apos;s teekkariwappu 2024!</p>
-        <p>Turku&apos;s teekkariwappu begins with the official pre-party for the wappu-starting-party, and of course by publishing Turku&apos;s teekkaris&apos; very own wappu magazine: Pönkeli! Pönkeli will take over and solemnly lead all students to wappu atmosphere. There will of course be a surprise entertainers that you do not want to miss. The bar will be open the whole event and has student-friendly prices. There bar will serve Pönkeli&apos;s very own drink “Teekkari&apos;s scream”!</p>
-        <p>The event is the official pre-party for the wappu-starting-party and there is the first chance to redeem yourself the most wanted product of wappu, i.e. Pönkeli 2024! After the event the wappu nation wanders together towards Lygas and wappu-starting-party.</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>What?</b> Pönkeli&apos;s publishing party and wappu pre-party</li>
-          <li><b>Where?</b> Kåren, Hämeenkatu 22</li>
-          <li><b>When?</b> 10th of April at 6 PM till 9 PM. Starts at 5.30 PM</li>
-          <li><b>Why?</b>  BECAUSE THIS IS THE STARTING OF WAPPU</li>
-          <li><b>Price?</b> 0€, Cloakroom 3 €</li>
-          <li><b>Dresscode?</b> Wappu/Pönkeli/over-alls</li>
-        </ul>
-      </>
-    )
+    description: {
+      fi: (
+        <>
+          <strong>Pönkelijulkkarit ja wappurauhanjulistus 10.4. klo 18 Kårenilla</strong>
+          <p>Hyvä turkulainen teekkari, teekkarifuksi ja teekkarimielinen opiskelija, on tullut aika aloittaa kauan odotettu ajanjakso vuodesta, eli Turun Teekkariwappu 2024.</p>
+          <p>Turun teekkariwappu aloitetaan wapunaloitusbileiden virallisilla etkoilla ja tietenkin Turun teekkareiden oman wappulehden, Pönkelin, julkaisulla. Pönkeli johdattelee kaikki turkulaiset opiskelijat wapputunnelmaan juhlavin menoin. Julkkareissa on tietenkin myös yllätysesiintyjiä, joita ei kannata missata. Kårenin baari palvelee koko tapahtuman ajan opiskelijaystävällisin hinnoin. Baarista saatavilla myös Pönkelin nimikkojuomaa “Teekkarin huuto”!</p>
+          <p>Tapahtuma toimii virallisina etkoina wapunaloitusbileille ja tapahtumassa on ensimmäinen mahdollisuus lunastaa itselleen wapun haluituin tuote eli Pönkeli 2024! Tapahtuman jälkeen wappukansa vaeltaa yhdessä kohti Lygasia ja wapunaloitusbileitä!</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>Mitä</b> Pönkelijulkkarit ja wappuetkot</li>
+            <li><b>Missä</b> Kåren, Hämeenkatu 22</li>
+            <li><b>Milloin</b> 10.4.24 klo 18.00-21.00. Ovet auki klo 17.30</li>
+            <li><b>Miksi</b> KOSKA TÄSTÄ SE WAPPU ALKAA</li>
+            <li><b>Mitä Maksaa</b> 0€, narikka 3€</li>
+            <li><b>Pukukoodi</b> Wappu/Pönkeli/haalarit</li>
+          </ul>
+        </>
+      ),
+      en: (
+        <>
+          <strong>Pönkeli&apos;s publishing party and wappu pre-party 10.4 at Kåren</strong>
+          <p>Dear teekkari, teekkarifuksi or teekkari-minded student, the time has come to begin the most expected period of the year; Turku&apos;s teekkariwappu 2024!</p>
+          <p>Turku&apos;s teekkariwappu begins with the official pre-party for the wappu-starting-party, and of course by publishing Turku&apos;s teekkaris&apos; very own wappu magazine: Pönkeli! Pönkeli will take over and solemnly lead all students to wappu atmosphere. There will of course be a surprise entertainers that you do not want to miss. The bar will be open the whole event and has student-friendly prices. There bar will serve Pönkeli&apos;s very own drink “Teekkari&apos;s scream”!</p>
+          <p>The event is the official pre-party for the wappu-starting-party and there is the first chance to redeem yourself the most wanted product of wappu, i.e. Pönkeli 2024! After the event the wappu nation wanders together towards Lygas and wappu-starting-party.</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>What?</b> Pönkeli&apos;s publishing party and wappu pre-party</li>
+            <li><b>Where?</b> Kåren, Hämeenkatu 22</li>
+            <li><b>When?</b> 10th of April at 6 PM till 9 PM. Starts at 5.30 PM</li>
+            <li><b>Why?</b>  BECAUSE THIS IS THE STARTING OF WAPPU</li>
+            <li><b>Price?</b> 0€, Cloakroom 3 €</li>
+            <li><b>Dresscode?</b> Wappu/Pönkeli/over-alls</li>
+          </ul>
+        </>
+      )
+    }
   },
   {
     name: 'Pönkelireivit 24',
     date: '2024-04-13',
-    details: '19-05 @UG',
+    details: { fi: '19-05 @UG' },
     image: '/ponkelireivit24.webp',
-    description: (
-      <>
-        <b>lauantaina 13.4. @UG 19-05!</b>
-        <p>Viime vuonna debytoineet menestyksekkäät Pönkelireivit palaavat entistä parempina. Reivit järjestetään tänä vuonna 13.4.2024 klo 19.00 alkaen.  Nimensä mukaisesti tarjolla on laaja kirjo elektronista tanssimusiikkia. Tänä vuonna esiintyjinä nähdään mm. GACHY X DLT, DJ Hexter feat. Thomas Trooper, Hvitr, DJ Erkku, DJ Fearinen ja Spettbros. Lähde siis elämäsi reiviseikkailuun Pönkelin matkassa. </p>
-        <p>Tapahtumaan ilmoittautuminen tapahtuu Kideappissä 1.4. klo 10.00 alkaen
-          {' '}
-          <Link
-            href='https://kide.app/events/e3b0dee8-0c67-4117-af2f-eaa7eed76245'
-            target='_blank'
-            className='link hover:text-accent transition-colors'
-            rel='noopener noreferrer'
-            onClick={e => e.stopPropagation()}
-          >tämän linkin kautta.</Link>
-        </p>
-        <p>Reiveille mahtuu 120 nopeinta ilmoittautujaa. Paikka ilmoitetaan osallistujille ennen tapahtumaa. Tapahtuma on OPM.</p>
-        <p>Luvassa on siis kovaa reivausta läpi yön mahtavassa seurassa, näitä reivejä et halua jättää väliin!</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>Mitä?</b> Pönkelireivit</li>
-          <li><b>Missä?</b> UG (ilmoitetaan myöhemmin osallistujille)</li>
-          <li><b>Milloin?</b> 13.4. klo 19.00-05.00</li>
-          <li><b>Miksi?</b> Kaikille, jotka haluavat reivata sydämensä kyllyydestä</li>
-          <li><b>Hinta?</b> 10€</li>
-          <li><b>Pukukoodi?</b> Reivit/haalarit. Tapahtuma järjestetään lämpimissä sisätiloissa</li>
-          <li><b>Mitä mukaan?</b> OPM, vesipullo, hyvät tanssikengät</li>
-          <li><b>Ilmoittautuminen?</b>
-            {' '}
-            <Link
-              href='https://kide.app/events/e3b0dee8-0c67-4117-af2f-eaa7eed76245'
-              target='_blank'
-              className='link hover:text-accent transition-colors'
-              rel='noopener noreferrer'
-              onClick={e => e.stopPropagation()}
-            >
-              Ilmoittautuminen täällä.
-            </Link>
-          </li>
-        </ul>
-        <hr className='my-3' />
-        <b>ENGLISH</b>
-        <strong>Pönkelirave 13.4. from 7 PM till 5 AM</strong>
-        <p>Last year successfully debuted Pönkelirave returns to Turku&apos;s Teekkariwappu better than ever. The rave will be held on 13th of  April starting from 7 PM. Living up to its name there will be served a variety of electronic dance music. Such artist will be seen at the rave: GACHY X DLT, DJ Hexter feat. Thomas Trooper, Hvitr, DJ Erkku, DJ Fearinen and Spettbros. So come on and jump into a rave adventure of your life with Pönkeli!</p>
-        <p>Enrolling will take place at KideApp and starts 1st of April at 10 PM
-          {' '}
-          <Link
-            href='https://kide.app/events/e3b0dee8-0c67-4117-af2f-eaa7eed76245'
-            target='_blank'
-            className='link hover:text-accent transition-colors'
-            rel='noopener noreferrer'
-            onClick={e => e.stopPropagation()}
-          >through this link.</Link>
-        </p>
-        <p>There are places for 120 fastest enrollers. Place will be announced to participants later. BYOB, Bring your own bottle.</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>What?</b> What? Pönkelirave</li>
-          <li><b>Where?</b> Where? UG (tba)</li>
-          <li><b>When?</b> When? Saturday the 13th of April from 7 PM till 5 AM.</li>
-          <li><b>Why?</b> Why? To all of those, who want to rave their heart out.</li>
-          <li><b>Price?</b> Tickets? 10 €</li>
-          <li><b>Dresscode?</b> Dresscode? Rave/Overalls. The rave will be held inside.</li>
-          <li><b>What to bring?</b> What to bring? water bottle, good dancing shoes, BYOB</li>
-          <li><b>Enroll?</b>
-            {' '}
-            <Link
-              href='https://kide.app/events/e3b0dee8-0c67-4117-af2f-eaa7eed76245'
-              target='_blank'
-              className='link hover:text-accent transition-colors'
-              rel='noopener noreferrer'
-              onClick={e => e.stopPropagation()}
-            >
-              Enroll here.
-            </Link>
-          </li>
-        </ul>
-      </>
-    )
+    description: {
+      fi: (
+        <>
+          <b>lauantaina 13.4. @UG 19-05!</b>
+          <p>Viime vuonna debytoineet menestyksekkäät Pönkelireivit palaavat entistä parempina. Reivit järjestetään tänä vuonna 13.4.2024 klo 19.00 alkaen.  Nimensä mukaisesti tarjolla on laaja kirjo elektronista tanssimusiikkia. Tänä vuonna esiintyjinä nähdään mm. GACHY X DLT, DJ Hexter feat. Thomas Trooper, Hvitr, DJ Erkku, DJ Fearinen ja Spettbros. Lähde siis elämäsi reiviseikkailuun Pönkelin matkassa. </p>
+          <p>Reiveille mahtuu 120 nopeinta ilmoittautujaa. Paikka ilmoitetaan osallistujille ennen tapahtumaa. Tapahtuma on OPM.</p>
+          <p>Luvassa on siis kovaa reivausta läpi yön mahtavassa seurassa, näitä reivejä et halua jättää väliin!</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>Mitä?</b> Pönkelireivit</li>
+            <li><b>Missä?</b> UG (ilmoitetaan myöhemmin osallistujille)</li>
+            <li><b>Milloin?</b> 13.4. klo 19.00-05.00</li>
+            <li><b>Miksi?</b> Kaikille, jotka haluavat reivata sydämensä kyllyydestä</li>
+            <li><b>Hinta?</b> 10€</li>
+            <li><b>Pukukoodi?</b> Reivit/haalarit. Tapahtuma järjestetään lämpimissä sisätiloissa</li>
+            <li><b>Mitä mukaan?</b> OPM, vesipullo, hyvät tanssikengät</li>
+          </ul>
+        </>
+      ),
+      en: (
+        <>
+          <strong>Pönkelirave 13.4. from 7 PM till 5 AM</strong>
+          <p>Last year successfully debuted Pönkelirave returns to Turku&apos;s Teekkariwappu better than ever. The rave will be held on 13th of  April starting from 7 PM. Living up to its name there will be served a variety of electronic dance music. Such artist will be seen at the rave: GACHY X DLT, DJ Hexter feat. Thomas Trooper, Hvitr, DJ Erkku, DJ Fearinen and Spettbros. So come on and jump into a rave adventure of your life with Pönkeli!</p>
+          <p>There are places for 120 fastest enrollers. Place will be announced to participants later. BYOB, Bring your own bottle.</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>What?</b> What? Pönkelirave</li>
+            <li><b>Where?</b> Where? UG (tba)</li>
+            <li><b>When?</b> When? Saturday the 13th of April from 7 PM till 5 AM.</li>
+            <li><b>Why?</b> Why? To all of those, who want to rave their heart out.</li>
+            <li><b>Price?</b> Tickets? 10 €</li>
+            <li><b>Dresscode?</b> Dresscode? Rave/Overalls. The rave will be held inside.</li>
+            <li><b>What to bring?</b> What to bring? water bottle, good dancing shoes, BYOB</li>
+          </ul>
+        </>
+      )
+    }
   },
   {
     name: 'Pönkelin FIA-cup',
     date: '2024-04-27',
-    details: '18.00 @Taiteiden talolla',
+    details: { fi: '18.00 @Taiteiden talolla' },
     image: '/fia.webp',
-    description: (
-      <>
-        <p>Olet varmaan ihmetellyt, mikä peli on tuo mystinen FIA, jota Åbo Akademin teekkarit erityisesti suosivat. Nyt sinulla on mahdollisuus päästä pelaamaan fiaa!</p>
-        <p>FIA-cup järjestetään 27.4.2024 klo 18.00 Taiteiden talolla. FIA-cupissa kilpaillaan kahden henkilön joukkueissa isolla kimble laudalla. Pelinappuloina toimivat pienet shottilasit, joilla syödään toisten nappuloita. Juoma on laimeaa alkoholia tai alkoholitonta. Yhdessä pelissä on mukana neljä joukkuetta. Tapahtuma järjestetään 20 joukkueen turnauksena, jossa pelataan välierät ennen finaalia. Turnausta saa tulla myös seuraamaan!</p>
-        <p>FIA on hauska seurapeli, jonka seuraaminenkin on hauskaa. Lähde rohkeasti mukaan teekkariwappuun paluun tehneeseen FIA-cupiin!</p>
-        <p>Ilmoittautuminen Kideappissa 4.4. klo 10.00 alkaen:
-          {' '}
-          <Link
-            href='https://kide.app/events/d2a57bc7-2919-4594-b5fc-e2d1fa1957b5'
-            target='_blank'
-            className='link hover:text-accent transition-colors'
-            rel='noopener noreferrer'
-            onClick={e => e.stopPropagation()}
-          >
-            Kide.appissa
-          </Link></p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>Mitä?</b> Pönkelin FIA-cup</li>
-          <li><b>Missä?</b> Taiteiden talo, Nunnankatu 4</li>
-          <li><b>Milloin?</b> 27.4. klo 18</li>
-          <li><b>Miksi?</b> FIA on hauska seurapeli!</li>
-          <li><b>Hinta?</b> 15 €, hinta sisältää juomat</li>
-          <li><b>Ilmoittautuminen</b>
-            {' '}
-            <Link
-              href='https://kide.app/events/d2a57bc7-2919-4594-b5fc-e2d1fa1957b5'
-              target='_blank'
-              className='link hover:text-accent transition-colors'
-              rel='noopener noreferrer'
-              onClick={e => e.stopPropagation()}
-            >
-              Kide.appissa
-            </Link>
-          </li>
-        </ul>
-      </>
-    )
+    description: {
+      fi: (
+        <>
+          <p>Olet varmaan ihmetellyt, mikä peli on tuo mystinen FIA, jota Åbo Akademin teekkarit erityisesti suosivat. Nyt sinulla on mahdollisuus päästä pelaamaan fiaa!</p>
+          <p>FIA-cup järjestetään 27.4.2024 klo 18.00 Taiteiden talolla. FIA-cupissa kilpaillaan kahden henkilön joukkueissa isolla kimble laudalla. Pelinappuloina toimivat pienet shottilasit, joilla syödään toisten nappuloita. Juoma on laimeaa alkoholia tai alkoholitonta. Yhdessä pelissä on mukana neljä joukkuetta. Tapahtuma järjestetään 20 joukkueen turnauksena, jossa pelataan välierät ennen finaalia. Turnausta saa tulla myös seuraamaan!</p>
+          <p>FIA on hauska seurapeli, jonka seuraaminenkin on hauskaa. Lähde rohkeasti mukaan teekkariwappuun paluun tehneeseen FIA-cupiin!</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>Mitä?</b> Pönkelin FIA-cup</li>
+            <li><b>Missä?</b> Taiteiden talo, Nunnankatu 4</li>
+            <li><b>Milloin?</b> 27.4. klo 18</li>
+            <li><b>Miksi?</b> FIA on hauska seurapeli!</li>
+            <li><b>Hinta?</b> 15 €, hinta sisältää juomat</li>
+          </ul>
+        </>
+      )
+    }
   },
   {
     name: 'Pönkeli Games III',
     date: '2024-10-10',
     details: null,
     image: '/ponkeligames2024.webp',
-    description: (
-      <>
-        <strong>Sporttiseikkailu kampuksesi ympäri!</strong>
-        <p>Pönkeli Games eli PöNGi on täällä taas ja ne kisaillaan tänä vuonna 10. lokakuuta klo 17 alkaen! PöNGissä pääset ottamaan mittaa muista joukkueista Amazing Race -tyylisellä rastikierroksella. Rastit vaativat kekseliäisyyttä, yhteistyötä ja ripeitä jalkoja. Kisan jälkeen voittajajoukkue lunastaa itselleen huikean palkinnon, ja kaikki osallistujat pääsevät virkistäytymään TYYn saunalla ennen myöhempiin illanviettoihin siirtymistä.</p>
-        <p>Kokoa siis neljän (4) hengen joukkueesi ja valmistaudu syksyn hauskimpaan ja vauhdikkaimpaan seikkailuun, kun Amazing PöNGi alkaa! Lipun hinta on vaivaiset 6 € / henkilö, joka sisältää osallistumisen kisaan, upean haalarimerkin sekä palauttavaa syötävää ja juotavaa saunalla kisan jälkeen.</p>
-        <p>Ilmoittautuminen kisaan alkaa 30.9. klo 12.00. Ilmoittautumisen jälkeen joukkueilla lähetetään sähköpostitse tarkempia ohjeita PöNGiin valmistautumisesta.</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>Mitä?</b> Pönkeli Games 2024!</li>
-          <li><b>Missä?</b> Turussa, lähtö TYYn saunalta!</li>
-          <li><b>Milloin?</b> Torstaina 10.10., lähtö klo 17!</li>
-          <li><b>Miksi?</b> Maine, kunnia ja huikeat palkinnot!</li>
-          <li><b>Hinta?</b> 6€/osallistuja</li>
-          <li><b>Palju?</b> Ei, mut sauna on!</li>
-          <li><b>Ilmoittautuminen</b>
-            {' '}
-            <Link
-              href='https://kide.app/events/4b2b1a41-21db-498d-b723-d883ba5a2842'
-              target='_blank'
-              className='link hover:text-accent transition-colors'
-              rel='noopener noreferrer'
-              onClick={e => e.stopPropagation()}
-            >
-              Kide.appissa
-            </Link>
-          </li>
-        </ul>
-        <hr className='my-3' />
-        <b>ENGLISH</b>
-        <strong>Sporttiseikkailu kampuksesi ympäri!</strong>
-        <p>The Pönkeli Games aka PöNGi is here again and they will be held this year on 10th of October starting at 17:00! In PöNGi you will take on other teams in an Amazing Race-style checkpoint race. The tasks require ingenuity, cooperation and fast feet. After the race, the winning team will claim a stunning prize, and all participants will be able to freshen up in the TYY sauna.</p>
-        <p>So get your team of four (4) together and get ready for the most fun and action-packed adventure of this autumn when the Amazing PöNGi begins! The ticket price is mere 6 € per person, which includes entry to the race, a great jumpsuit stamp and refreshing snacks and drinks in the sauna after the race.</p>
-        <p>Registration for the race starts on 30th of September at 12.00. After the registration closes, all teams will be sent an email with more detailed instructions on how to prepare for the PöNGi.</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>What?</b> Pönkeli Games 2024!</li>
-          <li><b>Where?</b> In Turku, starting from TYY sauna!</li>
-          <li><b>When?</b> Thursday 10.10., start at 17:00!</li>
-          <li><b>Why?</b> Fame, glory and amazing prizes!</li>
-          <li><b>Price?</b> 6€/participant</li>
-          <li><b>Hot tub?</b> No, but the sauna is warm!</li>
-          <li><b>Enroll</b>
-            {' '}
-            <Link
-              href='https://kide.app/events/4b2b1a41-21db-498d-b723-d883ba5a2842'
-              target='_blank'
-              className='link hover:text-accent transition-colors'
-              rel='noopener noreferrer'
-              onClick={e => e.stopPropagation()}
-            >
-              Kide.appissa
-            </Link>
-          </li>
-        </ul>
-      </>
-    )
+    description: {
+      fi: (
+        <>
+          <strong>Sporttiseikkailu kampuksesi ympäri!</strong>
+          <p>Pönkeli Games eli PöNGi on täällä taas ja ne kisaillaan tänä vuonna 10. lokakuuta klo 17 alkaen! PöNGissä pääset ottamaan mittaa muista joukkueista Amazing Race -tyylisellä rastikierroksella. Rastit vaativat kekseliäisyyttä, yhteistyötä ja ripeitä jalkoja. Kisan jälkeen voittajajoukkue lunastaa itselleen huikean palkinnon, ja kaikki osallistujat pääsevät virkistäytymään TYYn saunalla ennen myöhempiin illanviettoihin siirtymistä.</p>
+          <p>Kokoa siis neljän (4) hengen joukkueesi ja valmistaudu syksyn hauskimpaan ja vauhdikkaimpaan seikkailuun, kun Amazing PöNGi alkaa! Lipun hinta on vaivaiset 6 € / henkilö, joka sisältää osallistumisen kisaan, upean haalarimerkin sekä palauttavaa syötävää ja juotavaa saunalla kisan jälkeen.</p>
+          <p>Ilmoittautuminen kisaan alkaa 30.9. klo 12.00. Ilmoittautumisen jälkeen joukkueilla lähetetään sähköpostitse tarkempia ohjeita PöNGiin valmistautumisesta.</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>Mitä?</b> Pönkeli Games 2024!</li>
+            <li><b>Missä?</b> Turussa, lähtö TYYn saunalta!</li>
+            <li><b>Milloin?</b> Torstaina 10.10., lähtö klo 17!</li>
+            <li><b>Miksi?</b> Maine, kunnia ja huikeat palkinnot!</li>
+            <li><b>Hinta?</b> 6€/osallistuja</li>
+            <li><b>Palju?</b> Ei, mut sauna on!</li>
+          </ul>
+        </>
+      ),
+      en: (
+        <>
+          <strong>Sporty adventure around your campus!</strong>
+          <p>The Pönkeli Games aka PöNGi is here again and they will be held this year on 10th of October starting at 17:00! In PöNGi you will take on other teams in an Amazing Race-style checkpoint race. The tasks require ingenuity, cooperation and fast feet. After the race, the winning team will claim a stunning prize, and all participants will be able to freshen up in the TYY sauna.</p>
+          <p>So get your team of four (4) together and get ready for the most fun and action-packed adventure of this autumn when the Amazing PöNGi begins! The ticket price is mere 6 € per person, which includes entry to the race, a great jumpsuit stamp and refreshing snacks and drinks in the sauna after the race.</p>
+          <p>Registration for the race starts on 30th of September at 12.00. After the registration closes, all teams will be sent an email with more detailed instructions on how to prepare for the PöNGi.</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>What?</b> Pönkeli Games 2024!</li>
+            <li><b>Where?</b> In Turku, starting from TYY sauna!</li>
+            <li><b>When?</b> Thursday 10.10., start at 17:00!</li>
+            <li><b>Why?</b> Fame, glory and amazing prizes!</li>
+            <li><b>Price?</b> 6€/participant</li>
+            <li><b>Hot tub?</b> No, but the sauna is warm!</li>
+          </ul>
+        </>
+      )
+    }
   },
   {
     name: 'Pönkelijulkkarit ja wappurauhanjulistus',
     date: '2025-04-08',
-    details: '18.00 @Kåren',
+    details: { fi: '18.00 @Kåren' },
     image: '/ponkelijulkkarit25.webp',
-    description: (
-      <>
-        <strong>Pönkelijulkkarit ja wappurauhanjulistus 8.4. klo 18 Kårenilla</strong>
-        <p>Wappu on täällä! Arvon turkulainen teekkari, teekkarifuksi ja teekkarimielinen opiskelija Pönkeli 2025 on taas täällä!</p>
-        <p>Turun teekkariwappu käynnistyy virallisilla wapunaloituksen etkoilla eli Turun teekkareiden oman wappulehden Pönkelin julkaisulla. Pönkeli virittää turkulaiset opiskelijat juhlatunnelmaan näyttävällä tavalla. Julkkareissa yllätyksiä sekä viihdettä. Kårenin baari palvelee koko tapahtuman ajan opiskelijaystävällisin hinnoin.</p>
-        <p>Tapahtuma toimii virallisina etkoina wapunaloitusbileille ja tapahtumassa on ensimmäinen mahdollisuus ostaa puhdasta sekä kuivaa huumoria tihkuva Pönkeli 2025! Wapunaloitusbileet starttaavat Vegasissa klo 22!</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>Mitä</b> Pönkelijulkkarit ja wappuetkot</li>
-          <li><b>Missä</b> Kåren, Hämeenkatu 22</li>
-          <li><b>Milloin</b> 8.4.24 klo 18.00-21.00. Ovet auki klo 17.30</li>
-          <li><b>Miksi</b> WAPPUUUUU! 🥳</li>
-          <li><b>Mitä Maksaa</b> 0€, narikka 3€</li>
-          <li><b>Pukukoodi</b> Wappu/Pönkeli/haalarit</li>
-        </ul>
-        <hr className='my-3' />
-        <b>ENGLISH</b>
-        <strong>Pönkeli&apos;s publishing party and wappu pre-party 8.4 at Kåren</strong>
-        <p>Dear teekkari, teekkarifuksi or teekkari-minded student, the time has come to begin the most expected period of the year; Turku&apos;s teekkariwappu 2025!</p>
-        <p>Turku&apos;s teekkariwappu begins with the official pre-party for the wappu-starting-party, and of course by publishing Turku&apos;s teekkaris&apos; very own wappu magazine: Pönkeli! Pönkeli will take over and solemnly lead all students to wappu atmosphere. There will of course be a surprise entertainers that you do not want to miss. The bar will be open the whole event and has student-friendly prices.</p>
-        <p>The event is the official pre-party for the wappu-starting-party and there is the first chance to redeem yourself the most wanted product of wappu, i.e. Pönkeli 2025! After the event the wappu nation wanders together towards Vegas and wappu-starting-party.</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>What?</b> Pönkeli&apos;s publishing party and wappu pre-party</li>
-          <li><b>Where?</b> Kåren, Hämeenkatu 22</li>
-          <li><b>When?</b> 8th of April at 6 PM till 9 PM. Starts at 5.30 PM</li>
-          <li><b>Miksi</b>WAPPUUUUU! 🥳</li>
-          <li><b>Price?</b> 0€, Cloakroom 3 €</li>
-          <li><b>Dresscode?</b> Wappu/Pönkeli/over-alls</li>
-        </ul>
-      </>
-    )
+    description: {
+      fi: (
+        <>
+          <strong>Pönkelijulkkarit ja wappurauhanjulistus 8.4. klo 18 Kårenilla</strong>
+          <p>Wappu on täällä! Arvon turkulainen teekkari, teekkarifuksi ja teekkarimielinen opiskelija Pönkeli 2025 on taas täällä!</p>
+          <p>Turun teekkariwappu käynnistyy virallisilla wapunaloituksen etkoilla eli Turun teekkareiden oman wappulehden Pönkelin julkaisulla. Pönkeli virittää turkulaiset opiskelijat juhlatunnelmaan näyttävällä tavalla. Julkkareissa yllätyksiä sekä viihdettä. Kårenin baari palvelee koko tapahtuman ajan opiskelijaystävällisin hinnoin.</p>
+          <p>Tapahtuma toimii virallisina etkoina wapunaloitusbileille ja tapahtumassa on ensimmäinen mahdollisuus ostaa puhdasta sekä kuivaa huumoria tihkuva Pönkeli 2025! Wapunaloitusbileet starttaavat Vegasissa klo 22!</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>Mitä</b> Pönkelijulkkarit ja wappuetkot</li>
+            <li><b>Missä</b> Kåren, Hämeenkatu 22</li>
+            <li><b>Milloin</b> 8.4.24 klo 18.00-21.00. Ovet auki klo 17.30</li>
+            <li><b>Miksi</b> WAPPUUUUU! 🥳</li>
+            <li><b>Mitä Maksaa</b> 0€, narikka 3€</li>
+            <li><b>Pukukoodi</b> Wappu/Pönkeli/haalarit</li>
+          </ul>
+        </>
+      ),
+      en: (
+        <>
+          <strong>Pönkeli&apos;s publishing party and wappu pre-party 8.4 at Kåren</strong>
+          <p>Dear teekkari, teekkarifuksi or teekkari-minded student, the time has come to begin the most expected period of the year; Turku&apos;s teekkariwappu 2025!</p>
+          <p>Turku&apos;s teekkariwappu begins with the official pre-party for the wappu-starting-party, and of course by publishing Turku&apos;s teekkaris&apos; very own wappu magazine: Pönkeli! Pönkeli will take over and solemnly lead all students to wappu atmosphere. There will of course be a surprise entertainers that you do not want to miss. The bar will be open the whole event and has student-friendly prices.</p>
+          <p>The event is the official pre-party for the wappu-starting-party and there is the first chance to redeem yourself the most wanted product of wappu, i.e. Pönkeli 2025! After the event the wappu nation wanders together towards Vegas and wappu-starting-party.</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>What?</b> Pönkeli&apos;s publishing party and wappu pre-party</li>
+            <li><b>Where?</b> Kåren, Hämeenkatu 22</li>
+            <li><b>When?</b> 8th of April at 6 PM till 9 PM. Starts at 5.30 PM</li>
+            <li><b>Why?</b> WAPPUUUUU! 🥳</li>
+            <li><b>Price?</b> 0€, Cloakroom 3 €</li>
+            <li><b>Dresscode?</b> Wappu/Pönkeli/over-alls</li>
+          </ul>
+        </>
+      )
+    }
   },
   {
     name: 'Pönkelireivit 25',
     date: '2025-04-17',
-    details: '19-02 @Taiteen talo',
+    details: { fi: '19-02 @Taiteen talo' },
     image: '/ponkelireivit25.webp',
-    description: (
-      <>
-        <strong>FI/EN</strong>
-        <strong>Pönkelireivit palaavat jälleen vauhdittamaan turkulaisia opiskelijoita!</strong>
-        <p>Vauhdikkaat ja suuren suosion saaneet Pönkelireivit palaavat jälleen. Reivit järjestetään tänä vuonna 17.4.2025 klo 19.00 alkaen.  Nimensä mukaisesti tarjolla on laaja kirjo elektronista tanssimusiikkia. Lähde siis elämäsi reiviseikkailuun Pönkelin matkassa.</p>
-        <p>Tapahtumaan ilmoittautuminen alkaa 10.4. klo 14.00 alkaen. Reiveille mahtuu rajallinen määrä ihmisiä, joten kannattaa olla nopea. Paikka ilmoitetaan osallistujille ennen tapahtumaa. Tapahtuma on OPM.</p>
-        <p>Luvassa on siis jälleen kerran kovaa reivausta läpi illan mahtavassa seurassa, näitä reivejä et halua jättää väliin!</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>Mitä?</b> Pönkelireivit</li>
-          <li><b>Missä?</b> Taiteen talo</li>
-          <li><b>Milloin?</b> Torstaina 17.4.2025, klo 19.00</li>
-          <li><b>Miksi?</b> Kaikille, jotka haluavat reivata sydämensä kyllyydestä</li>
-          <li><b>Hinta?</b> 12 €</li>
-          <li><b>Pukukoodi?</b> Reivit/Haalarit. Tapahtuma järjestetään lämpimissä sisätiloissa</li>
-          <li><b>Mitä mukaan?</b> OPM, vesipullo, hyvät tanssikengät</li>
-        </ul>
-        <hr className='my-3' />
-        <b>ENGLISH</b>
-        <strong>Pönkelirave is here again to make you move!</strong>
-        <p>The Pönkelirave is here once again! The rave will be held on 17th of April starting at 19.00 and ending at 02.00 in the night. Living up to its name there will be served a variety of electronic dance music. So come on in and join Pönkeli for the rave adventure of your life.</p>
-        <p>Tickets will be available 10th of April at 14.00. There is a limited amount of places available, so be fast. The venue will be announced to participants later. BYOB, Bring your own bottle.</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>What?</b> Pönkelirave</li>
-          <li><b>Where?</b> Taiteen talo</li>
-          <li><b>When?</b> 17.4.2025 at 19.00</li>
-          <li><b>Why?</b> Cardio</li>
-          <li><b>Price?</b> 12 €</li>
-          <li><b>Dresscode?</b> Rave/overalls. The event will be held inside</li>
-        </ul>
-      </>
-    )
+    description: {
+      fi: (
+        <>
+          <strong>Pönkelireivit palaavat jälleen vauhdittamaan turkulaisia opiskelijoita!</strong>
+          <p>Vauhdikkaat ja suuren suosion saaneet Pönkelireivit palaavat jälleen. Reivit järjestetään tänä vuonna 17.4.2025 klo 19.00 alkaen.  Nimensä mukaisesti tarjolla on laaja kirjo elektronista tanssimusiikkia. Lähde siis elämäsi reiviseikkailuun Pönkelin matkassa.</p>
+          <p>Tapahtumaan ilmoittautuminen alkaa 10.4. klo 14.00 alkaen. Reiveille mahtuu rajallinen määrä ihmisiä, joten kannattaa olla nopea. Paikka ilmoitetaan osallistujille ennen tapahtumaa. Tapahtuma on OPM.</p>
+          <p>Luvassa on siis jälleen kerran kovaa reivausta läpi illan mahtavassa seurassa, näitä reivejä et halua jättää väliin!</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>Mitä?</b> Pönkelireivit</li>
+            <li><b>Missä?</b> Taiteen talo</li>
+            <li><b>Milloin?</b> Torstaina 17.4.2025, klo 19.00</li>
+            <li><b>Miksi?</b> Kaikille, jotka haluavat reivata sydämensä kyllyydestä</li>
+            <li><b>Hinta?</b> 12 €</li>
+            <li><b>Pukukoodi?</b> Reivit/Haalarit. Tapahtuma järjestetään lämpimissä sisätiloissa</li>
+            <li><b>Mitä mukaan?</b> OPM, vesipullo, hyvät tanssikengät</li>
+          </ul>
+        </>
+      ),
+      en: (
+        <>
+          <strong>Pönkelirave is here again to make you move!</strong>
+          <p>The Pönkelirave is here once again! The rave will be held on 17th of April starting at 19.00 and ending at 02.00 in the night. Living up to its name there will be served a variety of electronic dance music. So come on in and join Pönkeli for the rave adventure of your life.</p>
+          <p>Tickets will be available 10th of April at 14.00. There is a limited amount of places available, so be fast. The venue will be announced to participants later. BYOB, Bring your own bottle.</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>What?</b> Pönkelirave</li>
+            <li><b>Where?</b> Taiteen talo</li>
+            <li><b>When?</b> 17.4.2025 at 19.00</li>
+            <li><b>Why?</b> Cardio</li>
+            <li><b>Price?</b> 12 €</li>
+            <li><b>Dresscode?</b> Rave/overalls. The event will be held inside</li>
+          </ul>
+        </>
+      )
+    }
   },
   {
     name: 'Pönkeli Games IV',
     date: '2026-03-18',
-    details: '16.30 @TYYn sauna',
+    details: { fi: '16.30 @TYYn sauna', en: "16.30 @TYY's sauna" },
     image: '/ponkeligamesiv.webp',
-    description: (
-      <>
-        <strong>FI/EN</strong>
-        <strong>Urheilullinen rastikierros Turussa!</strong>
-        <p>Pönkeli Games IV  kisaillaan keskiviikkona 18.3. klo 16.30 alkaen! Kisoissa pääset ottamaan joukkueesi kanssa mittaa muista opiskelijoista urheilullisella rastikierroksella. Rastit vaativat kekseliäisyyttä, yhteistyötä ja voimaa. Kisan jälkeen voittajajoukkue lunastaa itselleen huikean palkinnon, ja kaikki osallistujat pääsevät virkistäytymään saunalla.</p>
-        <p>Kokoa siis neljän (4) hengen joukkueesi ja valmistaudu kevään hauskimpaan ja vauhdikkaimpaan rastikierrokseen, kun neljännet Pönkeli Gamesit alkavat! Lipun hinta on vaivaiset 6 € / henkilö, joka sisältää osallistumisen kisaan, upean haalarimerkin sekä palauttavaa syötävää ja juotavaa saunalla kisan jälkeen.</p>
-        <p>Ilmoittautuminen kisaan on auki NYT ja se päättyy 18.3. klo 12.00. Joukkue voi valmistatutua kisoihin varustautumalla urheilullisesti (tapahtuma sisältää juoksemista ulkona).</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>Mitä?</b> Pönkeli Games IV</li>
-          <li><b>Missä?</b> Turussa, lähtö TYYn saunalta!</li>
-          <li><b>Milloin?</b> Keskiviikkona 18.3.2026, lähtö klo 16.30!</li>
-          <li><b>Miksi?</b> Maine, kunnia ja huikeat palkinnot!</li>
-          <li><b>Hinta?</b> 6€/osallistuja</li>
-          <li><b>Palju?</b> Ei, mut sauna on!</li>
-          <li><b>Ilmoittautuminen</b>
-            {' '}
-            <Link
-              href="https://holvi.com/shop/ponkeli/product/5fbd37239dc0fce19585466f9a156627/"
-              target='_blank'
-              className='link hover:text-accent transition-colors'
-              rel='noopener noreferrer'
-              onClick={e => e.stopPropagation()}
-              >
-              Holvissa
-            </Link>
-          </li>
-        </ul>
-        <hr className='my-3' />
-        <b>ENGLISH</b>
-        <strong>Fast-paced checkpoint race around the campus!</strong>
-        <p>The Pönkeli Games are here again for the fourth time and they will be held this year on 18th of March starting at 16:30! In the Games you will take on other teams in an Amazing Race-style fast checkpoint race. The tasks require ingenuity, cooperation, strenght and fast feet. After the race, the winning team will claim a stunning prize, and all participants will be able to freshen up in the sauna.</p>
-        <p>So get your team of four (4) together and get ready for the most fun and action-packed adventure of this spring when the Pönkeli Games begin! The ticket price is mere 6 € per person, which includes entry to the race, an overall badge and refreshing snacks and drinks in the sauna after the race.</p>
-        <p>Registration for the race is open NOW and closes at 18th of March 12.00. Your team can prepare for the games by wearing sporty clothes (the event includes running outside).</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>What?</b> Pönkeli Games IV</li>
-          <li><b>Where?</b> In Turku, starting from TYY sauna!</li>
-          <li><b>When?</b> Wednesday 18.3.2026, start at 16:30!</li>
-          <li><b>Why?</b> Fame, glory and amazing prizes!</li>
-          <li><b>Price?</b> 6€/participant</li>
-          <li><b>Hot tub?</b> No, but the sauna is warm!</li>
-          <li><b>Sign up</b>
-            {' '}
-            <Link
-              href="https://holvi.com/shop/ponkeli/product/5fbd37239dc0fce19585466f9a156627/"
-              target='_blank'
-              className='link hover:text-accent transition-colors'
-              rel='noopener noreferrer'
-              onClick={e => e.stopPropagation()}
-              >
-              In Pönkelis Holvi-shop
-            </Link>
-          </li>
-        </ul>
-      </>
-    )
+    description: {
+      fi: (
+        <>
+          <strong>Urheilullinen rastikierros Turussa!</strong>
+          <p>Pönkeli Games IV  kisaillaan keskiviikkona 18.3. klo 16.30 alkaen! Kisoissa pääset ottamaan joukkueesi kanssa mittaa muista opiskelijoista urheilullisella rastikierroksella. Rastit vaativat kekseliäisyyttä, yhteistyötä ja voimaa. Kisan jälkeen voittajajoukkue lunastaa itselleen huikean palkinnon, ja kaikki osallistujat pääsevät virkistäytymään saunalla.</p>
+          <p>Kokoa siis neljän (4) hengen joukkueesi ja valmistaudu kevään hauskimpaan ja vauhdikkaimpaan rastikierrokseen, kun neljännet Pönkeli Gamesit alkavat! Lipun hinta on vaivaiset 6 € / henkilö, joka sisältää osallistumisen kisaan, upean haalarimerkin sekä palauttavaa syötävää ja juotavaa saunalla kisan jälkeen.</p>
+          <p>Ilmoittautuminen kisaan on auki NYT ja se päättyy 18.3. klo 12.00. Joukkue voi valmistatutua kisoihin varustautumalla urheilullisesti (tapahtuma sisältää juoksemista ulkona).</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>Mitä?</b> Pönkeli Games IV</li>
+            <li><b>Missä?</b> Turussa, lähtö TYYn saunalta!</li>
+            <li><b>Milloin?</b> Keskiviikkona 18.3.2026, lähtö klo 16.30!</li>
+            <li><b>Miksi?</b> Maine, kunnia ja huikeat palkinnot!</li>
+            <li><b>Hinta?</b> 6€/osallistuja</li>
+            <li><b>Palju?</b> Ei, mut sauna on!</li>
+          </ul>
+        </>
+      ),
+      en: (
+        <>
+          <strong>Fast-paced checkpoint race around the campus!</strong>
+          <p>The Pönkeli Games are here again for the fourth time and they will be held this year on 18th of March starting at 16:30! In the Games you will take on other teams in an Amazing Race-style fast checkpoint race. The tasks require ingenuity, cooperation, strenght and fast feet. After the race, the winning team will claim a stunning prize, and all participants will be able to freshen up in the sauna.</p>
+          <p>So get your team of four (4) together and get ready for the most fun and action-packed adventure of this spring when the Pönkeli Games begin! The ticket price is mere 6 € per person, which includes entry to the race, an overall badge and refreshing snacks and drinks in the sauna after the race.</p>
+          <p>Registration for the race is open NOW and closes at 18th of March 12.00. Your team can prepare for the games by wearing sporty clothes (the event includes running outside).</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>What?</b> Pönkeli Games IV</li>
+            <li><b>Where?</b> In Turku, starting from TYY sauna!</li>
+            <li><b>When?</b> Wednesday 18.3.2026, start at 16:30!</li>
+            <li><b>Why?</b> Fame, glory and amazing prizes!</li>
+            <li><b>Price?</b> 6€/participant</li>
+            <li><b>Hot tub?</b> No, but the sauna is warm!</li>
+          </ul>
+        </>
+      )
+    }
   },
   {
     name: 'Pönkelin Pubivisa 2026',
     date: '2026-01-21',
-    details: '18.00 @Saaristobaari',
+    details: { fi: '18.00 @Saaristobaari' },
     image: '/pubivisa26.webp',
-    description: (
-      <>
-        <strong>FI/EN</strong>
-        <strong>Pubivisan Wapun tulon vauhdittamiseksi!</strong>
-        <p>Odotatko jo Wapun alkua? Tai kutkuttaako tietovisa hammastasi? Wappulehti Pönkeli tarjoaa loistavan ratkaisun molempiin, kun se järjestää 100 wappuun bileille etkot Pönkelin Pubivisan muodossa. </p> 
-        <p>Suuntaa siis keskiviikkona 21.1. Saaristobaariin klo 18.00, ja tule nauttimaan rennosta wapputunnelmasta keskellä lumista talvea sekä kilpailemaan upeista palkinnoista.</p>
-        <p>Tapahtumassa on myös mahdollisuus liittyä Pönkelin VIP-myyjäksi! Lisää tietoa <Link href='/myyjarekry'>täältä!</Link></p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>Mitä?</b> 100 Päivää Wappuun etkot pubivisa</li>
-          <li><b>Missä?</b> Saaristobaari</li>
-          <li><b>Milloin?</b> Keskiviikkona 21.1., klo 18</li>
-          <li><b>Miksi?</b> Koska Wappu ei tule ilman pientä odotusta</li>
-          <li><b>Hinta?</b> Ei mitään!</li>
-          <li><b>Ilmoittautuminen</b> Paikanpäällä</li>
-        </ul>
-        <hr className='my-3' />
-        <b>ENGLISH</b>
-        <strong>Pub quiz to start warming up for Wappu</strong>
-        <p>Are you already looking forward to Wappu? Or are you feeling the itch for a good quiz? Pönkeli has the perfect solution to both, as it hosts a pre-party for 100 Days to Wappu party in the form of a pub quiz.</p>
-        <p>Join us on Wednesday, January 21st at 18.00 in Saaristobaari to enjoy a great Wappu atmosphere in the middle of snowy winter and compete for awesome prizes.</p>
-        <p>At the event, you’ll also have the opportunity to become a Pönkeli VIP seller. More info <Link href='/myyjarekry'>here!</Link></p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>What?</b> 100 days to Wappu pub quiz</li>
-          <li><b>Where?</b> Saaristobaari</li>
-          <li><b>When?</b> Wednesday, January 21st at 18.00</li>
-          <li><b>Why?</b> Wappu will come faster if you answer correctly.</li>
-          <li><b>Price?</b> Nothing!</li>
-          <li><b>Registration</b> At the venue</li>
-        </ul>
-      </>
-    )
+    description: {
+      fi: (
+        <>
+          <strong>Pubivisan Wapun tulon vauhdittamiseksi!</strong>
+          <p>Odotatko jo Wapun alkua? Tai kutkuttaako tietovisa hammastasi? Wappulehti Pönkeli tarjoaa loistavan ratkaisun molempiin, kun se järjestää 100 wappuun bileille etkot Pönkelin Pubivisan muodossa. </p>
+          <p>Suuntaa siis keskiviikkona 21.1. Saaristobaariin klo 18.00, ja tule nauttimaan rennosta wapputunnelmasta keskellä lumista talvea sekä kilpailemaan upeista palkinnoista.</p>
+          <p>Tapahtumassa on myös mahdollisuus liittyä Pönkelin VIP-myyjäksi!</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>Mitä?</b> 100 Päivää Wappuun etkot pubivisa</li>
+            <li><b>Missä?</b> Saaristobaari</li>
+            <li><b>Milloin?</b> Keskiviikkona 21.1., klo 18</li>
+            <li><b>Miksi?</b> Koska Wappu ei tule ilman pientä odotusta</li>
+            <li><b>Hinta?</b> Ei mitään!</li>
+            <li><b>Ilmoittautuminen</b> Paikanpäällä</li>
+          </ul>
+        </>
+      ),
+      en: (
+        <>
+          <strong>Pub quiz to start warming up for Wappu</strong>
+          <p>Are you already looking forward to Wappu? Or are you feeling the itch for a good quiz? Pönkeli has the perfect solution to both, as it hosts a pre-party for 100 Days to Wappu party in the form of a pub quiz.</p>
+          <p>Join us on Wednesday, January 21st at 18.00 in Saaristobaari to enjoy a great Wappu atmosphere in the middle of snowy winter and compete for awesome prizes.</p>
+          <p>At the event, you’ll also have the opportunity to become a Pönkeli VIP seller.</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>What?</b> 100 days to Wappu pub quiz</li>
+            <li><b>Where?</b> Saaristobaari</li>
+            <li><b>When?</b> Wednesday, January 21st at 18.00</li>
+            <li><b>Why?</b> Wappu will come faster if you answer correctly.</li>
+            <li><b>Price?</b> Nothing!</li>
+            <li><b>Registration</b> At the venue</li>
+          </ul>
+        </>
+      )
+    }
   },
   {
     name: 'Myyjäkoulu 2026',
     date: '2026-03-30',
-    details: '18-19 @ Agora XXI',
+    details: { fi: '18-19 @ Agora XXI' },
     image: '/myyjakoulu26.webp',
-    description: (
+    description: {
+      fi: (
         <>
-        <strong>Ilmoittaudu ja opi Pönkelin myyjäksi</strong>
-        <p>Lehtien myynnistä on luvassa myyjäpalkintoja sekä teekkarifukseille Pönkelipiste. Pönkeli järjestää myös pelkästään myyjille suunnattuja tapahtumia, joihin juuri sinun on mahdollista vain myyjänä osallistua!</p>
-        <p>Myyjäksi voit ilmoittautua Pönkelin nettisivujen kautta tai saapumalla Myyjäkouluun 30.3. klo 18-19 Agoran saliin XXI, jossa kerrotaan lisää Pönkelistä, lehtien myymisestä, palkinnoista ja tapahtumista. Vaikket olisi varma osallistumisesta, tule ihmeessä paikalle! Myyjäkoulu järjestetään myös Zoomissa (linkki saatavilla kiltasi tiedotuskanavilla tai pyytämällä sähköpostitse).</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>Mitä</b> Myyjäkoulu</li>
-          <li><b>Missä</b> Agora XXI</li>
-          <li><b>Milloin</b> 30.3. klo 18.00-19.00</li>
-          <li><b>Miksi</b> Pääset ilmoittautumaan myyjäksi ja oppimaan myyntiä</li>
-        </ul>
-        <hr className='my-3' />
-        <b>ENGLISH</b>
-        <strong>Register and learn how to become a Pönkeli salesperson</strong>
-        <p>Teekkari Wappu and the Pönkeli publishing party are approaching, and Pönkeli is looking for enthusiastic sellers for this year’s most fun student Wappu magazine in Turku!</p>
-        <p>By selling the magazines, you can earn seller rewards, and for teekkari freshmen, the Pönkeli point. Pönkeli also organizes exclusive events for sellers during Wappu.</p>
-        <p>You can sign up as a seller through Pönkeli’s website or by attending the seller training on March 30th from 18:00 to 19:00 in Agora, hall XXI. There you will hear more about Pönkeli, selling the magazines, rewards, and events. Even if you’re not sure about participating, feel free to come along! The seller training will also be held on Zoom (link available in your guild's information channels or by asking through e-mail).</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>What?</b> Pönkeli salesperson training</li>
-          <li><b>Where?</b> Agora XXI</li>
-          <li><b>When?</b> 30.3. from 18.00 to 19.00</li>
-          <li><b>Why?</b> Register, sell, earn rewards</li>
-        </ul>
-      </>
-    )
+          <strong>Ilmoittaudu ja opi Pönkelin myyjäksi</strong>
+          <p>Lehtien myynnistä on luvassa myyjäpalkintoja sekä teekkarifukseille Pönkelipiste. Pönkeli järjestää myös pelkästään myyjille suunnattuja tapahtumia, joihin juuri sinun on mahdollista vain myyjänä osallistua!</p>
+          <p>Myyjäksi voit ilmoittautua Pönkelin nettisivujen kautta tai saapumalla Myyjäkouluun 30.3. klo 18-19 Agoran saliin XXI, jossa kerrotaan lisää Pönkelistä, lehtien myymisestä, palkinnoista ja tapahtumista. Vaikket olisi varma osallistumisesta, tule ihmeessä paikalle! Myyjäkoulu järjestetään myös Zoomissa (linkki saatavilla kiltasi tiedotuskanavilla tai pyytämällä sähköpostitse).</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>Mitä</b> Myyjäkoulu</li>
+            <li><b>Missä</b> Agora XXI</li>
+            <li><b>Milloin</b> 30.3. klo 18.00-19.00</li>
+            <li><b>Miksi</b> Pääset ilmoittautumaan myyjäksi ja oppimaan myyntiä</li>
+          </ul>
+        </>
+      ),
+      en: (
+        <>
+          <strong>Register and learn how to become a Pönkeli salesperson</strong>
+          <p>Teekkari Wappu and the Pönkeli publishing party are approaching, and Pönkeli is looking for enthusiastic sellers for this year’s most fun student Wappu magazine in Turku!</p>
+          <p>By selling the magazines, you can earn seller rewards, and for teekkari freshmen, the Pönkeli point. Pönkeli also organizes exclusive events for sellers during Wappu.</p>
+          <p>You can sign up as a seller through Pönkeli’s website or by attending the seller training on March 30th from 18:00 to 19:00 in Agora, hall XXI. There you will hear more about Pönkeli, selling the magazines, rewards, and events. Even if you’re not sure about participating, feel free to come along! The seller training will also be held on Zoom (link available in your guild's information channels or by asking through e-mail).</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>What?</b> Pönkeli salesperson training</li>
+            <li><b>Where?</b> Agora XXI</li>
+            <li><b>When?</b> 30.3. from 18.00 to 19.00</li>
+            <li><b>Why?</b> Register, sell, earn rewards</li>
+          </ul>
+        </>
+      )
+    }
   },
   {
     name: 'Pönkelijulkkarit 2026',
     date: '2026-04-09',
-    details: '18.00 @Kåren',
+    details: { fi: '18.00 @Kåren' },
     image: '/julkkarit26.webp',
-    description: (
+    description: {
+      fi: (
         <>
-        <strong>Pönkelijulkkarit ja wappurauhanjulistus 9.4. klo 18 Kårenilla</strong>
-        <p>Wappu on täällä! Arvon turkulaiset teekkarit, fuksit ja teekkarimieliset opiskelijat, Pönkeli on taas täällä!</p>
-        <p>Turun teekkariwappu käynnistyy virallisilla wapunaloituksen etkoilla eli Turun teekkareiden oman Wappulehti Pönkelin julkaisulla. Pönkeli virittää turkulaiset opiskelijat juhlatunnelmaan näyttävällä tavalla. Julkkareissa yllätyksiä sekä viihdettä. Kårenin baari palvelee koko tapahtuman ajan opiskelijaystävällisin hinnoin.</p>
-        <p>Tapahtuma toimii virallisina etkoina wapunaloitusbileille ja tapahtumassa on ensimmäinen mahdollisuus ostaa vauhdikasta huummoria tihkuva Pönkeli 2026! Wapunaloitusbileet starttaavat Vegasissa klo 22!</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>Mitä</b> Pönkelijulkkarit</li>
-          <li><b>Missä</b> Kåren, Hämeenkatu 22</li>
-          <li><b>Milloin</b> 9.4. klo 18.00-21.00. Ovet auki klo 17.30</li>
-          <li><b>Miksi</b> WAPPUUUUU! 🥳</li>
-          <li><b>Mitä maksaa</b> 0€, narikka 3€</li>
-          <li><b>Pukukoodi</b> Wappu/Pönkeli/haalarit</li>
-        </ul>
-        <hr className='my-3' />
-        <b>ENGLISH</b>
-        <strong>Pönkeli&apos;s publishing party 9.4 at Kåren</strong>
-        <p>Dear teekkaris, freshmen and teekkari-minded students, the time has come to begin the most expected period of the year; Turku&apos;s teekkariwappu 2026!</p>
-        <p>Turku&apos;s teekkariwappu begins with the official pre-party for the wappu-starting-party, and of course by publishing of Turku&apos;s teekkaris&apos; very own wappu magazine: Pönkeli! Pönkeli will take over and solemnly lead all students to wappu atmosphere. There will of course be a surprise entertainment that you do not want to miss. The bar will be open the whole event and has student-friendly prices.</p>
-        <p>The event is the official pre-party for the wappu-starting-party and there is the first chance to redeem yourself the most wanted product of wappu, i.e. Pönkeli 2026! After the event the wappu nation wanders together towards Vegas and wappu-starting-party.</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>What?</b> Pönkeli&apos;s publishing party</li>
-          <li><b>Where?</b> Kåren, Hämeenkatu 22</li>
-          <li><b>When?</b> 9.4. from 18.00 to 21.00. Doors open at 17.30</li>
-          <li><b>Miksi</b>WAPPUUUUU! 🥳</li>
-          <li><b>Price?</b> 0€, Cloakroom 3 €</li>
-          <li><b>Dresscode?</b> Wappu/Pönkeli/over-alls</li>
-        </ul>
-      </>
-    )
+          <strong>Pönkelijulkkarit ja wappurauhanjulistus 9.4. klo 18 Kårenilla</strong>
+          <p>Wappu on täällä! Arvon turkulaiset teekkarit, fuksit ja teekkarimieliset opiskelijat, Pönkeli on taas täällä!</p>
+          <p>Turun teekkariwappu käynnistyy virallisilla wapunaloituksen etkoilla eli Turun teekkareiden oman Wappulehti Pönkelin julkaisulla. Pönkeli virittää turkulaiset opiskelijat juhlatunnelmaan näyttävällä tavalla. Julkkareissa yllätyksiä sekä viihdettä. Kårenin baari palvelee koko tapahtuman ajan opiskelijaystävällisin hinnoin.</p>
+          <p>Tapahtuma toimii virallisina etkoina wapunaloitusbileille ja tapahtumassa on ensimmäinen mahdollisuus ostaa vauhdikasta huummoria tihkuva Pönkeli 2026! Wapunaloitusbileet starttaavat Vegasissa klo 22!</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>Mitä</b> Pönkelijulkkarit</li>
+            <li><b>Missä</b> Kåren, Hämeenkatu 22</li>
+            <li><b>Milloin</b> 9.4. klo 18.00-21.00. Ovet auki klo 17.30</li>
+            <li><b>Miksi</b> WAPPUUUUU! 🥳</li>
+            <li><b>Mitä maksaa</b> 0€, narikka 3€</li>
+            <li><b>Pukukoodi</b> Wappu/Pönkeli/haalarit</li>
+          </ul>
+        </>
+      ),
+      en: (
+        <>
+          <strong>Pönkeli&apos;s publishing party 9.4 at Kåren</strong>
+          <p>Dear teekkaris, freshmen and teekkari-minded students, the time has come to begin the most expected period of the year; Turku&apos;s teekkariwappu 2026!</p>
+          <p>Turku&apos;s teekkariwappu begins with the official pre-party for the wappu-starting-party, and of course by publishing of Turku&apos;s teekkaris&apos; very own wappu magazine: Pönkeli! Pönkeli will take over and solemnly lead all students to wappu atmosphere. There will of course be a surprise entertainment that you do not want to miss. The bar will be open the whole event and has student-friendly prices.</p>
+          <p>The event is the official pre-party for the wappu-starting-party and there is the first chance to redeem yourself the most wanted product of wappu, i.e. Pönkeli 2026! After the event the wappu nation wanders together towards Vegas and wappu-starting-party.</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>What?</b> Pönkeli&apos;s publishing party</li>
+            <li><b>Where?</b> Kåren, Hämeenkatu 22</li>
+            <li><b>When?</b> 9.4. from 18.00 to 21.00. Doors open at 17.30</li>
+            <li><b>Why?</b> WAPPUUUUU! 🥳</li>
+            <li><b>Price?</b> 0€, Cloakroom 3 €</li>
+            <li><b>Dresscode?</b> Wappu/Pönkeli/over-alls</li>
+          </ul>
+        </>
+      )
+    }
   },
   {
     name: 'Pönkelireivit 2026',
     date: '2026-04-16',
-    details: '22-04 @UG-klubi',
+    details: { fi: '22-04 @UG-klubi' },
     image: '/reivit26.webp',
-    description: (
-      <>
-        <strong>FI/EN</strong>
-        <strong>Pönkelireivit palaavat jälleen vauhdittamaan turkulaisia opiskelijoita!</strong>
-        <p>Vauhdikkaat ja suuren suosion saaneet Pönkelireivit palaavat jälleen. Reivit järjestetään 16.4.2026 klo 22.00 alkaen.  Nimensä mukaisesti tarjolla on laaja kirjo elektronista tanssimusiikkia. Lähde siis elämäsi reiviseikkailuun Pönkelin matkassa.</p>
-        <p>Liput myydään ovelta. Reiveille mahtuu rajallinen määrä ihmisiä, joten kannattaa olla paikalla ajoissa. Illan pääesiintyjän aloittaa klo 00.00</p>
-        <p>Luvassa on siis jälleen kerran kovaa reivausta läpi illan mahtavassa seurassa, näitä reivejä et halua jättää väliin!</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>Mitä?</b> Pönkelireivit</li>
-          <li><b>Missä?</b> UG-klubi</li>
-          <li><b>Milloin?</b> Torstaina 16.4.2026, klo 22.00</li>
-          <li><b>Miksi?</b> Kaikille, jotka haluavat reivata sydämensä kyllyydestä</li>
-          <li><b>Hinta?</b> 5 €</li>
-          <li><b>Pukukoodi?</b> Reivit/haalarit</li>
-          <li><b>Mitä mukaan?</b> Hyvät tanssikengät</li>
-        </ul>
-        <hr className='my-3' />
-        <b>ENGLISH</b>
-        <strong>Pönkelirave is here again to make you move!</strong>
-        <p>The Pönkelirave is here once again! The rave will be held on 16th of April starting at 22.00. Living up to its name there will be served a variety of electronic dance music. So come on in and join Pönkeli for the rave adventure of your life.</p>
-        <p>Tickets sold from the door. There is a limited amount of space available, so be early! Our main guest will take the stage at 00.00</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>What?</b> Pönkelirave</li>
-          <li><b>Where?</b> UG-klubi</li>
-          <li><b>When?</b> 16.4.2026 at 22.00</li>
-          <li><b>Why?</b> Cardio</li>
-          <li><b>Price?</b> 5 €</li>
-          <li><b>Dresscode?</b> Rave/overalls</li>
-        </ul>
-      </>
-    )
+    description: {
+      fi: (
+        <>
+          <strong>Pönkelireivit palaavat jälleen vauhdittamaan turkulaisia opiskelijoita!</strong>
+          <p>Vauhdikkaat ja suuren suosion saaneet Pönkelireivit palaavat jälleen. Reivit järjestetään 16.4.2026 klo 22.00 alkaen.  Nimensä mukaisesti tarjolla on laaja kirjo elektronista tanssimusiikkia. Lähde siis elämäsi reiviseikkailuun Pönkelin matkassa.</p>
+          <p>Liput myydään ovelta. Reiveille mahtuu rajallinen määrä ihmisiä, joten kannattaa olla paikalla ajoissa. Illan pääesiintyjän aloittaa klo 00.00</p>
+          <p>Luvassa on siis jälleen kerran kovaa reivausta läpi illan mahtavassa seurassa, näitä reivejä et halua jättää väliin!</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>Mitä?</b> Pönkelireivit</li>
+            <li><b>Missä?</b> UG-klubi</li>
+            <li><b>Milloin?</b> Torstaina 16.4.2026, klo 22.00</li>
+            <li><b>Miksi?</b> Kaikille, jotka haluavat reivata sydämensä kyllyydestä</li>
+            <li><b>Hinta?</b> 5 €</li>
+            <li><b>Pukukoodi?</b> Reivit/haalarit</li>
+            <li><b>Mitä mukaan?</b> Hyvät tanssikengät</li>
+          </ul>
+        </>
+      ),
+      en: (
+        <>
+          <strong>Pönkelirave is here again to make you move!</strong>
+          <p>The Pönkelirave is here once again! The rave will be held on 16th of April starting at 22.00. Living up to its name there will be served a variety of electronic dance music. So come on in and join Pönkeli for the rave adventure of your life.</p>
+          <p>Tickets sold from the door. There is a limited amount of space available, so be early! Our main guest will take the stage at 00.00</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>What?</b> Pönkelirave</li>
+            <li><b>Where?</b> UG-klubi</li>
+            <li><b>When?</b> 16.4.2026 at 22.00</li>
+            <li><b>Why?</b> Cardio</li>
+            <li><b>Price?</b> 5 €</li>
+            <li><b>Dresscode?</b> Rave/overalls</li>
+          </ul>
+        </>
+      )
+    }
   },
   {
     name: 'Pönkeli FIA-cup 2026',
     date: '2026-04-27',
-    details: 'Q-talon alakerta, Vähä-Heikkilä',
+    details: { fi: 'Q-talon alakerta, Vähä-Heikkilä', en: 'House Q cellar, Vähä-Heikkilä' },
     image: '/fia26.webp',
-    description: (
-      <>
-        <strong>FI/EN</strong>
-        <p>Olet varmaan ihmetellyt, mikä peli on tuo FIA, jota Åbo Akademin sivistyneet teekkarit erityisesti suosivat. Nyt sinulla on mahdollisuus päästä pelaamaan fiaa</p>
-        <p>FIA-cup järjestetään 27.4.2026 klo 18.00 Q-talon epäilyttävässä alakerrassa. FIA-cupissa kilpaillaan kahden henkilön joukkueissa isolla FIA-laudalla. Pelinappuloina toimivat pienet shottilasit, joilla syödään toisten nappuloita. Juoma on laimeaa alkoholia. Yhdessä pelissä on mukana neljä joukkuetta.</p>
-        <p>Tapahtuma järjestetään 16 joukkueen turnauksena, jossa pelataan välierät ennen finaalia. Turnausta saa tulla myös seuraamaan!</p>
-        <p>Lähde mukaan teekkariwappuun paluun tehneeseen FIA-cupiin!</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>Mitä?</b> FIA-cup</li>
-          <li><b>Missä?</b> Q-talon alakerta, Vähä-Heikkilä</li>
-          <li><b>Milloin?</b> 27.4.2026 klo 18.00 alkaen</li>
-          <li><b>Miksi?</b> FIA</li>
-          <li><b>Hinta?</b> 16 €, sis. pelijuomat</li>
-          <li><b>Ilmoittautuminen?</b> Linkki tulee Teekkariwapun Telegram-tiedotukseen </li>
-        </ul>
-        <hr className='my-3' />
-        <b>ENGLISH</b>
-        <p>You have probably wondered what is that FIA game that the teekkaris of ÅA are fond of. Well now you have the chance to experience FIA.</p>
-        <p>Pönkelis FIA-cup will be held on 27th of April 2026 at 18.00 in the basement of Q-talo. In FIA, teams of two compete on a big FIA board. The game pieces are small shot glasses, which are "eaten" by other pieces. The drink is mildly alcoholic. Each game includes four teams.</p>
-        <p>The event is organized as a tournament with 16 teams, where semifinals are played before the final. You can also come and watch the tournament!</p>
-        <p>Join the FIA-cup, which has made a comeback to Wappu!</p>
-        <ul>
-          <li><b>TL;DR</b></li>
-          <li><b>What?</b> FIA-cup</li>
-          <li><b>Where?</b> Basement of Q-talo, Vähä-Heikkilä</li>
-          <li><b>When?</b> 27.4.2026 at 18.00</li>
-          <li><b>Why?</b> FIA</li>
-          <li><b>Price?</b> 16 €, includes drinks for the game</li>
-          <li><b>Registration?</b> Link will be shared in Teekkariwappu Telegram information channel </li>
-        </ul>
-        <hr className='my-3' />
-        <b>SÄÄNNÖT</b>
-        <b>Tavoite:</b>
-        <p> Pelin tarkoituksena on saada kaikki oman joukkueen pelinappulat kotipesään ensimmäisenä.</p>
-        <b>Pelinkulku:</b>
-        <p> Pelin aloittaa suurimman silmäluvun heittänyt joukkue. Pelinappuloita voi asettaa pelilaudalle nopan silmäluvuilla 1 tai 6. Jos joukkueella ei ole yhtään pelinappulaa kentällä, on sillä enintään kolme yritystä saada kentälle pelinappula. Silmäluvulla 6 saa aina uuden heittovuoron.</p>
-        <p> Kussakin peliruudussa saa olla vain yksi nappula kerrallaan.</p>
-        <p> Jos joukkue liikuttaa pelinappulaa ruutuun, missä on jo toisen joukkueen nappula, juo syönyt joukkue syödystä nappulasta shotin FIA-juomaa. Syöty nappula palautuu varikolle. Syöminen on aina pakollista, jos se on millään joukkueen nappulalla mahdollista, mukaan lukien varikolla olevalla nappulalla. Jos syöminen edellyttää siirtymistä uudelle kierrokselle, täytyy se tehdä.</p>
-        <p> Nappulan on kierrettävä pelilauta myötäpäivään. Kokonaisen kierroksen kierrettyään, nappulat voivat päästä kotipesään. Kotipesään on osuttava tasaluvulla ja kotipesä on täytettävä keskustasta varikkoon päin järjestyksessä. Kun nappula päätyy kotipesään oikealle kohdalle, juo nappulan omaava joukkue siitä shotin ja nappula lukittuu paikoilleen.</p>
-        <b>FIA- erikoissäännöt:</b>
-        <ul>
-          <li>- Noppaa saa heittää ainoastaan pelipöydälle. Muualle kohdistuneet heitot lasketaan vuoron luovuttamiseksi seuraavalle joukkueelle.</li>
-          <li>- Voittaja joukkueen on istuttava 5 minuuttia paikallaan heti pelin voiton yhteydessä. Molempien pelaajien on oltava paikallaan istumassa koko tämä aika. Jos kumpikaan joukkueen jäsenistä ei tähän kykene, lasketaan tilanne luovutusvoitoksi seuraavaksi tulleelle joukkueelle.</li>
-          <li>- Pelin aikana ainakin yksi pelaaja jokaisesta joukkueesta on oltava paikalla minä tahansa hetkenä.</li>
-          <li>- Jos FIA-juoma loppuu pelin aikana, haetaan uusi termos,</li>
-          <li>- Hävinneiden tiimien kesken juodaan tasaisesti pelilaudalla olevat nappulat,</li>
-          <li>- Kun peli päättyy, jaetaan jäljellä oleva termoksen juoma kaikkien pelissä mukana olleiden kesken tasaisesti.</li>
-          <li>- FIA-juomassa ei ole palautusoikeutta.</li>
-        </ul>
-      </>
-    )
+    description: {
+      fi: (
+        <>
+          <p>Olet varmaan ihmetellyt, mikä peli on tuo FIA, jota Åbo Akademin sivistyneet teekkarit erityisesti suosivat. Nyt sinulla on mahdollisuus päästä pelaamaan fiaa</p>
+          <p>FIA-cup järjestetään 27.4.2026 klo 18.00 Q-talon epäilyttävässä alakerrassa. FIA-cupissa kilpaillaan kahden henkilön joukkueissa isolla FIA-laudalla. Pelinappuloina toimivat pienet shottilasit, joilla syödään toisten nappuloita. Juoma on laimeaa alkoholia. Yhdessä pelissä on mukana neljä joukkuetta.</p>
+          <p>Tapahtuma järjestetään 16 joukkueen turnauksena, jossa pelataan välierät ennen finaalia. Turnausta saa tulla myös seuraamaan!</p>
+          <p>Lähde mukaan teekkariwappuun paluun tehneeseen FIA-cupiin!</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>Mitä?</b> FIA-cup</li>
+            <li><b>Missä?</b> Q-talon alakerta, Vähä-Heikkilä</li>
+            <li><b>Milloin?</b> 27.4.2026 klo 18.00 alkaen</li>
+            <li><b>Miksi?</b> FIA</li>
+            <li><b>Hinta?</b> 16 €, sis. pelijuomat</li>
+            <li><b>Ilmoittautuminen?</b> Linkki tulee Teekkariwapun Telegram-tiedotukseen </li>
+          </ul>
+          <hr className='my-3' />
+          <b>SÄÄNNÖT</b>
+          <b>Tavoite:</b>
+          <p> Pelin tarkoituksena on saada kaikki oman joukkueen pelinappulat kotipesään ensimmäisenä.</p>
+          <b>Pelinkulku:</b>
+          <p> Pelin aloittaa suurimman silmäluvun heittänyt joukkue. Pelinappuloita voi asettaa pelilaudalle nopan silmäluvuilla 1 tai 6. Jos joukkueella ei ole yhtään pelinappulaa kentällä, on sillä enintään kolme yritystä saada kentälle pelinappula. Silmäluvulla 6 saa aina uuden heittovuoron.</p>
+          <p> Kussakin peliruudussa saa olla vain yksi nappula kerrallaan.</p>
+          <p> Jos joukkue liikuttaa pelinappulaa ruutuun, missä on jo toisen joukkueen nappula, juo syönyt joukkue syödystä nappulasta shotin FIA-juomaa. Syöty nappula palautuu varikolle. Syöminen on aina pakollista, jos se on millään joukkueen nappulalla mahdollista, mukaan lukien varikolla olevalla nappulalla. Jos syöminen edellyttää siirtymistä uudelle kierrokselle, täytyy se tehdä.</p>
+          <p> Nappulan on kierrettävä pelilauta myötäpäivään. Kokonaisen kierroksen kierrettyään, nappulat voivat päästä kotipesään. Kotipesään on osuttava tasaluvulla ja kotipesä on täytettävä keskustasta varikkoon päin järjestyksessä. Kun nappula päätyy kotipesään oikealle kohdalle, juo nappulan omaava joukkue siitä shotin ja nappula lukittuu paikoilleen.</p>
+          <b>FIA- erikoissäännöt:</b>
+          <ul>
+            <li>- Noppaa saa heittää ainoastaan pelipöydälle. Muualle kohdistuneet heitot lasketaan vuoron luovuttamiseksi seuraavalle joukkueelle.</li>
+            <li>- Voittaja joukkueen on istuttava 5 minuuttia paikallaan heti pelin voiton yhteydessä. Molempien pelaajien on oltava paikallaan istumassa koko tämä aika. Jos kumpikaan joukkueen jäsenistä ei tähän kykene, lasketaan tilanne luovutusvoitoksi seuraavaksi tulleelle joukkueelle.</li>
+            <li>- Pelin aikana ainakin yksi pelaaja jokaisesta joukkueesta on oltava paikalla minä tahansa hetkenä.</li>
+            <li>- Jos FIA-juoma loppuu pelin aikana, haetaan uusi termos,</li>
+            <li>- Hävinneiden tiimien kesken juodaan tasaisesti pelilaudalla olevat nappulat,</li>
+            <li>- Kun peli päättyy, jaetaan jäljellä oleva termoksen juoma kaikkien pelissä mukana olleiden kesken tasaisesti.</li>
+            <li>- FIA-juomassa ei ole palautusoikeutta.</li>
+          </ul>
+        </>
+      ),
+      en: (
+        <>
+          <p>You have probably wondered what is that FIA game that the teekkaris of ÅA are fond of. Well now you have the chance to experience FIA.</p>
+          <p>Pönkelis FIA-cup will be held on 27th of April 2026 at 18.00 in the basement of Q-talo. In FIA, teams of two compete on a big FIA board. The game pieces are small shot glasses, which are "eaten" by other pieces. The drink is mildly alcoholic. Each game includes four teams.</p>
+          <p>The event is organized as a tournament with 16 teams, where semifinals are played before the final. You can also come and watch the tournament!</p>
+          <p>Join the FIA-cup, which has made a comeback to Wappu!</p>
+          <ul>
+            <li><b>TL;DR</b></li>
+            <li><b>What?</b> FIA-cup</li>
+            <li><b>Where?</b> Basement of Q-talo, Vähä-Heikkilä</li>
+            <li><b>When?</b> 27.4.2026 at 18.00</li>
+            <li><b>Why?</b> FIA</li>
+            <li><b>Price?</b> 16 €, includes drinks for the game</li>
+            <li><b>Registration?</b> Link will be shared in Teekkariwappu Telegram information channel </li>
+          </ul>
+          {
+            /* No English translation exists for the rules - reusing the
+               Finnish text here rather than writing a new one. */
+          }
+          <hr className='my-3' />
+          <b>SÄÄNNÖT</b>
+          <b>Tavoite:</b>
+          <p> Pelin tarkoituksena on saada kaikki oman joukkueen pelinappulat kotipesään ensimmäisenä.</p>
+          <b>Pelinkulku:</b>
+          <p> Pelin aloittaa suurimman silmäluvun heittänyt joukkue. Pelinappuloita voi asettaa pelilaudalle nopan silmäluvuilla 1 tai 6. Jos joukkueella ei ole yhtään pelinappulaa kentällä, on sillä enintään kolme yritystä saada kentälle pelinappula. Silmäluvulla 6 saa aina uuden heittovuoron.</p>
+          <p> Kussakin peliruudussa saa olla vain yksi nappula kerrallaan.</p>
+          <p> Jos joukkue liikuttaa pelinappulaa ruutuun, missä on jo toisen joukkueen nappula, juo syönyt joukkue syödystä nappulasta shotin FIA-juomaa. Syöty nappula palautuu varikolle. Syöminen on aina pakollista, jos se on millään joukkueen nappulalla mahdollista, mukaan lukien varikolla olevalla nappulalla. Jos syöminen edellyttää siirtymistä uudelle kierrokselle, täytyy se tehdä.</p>
+          <p> Nappulan on kierrettävä pelilauta myötäpäivään. Kokonaisen kierroksen kierrettyään, nappulat voivat päästä kotipesään. Kotipesään on osuttava tasaluvulla ja kotipesä on täytettävä keskustasta varikkoon päin järjestyksessä. Kun nappula päätyy kotipesään oikealle kohdalle, juo nappulan omaava joukkue siitä shotin ja nappula lukittuu paikoilleen.</p>
+          <b>FIA- erikoissäännöt:</b>
+          <ul>
+            <li>- Noppaa saa heittää ainoastaan pelipöydälle. Muualle kohdistuneet heitot lasketaan vuoron luovuttamiseksi seuraavalle joukkueelle.</li>
+            <li>- Voittaja joukkueen on istuttava 5 minuuttia paikallaan heti pelin voiton yhteydessä. Molempien pelaajien on oltava paikallaan istumassa koko tämä aika. Jos kumpikaan joukkueen jäsenistä ei tähän kykene, lasketaan tilanne luovutusvoitoksi seuraavaksi tulleelle joukkueelle.</li>
+            <li>- Pelin aikana ainakin yksi pelaaja jokaisesta joukkueesta on oltava paikalla minä tahansa hetkenä.</li>
+            <li>- Jos FIA-juoma loppuu pelin aikana, haetaan uusi termos,</li>
+            <li>- Hävinneiden tiimien kesken juodaan tasaisesti pelilaudalla olevat nappulat,</li>
+            <li>- Kun peli päättyy, jaetaan jäljellä oleva termoksen juoma kaikkien pelissä mukana olleiden kesken tasaisesti.</li>
+            <li>- FIA-juomassa ei ole palautusoikeutta.</li>
+          </ul>
+        </>
+      )
+    }
   },
 ]
 

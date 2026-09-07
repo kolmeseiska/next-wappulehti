@@ -1,5 +1,10 @@
 import Link from 'next/link'
 
+const CurrentYear = async () => {
+  'use cache'
+  return new Date().getFullYear()
+}
+
 const footer = () => {
   return (
     <footer className='bg-white py-12'>
@@ -15,7 +20,7 @@ const footer = () => {
         <div className='mt-8 pt-8 border-t border-gray-100 text-center text-[#032a39] text-sm'>
           ©
           {' '}
-          {(new Date()).getFullYear()}
+          <CurrentYear />
           {' '}
           Pönkeli - Huumorihulinaa vuodesta 2021
         </div>

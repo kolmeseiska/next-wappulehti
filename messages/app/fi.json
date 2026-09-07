@@ -1,0 +1,123 @@
+{
+  "notFound": {
+    "message": "Sorry! Täällä ei ole mitään",
+    "backHome": "Palaa kotiin"
+  },
+  "pages": {
+    "tapahtumat": {
+      "title": "Tapahtumat",
+      "today": "Tänään!",
+      "pastEvents": "Menneet tapahtumat"
+    },
+    "historia": {
+      "title": "Historia",
+      "introTitle": "Pönkeli on Turun yliopiston opiskelijoiden Wappulehti.",
+      "introBody": "Wappulehtiä on väännetty Turun yliopistossa jo vuodesta 2001 ja tuolloin teoksen nimi oli Pilde&Napander. Vuonna 2020 projekti aloitettiin alusta ja wappulehti sai uuden uljaan ja soiluvan nimen <b>Pönkeli.</b>",
+      "editions": {
+        "y2026": {
+          "title": "Sportti-Pönkeli",
+          "body": "<p1>Wappua 2026 vauhditti <b>\"Sportti-Pönkeli\"</b>, joka sisälsi urheilullista sisältöä ja liikuttavaa huumoria.</p1><p2>Sportti-Pönkelin mukana tulivat myös upeat sporttisen Pönkelin urheiluaurinkolasit, jotka suojasivat niin opiskelijoita kuin muitakin kansalaisia wapun aurinkoiselta säältä ja lisäsivät nopeutta hauskanpitoon!</p2>"
+        },
+        "y2025": {
+          "title": "Niksi Pönkeli",
+          "body": "<p1>Wapun 2025 siistein julkaisu <b>\"Niksi Pönkeli\"</b> sisälsi lehden täydeltä puhdasta sekä kuivaa huumoria.</p1><p2>Niksi Pönkelin mukana lukija sai itselleen suomalaisella käsityöllä tehdyn saippuan sekä monikäyttöisen \"kyykkäpyyhkeen\". Lehden vitsit, tarinat sekä grafiikat tarjosivat lukijalleen unohtumatonta hupia ja iloa.</p2>"
+        },
+        "y2024": {
+          "title": "Galleria Pönkeli",
+          "body": "<p1>Wappuna 2024 ilmestynyt <b>\"Galleria Pönkeli\"</b> oli ensimmäinen wappulehti laatuaan, joka oli myös kokemus fyysisen lehden sijaan. Pönkeli ilmestyi taidenäyttelynä tieteen ja taiteen kohtaamisista, mihin pääsylippuna toimi pieni huumorilehtinen, joka opasti näyttelyssä kävijöitä teoksista.</p1><p2>Taidenäyttelyyn oli luotu erilaisia teoksia aina perinteisistä maalauksista suurempiinkin insinööritaidonnäytteisiin. Galleria Pönkeliä pidettiin Turun Taiteen Talolla koko wapun ajan auki, ja se muovautui opiskelijoiden olohuoneeksi. Galleria Pönkeli oli innovatiivinen, kokeilunhaluinen ja osoitus tekniikan ja taiteen luovuudesta.</p2>"
+        },
+        "y2023": {
+          "title": "FantasiaPönkeli",
+          "body": "<p1>Vuonna 2023 otettiin askel perinteisempään ja Pönkeli manifestoitui lehden muotoon. <b>\"FantasiaPönkeli\"</b> on fantasia/DnD/roolipeli-teemainen tuotos täynnä upeaa perinteisin sekä virtuaalisin keinoin loihdittua grafiikkaa, tarinoita sekä vitsejä.</p1><p2>Pelkän luettavan lisäksi käyttäjät saivat itselleen viisi elementtinoppaa, joita pystyi hyödyntämään lehden sivuilta löytyvissä peleissä sekä vaihtelemaan toisten pönkelifantasian ystävien kanssa.</p2>"
+        },
+        "y2022": {
+          "title": "Pönkeliseikkailu",
+          "body": "<p1>Vuoden 2022 wappulehdessä <b>\"Pönkeliseikkailu\"</b> lukijat pääsivät etsimään kadonnutta tutkintoa upean grafiikan saattelemana.</p1>"
+        },
+        "y2021": {
+          "title": "Pönkelipakka",
+          "body": "<p1>Ensimmäinen Pönkeli näki päivänvalon wappuna 2021 nimellä \"Pönkelipakka\". Pelikorttipakka, jota monet turkulaiset sekä ulkopaikkakuntalaiset opiskelijat kantavat yhä haalareissaan.</p1>"
+        }
+      }
+    },
+    "ponkelipiste": {
+      "title": "Mikä Pönkeli ja Pönkelipiste?",
+      "paragraph1": "Pönkeli on turkulainen wappulehti, joka ilmestyi ensimmäisen kerran vuonna 2021. Lehti ilmestyy vuosittain wapun aikaan kaiken kansan iloksi. Wappulehdet ovatkin tärkeä osa teekkareiden ja opiskelijoiden historiaa ja kulttuuria ylipäänsä - niiden avulla on rahoitettu isompiakin rakennusprojekteja ja tuettu hyväntekeväisyyttä, sekä annettu yhteisölle takaisin.",
+      "paragraph2": "Pönkelin tavoitteena on yhdistää kaikkia turkulaisia teekkareita ja opiskelijoita kaikilta kampuksilta. Pönkeli haluaa levittää teekkarihuumorin ilosanomaa kaikelle kansalle ja jatkaa wappulehtien perinnettä. Pönkeli noudattaa toiminnassaaan yhdenvertaisuuden ja turvallisen tilan periaatteita.",
+      "paragraph3": "<b>No entä sitten se Pönkelipiste?</b> Pönkelipiste löytyy jokaisen teekkarifuksin fuksipassista. Pisteen voit suorittaa fuksivuotesi aikana toimimalla Pönkelin myyjänä tai tuottamalla Pönkeliin sisältöä joko grafiikan, piirroksen, humoristisen tekstin tai vitsin Pönkelin vitsikilpailuun. Pisteen saat, kun tuotoksesi päätyy lehteen, ja siitä ilmoitetaan hyvissä ajoin. <b>Pönkelipisteen saat passiisi myös myymällä Pönkeleitä.</b>",
+      "paragraph4": "Pönkelin myyjäksi ilmoittautuminen ei sido sinua vielä mihinkään ja se perustuu vapaaehtoisuuteen. Aiempina vuosina myyjiä on palkittu mm. virkistäytymisellä, palkinnoilla, lahjakorteilla, aamupaloilla jne. Pönkelin myyjäksi ilmoittautuminen aukeaa myöhemmin, seuraa meidän Instagramiamme.",
+      "paragraph5": "Myyjänä toimimisesta ja Pönkelin vitsikilpailusta kuulet lisää Pönkelin instagramista, tiktokista, kiltasi tiedotuskanavista sähköpostitse ja täältä nettisivuilta!"
+    },
+    "myyjainfo": {
+      "title": "Myyjät",
+      "thanksTitle": "Kiitos kaikille kevään 2023 Pönkeli-myyjille!",
+      "feedbackIntro": "Voit vielä jättää palautetta myyjänä toimimisesta <link>täällä.</link>",
+      "wantedAgain": "Pönkeli hakee reippaita myyjiä taas keväällä!"
+    },
+    "myyjarekry": {
+      "header": "Lähde Pönkelin myyjäksi!",
+      "whyTitle": "Miksi?",
+      "whyBody1": "Pönkelin myyjänä pääset nauttimaan vain myyjille suoduista eduista, joita ovat aiempina vuosina olleet esimerkiksi myyjäbrunssi, skumppajooga, saunailta sekä vuosittain vaihtuvat palkinnot (aurinkolasit, powerbank, termospullo, juomapullo…). Myyjille on myös oma myyjähaalarimerkki. Myyjänä pääset tutustumaan muihin ihmisiin - opiskelijoihin ja tavan tallaajiin, sekä pitämään hauskaa. <b>Fuksit saavat myyjänä toimimisesta pisteen fuksipassiinsa! Fuksipisteen saat myymällä 4 lehteä,</b> ne saat myytyä helposti vaikka kiltahuoneella tai wapputapahtumissa vanhemmille tieteenharjoittajille.",
+      "whyBody2": "Kaikista tehokkaimmat myyjät palkitaan myös lahjakorteilla!",
+      "howTitle": "Miten?",
+      "howBody1": "Myyjäksi voit lähteä oheisen lomakkeen kautta. Ilmoittaudu myyjäksi vaikka heti! Myyjäksi ilmoittautuminen oheisen linkin kautta varmistaa, että saat ajankohtaiset infot myynnistä ja myyjätoiminnasta. <b>Ilmoittautuminen ei vielä sido sinua mihinkään.</b> Myyjäsopimus allekirjoitetaan vasta ensimmäisiä lehtiä haettaessa.",
+      "howBody2": "Pönkelin myyjänä pääset nauttimaan vain myyjille suoduista eduista ja palkinnoista. Myyjäksi ilmoittautuminen ei sido sinua mihinkään ja myynti perustuu vapaaehtoisuuteen.",
+      "vipBody1": "Mikäli ilmoittaudut myyjäksi jo <b>Pönkelin pubivisassa 21.1.2026</b>, pääset <b>VIP-myyjäksi</b>. VIP-myyjät saavat ensimmäisenä lehdet haltuunsa heti Pönkelijulkkareiden jälkeen ja heille on tarjolla eturivin paikka virvokkeineen päräyttävässä Turun teekkariwapun aloittavassa tapahtumassa - Pönkelijulkkareissa!",
+      "vipBody2": "VIP-myyjäksi pääseminen edellyttää myyjäsopimuksen allekirjoittamista Pubivisassa! Jollet pääse paikanpäälle, mutta haluat VIP-myyjäksi, ole yhteydessä lehden toimitukseen!",
+      "scaredTitle": "Pelottaako?",
+      "scaredBody": "Älä Huoli! Wappulehtien myynti on hauskaa puuhaa, eikä niiden myyntiä tarvitse stressata tai pelätä joutuvansa myymään niitä yksin, sillä toimittajat myyvät lehtiä kanssasi koko wapun ajan. Wappulehtiä ei myöskään tarvitse lunastaa etukäteen, vaan tilität ne myynnin lopuksi. Kaikki myymättömät myyntikunnossa olevat wappulehdet saa palauttaa takaisin toimitukselle. Myyt siis vain sen verran kuin haluat ja jaksat. Viimeistään näillä kannustuksilla kannattaa lähteä myyjäksi!"
+    },
+    "rekry": {
+      "title": "Oletko kiinnostunut Pönkelin tekemisestä?",
+      "paragraph1": "Pönkeli rekrytoi uusia toimittajia tuottamaan Turun hauskinta wappulehteä jälleen kerran. Pönkelissä pääset tekemään kaikkea hauskaa - olitpa sitten kiinnostunut piirtämisestä, taittamisesta, kirjoittamisesta, vitsailusta, tapahtumatuottamisesta, valo- tai videokuvaamisesta, markkinoinnista tai muuten vain valmis hassuttelemaan ja hyppäämään projektiin! Pönkeliin hakiessa et tarvitse mitään erityisiä taitoja, vain avointa mieltä ja innon oppia uutta.",
+      "paragraph2": "Pönkeliin voivat hakea kaikki, olit sitten teekkari tai et, kunhan omaat hassuttelevan mielen ja halun tehdä yhdessä hyvää muille. Hae mukaan Pönkeliin alla olevalla lomakkeella, ja sinuun voidaan olla yhteydessä hakuajan päättymisen jälkeen. Ilmoita kiinnostuksesi siis heti!",
+      "lookingForIntro": "Erityisesti toimitukseen haetaan tällä hetkellä toimittajia jotka haluavat tehdä:",
+      "lookingFor": [
+        "Piirustuksia tai muuta grafiikkaa",
+        "Tapahtumia",
+        "Valo- ja/tai videokuvausta",
+        "Videoeditointia",
+        "Markkinointia ja sosiaalisen median sisältöä"
+      ],
+      "deadline": "Rekry sulkeutuu virallisesti 31.5.2026",
+      "formTitle": "Rekrylomake"
+    },
+    "soth": {
+      "message1": "Hevosia ei ongelmia",
+      "message2": "Pysy kuulolla ja palaa pian takaisin!"
+    },
+    "kisa": {
+      "title": "Pönkelin vitsikilpailu",
+      "headerNote": "Vitsikilpailu on päättynyt, kiitos osallistuneille!<br></br>Voittajat julkistetaan Pönkelijulkkareissa 9.4.2026",
+      "sideTitle": "Vitsi | Juttu | Grafiikka -kisa",
+      "sideBody1": "<b>Pönkelin vitsikilpailu</b> on Wappulehti Pönkelin vitsi/grafiikka/kirjoitus -kilpailu, jonka tarkoituksena on saada ne kaikkein hervottomimmat ja nerokkaimmat tuotokset samaan painokseen eli Wappuna 2026 ilmestyvään Pönkeliin! Vitsikilpailu on käynnissä nyt ja päättyy <b>12.3.2026.</b>",
+      "categoriesTitle": "Kilpailun kategoriat:",
+      "categories": [
+        "Paras vitsi",
+        "Hauskin fuksi",
+        "Humoristisin taideteos",
+        "Tehokkain kilta"
+      ],
+      "categoriesNote": "Kategorioiden voittajat palkitaan lahjakorteilla ja tehokkain kilta kiltahuoneen viihtyvyyttä edistävillä tarvikkeilla!",
+      "sideBody2": "Oletko siis taidokas taiteilija, suurenmoinen sanailija tai kenties virtuoosi vitsailija? Tai muuten vaan hupsu hassuttelija, joka haluaisi osallistua wappulehden tekoon?",
+      "sideBody3": "Tiputa parhain luomuksesi oheiseen lomakkeeseen ja bongaa se Pönkeli 2026 -lehdestä!",
+      "rulesTitle": "Kilpailun säännöt",
+      "rules": {
+        "deadline": "Kilpailu on käynnissä <b>12.3.2026 asti</b>.",
+        "howToParticipate": "Osallistua voit yläpuolelta löytyvän lomakkeen kautta tai ruokkimalla Agoran aulasta löytyvää PostiPönkeä.",
+        "beNice": "Älä ole tymä! Hylkäämme loukkaavat tuotokset suoraan!",
+        "usageRights": "Lähettämällä vitsisi/grafiikkasi/tekstisi hyväksyt sen mahdollisen käytön Pönkelissä nyt tai tulevaisuudessa alkuperäisenä tai muokattuna.",
+        "judging": "Pönkelin huumorineuvosto käy kilpailun päättymisen jälkeen läpi kaiken lähetetyn materiaalin, ja valitsee niiden keskuudesta ainakin seuraavat palkittavat:",
+        "judgingCategories": [
+          "Paras vitsi- Paras yksittäinen vitsi",
+          "Hauskin fuksi - Hauskin fuksin lähettämä tuotos",
+          "Humoristisin taideteos - Eniten hilpeyttä aiheuttava graafinen teos",
+          "Tehokkain kilta - Kilta, joka tuottaa eniten vitsejä, grafiikkaa tai juttuja"
+        ],
+        "prizeGiving": "Palkitseminen suoritetaan Pönkelijulkkareissa 9.4.",
+        "fuksiPoint": "Fuksit saavat lehteen päätyneestä tuotoksesta Pönkelipisteen fuksipassiin. Fukseille ilmoitetaan mikäli heidän tuotoksensa päätyy lehteen ennen julkkareita.",
+        "contactInfo": "Voittajille ilmoitetaan henkilökohtaisesti, joten varmistathan oikeat yhteystiedot. Sähköpostiosoitteet poistetaan Wapun jälkeen, mutta nimitieto säilytetään, jotta Pönkeli voi tulevaisuudessa kiittää lehden tekoon osallistuneita henkilöitä."
+      }
+    }
+  }
+}

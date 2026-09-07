@@ -1,8 +1,10 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 
 import Logo from './Logo'
+import { LocaleToggle } from './LocaleToggle'
 import { ThemeSwitcher } from './ThemeSwitcher'
 
 type NavItemProps = {
@@ -12,17 +14,19 @@ type NavItemProps = {
 type Route = [string, string, boolean?]
 
 const routes: Route[] = [
-  // ['Vitsikilpailu', '/kisa', true],
-  // ['Sportti-Pönkeli', '/sportti', true],
-  // ['Rekry', '/rekry', true],
-  ['Tapahtumat', '/tapahtumat'],
-  ['Historia', '/historia'],
-  //['Myyjät', '/myyjarekry'],
-  ['Pönkelipiste', '/ponkelipiste'],
-  // ['Myyjät', '/myyjainfo'],
+  // ['kisa', '/kisa', true],
+  // ['sportti', '/sportti', true],
+  // ['rekry', '/rekry', true],
+  ['tapahtumat', '/tapahtumat'],
+  ['historia', '/historia'],
+  //['myyjarekry', '/myyjarekry'],
+  ['ponkelipiste', '/ponkelipiste'],
+  // ['myyjainfo', '/myyjainfo'],
 ]
 
 const NavItems = ({ isCollapsed }: NavItemProps) => {
+  const t = useTranslations('common.nav')
+
   // Ensure that link gets closed after clicking
   const onLinkClick = () => {
     const elem = document.activeElement as HTMLElement
@@ -36,7 +40,7 @@ const NavItems = ({ isCollapsed }: NavItemProps) => {
 
   return (
     <ul tabIndex={0} className={`gap-1 ${menuClassName}`}>
-      {routes.map(([title, url, isHighlight]) => {
+      {routes.map(([titleKey, url, isHighlight]) => {
         const className = isHighlight
           ? 'bg-accent outline text-accent-content hover:bg-accent'
           : 'hover:bg-zinc-100 hover:text-zinc-900'
@@ -51,7 +55,7 @@ const NavItems = ({ isCollapsed }: NavItemProps) => {
             `}
             onClick={onLinkClick}
           >
-            {title}
+            {t(titleKey)}
           </Link>
         )
       })
@@ -76,7 +80,8 @@ const Navigation = () => {
           <NavItems />
         </div>
       </div>
-      <div className='navbar-end'>
+      <div className='navbar-end gap-2'>
+        <LocaleToggle />
         <ThemeSwitcher />
         <div className='dropdown dropdown-end'>
           <label tabIndex={0} className='btn btn-ghost text-primary md:hidden'>

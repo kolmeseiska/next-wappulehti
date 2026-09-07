@@ -1,0 +1,93 @@
+{
+  "common": {
+    "nav": {
+      "tapahtumat": "Events",
+      "historia": "History",
+      "ponkelipiste": "Pönkelipiste"
+    },
+    "languageToggle": {
+      "label": "Switch language",
+      "fi": "Finnish",
+      "en": "English"
+    },
+    "themeToggle": {
+      "dark": "Dark theme",
+      "light": "Light theme"
+    }
+  },
+  "footer": {
+    "tagline": "Come along for the Pönkeli ride!",
+    "instagramLabel": "Instagram page",
+    "tiktokLabel": "TikTok page",
+    "linkedinLabel": "LinkedIn page",
+    "copyright": "© {year} Pönkeli - Bringing the laughs since 2021"
+  },
+  "home": {
+    "eyebrow": "The Wappu magazine of UTU students",
+    "intro": "Welcome to explore what Pönkeli is all about. Browse our history and get involved through our site!",
+    "recruitment": {
+      "title": "Apply to join Pönkeli's editorial team!",
+      "cta": "Join us!"
+    },
+    "sellers": {
+      "title": "Apply to become a Pönkeli seller!",
+      "subtitle": "Prizes and unique seller events await.",
+      "cta": "Sign up as a seller here!"
+    },
+    "competition": {
+      "title": "Welcome to make your mark on Pönkeli!",
+      "subtitle": "The Pönkeli joke competition is a joke competition where you or your guild can win great prizes and glory!",
+      "cta": "Enter the competition here!"
+    },
+    "feedback": {
+      "title": "Thanks for an amazing Wappu and for taking part in Pönkeli!",
+      "subtitle": "Your feedback matters to us so we can keep improving Pönkeli.",
+      "cta": "Give feedback about Pönkeli 2026"
+    },
+    "release": {
+      "title": "Pönkeli 2026 has arrived!",
+      "subtitle": "Heartfelt jokes, wild sport experiments and fast-paced humor, all wrapped up with stylish sport sunglasses!",
+      "cta": "Read more and buy!"
+    }
+  },
+  "pages": {
+    "noUpcomingEvents": {
+      "paragraph1": "Pönkeli hosts fun, open-to-everyone events all year round: in autumn, our sports event Pönkeli Games with a rotating theme, in winter you might spot a few pranks here and there, and spring of course culminates in the event that kicks off Wappu, Pönkelijulkkarit, along with Turku's best student rave, Pönkelireivit.",
+      "paragraph2": "Follow Pönkeli on social media via the links at the bottom of the page to get the latest news and event updates!"
+    }
+  },
+  "forms": {
+    "recruitment": {
+      "name": "Name",
+      "year": "Year of study",
+      "fieldOfStudy": "What do you study",
+      "email": "Email",
+      "telegram": "Telegram handle",
+      "description": "Tell us briefly about yourself and why you want to join Pönkeli's editorial team",
+      "submit": "Send",
+      "submitIdle": "Join the team!"
+    },
+    "participation": {
+      "joke": "Write your joke, story or piece",
+      "email": "Email",
+      "guild": "Guild",
+      "isFuksi": "I'm a first-year",
+      "submit": "Send",
+      "submitIdle": "Write to us",
+      "fileOrTextRequired": "A joke or a file is required"
+    },
+    "seller": {
+      "name": "Name",
+      "email": "Email",
+      "isExperience": "I have previous Wappu-magazine experience",
+      "isFuksi": "I'm a first-year",
+      "submit": "Send",
+      "submitIdle": "Become a Pönkeli seller!"
+    },
+    "fileInput": {
+      "label": "File(s)",
+      "hintTitle": "Max 5 files, 5MB total.\n\nSupported file types:\n",
+      "upload": "Upload"
+    }
+  }
+}

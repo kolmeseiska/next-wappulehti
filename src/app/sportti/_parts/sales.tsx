@@ -1,3 +1,5 @@
+import { cacheLife } from 'next/cache'
+
 const saleTimes: { date: string, time: string, place: string }[] = [
   { date: '2026-04-10', time: '12-16', place: 'Osakuntasali, Rehtorinpellonkatu 4 B' },
   { date: '2026-04-13', time: '12-14', place: 'Osakuntasali, Rehtorinpellonkatu 4 B' },
@@ -20,7 +22,15 @@ const getCurrentDate = () => {
 const weekDays = ['Su', 'Ma', 'Ti', 'Ke', 'To', 'Pe', 'La']
 const getDay = (date: string) => weekDays[new Date(date).getDay()]
 
-const Sales = () => {
+const Sales = async () => {
+  'use cache'
+  // Revalidate every hour to keep today's highlighted row up to date
+  cacheLife({
+    stale: 60 * 60 * 3, // 3 hours
+    revalidate: 60 * 60, // 1 hour
+    expire: 60 * 60 * 24 // 1 day
+  })
+
   const currentISODate = getCurrentDate()
   const wappupakoStart = '2026-04-13'
   const wappupakoEnd = '2026-04-25'

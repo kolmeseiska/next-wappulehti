@@ -1,11 +1,13 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { useTheme } from 'next-themes'
 
 export const ThemeSwitcher = () => {
   const { theme, setTheme, forcedTheme } = useTheme()
   const [isMounted, setIsMounted] = useState(false)
+  const t = useTranslations('common.themeToggle')
 
   useEffect(() => {
     setIsMounted(true)
@@ -24,7 +26,7 @@ export const ThemeSwitcher = () => {
     : (
       <label
         className='swap swap-rotate'
-        title={theme === 'dark' ? 'Tumma teema' : 'Vaalea teema'}
+        title={theme === 'dark' ? t('dark') : t('light')}
       >
         <input
           type='checkbox'

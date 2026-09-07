@@ -1,5 +1,6 @@
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { useTranslations } from 'next-intl'
 
 import { Seller, sellerSchema } from '../seller'
 import FormCheckbox from './FormCheckbox'
@@ -29,6 +30,7 @@ const defaultValues: Seller = {
 }
 
 const SellerForm = () => {
+  const t = useTranslations('forms.seller')
   const { register, handleSubmit, formState, reset } = useForm<Seller>({
     resolver: yupResolver(sellerSchema),
     defaultValues
@@ -45,25 +47,25 @@ const SellerForm = () => {
     <form onSubmit={handleSubmit(onSubmit)}>
       <FormInput<Seller>
         name='name'
-        label='Nimi'
+        label={t('name')}
         register={register}
         errors={errors}
       />
       <FormInput<Seller>
         name='email'
-        label='Sähköposti'
+        label={t('email')}
         register={register}
         errors={errors}
       />
       <FormCheckbox<Seller>
         name='isExperience'
-        label='Minulla on aikaisempaa wappulehtikokemusta'
+        label={t('isExperience')}
         register={register}
         errors={errors}
       />
       <FormCheckbox<Seller>
         name='isFuksi'
-        label='Olen fuksi'
+        label={t('isFuksi')}
         register={register}
         errors={errors}
       />
@@ -77,8 +79,8 @@ const SellerForm = () => {
             ? <LoadingIcon />
             : null}
           {isDirty
-            ? 'Lähetä'
-            : 'Ryhdy Pönkelimyyjäksi!'}
+            ? t('submit')
+            : t('submitIdle')}
         </button>
       </div>
     </form>

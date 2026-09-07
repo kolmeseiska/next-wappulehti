@@ -1,0 +1,123 @@
+{
+  "notFound": {
+    "message": "Sorry! There's nothing here",
+    "backHome": "Back home"
+  },
+  "pages": {
+    "tapahtumat": {
+      "title": "Events",
+      "today": "Today!",
+      "pastEvents": "Past events"
+    },
+    "historia": {
+      "title": "History",
+      "introTitle": "Pönkeli is the Wappu-magazine of University of Turku students.",
+      "introBody": "Wappu-magazines have been produced at the University of Turku since 2001, when the publication was called Pilde&Napander. In 2020 the project started over from scratch, and the magazine got its bold new name, <b>Pönkeli.</b>",
+      "editions": {
+        "y2026": {
+          "title": "Sportti-Pönkeli",
+          "body": "<p1>Wappu 2026 was powered by <b>\"Sportti-Pönkeli\"</b> (\"Sport Pönkeli\"), packed with sporty content and heartfelt humor.</p1><p2>Sportti-Pönkeli also came with a pair of stylish sport sunglasses that shielded students and other citizens alike from Wappu's sunny weather - and added some extra speed to the fun!</p2>"
+        },
+        "y2025": {
+          "title": "Niksi Pönkeli",
+          "body": "<p1>Wappu 2025's slickest release, <b>\"Niksi Pönkeli\"</b> (\"Life-Hack Pönkeli\"), was full of clean and dry humor from cover to cover.</p1><p2>Niksi Pönkeli came with a bar of Finnish handmade soap and a multi-purpose sauna towel. The magazine's jokes, stories and graphics gave readers unforgettable fun and joy.</p2>"
+        },
+        "y2024": {
+          "title": "Galleria Pönkeli",
+          "body": "<p1>Released for Wappu 2024, <b>\"Galleria Pönkeli\"</b> (\"Gallery Pönkeli\") was the first Wappu-magazine of its kind - an experience rather than a physical magazine. Pönkeli took the form of an art exhibition on where science meets art, with a small humor booklet serving as the entry ticket and guiding visitors through the artworks.</p1><p2>The exhibition featured works ranging from traditional paintings to large-scale engineering showpieces. Galleria Pönkeli was held at the Turku Art Hall for the whole of Wappu, and it grew into a living room for students. It was innovative, experimental, and proof of the creativity found where engineering meets art.</p2>"
+        },
+        "y2023": {
+          "title": "FantasiaPönkeli",
+          "body": "<p1>In 2023, Pönkeli took a step toward tradition and manifested as an actual magazine. <b>\"FantasiaPönkeli\"</b> is a fantasy/D&D/tabletop-RPG themed creation, full of gorgeous graphics, stories and jokes conjured up with both traditional and digital techniques.</p1><p2>On top of the reading material, readers also got five elemental dice they could use in the games found throughout the magazine, or trade with fellow Pönkeli-fantasy enthusiasts.</p2>"
+        },
+        "y2022": {
+          "title": "Pönkeliseikkailu",
+          "body": "<p1>In the 2022 Wappu-magazine, <b>\"Pönkeliseikkailu\"</b> (\"Pönkeli Adventure\"), readers set out to find a missing degree, guided along by gorgeous artwork.</p1>"
+        },
+        "y2021": {
+          "title": "Pönkelipakka",
+          "body": "<p1>The very first Pönkeli saw the light of day for Wappu 2021 under the name \"Pönkelipakka\" (\"Pönkeli Deck\") - a deck of playing cards that many Turku students, locals and newcomers alike, still carry in their overalls today.</p1>"
+        }
+      }
+    },
+    "ponkelipiste": {
+      "title": "What are Pönkeli and Pönkelipiste?",
+      "paragraph1": "Pönkeli is a Turku-based Wappu-magazine that first came out in 2021. It's published every year around Wappu for everyone's enjoyment. Wappu-magazines are an important part of engineering students' and students' history and culture in general - they've been used to fund larger building projects, support charities, and give back to the community.",
+      "paragraph2": "Pönkeli's aim is to bring together all Turku engineering students and students from every campus. Pönkeli wants to spread the good news of engineering-student humor to everyone, and continue the tradition of Wappu-magazines. Pönkeli follows the principles of equality and safer spaces in everything it does.",
+      "paragraph3": "<b>So what's this Pönkelipiste, then?</b> Every engineering first-year finds Pönkelipiste in their first-year passport (fuksipassi). You can earn the point during your first year by working as a Pönkeli seller, or by contributing content to Pönkeli - whether that's graphics, a drawing, a humorous text, or a joke submitted to Pönkeli's joke competition. You earn the point once your contribution makes it into the magazine, and you'll be notified well in advance. <b>You can also earn Pönkelipiste for your passport by selling copies of Pönkeli.</b>",
+      "paragraph4": "Signing up as a Pönkeli seller doesn't commit you to anything yet and is entirely voluntary. In past years, sellers have been rewarded with things like get-togethers, prizes, gift cards, breakfasts and more. Seller sign-ups open later - follow our Instagram to stay in the loop.",
+      "paragraph5": "You'll hear more about being a seller and the Pönkeli joke competition via Pönkeli's Instagram, TikTok, your guild's communication channels by email, and right here on our website!"
+    },
+    "myyjainfo": {
+      "title": "Sellers",
+      "thanksTitle": "Thanks to all Pönkeli sellers from spring 2023!",
+      "feedbackIntro": "You can still leave feedback about being a seller <link>here.</link>",
+      "wantedAgain": "Pönkeli is looking for energetic sellers again this spring!"
+    },
+    "myyjarekry": {
+      "header": "Become a Pönkeli seller!",
+      "whyTitle": "Why?",
+      "whyBody1": "As a Pönkeli seller you get to enjoy perks reserved just for sellers, which in past years have included a seller brunch, sparkling-wine yoga, a sauna evening, and prizes that change every year (sunglasses, a power bank, a thermos, a water bottle...). Sellers also get their own seller overall patch. As a seller you'll get to meet new people - students and everyday folk alike - and have a great time. <b>First-years earn a point in their first-year passport for working as a seller! You earn the first-year point by selling 4 copies,</b> which is easy to do at your guild room or at Wappu events, selling to older students.",
+      "whyBody2": "The most effective sellers are also rewarded with gift cards!",
+      "howTitle": "How?",
+      "howBody1": "You can sign up as a seller through the form below. Go ahead and sign up right now! Signing up through the link below makes sure you get up-to-date info about sales and seller activities. <b>Signing up doesn't commit you to anything yet.</b> The seller agreement is only signed when you pick up your first batch of magazines.",
+      "howBody2": "As a Pönkeli seller you get to enjoy perks and prizes reserved just for sellers. Signing up doesn't commit you to anything, and selling is entirely voluntary.",
+      "vipBody1": "If you sign up as a seller already at <b>Pönkeli's Pubivisa on 21.1.2026</b>, you'll become a <b>VIP seller</b>. VIP sellers get their copies first, right after Pönkelijulkkarit, and get a front-row spot with refreshments at the event that kicks off Turku's engineering-student Wappu - Pönkelijulkkarit!",
+      "vipBody2": "Becoming a VIP seller requires signing the seller agreement at Pubivisa! If you can't make it in person but still want to be a VIP seller, get in touch with the editorial team!",
+      "scaredTitle": "Feeling nervous?",
+      "scaredBody": "Don't worry! Selling Wappu-magazines is fun, and you never have to stress about it or worry about selling alone - the editors sell alongside you throughout Wappu. You also don't need to pay for the magazines up front; you settle up after selling. Any unsold copies in sellable condition can be returned to the editorial team. So you only sell as much as you want and can manage. With all that going for it, there's really no reason not to become a seller!"
+    },
+    "rekry": {
+      "title": "Interested in making Pönkeli?",
+      "paragraph1": "Pönkeli is recruiting new editors to once again produce Turku's funniest Wappu-magazine. At Pönkeli you get to do all kinds of fun stuff - whether you're into drawing, layout design, writing, joking around, event production, photography or videography, marketing, or just up for some silliness and jumping into a project! You don't need any special skills to apply to Pönkeli, just an open mind and enthusiasm to learn something new.",
+      "paragraph2": "Anyone can apply to Pönkeli, whether you're an engineering student or not, as long as you've got a playful mind and want to do good together with others. Apply to join Pönkeli using the form below, and we may be in touch once applications close. So let us know you're interested right away!",
+      "lookingForIntro": "Right now the editorial team is especially looking for people who want to do:",
+      "lookingFor": [
+        "Drawings or other graphics",
+        "Events",
+        "Photography and/or videography",
+        "Video editing",
+        "Marketing and social media content"
+      ],
+      "deadline": "Applications officially close on 31.5.2026",
+      "formTitle": "Application form"
+    },
+    "soth": {
+      "message1": "No horsing around",
+      "message2": "Stay tuned and check back soon!"
+    },
+    "kisa": {
+      "title": "Pönkeli's joke competition",
+      "headerNote": "The joke competition has ended, thanks to everyone who took part!<br></br>Winners will be announced at Pönkelijulkkarit on 9.4.2026",
+      "sideTitle": "Joke | Story | Graphics competition",
+      "sideBody1": "<b>Pönkeli's joke competition</b> is the Wappu-magazine Pönkeli's joke/graphics/writing competition, aiming to gather the funniest and most brilliant submissions into a single issue - the Pönkeli published for Wappu 2026! The joke competition is open now and closes on <b>12.3.2026.</b>",
+      "categoriesTitle": "Competition categories:",
+      "categories": [
+        "Best joke",
+        "Funniest first-year",
+        "Most humorous artwork",
+        "Most effective guild"
+      ],
+      "categoriesNote": "Category winners are rewarded with gift cards, and the most effective guild gets supplies to make their guild room even cozier!",
+      "sideBody2": "So are you a skilled artist, a masterful wordsmith, or perhaps a joke-telling virtuoso? Or maybe just a goofball who wants to be part of making the Wappu-magazine?",
+      "sideBody3": "Drop your best creation into the form below and spot it in the Pönkeli 2026 magazine!",
+      "rulesTitle": "Competition rules",
+      "rules": {
+        "deadline": "The competition runs <b>until 12.3.2026</b>.",
+        "howToParticipate": "You can take part through the form above, or by feeding PostiPönkä in the Agora lobby.",
+        "beNice": "Don't be a jerk! We'll reject offensive submissions outright!",
+        "usageRights": "By submitting your joke/graphic/text, you agree that it may be used in Pönkeli now or in the future, whether unmodified or edited.",
+        "judging": "After the competition closes, Pönkeli's humor council reviews all submitted material and selects at least the following winners from among them:",
+        "judgingCategories": [
+          "Best joke - the single best joke",
+          "Funniest first-year - the funniest submission by a first-year",
+          "Most humorous artwork - the graphic work that causes the most hilarity",
+          "Most effective guild - the guild that produces the most jokes, graphics or stories"
+        ],
+        "prizeGiving": "Prizes are awarded at Pönkelijulkkarit on 9.4.",
+        "fuksiPoint": "First-years get a Pönkelipiste in their first-year passport for a submission that makes it into the magazine. First-years will be notified if their submission makes the magazine before Pönkelijulkkarit.",
+        "contactInfo": "Winners will be notified personally, so make sure your contact details are correct. Email addresses are deleted after Wappu, but names are kept so Pönkeli can thank everyone who contributed to the magazine in the future."
+      }
+    }
+  }
+}

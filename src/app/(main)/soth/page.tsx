@@ -1,6 +1,9 @@
 import Image from 'next/image'
+import { getTranslations } from 'next-intl/server'
 
-export default function SwordOfTheHorses() {
+export default async function SwordOfTheHorses() {
+  const t = await getTranslations('pages.soth')
+
   return (
     <div className='hero min-h-screen bg-base-200 relative'>
       <Image
@@ -12,7 +15,7 @@ export default function SwordOfTheHorses() {
       <div className='hero-content text-center'>
         <div className='max-w-md bg-yellow-950 rounded-md p-5'>
           <p className='pb-7 text-xl text-zinc-400'>
-            Hevosia ei ongelmia
+            {t('message1')}
             {' '}
             <svg
               viewBox='0 0 24 24'
@@ -23,7 +26,7 @@ export default function SwordOfTheHorses() {
             </svg>
           </p>
           <p>
-            Pysy kuulolla ja palaa pian takaisin!
+            {t('message2')}
           </p>
         </div>
       </div>
